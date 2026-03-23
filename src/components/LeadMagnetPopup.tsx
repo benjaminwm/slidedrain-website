@@ -12,19 +12,21 @@ export default function LeadMagnetPopup() {
     if (sessionStorage.getItem("leadmagnet-dismissed")) return;
 
     const handleScroll = () => {
+      // Don't show if cookie banner is still visible
+      if (!localStorage.getItem("cookie-consent")) return;
       const scrollPercent = window.scrollY / (document.body.scrollHeight - window.innerHeight);
-      if (scrollPercent > 0.35) {
+      if (scrollPercent > 0.45) {
         setOpen(true);
         window.removeEventListener("scroll", handleScroll);
       }
     };
 
-    // Also show after 20 seconds as fallback
+    // Also show after 30 seconds as fallback (after cookie banner is likely dismissed)
     const timer = setTimeout(() => {
-      if (!sessionStorage.getItem("leadmagnet-dismissed")) {
+      if (!sessionStorage.getItem("leadmagnet-dismissed") && localStorage.getItem("cookie-consent")) {
         setOpen(true);
       }
-    }, 20000);
+    }, 30000);
 
     window.addEventListener("scroll", handleScroll);
     return () => {
@@ -38,9 +40,21 @@ export default function LeadMagnetPopup() {
     sessionStorage.setItem("leadmagnet-dismissed", "true");
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [sending, setSending] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // TODO: Send to Supabase / email service
+    setSending(true);
+    try {
+      await fetch("/api/lead-magnet", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+    } catch {
+      // Still show success - PDF is available as direct download fallback
+    }
+    setSending(false);
     setSubmitted(true);
     sessionStorage.setItem("leadmagnet-dismissed", "true");
   };
@@ -157,9 +171,10 @@ export default function LeadMagnetPopup() {
               />
               <button
                 type="submit"
-                className="w-full bg-orange text-white py-3 rounded-lg font-semibold text-sm hover:bg-orange-dark transition-all hover:-translate-y-0.5 shadow-[0_4px_14px_rgba(251,92,19,0.3)] cursor-pointer"
+                disabled={sending}
+                className="w-full bg-orange text-white py-3 rounded-lg font-semibold text-sm hover:bg-orange-dark transition-all hover:-translate-y-0.5 shadow-[0_4px_14px_rgba(251,92,19,0.3)] cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed"
               >
-                Last ned gratis prosjektmappe
+                {sending ? "Sender..." : "Last ned gratis prosjektmappe"}
               </button>
               <p className="text-[11px] text-text-light/50 text-center">
                 Ingen spam. Vi deler aldri din informasjon.
