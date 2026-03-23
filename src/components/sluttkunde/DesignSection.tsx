@@ -1,6 +1,7 @@
 "use client";
 
 import FadeUp from "../FadeUp";
+import VideoEmbed from "../VideoEmbed";
 
 const features = [
   {
@@ -45,6 +46,7 @@ export default function DesignSection() {
             <span className="text-orange">sømløst uttrykk</span>
           </h2>
         </FadeUp>
+        <VideoEmbed />
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {features.map((f, i) => (
             <FadeUp

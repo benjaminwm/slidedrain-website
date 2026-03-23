@@ -15,10 +15,10 @@ export default function Navbar() {
   }, []);
 
   const links = [
-    { href: "#tilvalg", label: "Tilvalg" },
-    { href: "#fordeler", label: "Fordeler" },
-    { href: "#sikkerhet", label: "Sikkerhet" },
-    { href: "#logistikk", label: "Logistikk" },
+    { href: "/sluttkunde", label: "Sluttkunde" },
+    { href: "/tilvalg", label: "Entreprenør" },
+    { href: "/rorlegger", label: "Rørlegger" },
+    { href: "/om-oss", label: "Om oss" },
   ];
 
   return (
@@ -41,13 +41,13 @@ export default function Navbar() {
         {/* Desktop nav */}
         <div className="hidden md:flex items-center gap-8">
           {links.map((l) => (
-            <a
+            <Link
               key={l.href}
               href={l.href}
               className="text-sm text-text-light hover:text-navy transition-colors font-medium"
             >
               {l.label}
-            </a>
+            </Link>
           ))}
           <a
             href="#kontakt"
@@ -83,14 +83,14 @@ export default function Navbar() {
       {mobileOpen && (
         <div className="md:hidden bg-white border-t border-navy/8 px-6 py-4 space-y-3">
           {links.map((l) => (
-            <a
+            <Link
               key={l.href}
               href={l.href}
               onClick={() => setMobileOpen(false)}
               className="block text-sm text-text-light hover:text-navy font-medium py-2"
             >
               {l.label}
-            </a>
+            </Link>
           ))}
           <a
             href="#kontakt"

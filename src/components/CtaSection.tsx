@@ -27,21 +27,28 @@ export default function CtaSection() {
             <div className="flex items-center gap-4 mb-10">
               <div className="flex -space-x-3">
                 <Image
-                  src="/images/team-avatar-1.jpg"
+                  src="/images/team-1.jpg"
                   alt="Teammedlem"
                   width={48}
                   height={48}
                   className="w-12 h-12 rounded-full border-2 border-navy object-cover"
                 />
                 <Image
-                  src="/images/team-avatar-2.jpg"
+                  src="/images/team-2.jpg"
                   alt="Teammedlem"
                   width={48}
                   height={48}
                   className="w-12 h-12 rounded-full border-2 border-navy object-cover"
                 />
                 <Image
-                  src="/images/team-avatar-3.jpg"
+                  src="/images/team-3.jpg"
+                  alt="Teammedlem"
+                  width={48}
+                  height={48}
+                  className="w-12 h-12 rounded-full border-2 border-navy object-cover"
+                />
+                <Image
+                  src="/images/team-4.jpg"
                   alt="Teammedlem"
                   width={48}
                   height={48}

@@ -2,6 +2,7 @@
 
 import { LayersIcon, GridIcon, StarIcon } from "./icons";
 import FadeUp from "./FadeUp";
+import VideoEmbed from "./VideoEmbed";
 
 const tilvalg = [
   {
@@ -44,6 +45,7 @@ export default function TilvalgSection() {
             mellom ulike synlige designnivåer sent i byggeprosessen.
           </p>
         </FadeUp>
+        <VideoEmbed />
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {tilvalg.map((t) => (
             <FadeUp
