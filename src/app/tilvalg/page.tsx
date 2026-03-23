@@ -7,6 +7,7 @@ import SafetySection from "@/components/SafetySection";
 import TimelineSection from "@/components/TimelineSection";
 import CtaSection from "@/components/CtaSection";
 import Footer from "@/components/Footer";
+import LeadMagnetPopup from "@/components/LeadMagnetPopup";
 
 export const metadata = {
   title: "Slidedrain // Markedets mest fleksible tilvalgsløsning for gulvsluk",
@@ -28,6 +29,7 @@ export default function LandingPage() {
         <CtaSection />
       </main>
       <Footer />
+      <LeadMagnetPopup />
     </>
   );
 }
