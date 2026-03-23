@@ -31,8 +31,8 @@ export default function SluttkundeHero() {
         </div>
         <div className="flex justify-center items-center max-lg:order-first">
           <Image
-            src="/images/product-packaging.jpg"
-            alt="Slidedrain produkter"
+            src="/images/hero-bathroom.jpg"
+            alt="Moderne baderomsdesign med Slidedrain slukrenne"
             width={600}
             height={450}
             className="w-full rounded-2xl shadow-[0_20px_60px_rgba(40,52,71,0.12)]"
