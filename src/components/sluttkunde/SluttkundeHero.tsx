@@ -9,7 +9,7 @@ export default function SluttkundeHero() {
       <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-15 items-center">
         <div>
           <span className="inline-block bg-orange/10 text-orange text-[13px] font-semibold px-3.5 py-1.5 rounded-full mb-5 uppercase tracking-wide">
-            For boligkjøpere
+            For privatkunder
           </span>
           <h1 className="text-[42px] max-lg:text-[34px] max-sm:text-[28px] font-bold leading-[1.2] mb-5 text-navy">
             Den usynlige detaljen som utgjør{" "}
