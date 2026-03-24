@@ -1,7 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
-import { readFileSync } from "fs";
-import { join } from "path";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -16,13 +14,15 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    // Read PDF from public directory
-    const pdfPath = join(process.cwd(), "public", "downloads", "slidedrain-prosjektmappe.pdf");
-    const pdfBuffer = readFileSync(pdfPath);
+    // Fetch PDF from public URL
+    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || req.nextUrl.origin;
+    const pdfResponse = await fetch(`${baseUrl}/downloads/slidedrain-prosjektmappe.pdf`);
+    const pdfArrayBuffer = await pdfResponse.arrayBuffer();
+    const pdfBase64 = Buffer.from(pdfArrayBuffer).toString("base64");
 
     // Send email with PDF attachment
     const { data, error } = await resend.emails.send({
-      from: "Slidedrain <noreply@slidedrain.no>",
+      from: process.env.RESEND_FROM_EMAIL || "Slidedrain <onboarding@resend.dev>",
       to: email,
       subject: "Din Slidedrain Prosjektmappe",
       html: `
@@ -66,7 +66,7 @@ export async function POST(req: NextRequest) {
       attachments: [
         {
           filename: "Slidedrain-Prosjektmappe.pdf",
-          content: pdfBuffer.toString("base64"),
+          content: pdfBase64,
         },
       ],
     });
@@ -74,12 +74,11 @@ export async function POST(req: NextRequest) {
     if (error) {
       console.error("Resend error:", error);
       return NextResponse.json(
-        { error: "Kunne ikke sende e-post" },
+        { error: "Kunne ikke sende e-post", details: error.message },
         { status: 500 }
       );
     }
 
-    // TODO: Also save lead to Supabase
     console.log(`Lead captured: ${name} (${email}) - ${company || "N/A"}`);
 
     return NextResponse.json({ success: true, id: data?.id });
