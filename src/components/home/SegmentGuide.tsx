@@ -38,7 +38,7 @@ export default function SegmentGuide() {
           </h2>
           <p className="text-[17px] text-text-light leading-[1.7] font-light">
             Slidedrain er designet for å levere verdi til alle involverte parter
-            \u2013 fra privatpersoner til fagfolk og prosjektledere.
+            &ndash; fra privatpersoner til fagfolk og prosjektledere.
           </p>
         </FadeUp>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
