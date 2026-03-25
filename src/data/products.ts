@@ -38,6 +38,9 @@ export interface ProductCategory {
   products: Product[];
 }
 
+const BD = "https://www.dahl.no/teknisk-vvs/innomhus-avlop/sluk";
+const FK = "https://www.flisekompaniet.no/produkt";
+
 export const productCategories: ProductCategory[] = [
   {
     id: "sluksystem",
@@ -57,8 +60,7 @@ export const productCategories: ProductCategory[] = [
         imageId: "45f4deba-9a2f-4d53-930a-f86f4da7195e",
         description:
           "Slukpotte med sideutløp Ø75 mm i resirkulert plast. Fundamentet i Slidedrain-systemet som kobles til avløpsrøret. Sideutløp gir fleksibel tilkobling der røret kommer fra siden.",
-        dahlUrl:
-          "https://www.dahl.no/teknisk-vvs/innomhus-avlop/sluk/model-1-slukpotte-o75-mm-sideutlop-m3c_bd_p_101463741",
+        dahlUrl: `${BD}/model-1-slukpotte-o75-mm-sideutlop-m3c_bd_p_101463741`,
       },
       {
         name: "Slukpotte Ø75 Bunnutløp",
@@ -72,8 +74,7 @@ export const productCategories: ProductCategory[] = [
         imageId: "07decb8c-c781-4d15-a9d3-99cf1203d253",
         description:
           "Slukpotte med bunnutløp Ø75 mm i resirkulert plast. Ideell for installasjoner der avløpsrøret kommer rett nedenfra. Sikrer enkel og presis tilkobling.",
-        dahlUrl:
-          "https://www.dahl.no/teknisk-vvs/innomhus-avlop/sluk/model-1-slukpotte-o75-mm-bunnutlop-m3c_bd_p_101463742",
+        dahlUrl: `${BD}/model-1-slukpotte-o75-mm-bunnutlop-m3c_bd_p_101463742`,
       },
       {
         name: "Slukpotte Ø75 Skrått utløp",
@@ -87,8 +88,7 @@ export const productCategories: ProductCategory[] = [
         imageId: "8ad5b7b6-8c9c-4e0f-9547-19e1532ddf5f",
         description:
           "Slukpotte med skrått utløp Ø75 mm i resirkulert plast. Gir ekstra fleksibilitet i rørtilkobling der røret kommer i vinkel.",
-        dahlUrl:
-          "https://www.dahl.no/teknisk-vvs/innomhus-avlop/sluk/model-1-slukpotte-o75-skratt-utlop-m3c_bd_p_101463743",
+        dahlUrl: `${BD}/model-1-slukpotte-o75-skratt-utlop-m3c_bd_p_101463743`,
       },
       {
         name: "Slukoverdel med Klemring",
@@ -100,6 +100,7 @@ export const productCategories: ProductCategory[] = [
         imageId: "a6097e40-733a-4e5f-9a01-a7a6ac86691f",
         description:
           "Slukoverdel med klemring og vannlåshøyde 50 mm. Brukes med foliebaserte membraner der klemring er nødvendig. Trinnløs høydejustering 0–40 mm.",
+        dahlUrl: `${BD}/slukoverdel-mklemring-m3c_bd_p_101884878`,
       },
       {
         name: "Slukoverdel APEX-mansjett",
@@ -111,8 +112,7 @@ export const productCategories: ProductCategory[] = [
         imageId: "2b80cbbb-4a19-4b47-9867-a6aec78fa29a",
         description:
           "Slukoverdel med integrert APEX-mansjett for skrueløs montasje med smøremembran. Eliminerer behovet for klemring og forenkler installasjonen. Trinnløs 0–40 mm høydejustering.",
-        dahlUrl:
-          "https://www.dahl.no/teknisk-vvs/innomhus-avlop/sluk/model-1-slukoverdel-med-mansjett-m3c_bd_p_101463740",
+        dahlUrl: `${BD}/slukoverdel-apex-slukmansjett-m3c_bd_p_101876167`,
       },
       {
         name: "Monteringsverktøy, gjenbrukbart",
@@ -124,8 +124,7 @@ export const productCategories: ProductCategory[] = [
         imageId: "75c2e557-067a-4daa-8dc1-ac1c3983dfea",
         description:
           "Gjenbrukbart monteringsverktøy Ø175 mm for presis installasjon av Slidedrain slukoverdel. Sikrer nøyaktig plassering på badets laveste punkt og forenkler støping av fall.",
-        dahlUrl:
-          "https://www.dahl.no/teknisk-vvs/innomhus-avlop/sluk/model-1-monteringsverktoy-m3c_bd_p_101463739",
+        dahlUrl: `${BD}/model-1-monteringsverktoy-m3c_bd_p_101463739`,
       },
     ],
   },
@@ -148,10 +147,8 @@ export const productCategories: ProductCategory[] = [
         imageId: "426ca516-7f7e-4e06-b695-a36ff88015c1",
         description:
           "Kvadratisk slukrist 197 × 197 mm i børstet rustfritt stål. Tidløst og robust design som passer i ethvert baderom. Monteres enkelt ved flislegging.",
-        dahlUrl:
-          "https://www.dahl.no/teknisk-vvs/innomhus-avlop/sluk/slidedrain-slukrist-kvadrat-200-m3c_bd_6569f1427bcb06547c1336d4",
-        flisekompanietUrl:
-          "https://www.flisekompaniet.no/produkt/slidedrain-slukrist-20x20-kvadrat-mattborstet/",
+        dahlUrl: `${BD}/slidedrain-slukrist-kvadrat-200-m3c_bd_6569f1427bcb06547c1336d4`,
+        flisekompanietUrl: `${FK}/slidedrain-slukrist-20x20-kvadrat-mattborstet/`,
       },
       {
         name: "Slukrist Kvadrat Matt Sort",
@@ -166,10 +163,8 @@ export const productCategories: ProductCategory[] = [
         imageId: "8a022f8a-fe6e-44f3-9a4c-915ef26be446",
         description:
           "Kvadratisk slukrist 197 × 197 mm i matt sort. Moderne uttrykk som harmonerer med mørke interiørvalg. Monteres enkelt ved flislegging.",
-        dahlUrl:
-          "https://www.dahl.no/teknisk-vvs/innomhus-avlop/sluk/slidedrain-slukrist-kvadrat-200-sort-m3c_bd_6569f18baf228202c4880955",
-        flisekompanietUrl:
-          "https://www.flisekompaniet.no/produkt/slidedrain-slukrist-20x20-kvadrat-sort-matt/",
+        dahlUrl: `${BD}/slidedrain-slukrist-kvadrat-200-m3c_bd_6569f1427bcb06547c1336d4`,
+        flisekompanietUrl: `${FK}/slidedrain-slukrist-20x20-kvadrat-sort-matt/`,
       },
       {
         name: "Slukrist Kv Tile Insert RF Stål",
@@ -184,8 +179,8 @@ export const productCategories: ProductCategory[] = [
         imageId: "54597543-1629-4bb3-9a79-37e8931ec41d",
         description:
           "Kvadratisk slukrist med Tile Insert i rustfritt stål. Flis legges direkte i rammen slik at sluket blir tilnærmet usynlig. 197 × 197 × 15 mm.",
-        flisekompanietUrl:
-          "https://www.flisekompaniet.no/produkt/slidedrain-slukrist-20x20-kvadrat-tile-insert-rustfritt-stal/",
+        dahlUrl: `${BD}/slidedrain-slukrist-kvadrat-tile-insert-200-m3c_bd_6569f203af228202c4880959`,
+        flisekompanietUrl: `${FK}/slidedrain-slukrist-20x20-kvadrat-tile-insert-rustfritt-stal/`,
       },
       {
         name: "Slukrist Kv Tile Insert Matt Sort",
@@ -200,10 +195,8 @@ export const productCategories: ProductCategory[] = [
         imageId: "aee4bbd0-be9a-464f-8d27-e0c8a0e12ebd",
         description:
           "Kvadratisk slukrist med Tile Insert i matt sort. Flis legges direkte i rammen for et nesten usynlig sluk. 197 × 197 × 15 mm.",
-        dahlUrl:
-          "https://www.dahl.no/teknisk-vvs/innomhus-avlop/sluk/slidedrain-slukrist-kvadrat-tile-insert-200-m3c_bd_6569f203af228202c4880959",
-        flisekompanietUrl:
-          "https://www.flisekompaniet.no/produkt/slidedrain-slukrist-20x20-kvadrat-tile-insert-sort-matt/",
+        dahlUrl: `${BD}/slidedrain-slukrist-kvadrat-tile-insert-200-m3c_bd_6569f203af228202c4880959`,
+        flisekompanietUrl: `${FK}/slidedrain-slukrist-20x20-kvadrat-tile-insert-sort-matt/`,
       },
       {
         name: "Hjørnerist Tile Insert RF Stål",
@@ -218,8 +211,8 @@ export const productCategories: ProductCategory[] = [
         imageId: "356ad341-895f-46ea-919a-7910d7126651",
         description:
           "Hjørnerist med Tile Insert 297 × 297 mm i rustfritt stål. Plasseres i hjørnet for å maksimere bruken av storformat-fliser. Tilnærmet usynlig resultat.",
-        flisekompanietUrl:
-          "https://www.flisekompaniet.no/produkt/slidedrain-hjorneslukrist-30x30-tile-insert-rustfritt-stal/",
+        dahlUrl: `${BD}/slidedrain-hjornerist-tile-insert-30x30-cm-m3c_bd_66b1dec205943a3ea8b4745c`,
+        flisekompanietUrl: `${FK}/slidedrain-hjorneslukrist-30x30-tile-insert-rustfritt-stal/`,
       },
       {
         name: "Hjørnerist Tile Insert Matt Sort",
@@ -234,10 +227,8 @@ export const productCategories: ProductCategory[] = [
         imageId: "e9fc71bb-b8d8-420c-816b-b4c12535f08b",
         description:
           "Hjørnerist med Tile Insert 297 × 297 mm i matt sort. Plasseres i hjørnet for et elegant og uforstyrret baderomsgulv.",
-        dahlUrl:
-          "https://www.dahl.no/teknisk-vvs/innomhus-avlop/sluk/slidedrain-hjornerist-tile-insert-30x30-cm-m3c_bd_66b1dec205943a3ea8b4745c",
-        flisekompanietUrl:
-          "https://www.flisekompaniet.no/produkt/slidedrain-hjorneslukrist-30x30-tile-insert-sort-matt/",
+        dahlUrl: `${BD}/slidedrain-hjornerist-tile-insert-30x30-cm-m3c_bd_66b1dec205943a3ea8b4745c`,
+        flisekompanietUrl: `${FK}/slidedrain-hjorneslukrist-30x30-tile-insert-sort-matt/`,
       },
       {
         name: "Sirkulær Slukrist Børstet Stål",
@@ -272,10 +263,8 @@ export const productCategories: ProductCategory[] = [
         imageId: "ec9e04c6-976c-4613-bb65-6f7927aac975",
         description:
           "Slukrenne 797 mm med rist i børstet stål. Elegant linjedesign for et moderne baderom. Limes fast ved flislegging.",
-        dahlUrl:
-          "https://www.dahl.no/teknisk-vvs/innomhus-avlop/sluk/slidedrain-slukrenne-rist-800-m3c_bd_6569f2bf7bcb06547c1336db",
-        flisekompanietUrl:
-          "https://www.flisekompaniet.no/produkt/slidedrain-slukrenne-80x20-mrist-mattborstet/",
+        dahlUrl: `${BD}/slidedrain-slukrenne-rist-800-m3c_bd_6569f2bf7bcb06547c1336db`,
+        flisekompanietUrl: `${FK}/slidedrain-slukrenne-80x20-mrist-mattborstet/`,
       },
       {
         name: "Slukrenne Rist 800 Matt Sort",
@@ -290,8 +279,8 @@ export const productCategories: ProductCategory[] = [
         imageId: "41fd9019-a8cd-47e6-9b18-7cc6f3244520",
         description:
           "Slukrenne 797 mm med rist i matt sort. Moderne mørkt uttrykk som passer til moderne interiørtrender.",
-        flisekompanietUrl:
-          "https://www.flisekompaniet.no/produkt/slidedrain-slukrenne-80x20-mrist-sort-matt/",
+        dahlUrl: `${BD}/slidedrain-slukrenne-rist-800-m3c_bd_6569f2bf7bcb06547c1336db`,
+        flisekompanietUrl: `${FK}/slidedrain-slukrenne-80x20-mrist-sort-matt/`,
       },
     ],
   },
@@ -314,8 +303,8 @@ export const productCategories: ProductCategory[] = [
         imageId: "c8a4aea6-2ad4-4a36-890c-d893335e7ccd",
         description:
           "Slukrenne 597 mm med Tile Insert i rustfritt stål. Kompakt løsning for mindre baderom der flisen legges direkte i rammen.",
-        flisekompanietUrl:
-          "https://www.flisekompaniet.no/produkt/slidedrain-slukrenne-60x20-tile-insert-rustfritt-stal/",
+        dahlUrl: `${BD}/slidedrain-slukrenne-tile-insert-600-m3c_bd_66b1e1bd8364723d97f405a1`,
+        flisekompanietUrl: `${FK}/slidedrain-slukrenne-60x20-tile-insert-rustfritt-stal/`,
       },
       {
         name: "Slukrenne Tile Insert 600 Matt Sort",
@@ -330,10 +319,8 @@ export const productCategories: ProductCategory[] = [
         imageId: "0a73c5f1-6f8d-42b7-952a-64f3e7e32e80",
         description:
           "Slukrenne 597 mm med Tile Insert i matt sort. Kompakt løsning for mindre baderom med elegant mørk ramme.",
-        dahlUrl:
-          "https://www.dahl.no/teknisk-vvs/innomhus-avlop/sluk/slidedrain-slukrenne-tile-insert-600-matt-sort-m3c_bd_101505217",
-        flisekompanietUrl:
-          "https://www.flisekompaniet.no/produkt/slidedrain-slukrenne-60x20-tile-insert-sort-matt/",
+        dahlUrl: `${BD}/slidedrain-slukrenne-tile-insert-600-m3c_bd_66b1e1bd8364723d97f405a1`,
+        flisekompanietUrl: `${FK}/slidedrain-slukrenne-60x20-tile-insert-sort-matt/`,
       },
       {
         name: "Slukrenne Tile Insert 700 RF Stål",
@@ -348,8 +335,8 @@ export const productCategories: ProductCategory[] = [
         imageId: "e97ccbd0-6b67-4876-b656-9be88c563087",
         description:
           "Slukrenne 697 mm med Tile Insert i rustfritt stål. Populær lengde for mellomstore baderom.",
-        flisekompanietUrl:
-          "https://www.flisekompaniet.no/produkt/slidedrain-slukrenne-70x20-tile-insert-rustfritt-stal/",
+        dahlUrl: `${BD}/slidedrain-slukrenne-tile-insert-700-m3c_bd_66b1e0de756d264bc300dd9d`,
+        flisekompanietUrl: `${FK}/slidedrain-slukrenne-70x20-tile-insert-rustfritt-stal/`,
       },
       {
         name: "Slukrenne Tile Insert 700 Matt Sort",
@@ -364,8 +351,8 @@ export const productCategories: ProductCategory[] = [
         imageId: "d407f2c4-f81c-4ff9-84a8-b2c6c5f34415",
         description:
           "Slukrenne 697 mm med Tile Insert i matt sort. Populær lengde med moderne mørk profil.",
-        flisekompanietUrl:
-          "https://www.flisekompaniet.no/produkt/slidedrain-slukrenne-70x20-tile-insert-sort-matt/",
+        dahlUrl: `${BD}/slidedrain-slukrenne-tile-insert-700-m3c_bd_66b1e0de756d264bc300dd9d`,
+        flisekompanietUrl: `${FK}/slidedrain-slukrenne-70x20-tile-insert-sort-matt/`,
       },
       {
         name: "Slukrenne Tile Insert 800 RF Stål",
@@ -380,8 +367,8 @@ export const productCategories: ProductCategory[] = [
         imageId: "1728db8c-b489-4797-86de-a2133072cc06",
         description:
           "Slukrenne 797 mm med Tile Insert i rustfritt stål. Standard lengde som passer de fleste baderom.",
-        flisekompanietUrl:
-          "https://www.flisekompaniet.no/produkt/slidedrain-slukrenne-80x20-tile-insert-rustfritt-stal/",
+        dahlUrl: `${BD}/slidedrain-slukrenne-tile-insert-800-m3c_bd_6569f326125cb272c8eafc40`,
+        flisekompanietUrl: `${FK}/slidedrain-slukrenne-80x20-tile-insert-rustfritt-stal/`,
       },
       {
         name: "Slukrenne Tile Insert 800 Matt Sort",
@@ -396,8 +383,8 @@ export const productCategories: ProductCategory[] = [
         imageId: "cde5683d-04e6-492e-9d9a-1396c8a87f26",
         description:
           "Slukrenne 797 mm med Tile Insert i matt sort. Standard lengde med mørk profil.",
-        flisekompanietUrl:
-          "https://www.flisekompaniet.no/produkt/slidedrain-slukrenne-80x20-tile-insert-sort-matt/",
+        dahlUrl: `${BD}/slidedrain-slukrenne-tile-insert-800-m3c_bd_6569f326125cb272c8eafc40`,
+        flisekompanietUrl: `${FK}/slidedrain-slukrenne-80x20-tile-insert-sort-matt/`,
       },
       {
         name: "Slukrenne Tile Insert 900 RF Stål",
@@ -412,8 +399,8 @@ export const productCategories: ProductCategory[] = [
         imageId: "77b9e3de-84af-43f2-bb6d-b7716c886569",
         description:
           "Slukrenne 897 mm med Tile Insert i rustfritt stål. For større baderom med bredere dusjareal.",
-        flisekompanietUrl:
-          "https://www.flisekompaniet.no/produkt/slidedrain-slukrenne-90x20-tile-insert-rustfritt-stal/",
+        dahlUrl: `${BD}/slidedrain-slukrenne-tile-insert-900-m3c_bd_66b1e05005943a3ea8b47464`,
+        flisekompanietUrl: `${FK}/slidedrain-slukrenne-90x20-tile-insert-rustfritt-stal/`,
       },
       {
         name: "Slukrenne Tile Insert 900 Matt Sort",
@@ -428,10 +415,8 @@ export const productCategories: ProductCategory[] = [
         imageId: "4e37f8d7-0c02-445a-88e9-f06a6d8cada2",
         description:
           "Slukrenne 897 mm med Tile Insert i matt sort. For større baderom med moderne mørk profil.",
-        dahlUrl:
-          "https://www.dahl.no/teknisk-vvs/innomhus-avlop/sluk/slidedrain-slukrenne-tile-insert-900-m3c_bd_66b1e05005943a3ea8b47464",
-        flisekompanietUrl:
-          "https://www.flisekompaniet.no/produkt/slidedrain-slukrenne-90x20-tile-insert-sort-matt/",
+        dahlUrl: `${BD}/slidedrain-slukrenne-tile-insert-900-m3c_bd_66b1e05005943a3ea8b47464`,
+        flisekompanietUrl: `${FK}/slidedrain-slukrenne-90x20-tile-insert-sort-matt/`,
       },
       {
         name: "Slukrenne Tile Insert 1000 RF Stål",
@@ -446,8 +431,8 @@ export const productCategories: ProductCategory[] = [
         imageId: "0125862a-3d56-4c40-a738-e23769ca5391",
         description:
           "Slukrenne 997 mm med Tile Insert i rustfritt stål. Lang renne for romslige dusjanlegg med ensidig fall.",
-        flisekompanietUrl:
-          "https://www.flisekompaniet.no/produkt/slidedrain-slukrenne-100x20-tile-insert-rustfritt-stal/",
+        dahlUrl: `${BD}/slidedrain-slukrenne-tile-insert-1000-m3c_bd_66b1df988364723d97f40598`,
+        flisekompanietUrl: `${FK}/slidedrain-slukrenne-100x20-tile-insert-rustfritt-stal/`,
       },
       {
         name: "Slukrenne Tile Insert 1000 Sort",
@@ -462,8 +447,8 @@ export const productCategories: ProductCategory[] = [
         imageId: "01548960-cae4-43a2-b744-51d2c6bcf6dc",
         description:
           "Slukrenne 997 mm med Tile Insert i matt sort. Lang renne for romslige dusjanlegg med elegant mørk profil.",
-        flisekompanietUrl:
-          "https://www.flisekompaniet.no/produkt/slidedrain-slukrenne-100x20-tile-insert-sort-matt/",
+        dahlUrl: `${BD}/slidedrain-slukrenne-tile-insert-1000-m3c_bd_66b1df988364723d97f40598`,
+        flisekompanietUrl: `${FK}/slidedrain-slukrenne-100x20-tile-insert-sort-matt/`,
       },
       {
         name: "Slukrenne Tile Insert 1200 RF Stål",
@@ -514,6 +499,7 @@ export const productCategories: ProductCategory[] = [
         imageId: "e97ccbd0-6b67-4876-b656-9be88c563087",
         description:
           "Eksentrisk slukrenne 697 mm med Tile Insert i rustfritt stål. Ensidig fall mot vegg muliggjør bruk av storformat-fliser.",
+        dahlUrl: `${BD}/slidedrain-slukrenne-tile-insert-eksentrisk-m3c_bd_68c150e2fd18130a69f8a3d4`,
       },
       {
         name: "Slukrenne Eksentrisk Tile 700 Sort",
@@ -528,6 +514,7 @@ export const productCategories: ProductCategory[] = [
         imageId: "d407f2c4-f81c-4ff9-84a8-b2c6c5f34415",
         description:
           "Eksentrisk slukrenne 697 mm med Tile Insert i matt sort. Ensidig fall mot vegg med moderne mørk profil.",
+        dahlUrl: `${BD}/slidedrain-slukrenne-tile-insert-eksentrisk-m3c_bd_68c150e2fd18130a69f8a3d4`,
       },
       {
         name: "Slukrenne Eksentrisk Tile 800 Stål",
@@ -542,8 +529,8 @@ export const productCategories: ProductCategory[] = [
         imageId: "1728db8c-b489-4797-86de-a2133072cc06",
         description:
           "Eksentrisk slukrenne 797 mm med Tile Insert i rustfritt stål. Standardlengde med ensidig fall mot vegg.",
-        flisekompanietUrl:
-          "https://www.flisekompaniet.no/produkt/slidedrain-slukrenne-80x20-eksentrisk-tile-insert-rustfritt-stal/",
+        dahlUrl: `${BD}/slidedrain-slukrenne-tile-insert-eksentrisk-m3c_bd_68c150e2fd18130a69f8a3d4`,
+        flisekompanietUrl: `${FK}/slidedrain-slukrenne-80x20-eksentrisk-tile-insert-rustfritt-stal/`,
       },
       {
         name: "Slukrenne Eksentrisk Tile 800 Sort",
@@ -558,8 +545,8 @@ export const productCategories: ProductCategory[] = [
         imageId: "cde5683d-04e6-492e-9d9a-1396c8a87f26",
         description:
           "Eksentrisk slukrenne 797 mm med Tile Insert i matt sort. Standardlengde med ensidig fall og moderne mørk profil.",
-        flisekompanietUrl:
-          "https://www.flisekompaniet.no/produkt/slidedrain-slukrenne-80x20-eksentrisk-tile-insert-sort-matt/",
+        dahlUrl: `${BD}/slidedrain-slukrenne-tile-insert-eksentrisk-m3c_bd_68c150e2fd18130a69f8a3d4`,
+        flisekompanietUrl: `${FK}/slidedrain-slukrenne-80x20-eksentrisk-tile-insert-sort-matt/`,
       },
       {
         name: "Slukrenne Eksentrisk Tile 900 Stål",
@@ -574,6 +561,7 @@ export const productCategories: ProductCategory[] = [
         imageId: "77b9e3de-84af-43f2-bb6d-b7716c886569",
         description:
           "Eksentrisk slukrenne 897 mm med Tile Insert i rustfritt stål. For større dusjareal med ensidig fall.",
+        dahlUrl: `${BD}/slidedrain-slukrenne-tile-insert-eksentrisk-m3c_bd_68c150e2fd18130a69f8a3d4`,
       },
       {
         name: "Slukrenne Eksentrisk Tile 900 Sort",
@@ -588,6 +576,7 @@ export const productCategories: ProductCategory[] = [
         imageId: "4e37f8d7-0c02-445a-88e9-f06a6d8cada2",
         description:
           "Eksentrisk slukrenne 897 mm med Tile Insert i matt sort. For større dusjareal med mørk profil.",
+        dahlUrl: `${BD}/slidedrain-slukrenne-tile-insert-eksentrisk-m3c_bd_68c150e2fd18130a69f8a3d4`,
       },
       {
         name: "Slukrenne Eksentrisk Tile 1000 Stål",
@@ -602,6 +591,7 @@ export const productCategories: ProductCategory[] = [
         imageId: "0125862a-3d56-4c40-a738-e23769ca5391",
         description:
           "Eksentrisk slukrenne 997 mm med Tile Insert i rustfritt stål. Lang renne for romslige walk-in-dusjer.",
+        dahlUrl: `${BD}/slidedrain-slukrenne-tile-insert-eksentrisk-m3c_bd_68c150e2fd18130a69f8a3d4`,
       },
       {
         name: "Slukrenne Eksentrisk Tile 1000 Sort",
@@ -616,6 +606,7 @@ export const productCategories: ProductCategory[] = [
         imageId: "01548960-cae4-43a2-b744-51d2c6bcf6dc",
         description:
           "Eksentrisk slukrenne 997 mm med Tile Insert i matt sort. Lang renne med mørk profil for store baderom.",
+        dahlUrl: `${BD}/slidedrain-slukrenne-tile-insert-eksentrisk-m3c_bd_68c150e2fd18130a69f8a3d4`,
       },
       {
         name: "Slukrenne Eksentrisk Tile 1200 Stål",
@@ -630,6 +621,7 @@ export const productCategories: ProductCategory[] = [
         imageId: "0125862a-3d56-4c40-a738-e23769ca5391",
         description:
           "Eksentrisk slukrenne 1197 mm med Tile Insert i rustfritt stål. Lengste variant for ekstra brede dusjareal.",
+        dahlUrl: `${BD}/slidedrain-slukrenne-tile-insert-eksentrisk-m3c_bd_68c150e2fd18130a69f8a3d4`,
       },
       {
         name: "Slukrenne Eksentrisk Tile 1200 Sort",
@@ -644,6 +636,7 @@ export const productCategories: ProductCategory[] = [
         imageId: "01548960-cae4-43a2-b744-51d2c6bcf6dc",
         description:
           "Eksentrisk slukrenne 1197 mm med Tile Insert i matt sort. Lengste variant med mørk profil.",
+        dahlUrl: `${BD}/slidedrain-slukrenne-tile-insert-eksentrisk-m3c_bd_68c150e2fd18130a69f8a3d4`,
       },
     ],
   },

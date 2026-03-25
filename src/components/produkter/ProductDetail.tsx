@@ -211,7 +211,7 @@ export default function ProductDetail({
 
               {/* NOBB link */}
               <a
-                href={`https://nobb.no/items/${product.nobbNr}`}
+                href={`https://nobb.no/item/${product.nobbNr}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-sm text-text-light hover:text-navy transition-colors"
