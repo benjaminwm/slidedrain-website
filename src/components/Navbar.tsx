@@ -18,6 +18,7 @@ export default function Navbar() {
     { href: "/sluttkunde", label: "Sluttkunde" },
     { href: "/tilvalg", label: "Entreprenør" },
     { href: "/rorlegger", label: "Rørlegger" },
+    { href: "/produkter", label: "Produkter" },
     { href: "/om-oss", label: "Om oss" },
   ];
 
