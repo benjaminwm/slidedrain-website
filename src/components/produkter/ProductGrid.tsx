@@ -96,11 +96,19 @@ function ProductCard({ product }: { product: Product }) {
   );
 }
 
-export default function ProductGrid() {
+interface ProductGridProps {
+  activeFilter: string | null;
+}
+
+export default function ProductGrid({ activeFilter }: ProductGridProps) {
+  const filteredCategories = activeFilter
+    ? productCategories.filter((cat) => cat.id === activeFilter)
+    : productCategories;
+
   return (
     <section className="py-16 px-6">
       <div className="max-w-[1200px] mx-auto space-y-20">
-        {productCategories.map((cat) => (
+        {filteredCategories.map((cat) => (
           <div key={cat.id} id={cat.id} className="scroll-mt-[100px]">
             <FadeUp>
               <div className="mb-8">

@@ -1,6 +1,5 @@
 import Navbar from "@/components/Navbar";
-import ProductHero from "@/components/produkter/ProductHero";
-import ProductGrid from "@/components/produkter/ProductGrid";
+import ProductPage from "@/components/produkter/ProductPage";
 import CtaSection from "@/components/CtaSection";
 import Footer from "@/components/Footer";
 
@@ -15,8 +14,7 @@ export default function ProdukterPage() {
     <>
       <Navbar />
       <main>
-        <ProductHero />
-        <ProductGrid />
+        <ProductPage />
         <CtaSection />
       </main>
       <Footer />

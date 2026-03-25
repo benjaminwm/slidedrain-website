@@ -1,6 +1,13 @@
 "use client";
 
-export default function ProductHero() {
+import { productCategories } from "@/data/products";
+
+interface ProductHeroProps {
+  activeFilter: string | null;
+  onFilterChange: (id: string | null) => void;
+}
+
+export default function ProductHero({ activeFilter, onFilterChange }: ProductHeroProps) {
   return (
     <section className="pt-[140px] pb-16 px-6 bg-gradient-to-br from-white to-[#fef7f3]">
       <div className="max-w-[1200px] mx-auto text-center">
@@ -17,25 +24,33 @@ export default function ProductHero() {
           enkel bestilling.
         </p>
 
-        {/* Category quick links */}
-        <div className="flex flex-wrap justify-center gap-3 mt-8">
-          {[
-            { id: "slukpotter", label: "Slukpotter" },
-            { id: "slukoverdeler", label: "Slukoverdeler" },
-            { id: "monteringsverktoy", label: "Monteringsverktøy" },
-            { id: "slukrister", label: "Slukrister" },
-            { id: "hjornerister", label: "Hjørnerister" },
-            { id: "slukrenner", label: "Slukrenner Rist" },
-            { id: "slukrenner-tile", label: "Slukrenner Tile Insert" },
-            { id: "slukrenner-eksentrisk", label: "Eksentriske" },
-          ].map((c) => (
-            <a
-              key={c.id}
-              href={`#${c.id}`}
-              className="px-4 py-2 rounded-full bg-navy/6 text-navy text-sm font-medium hover:bg-navy/12 transition-colors"
+        {/* Filter buttons */}
+        <div className="flex flex-wrap justify-center gap-2 mt-8">
+          <button
+            onClick={() => onFilterChange(null)}
+            className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
+              activeFilter === null
+                ? "bg-navy text-white shadow-md"
+                : "bg-navy/6 text-navy hover:bg-navy/12"
+            }`}
+          >
+            Alle produkter
+          </button>
+          {productCategories.map((cat) => (
+            <button
+              key={cat.id}
+              onClick={() => onFilterChange(activeFilter === cat.id ? null : cat.id)}
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${
+                activeFilter === cat.id
+                  ? "bg-orange text-white shadow-md"
+                  : "bg-navy/6 text-navy hover:bg-navy/12"
+              }`}
             >
-              {c.label}
-            </a>
+              {cat.title}
+              <span className="ml-1.5 text-[11px] opacity-60">
+                {cat.products.length}
+              </span>
+            </button>
           ))}
         </div>
       </div>
