@@ -43,10 +43,10 @@ const FK = "https://www.flisekompaniet.no/produkt";
 
 export const productCategories: ProductCategory[] = [
   {
-    id: "sluksystem",
-    title: "Sluksystem",
+    id: "slukpotter",
+    title: "Slukpotter",
     description:
-      "Det tekniske fundamentet – slukpotte, slukoverdel og monteringsverktøy. Alt du trenger for en komplett installasjon.",
+      "Slukpotten kobles til avløpsrøret og danner fundamentet i Slidedrain-systemet. Tilgjengelig med side-, bunn- og skrått utløp.",
     products: [
       {
         name: "Slukpotte Ø75 Sideutløp",
@@ -90,6 +90,14 @@ export const productCategories: ProductCategory[] = [
           "Slukpotte med skrått utløp Ø75 mm i resirkulert plast. Gir ekstra fleksibilitet i rørtilkobling der røret kommer i vinkel.",
         dahlUrl: `${BD}/model-1-slukpotte-o75-skratt-utlop-m3c_bd_p_101463743`,
       },
+    ],
+  },
+  {
+    id: "slukoverdeler",
+    title: "Slukoverdeler",
+    description:
+      "Slukoverdelen monteres på slukpotten og sikrer vanntett overgang til membran. Tilgjengelig med klemring eller integrert APEX-mansjett.",
+    products: [
       {
         name: "Slukoverdel med Klemring",
         slug: "slukoverdel-klemring",
@@ -114,6 +122,14 @@ export const productCategories: ProductCategory[] = [
           "Slukoverdel med integrert APEX-mansjett for skrueløs montasje med smøremembran. Eliminerer behovet for klemring og forenkler installasjonen. Trinnløs 0–40 mm høydejustering.",
         dahlUrl: `${BD}/slukoverdel-apex-slukmansjett-m3c_bd_p_101876167`,
       },
+    ],
+  },
+  {
+    id: "monteringsverktoy",
+    title: "Monteringsverktøy",
+    description:
+      "Gjenbrukbart verktøy for presis installasjon av slukoverdelen på badets laveste punkt.",
+    products: [
       {
         name: "Monteringsverktøy, gjenbrukbart",
         slug: "monteringsverktoy",
@@ -132,7 +148,7 @@ export const productCategories: ProductCategory[] = [
     id: "slukrister",
     title: "Slukrister",
     description:
-      "Kvadratiske rister og hjørnerister i børstet stål eller matt sort – med eller uten Tile Insert.",
+      "Kvadratiske rister i børstet stål eller matt sort – med eller uten Tile Insert. Inkludert sirkulær slukrist.",
     products: [
       {
         name: "Slukrist Kvadrat Børstet Stål",
@@ -199,6 +215,26 @@ export const productCategories: ProductCategory[] = [
         flisekompanietUrl: `${FK}/slidedrain-slukrist-20x20-kvadrat-tile-insert-sort-matt/`,
       },
       {
+        name: "Sirkulær Slukrist Børstet Stål",
+        slug: "sirkulaer-slukrist-borstet-stal",
+        nobbNr: "60615860",
+        nrfNr: "3406115",
+        dimensions: "Ø172 mm",
+        diameterMm: 172,
+        finish: "Børstet stål",
+        imageId: "ce9bbc28-f1a1-45fd-b7d4-6bbb294f42c3",
+        description:
+          "Sirkulær slukrist Ø172 mm i børstet rustfritt stål. Klassisk rundt design med moderne finish.",
+      },
+    ],
+  },
+  {
+    id: "hjornerister",
+    title: "Hjørnerister",
+    description:
+      "Hjørnerister med Tile Insert 297 × 297 mm. Plasseres i hjørnet for å maksimere bruken av storformat-fliser.",
+    products: [
+      {
         name: "Hjørnerist Tile Insert RF Stål",
         slug: "hjornerist-tile-insert-rf-stal",
         nobbNr: "60657701",
@@ -229,18 +265,6 @@ export const productCategories: ProductCategory[] = [
           "Hjørnerist med Tile Insert 297 × 297 mm i matt sort. Plasseres i hjørnet for et elegant og uforstyrret baderomsgulv.",
         dahlUrl: `${BD}/slidedrain-hjornerist-tile-insert-30x30-cm-m3c_bd_66b1dec205943a3ea8b4745c`,
         flisekompanietUrl: `${FK}/slidedrain-hjorneslukrist-30x30-tile-insert-sort-matt/`,
-      },
-      {
-        name: "Sirkulær Slukrist Børstet Stål",
-        slug: "sirkulaer-slukrist-borstet-stal",
-        nobbNr: "60615860",
-        nrfNr: "3406115",
-        dimensions: "Ø172 mm",
-        diameterMm: 172,
-        finish: "Børstet stål",
-        imageId: "ce9bbc28-f1a1-45fd-b7d4-6bbb294f42c3",
-        description:
-          "Sirkulær slukrist Ø172 mm i børstet rustfritt stål. Klassisk rundt design med moderne finish.",
       },
     ],
   },

@@ -12,16 +12,19 @@ export default function ProductHero() {
           <span className="text-orange">NOBB &amp; NRF</span>
         </h1>
         <p className="text-lg text-text-light leading-[1.7] font-light max-w-[700px] mx-auto">
-          37 produkter fordelt p&aring; 5 kategorier. Alle varer er lagerf&oslash;rt hos
-          Br&oslash;drene Dahl og Flisekompaniet med NOBB- og NRF-nummer for
+          37 produkter fordelt på 7 kategorier. Alle varer er lagerført hos
+          Brødrene Dahl og Flisekompaniet med NOBB- og NRF-nummer for
           enkel bestilling.
         </p>
 
         {/* Category quick links */}
         <div className="flex flex-wrap justify-center gap-3 mt-8">
           {[
-            { id: "sluksystem", label: "Sluksystem" },
+            { id: "slukpotter", label: "Slukpotter" },
+            { id: "slukoverdeler", label: "Slukoverdeler" },
+            { id: "monteringsverktoy", label: "Monteringsverktøy" },
             { id: "slukrister", label: "Slukrister" },
+            { id: "hjornerister", label: "Hjørnerister" },
             { id: "slukrenner", label: "Slukrenner Rist" },
             { id: "slukrenner-tile", label: "Slukrenner Tile Insert" },
             { id: "slukrenner-eksentrisk", label: "Eksentriske" },
