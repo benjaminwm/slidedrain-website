@@ -124,6 +124,8 @@ export const productCategories: ProductCategory[] = [
         imageId: "75c2e557-067a-4daa-8dc1-ac1c3983dfea",
         description:
           "Gjenbrukbart monteringsverktøy Ø175 mm for presis installasjon av Slidedrain slukoverdel. Sikrer nøyaktig plassering på badets laveste punkt og forenkler støping av fall.",
+        dahlUrl:
+          "https://www.dahl.no/teknisk-vvs/innomhus-avlop/sluk/model-1-monteringsverktoy-m3c_bd_p_101463739",
       },
     ],
   },
