@@ -330,6 +330,8 @@ export const productCategories: ProductCategory[] = [
         imageId: "0a73c5f1-6f8d-42b7-952a-64f3e7e32e80",
         description:
           "Slukrenne 597 mm med Tile Insert i matt sort. Kompakt løsning for mindre baderom med elegant mørk ramme.",
+        dahlUrl:
+          "https://www.dahl.no/teknisk-vvs/innomhus-avlop/sluk/slidedrain-slukrenne-tile-insert-600-matt-sort-m3c_bd_101505217",
         flisekompanietUrl:
           "https://www.flisekompaniet.no/produkt/slidedrain-slukrenne-60x20-tile-insert-sort-matt/",
       },
