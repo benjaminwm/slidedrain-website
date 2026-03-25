@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import TilvalgSection from "@/components/TilvalgSection";
 import ComparisonSection from "@/components/ComparisonSection";
 import BenefitsSection from "@/components/BenefitsSection";
+import VideoSection from "@/components/VideoSection";
 import SafetySection from "@/components/SafetySection";
 import TimelineSection from "@/components/TimelineSection";
 import CtaSection from "@/components/CtaSection";
@@ -24,6 +25,7 @@ export default function LandingPage() {
         <TilvalgSection />
         <ComparisonSection />
         <BenefitsSection />
+        <VideoSection />
         <SafetySection />
         <TimelineSection />
         <CtaSection />
