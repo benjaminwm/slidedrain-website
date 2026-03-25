@@ -5,9 +5,11 @@ import { useEffect, useRef, useState } from "react";
 export default function FadeUp({
   children,
   className = "",
+  style,
 }: {
   children: React.ReactNode;
   className?: string;
+  style?: React.CSSProperties;
 }) {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
@@ -33,6 +35,7 @@ export default function FadeUp({
           ? "opacity-100 translate-y-0"
           : "opacity-0 translate-y-[30px]"
       } ${className}`}
+      style={style}
     >
       {children}
     </div>

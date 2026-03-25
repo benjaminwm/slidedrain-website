@@ -91,10 +91,14 @@ export default function TimelineSection() {
           </p>
         </FadeUp>
 
-        <FadeUp className="relative max-w-[800px] mx-auto">
+        <div className="relative max-w-[800px] mx-auto">
           <div className="absolute left-7 top-0 bottom-0 w-0.5 bg-orange/20" />
           {steps.map((s, i) => (
-            <div key={i} className="flex gap-6 mb-8 last:mb-0 relative">
+            <FadeUp
+              key={i}
+              className="flex gap-6 mb-8 last:mb-0 relative"
+              style={{ transitionDelay: `${i * 120}ms` }}
+            >
               <div
                 className={`shrink-0 w-14 h-14 rounded-full flex items-center justify-center bg-white border-2 z-10 ${
                   s.active
@@ -115,11 +119,14 @@ export default function TimelineSection() {
                   {s.desc}
                 </p>
               </div>
-            </div>
+            </FadeUp>
           ))}
-        </FadeUp>
+        </div>
 
-        <FadeUp className="text-center mt-8 text-sm text-text-light max-w-[700px] mx-auto">
+        <FadeUp
+          className="text-center mt-8 text-sm text-text-light max-w-[700px] mx-auto"
+          style={{ transitionDelay: `${steps.length * 120}ms` }}
+        >
           <strong>Fleksibel logistikk:</strong> Monteringsverktøy og slukoverdel
           kan leveres sammen med slukpotten i Varelevering 1, for en samlet
           leveranse av alt teknisk utstyr til rørfaget.
