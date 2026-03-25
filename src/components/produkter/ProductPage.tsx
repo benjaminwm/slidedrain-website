@@ -5,12 +5,24 @@ import ProductHero from "./ProductHero";
 import ProductGrid from "./ProductGrid";
 
 export default function ProductPage() {
-  const [activeFilter, setActiveFilter] = useState<string | null>(null);
+  const [activeFilters, setActiveFilters] = useState<string[]>([]);
+
+  const toggleFilter = (id: string) => {
+    setActiveFilters((prev) =>
+      prev.includes(id) ? prev.filter((f) => f !== id) : [...prev, id]
+    );
+  };
+
+  const clearFilters = () => setActiveFilters([]);
 
   return (
     <>
-      <ProductHero activeFilter={activeFilter} onFilterChange={setActiveFilter} />
-      <ProductGrid activeFilter={activeFilter} />
+      <ProductHero
+        activeFilters={activeFilters}
+        onToggleFilter={toggleFilter}
+        onClearFilters={clearFilters}
+      />
+      <ProductGrid activeFilters={activeFilters} />
     </>
   );
 }

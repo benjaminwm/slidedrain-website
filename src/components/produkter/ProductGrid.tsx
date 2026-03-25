@@ -97,12 +97,12 @@ function ProductCard({ product }: { product: Product }) {
 }
 
 interface ProductGridProps {
-  activeFilter: string | null;
+  activeFilters: string[];
 }
 
-export default function ProductGrid({ activeFilter }: ProductGridProps) {
-  const filteredCategories = activeFilter
-    ? productCategories.filter((cat) => cat.id === activeFilter)
+export default function ProductGrid({ activeFilters }: ProductGridProps) {
+  const filteredCategories = activeFilters.length > 0
+    ? productCategories.filter((cat) => activeFilters.includes(cat.id))
     : productCategories;
 
   return (
