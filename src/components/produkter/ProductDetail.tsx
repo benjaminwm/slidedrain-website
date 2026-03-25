@@ -30,7 +30,7 @@ export default function ProductDetail({
   category: ProductCategory;
 }) {
   return (
-    <section className="pt-[120px] pb-20 px-6">
+    <section className="pt-[120px] pb-20 px-6 bg-white">
       <div className="max-w-[1200px] mx-auto">
         {/* Breadcrumb */}
         <nav className="flex items-center gap-2 text-sm text-text-light mb-8">
