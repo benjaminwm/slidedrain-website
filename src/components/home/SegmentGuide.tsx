@@ -13,18 +13,18 @@ const segments = [
     color: "border-orange",
   },
   {
-    href: "/tilvalg",
-    tag: "Entreprenør",
-    title: "Vil du maksimere prosjektets lønnsomhet?",
-    desc: "Utvid tilvalgsperioden, eliminer omprosjektering og øk mersalget med Slidedrain Sluksystem.",
-    color: "border-navy",
-  },
-  {
     href: "/rorlegger",
     tag: "Rørlegger & Flislegger",
     title: "Ønsker du enklere og sikrere montasje?",
     desc: "Utviklet med fagfolk for fagfolk. Færre deler, raskere installasjon og mindre vannskaderisiko.",
     color: "border-green",
+  },
+  {
+    href: "/tilvalg",
+    tag: "Entreprenør & Byggherre",
+    title: "Vil du maksimere prosjektets lønnsomhet?",
+    desc: "Utvid tilvalgsperioden, eliminer omprosjektering og øk mersalget med Slidedrain Sluksystem.",
+    color: "border-navy",
   },
 ];
 
