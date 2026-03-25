@@ -9,7 +9,7 @@ export default function ProductOverview() {
       <div className="max-w-[1200px] mx-auto">
         <FadeUp className="text-center max-w-[800px] mx-auto mb-15">
           <h2 className="text-4xl max-md:text-[28px] font-bold mb-4 leading-tight">
-            Ett gulvsluk,{" "}
+            Ett sluksystem,{" "}
             <span className="text-orange">mange muligheter</span>
           </h2>
           <p className="text-[17px] text-text-light leading-[1.7] font-light">
