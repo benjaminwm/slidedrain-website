@@ -1,13 +1,17 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import FadeUp from "../FadeUp";
 import { productCategories, getProductImageUrl } from "@/data/products";
 import type { Product } from "@/data/products";
 
 function ProductCard({ product }: { product: Product }) {
   return (
-    <div className="bg-white rounded-xl border border-navy/8 overflow-hidden group hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+    <Link
+      href={`/produkter/${product.slug}`}
+      className="block bg-white rounded-xl border border-navy/8 overflow-hidden group hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+    >
       <div className="aspect-square bg-gray-bg flex items-center justify-center p-4 overflow-hidden">
         <Image
           src={getProductImageUrl(product.imageId)}
@@ -73,8 +77,22 @@ function ProductCard({ product }: { product: Product }) {
             {product.finish}
           </span>
         )}
+
+        {/* Retailer availability indicators */}
+        <div className="flex gap-1.5 mt-2 pt-2 border-t border-navy/6">
+          {product.dahlUrl && (
+            <span className="text-[10px] bg-navy/6 text-navy px-1.5 py-0.5 rounded font-medium">
+              Dahl
+            </span>
+          )}
+          {product.flisekompanietUrl && (
+            <span className="text-[10px] bg-navy/6 text-navy px-1.5 py-0.5 rounded font-medium">
+              Flisekompaniet
+            </span>
+          )}
+        </div>
       </div>
-    </div>
+    </Link>
   );
 }
 
