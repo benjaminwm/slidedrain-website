@@ -33,7 +33,7 @@ export default function ProductOverview() {
             </div>
             <div className="p-8">
               <span className="text-xs font-semibold uppercase tracking-wider text-orange mb-2 block">
-                Sluksystem
+                Det tekniske
               </span>
               <h3 className="text-2xl font-bold text-navy mb-3">
                 Slidedrain Gulvsluk
