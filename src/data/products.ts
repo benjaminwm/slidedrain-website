@@ -225,6 +225,7 @@ export const productCategories: ProductCategory[] = [
         imageId: "ce9bbc28-f1a1-45fd-b7d4-6bbb294f42c3",
         description:
           "Sirkulær slukrist Ø172 mm i børstet rustfritt stål. Klassisk rundt design med moderne finish.",
+        dahlUrl: `${BD}/slukrist-sirkular-borstet-stal-m3c_bd_p_101924169`,
       },
     ],
   },
