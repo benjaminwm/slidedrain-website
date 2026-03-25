@@ -270,46 +270,6 @@ export const productCategories: ProductCategory[] = [
     ],
   },
   {
-    id: "slukrenner",
-    title: "Slukrenner med Rist",
-    description:
-      "Langsgående slukrenner med rist i børstet stål eller matt sort.",
-    products: [
-      {
-        name: "Slukrenne Rist 800 Børstet Stål",
-        slug: "slukrenne-rist-800-borstet-stal",
-        nobbNr: "60159280",
-        nrfNr: "3406121",
-        dimensions: "797 × 197 × 9 mm",
-        lengthMm: 797,
-        widthMm: 197,
-        heightMm: 9,
-        finish: "Børstet stål",
-        imageId: "ec9e04c6-976c-4613-bb65-6f7927aac975",
-        description:
-          "Slukrenne 797 mm med rist i børstet stål. Elegant linjedesign for et moderne baderom. Limes fast ved flislegging.",
-        dahlUrl: `${BD}/slidedrain-slukrenne-rist-800-m3c_bd_6569f2bf7bcb06547c1336db`,
-        flisekompanietUrl: `${FK}/slidedrain-slukrenne-80x20-mrist-mattborstet/`,
-      },
-      {
-        name: "Slukrenne Rist 800 Matt Sort",
-        slug: "slukrenne-rist-800-matt-sort",
-        nobbNr: "60159281",
-        nrfNr: "3406122",
-        dimensions: "797 × 197 × 9 mm",
-        lengthMm: 797,
-        widthMm: 197,
-        heightMm: 9,
-        finish: "Matt sort",
-        imageId: "41fd9019-a8cd-47e6-9b18-7cc6f3244520",
-        description:
-          "Slukrenne 797 mm med rist i matt sort. Moderne mørkt uttrykk som passer til moderne interiørtrender.",
-        dahlUrl: `${BD}/slidedrain-slukrenne-rist-800-m3c_bd_6569f2bf7bcb06547c1336db`,
-        flisekompanietUrl: `${FK}/slidedrain-slukrenne-80x20-mrist-sort-matt/`,
-      },
-    ],
-  },
-  {
     id: "slukrenner-tile",
     title: "Slukrenner med Tile Insert",
     description:
@@ -662,6 +622,46 @@ export const productCategories: ProductCategory[] = [
         description:
           "Eksentrisk slukrenne 1197 mm med Tile Insert i matt sort. Lengste variant med mørk profil.",
         dahlUrl: `${BD}/slidedrain-slukrenne-tile-insert-eksentrisk-m3c_bd_68c150e2fd18130a69f8a3d4`,
+      },
+    ],
+  },
+  {
+    id: "slukrenner",
+    title: "Slukrenner med Rist",
+    description:
+      "Langsgående slukrenner med rist i børstet stål eller matt sort.",
+    products: [
+      {
+        name: "Slukrenne Rist 800 Børstet Stål",
+        slug: "slukrenne-rist-800-borstet-stal",
+        nobbNr: "60159280",
+        nrfNr: "3406121",
+        dimensions: "797 × 197 × 9 mm",
+        lengthMm: 797,
+        widthMm: 197,
+        heightMm: 9,
+        finish: "Børstet stål",
+        imageId: "ec9e04c6-976c-4613-bb65-6f7927aac975",
+        description:
+          "Slukrenne 797 mm med rist i børstet stål. Elegant linjedesign for et moderne baderom. Limes fast ved flislegging.",
+        dahlUrl: `${BD}/slidedrain-slukrenne-rist-800-m3c_bd_6569f2bf7bcb06547c1336db`,
+        flisekompanietUrl: `${FK}/slidedrain-slukrenne-80x20-mrist-mattborstet/`,
+      },
+      {
+        name: "Slukrenne Rist 800 Matt Sort",
+        slug: "slukrenne-rist-800-matt-sort",
+        nobbNr: "60159281",
+        nrfNr: "3406122",
+        dimensions: "797 × 197 × 9 mm",
+        lengthMm: 797,
+        widthMm: 197,
+        heightMm: 9,
+        finish: "Matt sort",
+        imageId: "41fd9019-a8cd-47e6-9b18-7cc6f3244520",
+        description:
+          "Slukrenne 797 mm med rist i matt sort. Moderne mørkt uttrykk som passer til moderne interiørtrender.",
+        dahlUrl: `${BD}/slidedrain-slukrenne-rist-800-m3c_bd_6569f2bf7bcb06547c1336db`,
+        flisekompanietUrl: `${FK}/slidedrain-slukrenne-80x20-mrist-sort-matt/`,
       },
     ],
   },
