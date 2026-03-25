@@ -8,6 +8,11 @@ export interface Product {
   heightMm?: number;
   diameterMm?: number;
   finish?: string;
+  imageId: string;
+}
+
+export function getProductImageUrl(imageId: string): string {
+  return `https://cdn.byggtjeneste.no/nobb/${imageId}/square`;
 }
 
 export interface ProductCategory {
@@ -32,6 +37,7 @@ export const productCategories: ProductCategory[] = [
         widthMm: 214,
         heightMm: 120,
         diameterMm: 75,
+        imageId: "45f4deba-9a2f-4d53-930a-f86f4da7195e",
       },
       {
         name: "Slukpotte Ø75 Bunnutløp",
@@ -41,6 +47,7 @@ export const productCategories: ProductCategory[] = [
         widthMm: 214,
         heightMm: 120,
         diameterMm: 75,
+        imageId: "07decb8c-c781-4d15-a9d3-99cf1203d253",
       },
       {
         name: "Slukpotte Ø75 Skrått utløp",
@@ -50,6 +57,7 @@ export const productCategories: ProductCategory[] = [
         widthMm: 214,
         heightMm: 120,
         diameterMm: 75,
+        imageId: "8ad5b7b6-8c9c-4e0f-9547-19e1532ddf5f",
       },
       {
         name: "Slukoverdel med Klemring",
@@ -57,6 +65,7 @@ export const productCategories: ProductCategory[] = [
         nrfNr: "3411002",
         dimensions: "Vannlåshøyde 50 mm",
         heightMm: 50,
+        imageId: "a6097e40-733a-4e5f-9a01-a7a6ac86691f",
       },
       {
         name: "Slukoverdel APEX-mansjett",
@@ -64,6 +73,7 @@ export const productCategories: ProductCategory[] = [
         nrfNr: "1459485",
         dimensions: "Vannlåshøyde 50 mm, 0–40 mm justering",
         heightMm: 50,
+        imageId: "2b80cbbb-4a19-4b47-9867-a6aec78fa29a",
       },
       {
         name: "Monteringsverktøy, gjenbrukbart",
@@ -71,6 +81,7 @@ export const productCategories: ProductCategory[] = [
         nrfNr: "3411001",
         dimensions: "Ø175 mm",
         diameterMm: 175,
+        imageId: "75c2e557-067a-4daa-8dc1-ac1c3983dfea",
       },
     ],
   },
@@ -89,6 +100,7 @@ export const productCategories: ProductCategory[] = [
         widthMm: 197,
         heightMm: 9,
         finish: "Børstet stål",
+        imageId: "426ca516-7f7e-4e06-b695-a36ff88015c1",
       },
       {
         name: "Slukrist Kvadrat Matt Sort",
@@ -99,6 +111,7 @@ export const productCategories: ProductCategory[] = [
         widthMm: 197,
         heightMm: 9,
         finish: "Matt sort",
+        imageId: "8a022f8a-fe6e-44f3-9a4c-915ef26be446",
       },
       {
         name: "Slukrist Kv Tile Insert RF Stål",
@@ -109,6 +122,7 @@ export const productCategories: ProductCategory[] = [
         widthMm: 197,
         heightMm: 15,
         finish: "Rustfritt stål",
+        imageId: "54597543-1629-4bb3-9a79-37e8931ec41d",
       },
       {
         name: "Slukrist Kv Tile Insert Matt Sort",
@@ -119,6 +133,7 @@ export const productCategories: ProductCategory[] = [
         widthMm: 197,
         heightMm: 15,
         finish: "Matt sort",
+        imageId: "aee4bbd0-be9a-464f-8d27-e0c8a0e12ebd",
       },
       {
         name: "Hjørnerist Tile Insert RF Stål",
@@ -129,6 +144,7 @@ export const productCategories: ProductCategory[] = [
         widthMm: 297,
         heightMm: 15,
         finish: "Rustfritt stål",
+        imageId: "356ad341-895f-46ea-919a-7910d7126651",
       },
       {
         name: "Hjørnerist Tile Insert Matt Sort",
@@ -139,6 +155,7 @@ export const productCategories: ProductCategory[] = [
         widthMm: 297,
         heightMm: 15,
         finish: "Matt sort",
+        imageId: "e9fc71bb-b8d8-420c-816b-b4c12535f08b",
       },
       {
         name: "Sirkulær Slukrist Børstet Stål",
@@ -147,6 +164,7 @@ export const productCategories: ProductCategory[] = [
         dimensions: "Ø172 mm",
         diameterMm: 172,
         finish: "Børstet stål",
+        imageId: "ce9bbc28-f1a1-45fd-b7d4-6bbb294f42c3",
       },
     ],
   },
@@ -165,6 +183,7 @@ export const productCategories: ProductCategory[] = [
         widthMm: 197,
         heightMm: 9,
         finish: "Børstet stål",
+        imageId: "ec9e04c6-976c-4613-bb65-6f7927aac975",
       },
       {
         name: "Slukrenne Rist 800 Matt Sort",
@@ -175,6 +194,7 @@ export const productCategories: ProductCategory[] = [
         widthMm: 197,
         heightMm: 9,
         finish: "Matt sort",
+        imageId: "41fd9019-a8cd-47e6-9b18-7cc6f3244520",
       },
     ],
   },
@@ -193,6 +213,7 @@ export const productCategories: ProductCategory[] = [
         widthMm: 197,
         heightMm: 15,
         finish: "Rustfritt stål",
+        imageId: "c8a4aea6-2ad4-4a36-890c-d893335e7ccd",
       },
       {
         name: "Slukrenne Tile Insert 600 Matt Sort",
@@ -203,6 +224,7 @@ export const productCategories: ProductCategory[] = [
         widthMm: 197,
         heightMm: 15,
         finish: "Matt sort",
+        imageId: "0a73c5f1-6f8d-42b7-952a-64f3e7e32e80",
       },
       {
         name: "Slukrenne Tile Insert 700 RF Stål",
@@ -213,6 +235,7 @@ export const productCategories: ProductCategory[] = [
         widthMm: 197,
         heightMm: 15,
         finish: "Rustfritt stål",
+        imageId: "e97ccbd0-6b67-4876-b656-9be88c563087",
       },
       {
         name: "Slukrenne Tile Insert 700 Matt Sort",
@@ -223,6 +246,7 @@ export const productCategories: ProductCategory[] = [
         widthMm: 197,
         heightMm: 15,
         finish: "Matt sort",
+        imageId: "d407f2c4-f81c-4ff9-84a8-b2c6c5f34415",
       },
       {
         name: "Slukrenne Tile Insert 800 RF Stål",
@@ -233,6 +257,7 @@ export const productCategories: ProductCategory[] = [
         widthMm: 197,
         heightMm: 15,
         finish: "Rustfritt stål",
+        imageId: "1728db8c-b489-4797-86de-a2133072cc06",
       },
       {
         name: "Slukrenne Tile Insert 800 Matt Sort",
@@ -243,6 +268,7 @@ export const productCategories: ProductCategory[] = [
         widthMm: 197,
         heightMm: 15,
         finish: "Matt sort",
+        imageId: "cde5683d-04e6-492e-9d9a-1396c8a87f26",
       },
       {
         name: "Slukrenne Tile Insert 900 RF Stål",
@@ -253,6 +279,7 @@ export const productCategories: ProductCategory[] = [
         widthMm: 197,
         heightMm: 15,
         finish: "Rustfritt stål",
+        imageId: "77b9e3de-84af-43f2-bb6d-b7716c886569",
       },
       {
         name: "Slukrenne Tile Insert 900 Matt Sort",
@@ -263,6 +290,7 @@ export const productCategories: ProductCategory[] = [
         widthMm: 197,
         heightMm: 15,
         finish: "Matt sort",
+        imageId: "4e37f8d7-0c02-445a-88e9-f06a6d8cada2",
       },
       {
         name: "Slukrenne Tile Insert 1000 RF Stål",
@@ -273,6 +301,7 @@ export const productCategories: ProductCategory[] = [
         widthMm: 197,
         heightMm: 15,
         finish: "Rustfritt stål",
+        imageId: "0125862a-3d56-4c40-a738-e23769ca5391",
       },
       {
         name: "Slukrenne Tile Insert 1000 Sort",
@@ -283,6 +312,7 @@ export const productCategories: ProductCategory[] = [
         widthMm: 197,
         heightMm: 15,
         finish: "Matt sort",
+        imageId: "01548960-cae4-43a2-b744-51d2c6bcf6dc",
       },
       {
         name: "Slukrenne Tile Insert 1200 RF Stål",
@@ -293,6 +323,7 @@ export const productCategories: ProductCategory[] = [
         widthMm: 197,
         heightMm: 15,
         finish: "Rustfritt stål",
+        imageId: "0125862a-3d56-4c40-a738-e23769ca5391",
       },
       {
         name: "Slukrenne Tile Insert 1200 Sort",
@@ -303,6 +334,7 @@ export const productCategories: ProductCategory[] = [
         widthMm: 197,
         heightMm: 15,
         finish: "Matt sort",
+        imageId: "01548960-cae4-43a2-b744-51d2c6bcf6dc",
       },
     ],
   },
@@ -321,6 +353,7 @@ export const productCategories: ProductCategory[] = [
         widthMm: 197,
         heightMm: 15,
         finish: "Rustfritt stål",
+        imageId: "e97ccbd0-6b67-4876-b656-9be88c563087",
       },
       {
         name: "Slukrenne Eksentrisk Tile 700 Sort",
@@ -331,6 +364,7 @@ export const productCategories: ProductCategory[] = [
         widthMm: 197,
         heightMm: 15,
         finish: "Matt sort",
+        imageId: "d407f2c4-f81c-4ff9-84a8-b2c6c5f34415",
       },
       {
         name: "Slukrenne Eksentrisk Tile 800 Stål",
@@ -341,6 +375,7 @@ export const productCategories: ProductCategory[] = [
         widthMm: 197,
         heightMm: 15,
         finish: "Rustfritt stål",
+        imageId: "1728db8c-b489-4797-86de-a2133072cc06",
       },
       {
         name: "Slukrenne Eksentrisk Tile 800 Sort",
@@ -351,6 +386,7 @@ export const productCategories: ProductCategory[] = [
         widthMm: 197,
         heightMm: 15,
         finish: "Matt sort",
+        imageId: "cde5683d-04e6-492e-9d9a-1396c8a87f26",
       },
       {
         name: "Slukrenne Eksentrisk Tile 900 Stål",
@@ -361,6 +397,7 @@ export const productCategories: ProductCategory[] = [
         widthMm: 197,
         heightMm: 15,
         finish: "Rustfritt stål",
+        imageId: "77b9e3de-84af-43f2-bb6d-b7716c886569",
       },
       {
         name: "Slukrenne Eksentrisk Tile 900 Sort",
@@ -371,6 +408,7 @@ export const productCategories: ProductCategory[] = [
         widthMm: 197,
         heightMm: 15,
         finish: "Matt sort",
+        imageId: "4e37f8d7-0c02-445a-88e9-f06a6d8cada2",
       },
       {
         name: "Slukrenne Eksentrisk Tile 1000 Stål",
@@ -381,6 +419,7 @@ export const productCategories: ProductCategory[] = [
         widthMm: 197,
         heightMm: 15,
         finish: "Rustfritt stål",
+        imageId: "0125862a-3d56-4c40-a738-e23769ca5391",
       },
       {
         name: "Slukrenne Eksentrisk Tile 1000 Sort",
@@ -391,6 +430,7 @@ export const productCategories: ProductCategory[] = [
         widthMm: 197,
         heightMm: 15,
         finish: "Matt sort",
+        imageId: "01548960-cae4-43a2-b744-51d2c6bcf6dc",
       },
       {
         name: "Slukrenne Eksentrisk Tile 1200 Stål",
@@ -401,6 +441,7 @@ export const productCategories: ProductCategory[] = [
         widthMm: 197,
         heightMm: 15,
         finish: "Rustfritt stål",
+        imageId: "0125862a-3d56-4c40-a738-e23769ca5391",
       },
       {
         name: "Slukrenne Eksentrisk Tile 1200 Sort",
@@ -411,6 +452,7 @@ export const productCategories: ProductCategory[] = [
         widthMm: 197,
         heightMm: 15,
         finish: "Matt sort",
+        imageId: "01548960-cae4-43a2-b744-51d2c6bcf6dc",
       },
     ],
   },
