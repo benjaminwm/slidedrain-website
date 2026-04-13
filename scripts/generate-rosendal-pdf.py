@@ -212,7 +212,7 @@ def build_pdf():
     # --- PAGE 1: Hero ---
     story.append(Paragraph("KUNDEHISTORIE", styles["badge"]))
     story.append(Paragraph(
-        'Rosendal Bygg: <font color="#FB5C13">Ole Olsen, r\u00f8rlegger</font>',
+        'Rosendal Bygg sparer tid og kostnader <font color="#FB5C13">med Slidedrain</font>',
         styles["title"]
     ))
     story.append(Paragraph(

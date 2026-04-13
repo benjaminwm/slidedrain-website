@@ -26,8 +26,8 @@ export default function RosendalContent() {
                 Kundehistorie
               </span>
               <h1 className="text-[42px] max-lg:text-[34px] max-sm:text-[28px] font-bold leading-[1.15] mb-5 text-navy">
-                Rosendal Bygg:{" "}
-                <span className="text-orange">Ole Olsen, rørlegger</span>
+                Rosendal Bygg sparer tid og kostnader{" "}
+                <span className="text-orange">med Slidedrain</span>
               </h1>
               <p className="text-lg text-text-light leading-[1.7] font-light mb-6">
                 Når et detaljbesatt tømrerfirma i Trondheim har en rørlegger
