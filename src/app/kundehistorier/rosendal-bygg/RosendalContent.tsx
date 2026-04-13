@@ -36,32 +36,21 @@ export default function RosendalContent() {
                 Bygg bruker Slidedrain til å levere premium
                 baderomsopplevelser &ndash; uten kompromisser.
               </p>
-              <div className="flex flex-col gap-3">
-                <div className="flex items-center gap-4 p-4 bg-gray-bg rounded-xl">
-                  <div className="w-10 h-10 rounded-full bg-navy flex items-center justify-center text-white font-bold text-sm shrink-0">
-                    RB
-                  </div>
-                  <div>
-                    <p className="font-semibold text-navy text-[14px]">
-                      Rosendal Bygg
-                    </p>
-                    <p className="text-xs text-text-light">
-                      Tømrerfirma &ndash; rehabilitering og nybygg, Trondheim
-                    </p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-4 p-4 bg-gray-bg rounded-xl">
-                  <div className="w-10 h-10 rounded-full bg-orange flex items-center justify-center text-white font-bold text-sm shrink-0">
-                    OO
-                  </div>
-                  <div>
-                    <p className="font-semibold text-navy text-[14px]">
-                      Ole Olsen
-                    </p>
-                    <p className="text-xs text-text-light">
-                      Rørlegger i Rosendal Bygg, medlem av VVS Fagmann
-                    </p>
-                  </div>
+              <div className="flex items-center gap-4 p-4 bg-gray-bg rounded-xl">
+                <Image
+                  src="/images/kundehistorier/ole-olsen.webp"
+                  alt="Ole Olsen"
+                  width={48}
+                  height={48}
+                  className="w-12 h-12 rounded-full object-cover shrink-0"
+                />
+                <div>
+                  <p className="font-semibold text-navy text-[15px]">
+                    Ole Olsen
+                  </p>
+                  <p className="text-sm text-text-light">
+                    Rørlegger i Rosendal Bygg, medlem av VVS Fagmann
+                  </p>
                 </div>
               </div>
             </div>
