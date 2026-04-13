@@ -299,10 +299,9 @@ def build_pdf():
         "P\u00e5 dette rehab-prosjektet som er avbildet var det problemer med "
         "bjelkelaget, som gjorde det vanskelig med et vanlig sluk. Med "
         "Slidedrain kan de legge et sirkul\u00e6rt gulvsluk inntil vegg og ha "
-        "slukrenne med tile insert over. De kunne ogs\u00e5 plassert det i "
-        "hj\u00f8rnet med et eksentrisk utskj\u00e6r i enden. Med tile insert "
-        "fikk kundene det stilrene uttrykket de \u00f8nsket \u2013 uten "
-        "mosaikkfliser og uten vedlikeholdsproblemene fra linjesluk.",
+        "slukrenne med tile insert over. Med tile insert fikk kundene det "
+        "stilrene uttrykket de \u00f8nsket \u2013 uten "
+        "vedlikeholdsproblemene fra linjesluk.",
         styles["body"]
     ))
 
@@ -311,7 +310,7 @@ def build_pdf():
         ("Fleksibel plassering",
          "Den eksentriske varianten lar sluket plasseres uavhengig av "
          "bjelkelag og armaturplassering."),
-        ("Storformat uten mosaikkflis",
+        ("Storformatflis med ensidig fall",
          "Ensidig fall med storformatfliser gir f\u00e6rre fuger, enklere "
          "rengj\u00f8ring og et moderne uttrykk."),
         ("Enklere vedlikehold",
@@ -345,13 +344,7 @@ def build_pdf():
     story.append(t)
     story.append(Spacer(1, 6 * mm))
 
-    # Quote 2
-    add_quote(story,
-        "Sluken kunne v\u00e6rt plassert her, og s\u00e5 kunne man g\u00e5tt for "
-        "den eksentriske varianten der. Det setter ikke noen begrensninger for "
-        "alternativene til kunden.",
-        "Ole Olsen, om fleksibiliteten ved prosjektering"
-    )
+
 
     # --- PAGE 3: Result ---
     story.append(PageBreak())
@@ -385,7 +378,7 @@ def build_pdf():
     # Stats
     add_stats_box(story, [
         ("0", "Tilbakemeldinger\np\u00e5 tette sluk"),
-        ("100%", "Storformatflis\nuten mosaikkflis"),
+        ("100%", "Storformatflis\nmed ensidig fall"),
         ("Fleksibelt", "Tilpasset bjelkelag\ni alle bad"),
     ])
 

@@ -176,10 +176,9 @@ export default function RosendalContent() {
               dette rehab-prosjektet som er avbildet var det problemer med
               bjelkelaget, som gjorde det vanskelig med et vanlig sluk. Med
               Slidedrain kan de legge et sirkulært gulvsluk inntil vegg og ha
-              slukrenne med tile insert over. De kunne også plassert det i
-              hjørnet med et eksentrisk utskjær i enden. Med tile insert fikk
-              kundene det stilrene uttrykket de ønsket &ndash; uten
-              mosaikkfliser og uten vedlikeholdsproblemene fra linjesluk.
+              slukrenne med tile insert over. Med tile insert fikk kundene det
+              stilrene uttrykket de ønsket &ndash; uten
+              vedlikeholdsproblemene fra linjesluk.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {[
@@ -193,7 +192,7 @@ export default function RosendalContent() {
                   ),
                 },
                 {
-                  title: "Storformat uten mosaikkflis",
+                  title: "Storformatflis med ensidig fall",
                   desc: "Ensidig fall med storformatfliser gir færre fuger, enklere rengjøring og et moderne uttrykk.",
                   icon: (
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-6 h-6 stroke-orange">
@@ -281,7 +280,7 @@ export default function RosendalContent() {
                 </div>
                 <div>
                   <p className="text-3xl font-bold text-orange mb-1">100%</p>
-                  <p className="text-sm text-white/70">Storformatflis uten mosaikkflis</p>
+                  <p className="text-sm text-white/70">Storformatflis med ensidig fall</p>
                 </div>
                 <div>
                   <p className="text-3xl font-bold text-orange mb-1">Fleksibelt</p>
