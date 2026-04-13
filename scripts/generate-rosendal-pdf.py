@@ -375,12 +375,7 @@ def build_pdf():
         "Ole Olsen, r\u00f8rlegger i Rosendal Bygg"
     )
 
-    # Stats
-    add_stats_box(story, [
-        ("0", "Tilbakemeldinger\np\u00e5 tette sluk"),
-        ("100%", "Storformatflis\nmed ensidig fall"),
-        ("Fleksibelt", "Tilpasset bjelkelag\ni alle bad"),
-    ])
+
 
     # Overview image
     add_image(story, "rosendal-3.jpg")
