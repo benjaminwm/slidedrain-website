@@ -106,10 +106,9 @@ export default function RosendalContent() {
           <FadeUp className="mb-16">
             <blockquote className="border-l-4 border-orange pl-6 py-2 bg-gray-bg rounded-r-xl p-6">
               <p className="text-xl max-md:text-lg text-navy leading-[1.6] italic mb-3">
-                &ldquo;Hvis man skal ha et sluk hjem til seg selv, i hvert fall
-                jeg som rørlegger &ndash; da får jeg bruke det som jeg selv
-                ville ha brukt hjemme. Et standard sirkulært sluk med en tile
-                insert over.&rdquo;
+                &ldquo;Jeg som håndverker, jeg vil jo levere fra meg noe jeg
+                står inne for. Jeg vil ikke bli oppringt et par uker
+                etterpå.&rdquo;
               </p>
               <cite className="text-sm text-text-light not-italic font-medium">
                 &mdash; Ole Olsen, rørlegger i Rosendal Bygg
@@ -375,9 +374,10 @@ export default function RosendalContent() {
           <FadeUp>
             <blockquote className="border-l-4 border-orange pl-6 py-2 bg-gray-bg rounded-r-xl p-6">
               <p className="text-xl max-md:text-lg text-navy leading-[1.6] italic mb-3">
-                &ldquo;Jeg som håndverker, jeg vil jo levere fra meg noe jeg
-                står inne for. Jeg vil ikke bli oppringt et par uker
-                etterpå.&rdquo;
+                &ldquo;Hvis man skal ha et sluk hjem til seg selv, i hvert fall
+                jeg som rørlegger &ndash; da får jeg bruke det som jeg selv
+                ville ha brukt hjemme. Et standard sirkulært sluk med en tile
+                insert over.&rdquo;
               </p>
               <cite className="text-sm text-text-light not-italic font-medium">
                 &mdash; Ole Olsen, rørlegger i Rosendal Bygg
