@@ -172,11 +172,14 @@ export default function RosendalContent() {
               Løsningen: Slidedrain Sluksystem
             </h2>
             <p className="text-[17px] text-text-light leading-[1.8] mb-6">
-              Ole introduserte Slidedrain for Rosendal Byggs prosjekter. Med
-              den eksentriske varianten kunne sluket plasseres optimalt i
-              forhold til bjelkelaget, og med tile insert fikk kundene det
-              stilrene uttrykket de ønsket &ndash; uten mosaikkfliser og uten
-              vedlikeholdsproblemene fra linjesluk.
+              Ole går ofte for Slidedrain på Rosendal Byggs prosjekter. På
+              dette rehab-prosjektet som er avbildet var det problemer med
+              bjelkelaget, som gjorde det vanskelig med et vanlig sluk. Med
+              Slidedrain kan de legge et sirkulært gulvsluk inntil vegg og ha
+              slukrenne med tile insert over. De kunne også plassert det i
+              hjørnet med et eksentrisk utskjær i enden. Med tile insert fikk
+              kundene det stilrene uttrykket de ønsket &ndash; uten
+              mosaikkfliser og uten vedlikeholdsproblemene fra linjesluk.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {[

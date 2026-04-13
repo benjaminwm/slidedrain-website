@@ -295,11 +295,14 @@ def build_pdf():
     # --- Solution ---
     story.append(Paragraph("L\u00f8sningen: Slidedrain Sluksystem", styles["h2"]))
     story.append(Paragraph(
-        "Ole introduserte Slidedrain for Rosendal Byggs prosjekter. Med den "
-        "eksentriske varianten kunne sluket plasseres optimalt i forhold til "
-        "bjelkelaget, og med tile insert fikk kundene det stilrene uttrykket "
-        "de \u00f8nsket \u2013 uten mosaikkfliser og uten vedlikeholdsproblemene "
-        "fra linjesluk.",
+        "Ole g\u00e5r ofte for Slidedrain p\u00e5 Rosendal Byggs prosjekter. "
+        "P\u00e5 dette rehab-prosjektet som er avbildet var det problemer med "
+        "bjelkelaget, som gjorde det vanskelig med et vanlig sluk. Med "
+        "Slidedrain kan de legge et sirkul\u00e6rt gulvsluk inntil vegg og ha "
+        "slukrenne med tile insert over. De kunne ogs\u00e5 plassert det i "
+        "hj\u00f8rnet med et eksentrisk utskj\u00e6r i enden. Med tile insert "
+        "fikk kundene det stilrene uttrykket de \u00f8nsket \u2013 uten "
+        "mosaikkfliser og uten vedlikeholdsproblemene fra linjesluk.",
         styles["body"]
     ))
 
