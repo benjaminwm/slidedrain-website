@@ -8,7 +8,7 @@ export default function RosendalContent() {
   return (
     <>
       {/* Hero */}
-      <section className="pt-[140px] pb-20 px-6 bg-gradient-to-br from-white to-[#fef7f3] overflow-hidden">
+      <section className="pt-[140px] pb-20 px-6 bg-white overflow-hidden">
         <div className="max-w-[1200px] mx-auto">
           <Link
             href="/kundehistorier"
