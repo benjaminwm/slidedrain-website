@@ -26,34 +26,49 @@ export default function RosendalContent() {
                 Kundehistorie
               </span>
               <h1 className="text-[42px] max-lg:text-[34px] max-sm:text-[28px] font-bold leading-[1.15] mb-5 text-navy">
-                Rosendal Bygg:{" "}
-                <span className="text-orange">
-                  Fra planlegging til ferdig bad
-                </span>
+                Rosendal Bygg &{" "}
+                <span className="text-orange">VVS Fagmann</span>
               </h1>
               <p className="text-lg text-text-light leading-[1.7] font-light mb-6">
-                Se hvordan Rosendal Bygg bruker Slidedrain Sluksystem for
-                enklere planlegging, raskere montasje og tryggere bad i sine
-                byggeprosjekter.
+                Når en detaljbesatt totalentreprenør i Trondheim møter en
+                rørlegger som kun monterer det han selv ville hatt hjemme,
+                blir resultatet eksepsjonelt. Se hvordan Rosendal Bygg og
+                Ole Olsen i VVS Fagmann bruker Slidedrain til å levere
+                premium baderomsopplevelser &ndash; uten kompromisser.
               </p>
-              <div className="flex items-center gap-4 p-4 bg-white rounded-xl border border-navy/8">
-                <div className="w-12 h-12 rounded-full bg-navy flex items-center justify-center text-white font-bold text-lg shrink-0">
-                  RB
+              <div className="flex flex-col gap-3">
+                <div className="flex items-center gap-4 p-4 bg-gray-bg rounded-xl">
+                  <div className="w-10 h-10 rounded-full bg-navy flex items-center justify-center text-white font-bold text-sm shrink-0">
+                    RB
+                  </div>
+                  <div>
+                    <p className="font-semibold text-navy text-[14px]">
+                      Rosendal Bygg
+                    </p>
+                    <p className="text-xs text-text-light">
+                      Totalentreprenør &ndash; rehabilitering og nybygg, Trondheim
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <p className="font-semibold text-navy text-[15px]">
-                    Rosendal Bygg
-                  </p>
-                  <p className="text-sm text-text-light">
-                    Byggeprosjekt med Slidedrain Sluksystem
-                  </p>
+                <div className="flex items-center gap-4 p-4 bg-gray-bg rounded-xl">
+                  <div className="w-10 h-10 rounded-full bg-orange flex items-center justify-center text-white font-bold text-sm shrink-0">
+                    OO
+                  </div>
+                  <div>
+                    <p className="font-semibold text-navy text-[14px]">
+                      Ole Olsen &ndash; VVS Fagmann
+                    </p>
+                    <p className="text-xs text-text-light">
+                      Rørlegger og underentreprenør for Rosendal Bygg
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
             <div className="flex justify-center items-center max-lg:order-first">
               <Image
                 src="/images/kundehistorier/rosendal-2.jpg"
-                alt="Rosendal Bygg – installasjon av Slidedrain slukpotte"
+                alt="Ole Olsen planlegger slukplassering på byggeplassen til Rosendal Bygg"
                 width={700}
                 height={394}
                 className="w-full rounded-2xl shadow-[0_20px_60px_rgba(40,52,71,0.12)]"
@@ -65,19 +80,59 @@ export default function RosendalContent() {
       </section>
 
       {/* Story content */}
-      <section className="py-20 px-6">
+      <section className="py-20 px-6 bg-white">
         <div className="max-w-[800px] mx-auto">
-          {/* Intro */}
+          {/* Intro - The companies */}
           <FadeUp className="mb-16">
             <h2 className="text-3xl max-md:text-2xl font-bold text-navy mb-5">
-              Utfordringen
+              Trondheims mest detaljbevisste byggherre
             </h2>
+            <p className="text-[17px] text-text-light leading-[1.8] mb-4">
+              Rosendal Bygg er en totalentreprenør fra Trondheim som
+              spesialiserer seg på rehabilitering og oppgradering av eldre
+              boliger. Prosjektene deres kjennetegnes av en kompromissløs
+              oppmerksomhet på detaljer &ndash; fra listverk som er smalere enn
+              standard til nøye koordinert materialvalg gjennom hele boligen.
+            </p>
             <p className="text-[17px] text-text-light leading-[1.8]">
-              For Rosendal Bygg var det viktig å finne en løsning som forenklet
-              koordineringen mellom fagområdene og samtidig ga sluttkunden
-              valgfrihet sent i byggeprosessen. Tradisjonelle slukløsninger
-              krevde tidlige beslutninger som ofte førte til omprosjektering
-              og forsinkelser.
+              Når kvalitetskravene er så høye, trengs det håndverkere som
+              matcher ambisjonsnivået. Ole Olsen i VVS Fagmann er rørleggeren
+              Rosendal Bygg stoler på &ndash; en fagmann som kun monterer det
+              han selv ville hatt hjemme.
+            </p>
+          </FadeUp>
+
+          {/* Quote 1 - Craftsman's choice */}
+          <FadeUp className="mb-16">
+            <blockquote className="border-l-4 border-orange pl-6 py-2 bg-gray-bg rounded-r-xl p-6">
+              <p className="text-xl max-md:text-lg text-navy leading-[1.6] italic mb-3">
+                &ldquo;Hvis man skal ha et sluk hjem til seg selv, i hvert fall
+                jeg som rørlegger &ndash; da får jeg bruke det som jeg selv
+                ville ha brukt hjemme. Et standard sirkulært sluk med en tile
+                insert over.&rdquo;
+              </p>
+              <cite className="text-sm text-text-light not-italic font-medium">
+                &mdash; Ole Olsen, VVS Fagmann
+              </cite>
+            </blockquote>
+          </FadeUp>
+
+          {/* Challenge */}
+          <FadeUp className="mb-16">
+            <h2 className="text-3xl max-md:text-2xl font-bold text-navy mb-5">
+              Utfordringen: Bjelkelag, design og vedlikehold
+            </h2>
+            <p className="text-[17px] text-text-light leading-[1.8] mb-4">
+              Rosendal Byggs prosjekter er ofte eldre boliger der bjelkelaget
+              i gulvet setter begrensninger for hvor sluket kan plasseres.
+              Kundene ønsker gjerne tile insert-design med storformatfliser,
+              men tradisjonelle linjesluk skaper utfordringer &ndash; både
+              under og etter montasje.
+            </p>
+            <p className="text-[17px] text-text-light leading-[1.8]">
+              Ole hadde erfart problemene med linjesluk på nært hold: tette
+              avløp, luktproblemer og frustrerte sluttkunder som ikke klarte
+              vedlikeholdet selv.
             </p>
           </FadeUp>
 
@@ -85,55 +140,110 @@ export default function RosendalContent() {
           <FadeUp className="mb-16">
             <Image
               src="/images/kundehistorier/rosendal-1.jpg"
-              alt="Digital planlegging av baderomsoppsett med Slidedrain"
+              alt="Ole Olsen planlegger flisoppsett og slukplassering digitalt"
               width={800}
               height={450}
               className="w-full rounded-2xl shadow-[0_8px_30px_rgba(40,52,71,0.1)] mb-6"
             />
             <p className="text-sm text-text-light text-center italic">
-              Digital planlegging – flisoppsett og slukplassering tegnes inn
-              direkte på mobilen.
+              Digital planlegging av flisoppsett og slukplassering &ndash; Slidedrain
+              gir fleksibilitet til å tilpasse løsningen etter bjelkelaget.
             </p>
+          </FadeUp>
+
+          {/* Quote 2 - Clogging demo */}
+          <FadeUp className="mb-16">
+            <blockquote className="border-l-4 border-orange pl-6 py-2 bg-gray-bg rounded-r-xl p-6">
+              <p className="text-xl max-md:text-lg text-navy leading-[1.6] italic mb-3">
+                &ldquo;Det er kun en uke siden de har renset det. Vi hadde på
+                vannet, kanskje 15 sekunder, og du ser jo at etter en uke uten
+                vedlikehold så oversvømmer hele dusjsonen.&rdquo;
+              </p>
+              <cite className="text-sm text-text-light not-italic font-medium">
+                &mdash; Ole Olsen, om et tradisjonelt linjesluk
+              </cite>
+            </blockquote>
+          </FadeUp>
+
+          {/* The problem with linear drains */}
+          <FadeUp className="mb-16">
+            <div className="bg-navy rounded-2xl p-8 text-white">
+              <h3 className="text-xl font-bold mb-4">
+                Problemet med tradisjonelle linjesluk
+              </h3>
+              <div className="space-y-4">
+                {[
+                  "Designet er så smalt at det tettes mye raskere enn store vannlåser på vanlige sirkulære sluk.",
+                  "For komplisert for sluttkunden å vedlikeholde – ikke for en håndverker, men for den vanlige mannen i gata.",
+                  "Resulterer i telefoner om lukt og tett avløp kort tid etter overlevering.",
+                ].map((item, i) => (
+                  <div key={i} className="flex items-start gap-3">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="#ef4444" strokeWidth={2} className="w-5 h-5 shrink-0 mt-0.5">
+                      <circle cx="12" cy="12" r="10" />
+                      <line x1="15" y1="9" x2="9" y2="15" />
+                      <line x1="9" y1="9" x2="15" y2="15" />
+                    </svg>
+                    <p className="text-white/80 text-[15px] leading-relaxed">
+                      {item}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
           </FadeUp>
 
           {/* Solution */}
           <FadeUp className="mb-16">
             <h2 className="text-3xl max-md:text-2xl font-bold text-navy mb-5">
-              Løsningen
+              Løsningen: Slidedrain Sluksystem
             </h2>
             <p className="text-[17px] text-text-light leading-[1.8] mb-6">
-              Ved å velge Slidedrain Sluksystem kunne Rosendal Bygg standardisere
-              den tekniske utførelsen for alle bad i prosjektet. Slukpotten
-              plasseres i hjørnet under byggets rørleggerarbeider, mens det
-              synlige designvalget utsettes til flislegging.
+              Ole introduserte Slidedrain for Rosendal Byggs prosjekter. Med
+              den eksentriske varianten kunne sluket plasseres optimalt i
+              forhold til bjelkelaget, og med tile insert fikk kundene det
+              stilrene uttrykket de ønsket &ndash; uten mosaikkfliser og uten
+              vedlikeholdsproblemene fra linjesluk.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {[
                 {
-                  icon: "📐",
-                  title: "Enklere planlegging",
-                  desc: "Én teknisk løsning for alle bad, uavhengig av designvalg.",
+                  title: "Fleksibel plassering",
+                  desc: "Den eksentriske varianten lar sluket plasseres uavhengig av bjelkelag og armaturplassering.",
+                  icon: (
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-6 h-6 stroke-orange">
+                      <path d="M12 2L2 7l10 5 10-5-10-5z" /><path d="M2 17l10 5 10-5" /><path d="M2 12l10 5 10-5" />
+                    </svg>
+                  ),
                 },
                 {
-                  icon: "⚡",
-                  title: "Raskere montasje",
-                  desc: "Færre deler og skrueløs teknologi gir raskere installasjon.",
+                  title: "Storformat uten mosaikkflis",
+                  desc: "Kilefall med storformatfliser gir færre fuger, enklere rengjøring og et moderne uttrykk.",
+                  icon: (
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-6 h-6 stroke-orange">
+                      <rect x="3" y="3" width="18" height="18" rx="2" />
+                      <line x1="3" y1="12" x2="21" y2="12" />
+                      <line x1="12" y1="3" x2="12" y2="21" />
+                    </svg>
+                  ),
                 },
                 {
-                  icon: "🛡️",
-                  title: "Tryggere bad",
-                  desc: "Patentert system eliminerer tradisjonelle feilkilder.",
+                  title: "Enklere vedlikehold",
+                  desc: "Stor vannlås som tettes sjeldnere enn linjesluk. Enkel å rengjøre for sluttkunden.",
+                  icon: (
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-6 h-6 stroke-orange">
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                    </svg>
+                  ),
                 },
               ].map((item, i) => (
-                <div
-                  key={i}
-                  className="bg-gray-bg rounded-xl p-5 text-center"
-                >
-                  <span className="text-2xl mb-2 block">{item.icon}</span>
-                  <h4 className="font-semibold text-navy text-sm mb-1">
+                <div key={i} className="bg-gray-bg rounded-xl p-6 text-center">
+                  <div className="w-12 h-12 bg-orange/10 rounded-xl flex items-center justify-center mx-auto mb-3">
+                    {item.icon}
+                  </div>
+                  <h4 className="font-semibold text-navy text-[15px] mb-2">
                     {item.title}
                   </h4>
-                  <p className="text-xs text-text-light leading-relaxed">
+                  <p className="text-sm text-text-light leading-relaxed">
                     {item.desc}
                   </p>
                 </div>
@@ -141,18 +251,33 @@ export default function RosendalContent() {
             </div>
           </FadeUp>
 
+          {/* Quote 3 - Flexibility */}
+          <FadeUp className="mb-16">
+            <blockquote className="border-l-4 border-orange pl-6 py-2 bg-gray-bg rounded-r-xl p-6">
+              <p className="text-xl max-md:text-lg text-navy leading-[1.6] italic mb-3">
+                &ldquo;Sluken kunne vært plassert her, og så kunne man gått for
+                den eksentriske varianten der. Det setter ikke noen
+                begrensninger for alternativene til kunden.&rdquo;
+              </p>
+              <cite className="text-sm text-text-light not-italic font-medium">
+                &mdash; Ole Olsen, om fleksibiliteten ved prosjektering
+              </cite>
+            </blockquote>
+          </FadeUp>
+
           {/* Image 2 - Installation */}
           <FadeUp className="mb-16">
             <Image
               src="/images/kundehistorier/rosendal-2.jpg"
-              alt="Installasjon av Slidedrain slukpotte på byggeplass"
+              alt="Ole Olsen planlegger slukplassering med Slidedrain slukpotte"
               width={800}
               height={450}
               className="w-full rounded-2xl shadow-[0_8px_30px_rgba(40,52,71,0.1)] mb-6"
             />
             <p className="text-sm text-text-light text-center italic">
-              Slukpotten plasseres i hjørnet under rørleggerarbeidet – den
-              modulære oppbyggingen gjør koordineringen enkel.
+              Ole planlegger slukplasseringen i bjelkelaget &ndash; den
+              eksentriske varianten gjør det mulig å tilpasse etter
+              konstruksjonen.
             </p>
           </FadeUp>
 
@@ -162,25 +287,43 @@ export default function RosendalContent() {
               Resultatet
             </h2>
             <p className="text-[17px] text-text-light leading-[1.8] mb-6">
-              Med Slidedrain fikk Rosendal Bygg en forutsigbar byggeprosess
-              der alle fagområder jobbet mot samme tekniske standard. Sluttkundene
-              fikk full valgfrihet på designet helt frem til flislegging,
-              noe som økte kundetilfredsheten og fjernet behovet for kostbar
-              omprosjektering.
+              Resultatet er bad som forener Rosendal Byggs kompromissløse krav
+              til kvalitet med en teknisk løsning som faktisk fungerer i
+              hverdagen. Storformatfliser med tile insert gir et stilrent
+              uttrykk, mens den store vannlåsen eliminerer
+              vedlikeholdsproblemene som plaget tradisjonelle linjesluk.
             </p>
+          </FadeUp>
+
+          {/* Quote 4 - No callbacks */}
+          <FadeUp className="mb-16">
+            <blockquote className="border-l-4 border-orange pl-6 py-2 bg-gray-bg rounded-r-xl p-6">
+              <p className="text-xl max-md:text-lg text-navy leading-[1.6] italic mb-3">
+                &ldquo;Det er enkelt å rengjøre og det er enkelt å sette
+                tilbake. Derfor får du ikke noen telefoner etterpå. Pluss at
+                det ser veldig bra ut. Det er veldig lett å selge.&rdquo;
+              </p>
+              <cite className="text-sm text-text-light not-italic font-medium">
+                &mdash; Ole Olsen, VVS Fagmann
+              </cite>
+            </blockquote>
+          </FadeUp>
+
+          {/* Stats */}
+          <FadeUp className="mb-16">
             <div className="bg-navy rounded-2xl p-8 text-white">
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
                 <div>
                   <p className="text-3xl font-bold text-orange mb-1">0</p>
-                  <p className="text-sm text-white/70">Omprosjekteringer</p>
+                  <p className="text-sm text-white/70">Tilbakemeldinger på tette sluk</p>
                 </div>
                 <div>
                   <p className="text-3xl font-bold text-orange mb-1">100%</p>
-                  <p className="text-sm text-white/70">Standardisert utførelse</p>
+                  <p className="text-sm text-white/70">Storformatflis uten mosaikkflis</p>
                 </div>
                 <div>
-                  <p className="text-3xl font-bold text-orange mb-1">Utvidet</p>
-                  <p className="text-sm text-white/70">Tilvalgsvindu for kunden</p>
+                  <p className="text-3xl font-bold text-orange mb-1">Fleksibelt</p>
+                  <p className="text-sm text-white/70">Tilpasset bjelkelag i alle bad</p>
                 </div>
               </div>
             </div>
@@ -190,27 +333,68 @@ export default function RosendalContent() {
           <FadeUp className="mb-16">
             <Image
               src="/images/kundehistorier/rosendal-3.jpg"
-              alt="Oversikt over baderom under bygging med Slidedrain"
+              alt="Ole Olsen med Slidedrain slukpotte på byggeplassen"
               width={800}
               height={450}
               className="w-full rounded-2xl shadow-[0_8px_30px_rgba(40,52,71,0.1)] mb-6"
             />
             <p className="text-sm text-text-light text-center italic">
-              Baderommet tar form – slukpotten er allerede på plass og klar
-              for neste steg.
+              Ole med Slidedrain slukpotte på byggeplassen &ndash; klar for
+              installasjon i neste bad.
             </p>
           </FadeUp>
 
-          {/* Quote */}
+          {/* Key takeaways */}
+          <FadeUp className="mb-16">
+            <h2 className="text-3xl max-md:text-2xl font-bold text-navy mb-5">
+              Nøkkelpunkter fra prosjektet
+            </h2>
+            <div className="space-y-4">
+              {[
+                {
+                  title: "Sluttkunden velger design, håndverkeren styrer teknikken",
+                  desc: "Med Slidedrain og tile insert får kunden velge flis, farge og stil, mens rørleggeren har full kontroll over det tekniske.",
+                },
+                {
+                  title: "Linjesluk-look uten linjesluk-problemer",
+                  desc: "Kilefall med storformatfliser og tile insert gir det moderne uttrykket kundene ønsker, men med en vannlås som faktisk fungerer i hverdagen.",
+                },
+                {
+                  title: "Ingen begrensninger fra bjelkelaget",
+                  desc: "Den eksentriske varianten og fleksibel plassering gjør at sluket kan tilpasses ethvert konstruksjonsoppsett.",
+                },
+                {
+                  title: "Færre fagdager, null reklamasjoner",
+                  desc: "Enklere montasje med færre deler og et system sluttkunden faktisk klarer å vedlikeholde selv.",
+                },
+              ].map((item, i) => (
+                <div key={i} className="flex items-start gap-4 p-5 bg-gray-bg rounded-xl">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#22c55e" strokeWidth={2} className="w-6 h-6 shrink-0 mt-0.5">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  <div>
+                    <h4 className="font-semibold text-navy text-[15px] mb-1">
+                      {item.title}
+                    </h4>
+                    <p className="text-sm text-text-light leading-relaxed">
+                      {item.desc}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </FadeUp>
+
+          {/* Final quote */}
           <FadeUp>
-            <blockquote className="border-l-4 border-orange pl-6 py-2">
-              <p className="text-xl max-md:text-lg text-navy leading-[1.6] italic mb-4">
-                &ldquo;Med Slidedrain slipper vi å bekymre oss for sene endringer.
-                Den tekniske installasjonen er den samme uansett hva kunden
-                velger, og det forenkler hele prosessen for oss.&rdquo;
+            <blockquote className="border-l-4 border-orange pl-6 py-2 bg-gray-bg rounded-r-xl p-6">
+              <p className="text-xl max-md:text-lg text-navy leading-[1.6] italic mb-3">
+                &ldquo;Jeg som håndverker, jeg vil jo levere fra meg noe jeg
+                står inne for. Jeg vil ikke bli oppringt et par uker
+                etterpå.&rdquo;
               </p>
               <cite className="text-sm text-text-light not-italic font-medium">
-                — Rosendal Bygg
+                &mdash; Ole Olsen, VVS Fagmann
               </cite>
             </blockquote>
           </FadeUp>
