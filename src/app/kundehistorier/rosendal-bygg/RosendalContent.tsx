@@ -242,14 +242,14 @@ export default function RosendalContent() {
           {/* Image 2 - Installation */}
           <FadeUp className="mb-16">
             <Image
-              src="/images/kundehistorier/rosendal-2.jpg"
-              alt="Ole Olsen planlegger slukplassering med Slidedrain slukpotte"
+              src="/images/kundehistorier/rosendal-4.jpg"
+              alt="Ole Olsen monterer Slidedrain slukrenne i bjelkelaget"
               width={800}
               height={450}
               className="w-full rounded-2xl shadow-[0_8px_30px_rgba(40,52,71,0.1)] mb-6"
             />
             <p className="text-sm text-text-light text-center italic">
-              Ole planlegger slukplasseringen i bjelkelaget &ndash; den
+              Ole monterer Slidedrain slukrenne i bjelkelaget &ndash; den
               eksentriske varianten gjør det mulig å tilpasse etter
               konstruksjonen.
             </p>
