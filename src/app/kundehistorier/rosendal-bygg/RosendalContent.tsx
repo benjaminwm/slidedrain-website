@@ -77,7 +77,7 @@ export default function RosendalContent() {
               Byggmesterbedrift i Trondheim
             </h2>
             <p className="text-[17px] text-text-light leading-[1.8] mb-4">
-              Rosendal Bygg er en totalentreprenør fra Trondheim som
+              Rosendal Bygg er en byggmesterbedrift fra Trondheim som
               spesialiserer seg på rehabilitering og oppgradering av eldre
               boliger. Prosjektene deres kjennetegnes av en kompromissløs
               oppmerksomhet på detaljer &ndash; fra listverk som er smalere enn

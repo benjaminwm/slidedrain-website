@@ -236,7 +236,7 @@ def build_pdf():
     # --- Intro ---
     story.append(Paragraph("Byggmesterbedrift i Trondheim", styles["h2"]))
     story.append(Paragraph(
-        "Rosendal Bygg er en totalentrepren\u00f8r fra Trondheim som spesialiserer "
+        "Rosendal Bygg er en byggmesterbedrift fra Trondheim som spesialiserer "
         "seg p\u00e5 rehabilitering og oppgradering av eldre boliger. Prosjektene "
         "deres kjennetegnes av en kompromissl\u00f8s oppmerksomhet p\u00e5 detaljer "
         "\u2013 fra listverk som er smalere enn standard til n\u00f8ye koordinert "
