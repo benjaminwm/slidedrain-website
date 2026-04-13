@@ -151,20 +151,6 @@ export default function RosendalContent() {
             </p>
           </FadeUp>
 
-          {/* Quote 2 - Clogging demo */}
-          <FadeUp className="mb-16">
-            <blockquote className="border-l-4 border-orange pl-6 py-2 bg-gray-bg rounded-r-xl p-6">
-              <p className="text-xl max-md:text-lg text-navy leading-[1.6] italic mb-3">
-                &ldquo;Det er kun en uke siden de har renset det. Vi hadde på
-                vannet, kanskje 15 sekunder, og du ser jo at etter en uke uten
-                vedlikehold så oversvømmer hele dusjsonen.&rdquo;
-              </p>
-              <cite className="text-sm text-text-light not-italic font-medium">
-                &mdash; Ole Olsen, om et tradisjonelt linjesluk
-              </cite>
-            </blockquote>
-          </FadeUp>
-
           {/* The problem with linear drains */}
           <FadeUp className="mb-16">
             <div className="bg-navy rounded-2xl p-8 text-white">
