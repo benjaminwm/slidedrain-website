@@ -26,15 +26,15 @@ export default function RosendalContent() {
                 Kundehistorie
               </span>
               <h1 className="text-[42px] max-lg:text-[34px] max-sm:text-[28px] font-bold leading-[1.15] mb-5 text-navy">
-                Rosendal Bygg &{" "}
-                <span className="text-orange">VVS Fagmann</span>
+                Rosendal Bygg:{" "}
+                <span className="text-orange">Ole Olsen, rørlegger</span>
               </h1>
               <p className="text-lg text-text-light leading-[1.7] font-light mb-6">
-                Når en detaljbesatt totalentreprenør i Trondheim møter en
-                rørlegger som kun monterer det han selv ville hatt hjemme,
-                blir resultatet eksepsjonelt. Se hvordan Rosendal Bygg og
-                Ole Olsen i VVS Fagmann bruker Slidedrain til å levere
-                premium baderomsopplevelser &ndash; uten kompromisser.
+                Når et detaljbesatt tømrerfirma i Trondheim har en rørlegger
+                som kun monterer det han selv ville hatt hjemme, blir
+                resultatet eksepsjonelt. Se hvordan Ole Olsen og Rosendal
+                Bygg bruker Slidedrain til å levere premium
+                baderomsopplevelser &ndash; uten kompromisser.
               </p>
               <div className="flex flex-col gap-3">
                 <div className="flex items-center gap-4 p-4 bg-gray-bg rounded-xl">
@@ -46,7 +46,7 @@ export default function RosendalContent() {
                       Rosendal Bygg
                     </p>
                     <p className="text-xs text-text-light">
-                      Totalentreprenør &ndash; rehabilitering og nybygg, Trondheim
+                      Tømrerfirma &ndash; rehabilitering og nybygg, Trondheim
                     </p>
                   </div>
                 </div>
@@ -56,10 +56,10 @@ export default function RosendalContent() {
                   </div>
                   <div>
                     <p className="font-semibold text-navy text-[14px]">
-                      Ole Olsen &ndash; VVS Fagmann
+                      Ole Olsen
                     </p>
                     <p className="text-xs text-text-light">
-                      Rørlegger og underentreprenør for Rosendal Bygg
+                      Rørlegger i Rosendal Bygg, medlem av VVS Fagmann
                     </p>
                   </div>
                 </div>
@@ -96,9 +96,9 @@ export default function RosendalContent() {
             </p>
             <p className="text-[17px] text-text-light leading-[1.8]">
               Når kvalitetskravene er så høye, trengs det håndverkere som
-              matcher ambisjonsnivået. Ole Olsen i VVS Fagmann er rørleggeren
-              Rosendal Bygg stoler på &ndash; en fagmann som kun monterer det
-              han selv ville hatt hjemme.
+              matcher ambisjonsnivået. Ole Olsen er rørleggeren i Rosendal
+              Bygg og medlem av VVS Fagmann &ndash; en fagmann som kun
+              monterer det han selv ville hatt hjemme.
             </p>
           </FadeUp>
 
@@ -112,7 +112,7 @@ export default function RosendalContent() {
                 insert over.&rdquo;
               </p>
               <cite className="text-sm text-text-light not-italic font-medium">
-                &mdash; Ole Olsen, VVS Fagmann
+                &mdash; Ole Olsen, rørlegger i Rosendal Bygg
               </cite>
             </blockquote>
           </FadeUp>
@@ -304,7 +304,7 @@ export default function RosendalContent() {
                 det ser veldig bra ut. Det er veldig lett å selge.&rdquo;
               </p>
               <cite className="text-sm text-text-light not-italic font-medium">
-                &mdash; Ole Olsen, VVS Fagmann
+                &mdash; Ole Olsen, rørlegger i Rosendal Bygg
               </cite>
             </blockquote>
           </FadeUp>
@@ -394,7 +394,7 @@ export default function RosendalContent() {
                 etterpå.&rdquo;
               </p>
               <cite className="text-sm text-text-light not-italic font-medium">
-                &mdash; Ole Olsen, VVS Fagmann
+                &mdash; Ole Olsen, rørlegger i Rosendal Bygg
               </cite>
             </blockquote>
           </FadeUp>
