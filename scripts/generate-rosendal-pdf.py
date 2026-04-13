@@ -312,7 +312,7 @@ def build_pdf():
          "Den eksentriske varianten lar sluket plasseres uavhengig av "
          "bjelkelag og armaturplassering."),
         ("Storformat uten mosaikkflis",
-         "Kilefall med storformatfliser gir f\u00e6rre fuger, enklere "
+         "Ensidig fall med storformatfliser gir f\u00e6rre fuger, enklere "
          "rengj\u00f8ring og et moderne uttrykk."),
         ("Enklere vedlikehold",
          "Stor vannl\u00e5s som tettes sjeldnere enn linjesluk. Enkel "
@@ -406,7 +406,7 @@ def build_pdf():
     )
     add_takeaway(story,
         "Linjesluk-look uten linjesluk-problemer",
-        "Kilefall med storformatfliser og tile insert gir det moderne uttrykket "
+        "Ensidig fall med storformatfliser og tile insert gir det moderne uttrykket "
         "kundene \u00f8nsker, men med en vannl\u00e5s som faktisk fungerer i hverdagen."
     )
     add_takeaway(story,

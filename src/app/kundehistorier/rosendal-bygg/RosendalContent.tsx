@@ -194,7 +194,7 @@ export default function RosendalContent() {
                 },
                 {
                   title: "Storformat uten mosaikkflis",
-                  desc: "Kilefall med storformatfliser gir færre fuger, enklere rengjøring og et moderne uttrykk.",
+                  desc: "Ensidig fall med storformatfliser gir færre fuger, enklere rengjøring og et moderne uttrykk.",
                   icon: (
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-6 h-6 stroke-orange">
                       <rect x="3" y="3" width="18" height="18" rx="2" />
@@ -319,7 +319,7 @@ export default function RosendalContent() {
                 },
                 {
                   title: "Linjesluk-look uten linjesluk-problemer",
-                  desc: "Kilefall med storformatfliser og tile insert gir det moderne uttrykket kundene ønsker, men med en vannlås som faktisk fungerer i hverdagen.",
+                  desc: "Ensidig fall med storformatfliser og tile insert gir det moderne uttrykket kundene ønsker, men med en vannlås som faktisk fungerer i hverdagen.",
                 },
                 {
                   title: "Ingen begrensninger fra bjelkelaget",
