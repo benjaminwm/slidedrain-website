@@ -74,7 +74,7 @@ export default function RosendalContent() {
           {/* Intro - The companies */}
           <FadeUp className="mb-16">
             <h2 className="text-3xl max-md:text-2xl font-bold text-navy mb-5">
-              Trondheims mest detaljbevisste byggherre
+              Trondheims mest detaljbevisste tømrerfirma
             </h2>
             <p className="text-[17px] text-text-light leading-[1.8] mb-4">
               Rosendal Bygg er en totalentreprenør fra Trondheim som
