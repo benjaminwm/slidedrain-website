@@ -249,9 +249,8 @@ export default function RosendalContent() {
               className="w-full rounded-2xl shadow-[0_8px_30px_rgba(40,52,71,0.1)] mb-6"
             />
             <p className="text-sm text-text-light text-center italic">
-              Ole monterer Slidedrain slukrenne i bjelkelaget &ndash; den
-              eksentriske varianten gjør det mulig å tilpasse etter
-              konstruksjonen.
+              Ole plasserer slukrennen med tile insert over det sirkulære
+              gulvsluket &ndash; linjesluk-look med sirkulært sluk under.
             </p>
           </FadeUp>
 
