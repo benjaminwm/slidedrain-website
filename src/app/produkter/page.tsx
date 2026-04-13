@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import ProductPage from "@/components/produkter/ProductPage";
 import CtaSection from "@/components/CtaSection";
 import Footer from "@/components/Footer";
+import CaseStudyPopup from "@/components/CaseStudyPopup";
 
 export const metadata = {
   title: "Slidedrain // Produkter",
@@ -18,6 +19,7 @@ export default function ProdukterPage() {
         <CtaSection />
       </main>
       <Footer />
+      <CaseStudyPopup />
     </>
   );
 }

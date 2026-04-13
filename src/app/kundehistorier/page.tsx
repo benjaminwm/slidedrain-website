@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import CaseStudyPopup from "@/components/CaseStudyPopup";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -79,6 +80,7 @@ export default function KundehistorierPage() {
         </section>
       </main>
       <Footer />
+      <CaseStudyPopup />
     </>
   );
 }

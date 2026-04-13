@@ -5,6 +5,7 @@ import TeamSection from "@/components/om-oss/TeamSection";
 import ValuesSection from "@/components/om-oss/ValuesSection";
 import CtaSection from "@/components/CtaSection";
 import Footer from "@/components/Footer";
+import CaseStudyPopup from "@/components/CaseStudyPopup";
 
 export const metadata = {
   title: "Slidedrain // Om oss",
@@ -24,6 +25,7 @@ export default function OmOssPage() {
         <CtaSection />
       </main>
       <Footer />
+      <CaseStudyPopup />
     </>
   );
 }

@@ -6,6 +6,7 @@ import MaintenanceSection from "@/components/sluttkunde/MaintenanceSection";
 import InnovationSection from "@/components/sluttkunde/InnovationSection";
 import HowToSection from "@/components/sluttkunde/HowToSection";
 import SluttkundeCtaSection from "@/components/sluttkunde/SluttkundeCtaSection";
+import CaseStudyPopup from "@/components/CaseStudyPopup";
 
 export const metadata = {
   title: "Slidedrain // Den usynlige detaljen som utgjør hele forskjellen",
@@ -26,6 +27,7 @@ export default function SluttkunderPage() {
         <SluttkundeCtaSection />
       </main>
       <Footer />
+      <CaseStudyPopup />
     </>
   );
 }

@@ -6,6 +6,7 @@ import SegmentGuide from "@/components/home/SegmentGuide";
 import TrustBar from "@/components/home/TrustBar";
 import CtaSection from "@/components/CtaSection";
 import Footer from "@/components/Footer";
+import CaseStudyPopup from "@/components/CaseStudyPopup";
 
 export const metadata = {
   title: "Slidedrain // Neste generasjons gulvsluk",
@@ -26,6 +27,7 @@ export default function HomePage() {
         <CtaSection />
       </main>
       <Footer />
+      <CaseStudyPopup />
     </>
   );
 }

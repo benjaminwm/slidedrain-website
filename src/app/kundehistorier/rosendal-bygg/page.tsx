@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import CaseStudyPopup from "@/components/CaseStudyPopup";
 import CtaSection from "@/components/CtaSection";
 import RosendalContent from "./RosendalContent";
 
@@ -18,6 +19,7 @@ export default function RosendalByggPage() {
         <CtaSection />
       </main>
       <Footer />
+      <CaseStudyPopup />
     </>
   );
 }

@@ -6,6 +6,7 @@ import SystemSection from "@/components/rorlegger/SystemSection";
 import ComparisonTable from "@/components/rorlegger/ComparisonTable";
 import TrustSection from "@/components/rorlegger/TrustSection";
 import RorleggerCtaSection from "@/components/rorlegger/RorleggerCtaSection";
+import CaseStudyPopup from "@/components/CaseStudyPopup";
 
 export const metadata = {
   title: "Slidedrain // Utviklet med fagfolk for fagfolk",
@@ -26,6 +27,7 @@ export default function RorleggerPage() {
         <RorleggerCtaSection />
       </main>
       <Footer />
+      <CaseStudyPopup />
     </>
   );
 }
