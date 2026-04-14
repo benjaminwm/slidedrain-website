@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import FadeUp from "./FadeUp";
 import VideoEmbed from "./VideoEmbed";
@@ -11,26 +12,43 @@ const tilvalg = [
     level: "Tilvalg 1",
     title: "Basis \u2013 Hjørnerist i rustfritt stål",
     desc: "Robust og tidløst design som inngår i prosjektets standardleveranse med en prisgunstig profil som styrker konkurransekraften i entreprisen.",
-    imageId: "426ca516-7f7e-4e06-b695-a36ff88015c1",
+    productImage: `${CDN}/426ca516-7f7e-4e06-b695-a36ff88015c1/square`,
+    insituImage: "/images/tilvalg-1-insitu.png",
     featured: false,
   },
   {
     level: "Tilvalg 2",
     title: "Plus \u2013 Hjørnerist med Tile Insert",
     desc: "En estetisk videreutvikling av den klassiske hjørneristen som integreres sømløst med baderommets egne fliser. Ved å bytte ut stålflaten med flis blir sluket nesten usynlig for et mer stilrent uttrykk.",
-    imageId: "356ad341-895f-46ea-919a-7910d7126651",
+    productImage: `${CDN}/356ad341-895f-46ea-919a-7910d7126651/square`,
+    insituImage: "/images/tilvalg-2-insitu.png",
     featured: true,
   },
   {
     level: "Tilvalg 3",
     title: "Premium \u2013 Eksentrisk slukrenne med Tile Insert",
     desc: "Den ultimate oppgraderingen som forvandler hjørnesluket til en moderne slukrenne med lengder fra 700\u20131200 mm. Perfekt for storformat-fliser med ensidig fall mot vegg for en eksklusiv finish.",
-    imageId: "1728db8c-b489-4797-86de-a2133072cc06",
+    productImage: `${CDN}/1728db8c-b489-4797-86de-a2133072cc06/square`,
+    insituImage: "/images/tilvalg-3-insitu.png",
     featured: false,
   },
 ];
 
 export default function TilvalgSection() {
+  const [inView, setInView] = useState(false);
+  const gridRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const el = gridRef.current;
+    if (!el) return;
+    const obs = new IntersectionObserver(
+      ([entry]) => setInView(entry.isIntersecting),
+      { threshold: 0.35 }
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, []);
+
   return (
     <section className="py-20 px-6 bg-gray-bg" id="tilvalg">
       <div className="max-w-[1200px] mx-auto">
@@ -50,7 +68,7 @@ export default function TilvalgSection() {
 
         <VideoEmbed />
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-14">
+        <div ref={gridRef} className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-14">
           {tilvalg.map((t, i) => (
             <FadeUp
               key={i}
@@ -63,14 +81,25 @@ export default function TilvalgSection() {
               {t.featured && (
                 <div className="absolute top-0 left-0 right-0 h-1 bg-orange" />
               )}
-              <div className="bg-gray-bg rounded-xl flex items-center justify-center mb-6 p-4 aspect-square">
+              <div className="bg-gray-bg rounded-xl flex items-center justify-center mb-6 p-4 aspect-square relative overflow-hidden">
                 <Image
-                  src={`${CDN}/${t.imageId}/square`}
+                  src={t.productImage}
                   alt={t.title}
-                  width={300}
-                  height={300}
-                  className="w-full h-full object-contain"
+                  width={400}
+                  height={400}
+                  className={`absolute inset-4 w-[calc(100%-2rem)] h-[calc(100%-2rem)] object-contain transition-opacity duration-700 ${
+                    inView ? "opacity-0" : "opacity-100"
+                  }`}
                   unoptimized
+                />
+                <Image
+                  src={t.insituImage}
+                  alt={`${t.title} installert`}
+                  width={600}
+                  height={600}
+                  className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${
+                    inView ? "opacity-100" : "opacity-0"
+                  }`}
                 />
               </div>
               <div className="text-xs font-semibold uppercase tracking-wider text-orange mb-2">
