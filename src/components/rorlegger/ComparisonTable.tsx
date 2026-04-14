@@ -74,12 +74,12 @@ export default function ComparisonTable() {
                   <td className="py-4 px-4 font-semibold text-navy">
                     {r.feature}
                   </td>
-                  <td className="py-4 px-4 text-green-700">
-                    <span className="font-bold">{r.sdBold}</span>{" "}
+                  <td className="py-4 px-4">
+                    <span className="font-bold text-orange">{r.sdBold}</span>{" "}
                     <span className="font-normal text-text-light">{r.sdReg}</span>
                   </td>
-                  <td className="py-4 px-4 text-red-400">
-                    <span className="font-bold">{r.trBold}</span>{" "}
+                  <td className="py-4 px-4">
+                    <span className="font-bold text-navy">{r.trBold}</span>{" "}
                     <span className="font-normal text-text-light">{r.trReg}</span>
                   </td>
                 </tr>
