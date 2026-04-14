@@ -10,8 +10,8 @@ export default function Hero() {
             For byggherrer & entreprenører
           </span>
           <h1 className="text-[42px] max-lg:text-[34px] max-sm:text-[28px] font-bold leading-[1.2] mb-5 text-navy">
-            Maksimer prosjektets lønnsomhet med markedets mest fleksible{" "}
-            <span className="text-orange">tilvalgsløsning for gulvsluk</span>
+            Sluksystemet som maksimerer{" "}
+            <span className="text-orange">prosjektets lønnsomhet</span>
           </h1>
           <p className="text-lg text-text-light leading-[1.7] mb-8 font-light">
             Utvid tilvalgsperioden med flere måneder og eliminer behovet for
