@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#1a2536] text-white/60">
+    <footer className="bg-white text-text-light border-t border-navy/8">
       <div className="max-w-[1200px] mx-auto px-6 py-14">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-10">
           {/* Brand */}
@@ -24,46 +24,56 @@ export default function Footer() {
 
           {/* Quick links */}
           <div>
-            <h4 className="text-white font-semibold text-sm mb-4">
-              Landingsside
+            <h4 className="text-navy font-semibold text-sm mb-4">
+              Sider
             </h4>
             <ul className="space-y-2.5 text-sm">
               <li>
-                <a href="#tilvalg" className="hover:text-white transition-colors">
-                  Tilvalg
-                </a>
+                <Link href="/produkter" className="hover:text-navy transition-colors">
+                  Produkter
+                </Link>
               </li>
               <li>
-                <a href="#fordeler" className="hover:text-white transition-colors">
-                  Fordeler
-                </a>
+                <Link href="/sluttkunde" className="hover:text-navy transition-colors">
+                  Privatperson
+                </Link>
               </li>
               <li>
-                <a href="#sikkerhet" className="hover:text-white transition-colors">
-                  Sikkerhet
-                </a>
+                <Link href="/rorlegger" className="hover:text-navy transition-colors">
+                  Rørlegger
+                </Link>
               </li>
               <li>
-                <a href="#logistikk" className="hover:text-white transition-colors">
-                  Logistikk
-                </a>
+                <Link href="/tilvalg" className="hover:text-navy transition-colors">
+                  Entreprenør
+                </Link>
               </li>
               <li>
-                <a href="#kontakt" className="hover:text-white transition-colors">
-                  Kontakt
-                </a>
+                <Link href="/installasjon" className="hover:text-navy transition-colors">
+                  Installasjon
+                </Link>
+              </li>
+              <li>
+                <Link href="/kundehistorier" className="hover:text-navy transition-colors">
+                  Kundehistorier
+                </Link>
+              </li>
+              <li>
+                <Link href="/om-oss" className="hover:text-navy transition-colors">
+                  Om oss
+                </Link>
               </li>
             </ul>
           </div>
 
           {/* Contact */}
           <div>
-            <h4 className="text-white font-semibold text-sm mb-4">Kontakt</h4>
+            <h4 className="text-navy font-semibold text-sm mb-4">Kontakt</h4>
             <ul className="space-y-2.5 text-sm">
               <li>
                 <Link
                   href="https://slidedrain.no"
-                  className="hover:text-white transition-colors"
+                  className="hover:text-navy transition-colors"
                 >
                   slidedrain.no
                 </Link>
@@ -71,7 +81,7 @@ export default function Footer() {
               <li>
                 <a
                   href="mailto:post@slidedrain.no"
-                  className="hover:text-white transition-colors"
+                  className="hover:text-navy transition-colors"
                 >
                   post@slidedrain.no
                 </a>
@@ -81,16 +91,16 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="border-t border-white/10 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-white/40">
+        <div className="border-t border-navy/8 pt-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-text-light/50">
           <p>
             &copy; {new Date().getFullYear()} Slidedrain. Alle rettigheter
             reservert.
           </p>
           <div className="flex gap-6">
-            <Link href="/personvern" className="hover:text-white/60 transition-colors">
+            <Link href="/personvern" className="hover:text-navy transition-colors">
               Personvern
             </Link>
-            <Link href="/vilkar" className="hover:text-white/60 transition-colors">
+            <Link href="/vilkar" className="hover:text-navy transition-colors">
               Vilkår
             </Link>
           </div>

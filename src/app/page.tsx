@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import HomeHero from "@/components/home/HomeHero";
 import ValueProps from "@/components/home/ValueProps";
+import ProductShowcase from "@/components/home/ProductShowcase";
 import ProductOverview from "@/components/home/ProductOverview";
 import SegmentGuide from "@/components/home/SegmentGuide";
 import TrustBar from "@/components/home/TrustBar";
@@ -21,6 +22,7 @@ export default function HomePage() {
       <main>
         <HomeHero />
         <ValueProps />
+        <ProductShowcase />
         <ProductOverview />
         <SegmentGuide />
         <TrustBar />
