@@ -67,14 +67,14 @@ export default function TrustBar() {
               Tilgjengelig hos
             </span>
             <Image
-              src="https://slidedrain.no/wp-content/uploads/2022/05/BD-Logo-neg-2linjers-300x71.png"
+              src="/images/logo-brodrenedahl.png"
               alt="Brødrene Dahl"
               width={120}
               height={28}
               className="h-7 w-auto opacity-40 hover:opacity-70 transition-opacity"
             />
             <Image
-              src="https://slidedrain.no/wp-content/uploads/2022/05/flisekompaniet_logo_neg-300x49.png"
+              src="/images/logo-flisekompaniet.png"
               alt="Flisekompaniet"
               width={120}
               height={28}

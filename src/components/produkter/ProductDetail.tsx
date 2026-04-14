@@ -149,7 +149,7 @@ export default function ProductDetail({
                   >
                     <div className="flex items-center gap-4">
                       <Image
-                        src="https://slidedrain.no/wp-content/uploads/2022/05/BD-Logo-neg-2linjers-300x71.png"
+                        src="/images/logo-brodrenedahl.png"
                         alt="Brødrene Dahl"
                         width={100}
                         height={24}
@@ -180,7 +180,7 @@ export default function ProductDetail({
                   >
                     <div className="flex items-center gap-4">
                       <Image
-                        src="https://slidedrain.no/wp-content/uploads/2022/05/flisekompaniet_logo_neg-300x49.png"
+                        src="/images/logo-flisekompaniet.png"
                         alt="Flisekompaniet"
                         width={100}
                         height={24}
