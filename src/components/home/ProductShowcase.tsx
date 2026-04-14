@@ -59,18 +59,11 @@ const layers = [
   },
 ];
 
-function ArrowButton({
-  direction,
-  onClick,
-}: {
-  direction: "left" | "right";
-  onClick: () => void;
-}) {
+function ArrowBtn({ direction, onClick }: { direction: "left" | "right"; onClick: () => void }) {
   return (
     <button
       onClick={onClick}
-      className="w-8 h-8 rounded-full flex items-center justify-center text-orange hover:bg-orange/10 transition-colors cursor-pointer shrink-0"
-      aria-label={direction === "left" ? "Forrige" : "Neste"}
+      className="w-7 h-7 rounded-full flex items-center justify-center text-orange hover:bg-orange/10 transition-colors cursor-pointer shrink-0"
     >
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={3} className="w-4 h-4">
         {direction === "left" ? <path d="M15 18l-6-6 6-6" /> : <path d="M9 18l6-6-6-6" />}
@@ -79,18 +72,11 @@ function ArrowButton({
   );
 }
 
-function GhostProduct({ product }: { product: Product | undefined }) {
-  if (!product) return <div className="w-14 h-14" />;
+function Ghost({ product }: { product: Product | undefined }) {
+  if (!product) return <div className="w-10 h-10" />;
   return (
-    <div className="w-14 h-14 opacity-25 shrink-0">
-      <Image
-        src={getProductImageUrl(product.imageId)}
-        alt=""
-        width={56}
-        height={56}
-        className="w-full h-full object-contain"
-        unoptimized
-      />
+    <div className="w-10 h-10 opacity-20 shrink-0">
+      <Image src={getProductImageUrl(product.imageId)} alt="" width={40} height={40} className="w-full h-full object-contain" unoptimized />
     </div>
   );
 }
@@ -107,37 +93,33 @@ function LayerRow({
   onNext: () => void;
 }) {
   const product = layer.products[selectedIdx];
-  const prevProduct = layer.products[selectedIdx - 1];
-  const nextProduct = layer.products[selectedIdx + 1];
+  const prev = layer.products[selectedIdx - 1];
+  const next = layer.products[selectedIdx + 1];
 
   return (
     <div className="flex flex-col items-center">
-      <div className="text-center mb-2">
-        <p className="font-bold text-navy text-[13px]">{layer.label}</p>
-        <p className="text-xs text-text-light italic">{layer.subtitle}</p>
-      </div>
+      <p className="font-bold text-navy text-xs">{layer.label}</p>
+      <p className="text-[11px] text-text-light italic mb-1">{layer.subtitle}</p>
 
-      <div className="flex items-center gap-1 w-full justify-center">
-        <GhostProduct product={prevProduct} />
-        <ArrowButton direction="left" onClick={onPrev} />
-
-        <div className="w-[180px] h-[120px] bg-white rounded-xl flex items-center justify-center p-3 shadow-sm">
+      <div className="flex items-center gap-1 justify-center">
+        <Ghost product={prev} />
+        <ArrowBtn direction="left" onClick={onPrev} />
+        <div className="w-[120px] h-[90px] bg-white rounded-lg flex items-center justify-center p-2 shadow-sm">
           <Image
             src={getProductImageUrl(product.imageId)}
             alt={product.name}
-            width={160}
-            height={100}
-            className="w-full h-full object-contain transition-all duration-300"
+            width={110}
+            height={80}
+            className="w-full h-full object-contain"
             unoptimized
             key={product.nobbNr}
           />
         </div>
-
-        <ArrowButton direction="right" onClick={onNext} />
-        <GhostProduct product={nextProduct} />
+        <ArrowBtn direction="right" onClick={onNext} />
+        <Ghost product={next} />
       </div>
 
-      <p className="text-[10px] text-text-light mt-1.5 text-center max-w-[200px] truncate">
+      <p className="text-[9px] text-text-light mt-1 text-center max-w-[160px] truncate">
         {product.name}
       </p>
     </div>
@@ -147,46 +129,43 @@ function LayerRow({
 export default function ProductShowcase() {
   const [selections, setSelections] = useState([0, 0, 0]);
 
-  const navigate = useCallback(
-    (layerIdx: number, direction: number) => {
-      setSelections((prev) => {
-        const next = [...prev];
-        const len = layers[layerIdx].products.length;
-        next[layerIdx] = (prev[layerIdx] + direction + len) % len;
-        return next;
-      });
-    },
-    []
-  );
+  const navigate = useCallback((layerIdx: number, direction: number) => {
+    setSelections((prev) => {
+      const next = [...prev];
+      const len = layers[layerIdx].products.length;
+      next[layerIdx] = (prev[layerIdx] + direction + len) % len;
+      return next;
+    });
+  }, []);
 
   return (
-    <section className="py-20 px-6 bg-gray-bg" id="produkter">
+    <section className="py-16 px-6 bg-gray-bg" id="produkter">
       <div className="max-w-[1200px] mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-10 items-center">
           {/* Left: Text */}
-          <div>
-            <span className="inline-block bg-orange/10 text-orange text-[13px] font-semibold px-3.5 py-1.5 rounded-full mb-5 uppercase tracking-wide">
+          <div className="max-w-[520px]">
+            <span className="inline-block bg-orange/10 text-orange text-[12px] font-semibold px-3 py-1 rounded-full mb-4 uppercase tracking-wide">
               Modulært sluksystem
             </span>
-            <h2 className="text-[38px] max-lg:text-[30px] max-sm:text-[26px] font-bold leading-[1.15] mb-5 text-navy">
+            <h2 className="text-[32px] max-md:text-[26px] font-bold leading-[1.15] mb-4 text-navy">
               Forenkler byggeprosessen fra{" "}
               <AnimatedWord words={animWords1} /> til{" "}
               <AnimatedWord words={animWords2} />
             </h2>
-            <p className="text-[17px] text-text-light leading-[1.7] font-light mb-6">
+            <p className="text-[15px] text-text-light leading-[1.7] font-light mb-5">
               Slidedrain er et komplett modulært sluksystem der den tekniske
               installasjonen er den samme, uansett hvilket designuttrykk
               sluttkunden velger. Sett sammen din egen løsning &ndash; alt
               passer sammen.
             </p>
-            <ul className="space-y-3 mb-8">
+            <ul className="space-y-2.5 mb-6">
               {[
                 "Velg blant 25+ slukrenner og slukrister",
                 "Samme slukoverdel og slukpotte for alle design",
                 "Designvalg kan endres helt frem til flislegging",
               ].map((item, i) => (
-                <li key={i} className="flex items-start gap-3 text-[15px] text-text-light">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="#22c55e" strokeWidth={2} className="w-5 h-5 shrink-0 mt-0.5">
+                <li key={i} className="flex items-start gap-2.5 text-[14px] text-text-light">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#22c55e" strokeWidth={2} className="w-4.5 h-4.5 shrink-0 mt-0.5">
                     <polyline points="20 6 9 17 4 12" />
                   </svg>
                   {item}
@@ -195,7 +174,7 @@ export default function ProductShowcase() {
             </ul>
             <Link
               href="/produkter"
-              className="inline-flex items-center gap-2.5 bg-orange text-white px-7 py-3.5 rounded-lg font-semibold text-[15px] hover:bg-orange-dark transition-all hover:-translate-y-0.5 shadow-[0_4px_14px_rgba(251,92,19,0.3)]"
+              className="inline-flex items-center gap-2 bg-orange text-white px-6 py-3 rounded-lg font-semibold text-sm hover:bg-orange-dark transition-all hover:-translate-y-0.5 shadow-[0_4px_14px_rgba(251,92,19,0.3)]"
             >
               Se alle produkter
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="w-4 h-4">
@@ -204,13 +183,13 @@ export default function ProductShowcase() {
             </Link>
           </div>
 
-          {/* Right: Configurator */}
-          <div className="border-2 border-dashed border-navy/15 rounded-3xl py-8 px-3 bg-white/50 space-y-6">
+          {/* Right: Compact configurator */}
+          <div className="border-2 border-dashed border-navy/12 rounded-2xl py-5 px-3 bg-white/60 space-y-1 w-[340px] max-lg:mx-auto">
             {layers.map((layer, i) => (
               <div key={i}>
                 {i > 0 && (
-                  <div className="flex justify-center mb-4">
-                    <div className="w-px h-6 bg-navy/15" />
+                  <div className="flex justify-center">
+                    <div className="w-px h-4 bg-navy/15" />
                   </div>
                 )}
                 <LayerRow
@@ -222,14 +201,13 @@ export default function ProductShowcase() {
               </div>
             ))}
 
-            {/* Logo */}
-            <div className="flex justify-center pt-2">
+            <div className="flex justify-center pt-1">
               <Image
                 src="https://slidedrain.no/wp-content/uploads/2020/08/Full-logo_Orange.webp?x59798"
                 alt="Slidedrain"
-                width={120}
-                height={24}
-                className="h-5 w-auto opacity-40"
+                width={100}
+                height={20}
+                className="h-4 w-auto opacity-35"
               />
             </div>
           </div>
