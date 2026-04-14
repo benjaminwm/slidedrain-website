@@ -31,22 +31,25 @@ export default function RosendalContent() {
               </h1>
               <p className="text-lg text-text-light leading-[1.7] font-light mb-6">
                 Når et detaljbesatt tømrerfirma i Trondheim har en rørlegger
-                som kun monterer det han selv ville hatt hjemme, blir
-                resultatet eksepsjonelt. Se hvordan Ole Olsen og Rosendal
-                Bygg bruker Slidedrain til å levere premium
-                baderomsopplevelser &ndash; uten kompromisser.
+                som er lidenskapelig opptatt av arkitektur, blir resultatet
+                eksepsjonelt. Se hvordan Ole Brehme Olsen og{" "}
+                <a href="https://www.rosendalbygg.no/" target="_blank" rel="noopener noreferrer" className="text-navy underline hover:text-orange transition-colors">
+                  Rosendal Bygg
+                </a>{" "}
+                bruker Slidedrain til å levere premium baderomsopplevelser
+                &ndash; uten kompromisser.
               </p>
               <div className="flex items-center gap-4 p-4 bg-gray-bg rounded-xl">
                 <Image
                   src="/images/kundehistorier/ole-olsen.webp"
-                  alt="Ole Olsen"
+                  alt="Ole Brehme Olsen"
                   width={48}
                   height={48}
                   className="w-12 h-12 rounded-full object-cover shrink-0"
                 />
                 <div>
                   <p className="font-semibold text-navy text-[15px]">
-                    Ole Olsen
+                    Ole Brehme Olsen
                   </p>
                   <p className="text-sm text-text-light">
                     Rørlegger i Rosendal Bygg, medlem av VVS Fagmann
@@ -57,7 +60,7 @@ export default function RosendalContent() {
             <div className="flex justify-center items-center max-lg:order-first">
               <Image
                 src="/images/kundehistorier/rosendal-2.jpg"
-                alt="Ole Olsen planlegger slukplassering på byggeplassen til Rosendal Bygg"
+                alt="Ole Brehme Olsen planlegger slukplassering på byggeplassen til Rosendal Bygg"
                 width={700}
                 height={394}
                 className="w-full rounded-2xl shadow-[0_20px_60px_rgba(40,52,71,0.12)]"
@@ -77,30 +80,34 @@ export default function RosendalContent() {
               Byggmesterbedrift i Trondheim
             </h2>
             <p className="text-[17px] text-text-light leading-[1.8] mb-4">
-              Rosendal Bygg er en byggmesterbedrift fra Trondheim som
-              spesialiserer seg på rehabilitering og oppgradering av eldre
+              Rosendal Bygg er en byggmester- og rørleggerbedrift fra Trondheim
+              som spesialiserer seg på rehabilitering og oppgradering av eldre
               boliger. Prosjektene deres kjennetegnes av en kompromissløs
               oppmerksomhet på detaljer &ndash; fra listverk som er smalere enn
               standard til nøye koordinert materialvalg gjennom hele boligen.
+              Utvalgte glimt fra prosjektene deles på{" "}
+              <a href="https://www.instagram.com/rosendalbygg/" target="_blank" rel="noopener noreferrer" className="text-navy underline hover:text-orange transition-colors">
+                Rosendal Bygg sin Instagramprofil
+              </a>
+              , med følgerskaren som teller nærmere 3000.
             </p>
             <p className="text-[17px] text-text-light leading-[1.8]">
               Når kvalitetskravene er så høye, trengs det håndverkere som
-              matcher ambisjonsnivået. Ole Olsen er rørleggeren i Rosendal
-              Bygg og medlem av VVS Fagmann &ndash; en fagmann som kun
-              monterer det han selv ville hatt hjemme.
+              matcher ambisjonsnivået. Ole Brehme Olsen er rørleggeren i
+              Rosendal Bygg og medlem av VVS Fagmann &ndash; en fagmann som er
+              ekspert på å visualisere detaljer, både faglig og tverrfaglig.
             </p>
           </FadeUp>
 
-          {/* Quote 1 - Craftsman's choice */}
+          {/* Quote 1 */}
           <FadeUp className="mb-16">
             <blockquote className="border-l-4 border-orange pl-6 py-2 bg-gray-bg rounded-r-xl p-6">
               <p className="text-xl max-md:text-lg text-navy leading-[1.6] italic mb-3">
-                &ldquo;Jeg som håndverker, jeg vil jo levere fra meg noe jeg
-                står inne for. Jeg vil ikke bli oppringt et par uker
-                etterpå.&rdquo;
+                &ldquo;Jeg prøver alltid å overgå mine tidligere utførelser, på
+                et eller annet nivå.&rdquo;
               </p>
               <cite className="text-sm text-text-light not-italic font-medium">
-                &mdash; Ole Olsen, rørlegger i Rosendal Bygg
+                &mdash; Ole Brehme Olsen, rørlegger i Rosendal Bygg
               </cite>
             </blockquote>
           </FadeUp>
@@ -108,34 +115,34 @@ export default function RosendalContent() {
           {/* Challenge */}
           <FadeUp className="mb-16">
             <h2 className="text-3xl max-md:text-2xl font-bold text-navy mb-5">
-              Utfordringen: Bjelkelag, design og vedlikehold
+              Bjelkelag, design og vedlikehold
             </h2>
             <p className="text-[17px] text-text-light leading-[1.8] mb-4">
               Rosendal Byggs prosjekter er ofte eldre boliger der bjelkelaget
               i gulvet setter begrensninger for hvor sluket kan plasseres.
               Kundene ønsker gjerne tile insert-design med storformatfliser,
-              men tradisjonelle linjesluk skaper utfordringer &ndash; både
+              men tradisjonelle linjesluk kan skape utfordringer &ndash; både
               under og etter montasje.
             </p>
             <p className="text-[17px] text-text-light leading-[1.8]">
-              Ole hadde erfart problemene med linjesluk på nært hold: tette
-              avløp, luktproblemer og frustrerte sluttkunder som ikke klarte
-              vedlikeholdet selv.
+              Med standard sirkulærsluk får man et produkt som tar unna vannet
+              og er særdeles enkelt å vedlikeholde. Med slukrist fra Slidedrain
+              får man fleksibilitet ved montering og i tillegg et flott design.
             </p>
           </FadeUp>
 
-          {/* Image 1 - Phone planning */}
+          {/* Image - Ole with slukpotte */}
           <FadeUp className="mb-16">
             <Image
-              src="/images/kundehistorier/rosendal-1.jpg"
-              alt="Ole Olsen planlegger flisoppsett og slukplassering digitalt"
+              src="/images/kundehistorier/rosendal-3.jpg"
+              alt="Ole Brehme Olsen med Slidedrain slukpotte på byggeplassen"
               width={800}
               height={450}
               className="w-full rounded-2xl shadow-[0_8px_30px_rgba(40,52,71,0.1)] mb-6"
             />
             <p className="text-sm text-text-light text-center italic">
-              Digital planlegging av flisoppsett og slukplassering &ndash; Slidedrain
-              gir fleksibilitet til å tilpasse løsningen etter bjelkelaget.
+              Ole med Slidedrain slukpotte på byggeplassen &ndash; klar for
+              installasjon i neste bad.
             </p>
           </FadeUp>
 
@@ -149,7 +156,7 @@ export default function RosendalContent() {
                 {[
                   "Designet er så smalt at det tettes mye raskere enn store vannlåser på vanlige sirkulære sluk.",
                   "For komplisert for sluttkunden å vedlikeholde – ikke for en håndverker, men for den vanlige mannen i gata.",
-                  "Resulterer i telefoner om lukt og tett avløp kort tid etter overlevering.",
+                  "Kan resultere i telefoner om lukt og tett avløp kort tid etter overlevering.",
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-3">
                     <svg viewBox="0 0 24 24" fill="none" stroke="#ef4444" strokeWidth={2} className="w-5 h-5 shrink-0 mt-0.5">
@@ -166,12 +173,12 @@ export default function RosendalContent() {
             </div>
           </FadeUp>
 
-          {/* Solution */}
+          {/* Solution text */}
           <FadeUp className="mb-16">
             <h2 className="text-3xl max-md:text-2xl font-bold text-navy mb-5">
               Løsningen: Slidedrain Sluksystem
             </h2>
-            <p className="text-[17px] text-text-light leading-[1.8] mb-6">
+            <p className="text-[17px] text-text-light leading-[1.8]">
               Ole går ofte for Slidedrain på Rosendal Byggs prosjekter. På
               dette rehab-prosjektet som er avbildet var det problemer med
               bjelkelaget, som gjorde det vanskelig med et vanlig sluk. Med
@@ -180,6 +187,52 @@ export default function RosendalContent() {
               stilrene uttrykket de ønsket &ndash; uten
               vedlikeholdsproblemene fra linjesluk.
             </p>
+          </FadeUp>
+
+          {/* Image - Installation */}
+          <FadeUp className="mb-16">
+            <Image
+              src="/images/kundehistorier/rosendal-4.jpg"
+              alt="Ole Brehme Olsen monterer Slidedrain slukrenne i bjelkelaget"
+              width={800}
+              height={450}
+              className="w-full rounded-2xl shadow-[0_8px_30px_rgba(40,52,71,0.1)] mb-6"
+            />
+            <p className="text-sm text-text-light text-center italic">
+              Ole plasserer slukrennen med tile insert over det sirkulære
+              gulvsluket &ndash; linjesluk-look med sirkulært sluk under.
+            </p>
+          </FadeUp>
+
+          {/* Result */}
+          <FadeUp className="mb-16">
+            <h2 className="text-3xl max-md:text-2xl font-bold text-navy mb-5">
+              Resultatet
+            </h2>
+            <p className="text-[17px] text-text-light leading-[1.8] mb-6">
+              Resultatet er bad som forener Rosendal Byggs kompromissløse krav
+              til kvalitet med en teknisk løsning som faktisk fungerer i
+              hverdagen. Storformatfliser med tile insert gir et stilrent
+              uttrykk, mens den store vannlåsen eliminerer
+              vedlikeholdsproblemene som plaget tradisjonelle linjesluk.
+            </p>
+          </FadeUp>
+
+          {/* Quote - Result */}
+          <FadeUp className="mb-16">
+            <blockquote className="border-l-4 border-orange pl-6 py-2 bg-gray-bg rounded-r-xl p-6">
+              <p className="text-xl max-md:text-lg text-navy leading-[1.6] italic mb-3">
+                &ldquo;Det er enkelt å rengjøre vannlåsen og det er enkelt å
+                sette den tilbake.&rdquo;
+              </p>
+              <cite className="text-sm text-text-light not-italic font-medium">
+                &mdash; Ole Brehme Olsen, rørlegger i Rosendal Bygg
+              </cite>
+            </blockquote>
+          </FadeUp>
+
+          {/* Solution cards */}
+          <FadeUp className="mb-16">
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               {[
                 {
@@ -227,49 +280,6 @@ export default function RosendalContent() {
             </div>
           </FadeUp>
 
-          {/* Image 2 - Installation */}
-          <FadeUp className="mb-16">
-            <Image
-              src="/images/kundehistorier/rosendal-4.jpg"
-              alt="Ole Olsen monterer Slidedrain slukrenne i bjelkelaget"
-              width={800}
-              height={450}
-              className="w-full rounded-2xl shadow-[0_8px_30px_rgba(40,52,71,0.1)] mb-6"
-            />
-            <p className="text-sm text-text-light text-center italic">
-              Ole plasserer slukrennen med tile insert over det sirkulære
-              gulvsluket &ndash; linjesluk-look med sirkulært sluk under.
-            </p>
-          </FadeUp>
-
-          {/* Result */}
-          <FadeUp className="mb-16">
-            <h2 className="text-3xl max-md:text-2xl font-bold text-navy mb-5">
-              Resultatet
-            </h2>
-            <p className="text-[17px] text-text-light leading-[1.8] mb-6">
-              Resultatet er bad som forener Rosendal Byggs kompromissløse krav
-              til kvalitet med en teknisk løsning som faktisk fungerer i
-              hverdagen. Storformatfliser med tile insert gir et stilrent
-              uttrykk, mens den store vannlåsen eliminerer
-              vedlikeholdsproblemene som plaget tradisjonelle linjesluk.
-            </p>
-          </FadeUp>
-
-          {/* Quote 4 - No callbacks */}
-          <FadeUp className="mb-16">
-            <blockquote className="border-l-4 border-orange pl-6 py-2 bg-gray-bg rounded-r-xl p-6">
-              <p className="text-xl max-md:text-lg text-navy leading-[1.6] italic mb-3">
-                &ldquo;Det er enkelt å rengjøre og det er enkelt å sette
-                tilbake. Derfor får du ikke noen telefoner etterpå. Pluss at
-                det ser veldig bra ut. Det er veldig lett å selge.&rdquo;
-              </p>
-              <cite className="text-sm text-text-light not-italic font-medium">
-                &mdash; Ole Olsen, rørlegger i Rosendal Bygg
-              </cite>
-            </blockquote>
-          </FadeUp>
-
           {/* Stats */}
           <FadeUp className="mb-16">
             <div className="bg-navy rounded-2xl p-8 text-white">
@@ -290,18 +300,19 @@ export default function RosendalContent() {
             </div>
           </FadeUp>
 
-          {/* Image 3 - Overview */}
+          {/* Image - Phone planning */}
           <FadeUp className="mb-16">
             <Image
-              src="/images/kundehistorier/rosendal-3.jpg"
-              alt="Ole Olsen med Slidedrain slukpotte på byggeplassen"
+              src="/images/kundehistorier/rosendal-1.jpg"
+              alt="Ole Brehme Olsen planlegger flisoppsett og slukplassering digitalt"
               width={800}
               height={450}
               className="w-full rounded-2xl shadow-[0_8px_30px_rgba(40,52,71,0.1)] mb-6"
             />
             <p className="text-sm text-text-light text-center italic">
-              Ole med Slidedrain slukpotte på byggeplassen &ndash; klar for
-              installasjon i neste bad.
+              Digital planlegging av flisoppsett og slukplassering &ndash;
+              Slidedrain gir fleksibilitet til å tilpasse løsningen etter
+              bjelkelaget.
             </p>
           </FadeUp>
 
@@ -356,7 +367,7 @@ export default function RosendalContent() {
                 insert over.&rdquo;
               </p>
               <cite className="text-sm text-text-light not-italic font-medium">
-                &mdash; Ole Olsen, rørlegger i Rosendal Bygg
+                &mdash; Ole Brehme Olsen, rørlegger i Rosendal Bygg
               </cite>
             </blockquote>
           </FadeUp>
