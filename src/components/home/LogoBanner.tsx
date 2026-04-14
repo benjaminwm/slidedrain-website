@@ -21,7 +21,11 @@ const allLogos = [...logos, ...logos];
 
 export default function LogoBanner() {
   return (
-    <div className="overflow-hidden py-6 border-t border-navy/6">
+    <div className="relative py-6 border-t border-navy/6">
+      {/* Fade edges */}
+      <div className="absolute left-0 top-0 bottom-0 w-[20%] bg-gradient-to-r from-[#fef7f3] to-transparent z-10 pointer-events-none" />
+      <div className="absolute right-0 top-0 bottom-0 w-[20%] bg-gradient-to-l from-[#fef7f3] to-transparent z-10 pointer-events-none" />
+      <div className="overflow-hidden mx-[20%]">
       <div className="flex items-center animate-scroll">
         {allLogos.map((logo, i) => (
           <div
@@ -37,6 +41,7 @@ export default function LogoBanner() {
             />
           </div>
         ))}
+      </div>
       </div>
 
       <style>{`
