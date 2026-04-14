@@ -26,7 +26,7 @@ const steps = [
     tag: "Tilvalg åpnes",
     tagColor: "bg-green/12 text-green",
     title: "Kundetilvalg åpnes",
-    desc: "Kunden kan velge fritt helt frem til støping av fall.",
+    desc: "Kunden kan velge fritt helt frem til avretting av gulvstøp.",
     active: true,
   },
   {
