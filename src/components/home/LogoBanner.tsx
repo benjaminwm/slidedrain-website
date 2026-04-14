@@ -19,12 +19,12 @@ const allLogos = [...logos, ...logos];
 
 export default function LogoBanner() {
   return (
-    <div className="relative py-6 overflow-hidden mx-[20%]">
-      {/* Fade edges */}
-      <div className="absolute left-0 top-0 bottom-0 w-[15%] bg-gradient-to-r from-[#fef7f3] to-transparent z-10 pointer-events-none" />
-      <div className="absolute right-0 top-0 bottom-0 w-[15%] bg-gradient-to-l from-[#fef7f3] to-transparent z-10 pointer-events-none" />
+    <div className="relative py-6 overflow-hidden">
+      {/* Fade edges - 20% on each side matching hero bg */}
+      <div className="absolute left-0 top-0 bottom-0 w-[20%] bg-gradient-to-r from-[#fef7f3] to-transparent z-10 pointer-events-none" />
+      <div className="absolute right-0 top-0 bottom-0 w-[20%] bg-gradient-to-l from-[#fef7f3] to-transparent z-10 pointer-events-none" />
 
-      <div className="flex items-center animate-scroll">
+      <div className="flex items-center animate-logo-scroll">
         {allLogos.map((logo, i) => (
           <div key={i} className="flex items-center justify-center shrink-0 px-8">
             <Image
@@ -39,12 +39,12 @@ export default function LogoBanner() {
       </div>
 
       <style>{`
-        @keyframes scroll {
+        @keyframes logoScroll {
           0% { transform: translateX(0); }
           100% { transform: translateX(-50%); }
         }
-        .animate-scroll {
-          animation: scroll 40s linear infinite;
+        .animate-logo-scroll {
+          animation: logoScroll 40s linear infinite;
           width: max-content;
         }
       `}</style>

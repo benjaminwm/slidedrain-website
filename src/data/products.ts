@@ -449,20 +449,6 @@ export const productCategories: ProductCategory[] = [
         description:
           "Slukrenne 1197 mm med Tile Insert i rustfritt stål. Den lengste varianten for ekstra brede dusjanlegg og walk-in-løsninger.",
       },
-      {
-        name: "Slukrenne Tile Insert 1200 Sort",
-        slug: "slukrenne-tile-insert-1200-matt-sort",
-        nobbNr: "60795673",
-        nrfNr: "1459482",
-        dimensions: "1197 × 197 × 15 mm",
-        lengthMm: 1197,
-        widthMm: 197,
-        heightMm: 15,
-        finish: "Matt sort",
-        imageId: "01548960-cae4-43a2-b744-51d2c6bcf6dc",
-        description:
-          "Slukrenne 1197 mm med Tile Insert i matt sort. Lengste variant med mørk profil for store, moderne baderom.",
-      },
     ],
   },
   {
@@ -484,21 +470,6 @@ export const productCategories: ProductCategory[] = [
         imageId: "e97ccbd0-6b67-4876-b656-9be88c563087",
         description:
           "Eksentrisk slukrenne 697 mm med Tile Insert i rustfritt stål. Ensidig fall mot vegg muliggjør bruk av storformat-fliser.",
-        dahlUrl: `${BD}/slidedrain-slukrenne-tile-insert-eksentrisk-m3c_bd_68c150e2fd18130a69f8a3d4`,
-      },
-      {
-        name: "Slukrenne Eksentrisk Tile 700 Sort",
-        slug: "slukrenne-eksentrisk-tile-700-sort",
-        nobbNr: "60795571",
-        nrfNr: "1459465",
-        dimensions: "697 × 197 × 15 mm",
-        lengthMm: 697,
-        widthMm: 197,
-        heightMm: 15,
-        finish: "Matt sort",
-        imageId: "d407f2c4-f81c-4ff9-84a8-b2c6c5f34415",
-        description:
-          "Eksentrisk slukrenne 697 mm med Tile Insert i matt sort. Ensidig fall mot vegg med moderne mørk profil.",
         dahlUrl: `${BD}/slidedrain-slukrenne-tile-insert-eksentrisk-m3c_bd_68c150e2fd18130a69f8a3d4`,
       },
       {
@@ -549,21 +520,6 @@ export const productCategories: ProductCategory[] = [
         dahlUrl: `${BD}/slidedrain-slukrenne-tile-insert-eksentrisk-m3c_bd_68c150e2fd18130a69f8a3d4`,
       },
       {
-        name: "Slukrenne Eksentrisk Tile 900 Sort",
-        slug: "slukrenne-eksentrisk-tile-900-sort",
-        nobbNr: "60795573",
-        nrfNr: "1459467",
-        dimensions: "897 × 197 × 15 mm",
-        lengthMm: 897,
-        widthMm: 197,
-        heightMm: 15,
-        finish: "Matt sort",
-        imageId: "4e37f8d7-0c02-445a-88e9-f06a6d8cada2",
-        description:
-          "Eksentrisk slukrenne 897 mm med Tile Insert i matt sort. For større dusjareal med mørk profil.",
-        dahlUrl: `${BD}/slidedrain-slukrenne-tile-insert-eksentrisk-m3c_bd_68c150e2fd18130a69f8a3d4`,
-      },
-      {
         name: "Slukrenne Eksentrisk Tile 1000 Stål",
         slug: "slukrenne-eksentrisk-tile-1000-stal",
         nobbNr: "60795649",
@@ -579,21 +535,6 @@ export const productCategories: ProductCategory[] = [
         dahlUrl: `${BD}/slidedrain-slukrenne-tile-insert-eksentrisk-m3c_bd_68c150e2fd18130a69f8a3d4`,
       },
       {
-        name: "Slukrenne Eksentrisk Tile 1000 Sort",
-        slug: "slukrenne-eksentrisk-tile-1000-sort",
-        nobbNr: "60795650",
-        nrfNr: "1459476",
-        dimensions: "997 × 197 × 15 mm",
-        lengthMm: 997,
-        widthMm: 197,
-        heightMm: 15,
-        finish: "Matt sort",
-        imageId: "01548960-cae4-43a2-b744-51d2c6bcf6dc",
-        description:
-          "Eksentrisk slukrenne 997 mm med Tile Insert i matt sort. Lang renne med mørk profil for store baderom.",
-        dahlUrl: `${BD}/slidedrain-slukrenne-tile-insert-eksentrisk-m3c_bd_68c150e2fd18130a69f8a3d4`,
-      },
-      {
         name: "Slukrenne Eksentrisk Tile 1200 Stål",
         slug: "slukrenne-eksentrisk-tile-1200-stal",
         nobbNr: "60795683",
@@ -606,21 +547,6 @@ export const productCategories: ProductCategory[] = [
         imageId: "0125862a-3d56-4c40-a738-e23769ca5391",
         description:
           "Eksentrisk slukrenne 1197 mm med Tile Insert i rustfritt stål. Lengste variant for ekstra brede dusjareal.",
-        dahlUrl: `${BD}/slidedrain-slukrenne-tile-insert-eksentrisk-m3c_bd_68c150e2fd18130a69f8a3d4`,
-      },
-      {
-        name: "Slukrenne Eksentrisk Tile 1200 Sort",
-        slug: "slukrenne-eksentrisk-tile-1200-sort",
-        nobbNr: "60795684",
-        nrfNr: "1459484",
-        dimensions: "1197 × 197 × 15 mm",
-        lengthMm: 1197,
-        widthMm: 197,
-        heightMm: 15,
-        finish: "Matt sort",
-        imageId: "01548960-cae4-43a2-b744-51d2c6bcf6dc",
-        description:
-          "Eksentrisk slukrenne 1197 mm med Tile Insert i matt sort. Lengste variant med mørk profil.",
         dahlUrl: `${BD}/slidedrain-slukrenne-tile-insert-eksentrisk-m3c_bd_68c150e2fd18130a69f8a3d4`,
       },
     ],
