@@ -14,7 +14,7 @@ const steps = [
     tag: "Oppstart",
     tagColor: "bg-blue-500/12 text-blue-600",
     title: "Prosjektering",
-    desc: "De tre designvalgene, basis, pluss og premium, prosjekteres inn.",
+    desc: "De tre designvalgene av hjørnerister og slukrenne prosjekteres inn.",
     active: true,
   },
   {
@@ -23,10 +23,10 @@ const steps = [
         <circle cx="12" cy="12" r="5" fill="#22c55e" stroke="#22c55e" />
       </svg>
     ),
-    tag: "Åpen valgfrihet",
+    tag: "Tilvalg åpnes",
     tagColor: "bg-green/12 text-green",
-    title: "Tilvalg åpnes",
-    desc: "Kundetilvalg helt frem til støping av fall.",
+    title: "Kundetilvalg åpnes",
+    desc: "Kunden kan velge fritt helt frem til støping av fall.",
     active: true,
   },
   {
