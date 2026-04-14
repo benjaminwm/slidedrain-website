@@ -7,16 +7,6 @@ export default function HomeHero() {
   return (
     <section className="pt-[140px] pb-20 px-6 bg-gradient-to-br from-white to-[#fef7f3] overflow-hidden">
       <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-15 items-center">
-        <div className="flex justify-center items-center max-lg:order-first">
-          <Image
-            src="/images/hero-bathroom.jpg"
-            alt="Moderne baderom med Slidedrain slukrenne"
-            width={600}
-            height={450}
-            className="w-full rounded-2xl shadow-[0_20px_60px_rgba(40,52,71,0.12)]"
-            priority
-          />
-        </div>
         <div>
           <span className="inline-block bg-orange/10 text-orange text-[13px] font-semibold px-3.5 py-1.5 rounded-full mb-5 uppercase tracking-wide">
             Neste generasjons gulvsluk
@@ -25,7 +15,7 @@ export default function HomeHero() {
             Ett sluksystem,<br />
             <span className="text-orange">mange muligheter.</span>
           </h1>
-          <p className="text-lg text-text-light leading-[1.7] mb-8 font-light">
+          <p className="text-lg text-text-light leading-[1.7] mb-6 font-light">
             Slidedrain forener skandinavisk minimalisme med en patentert
             teknologi som setter en ny standard for våtromssikkerhet,
             vedlikehold og stilrent resultat. Norskprodusert og SINTEF-godkjent.
@@ -64,6 +54,16 @@ export default function HomeHero() {
               Finn din løsning
             </a>
           </div>
+        </div>
+        <div className="flex justify-center items-center max-lg:order-first">
+          <Image
+            src="/images/hero-bathroom.jpg"
+            alt="Moderne baderom med Slidedrain slukrenne"
+            width={600}
+            height={450}
+            className="w-full rounded-2xl shadow-[0_20px_60px_rgba(40,52,71,0.12)]"
+            priority
+          />
         </div>
       </div>
     </section>

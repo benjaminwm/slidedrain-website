@@ -1,8 +1,7 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { productCategories, getProductImageUrl } from "@/data/products";
 import type { Product } from "@/data/products";
 
@@ -35,196 +34,201 @@ function AnimatedWord({ words }: { words: string[] }) {
   );
 }
 
-// Build the 3 rows from product data
-const slukrennerCats = ["slukrenner-tile", "slukrenner-eksentrisk", "slukrenner"];
-const slukoverdelerCat = "slukoverdeler";
-const slukpotterCat = "slukpotter";
-
-function getProductsForRow(catIds: string | string[]): Product[] {
-  const ids = Array.isArray(catIds) ? catIds : [catIds];
+function getProducts(catIds: string[]): Product[] {
   return productCategories
-    .filter((c) => ids.includes(c.id))
+    .filter((c) => catIds.includes(c.id))
     .flatMap((c) => c.products);
 }
 
-const rows = [
+const layers = [
   {
-    label: "Slukrenner",
-    products: getProductsForRow(slukrennerCats),
+    label: "Synlig VVS",
+    subtitle: "Slukrenner & Slukrister",
+    products: getProducts(["slukrenner-tile", "slukrenner-eksentrisk", "slukrenner", "slukrister", "hjornerister"]),
   },
   {
-    label: "Slukoverdeler",
-    products: getProductsForRow(slukoverdelerCat),
+    label: "Teknisk VVS",
+    subtitle: "Slukoverdel",
+    products: getProducts(["slukoverdeler"]),
   },
   {
-    label: "Slukpotter",
-    products: getProductsForRow(slukpotterCat),
+    label: "Teknisk VVS",
+    subtitle: "Slukpotte",
+    products: getProducts(["slukpotter"]),
   },
 ];
 
-export default function ProductShowcase() {
-  const [activeRow, setActiveRow] = useState(0);
-  const [activeProduct, setActiveProduct] = useState(0);
+function ArrowButton({
+  direction,
+  onClick,
+}: {
+  direction: "left" | "right";
+  onClick: () => void;
+}) {
+  return (
+    <button
+      onClick={onClick}
+      className="w-10 h-10 rounded-full flex items-center justify-center text-orange hover:bg-orange/10 transition-colors cursor-pointer shrink-0"
+      aria-label={direction === "left" ? "Forrige" : "Neste"}
+    >
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth={3}
+        className="w-5 h-5"
+      >
+        {direction === "left" ? (
+          <path d="M15 18l-6-6 6-6" />
+        ) : (
+          <path d="M9 18l6-6-6-6" />
+        )}
+      </svg>
+    </button>
+  );
+}
 
-  const currentProducts = rows[activeRow].products;
-  const current = currentProducts[activeProduct] || currentProducts[0];
+function GhostProduct({ product }: { product: Product | undefined }) {
+  if (!product) return <div className="w-16 h-16 sm:w-20 sm:h-20" />;
+  return (
+    <div className="w-16 h-16 sm:w-20 sm:h-20 opacity-30 shrink-0">
+      <Image
+        src={getProductImageUrl(product.imageId)}
+        alt=""
+        width={80}
+        height={80}
+        className="w-full h-full object-contain"
+        unoptimized
+      />
+    </div>
+  );
+}
 
-  const handleRowChange = (i: number) => {
-    setActiveRow(i);
-    setActiveProduct(0);
-  };
+function LayerRow({
+  layer,
+  selectedIdx,
+  onPrev,
+  onNext,
+}: {
+  layer: (typeof layers)[0];
+  selectedIdx: number;
+  onPrev: () => void;
+  onNext: () => void;
+}) {
+  const product = layer.products[selectedIdx];
+  const prevProduct = layer.products[selectedIdx - 1];
+  const nextProduct = layer.products[selectedIdx + 1];
 
   return (
-    <section className="py-20 px-6 bg-white">
+    <div className="flex flex-col items-center">
+      {/* Label */}
+      <div className="text-center mb-3">
+        <p className="font-bold text-navy text-[15px]">{layer.label}</p>
+        <p className="text-sm text-text-light italic">{layer.subtitle}</p>
+      </div>
+
+      {/* Carousel row */}
+      <div className="flex items-center gap-2 sm:gap-4 w-full justify-center">
+        {/* Left ghost */}
+        <div className="hidden sm:flex items-center">
+          <GhostProduct product={prevProduct} />
+        </div>
+
+        <ArrowButton direction="left" onClick={onPrev} />
+
+        {/* Main product */}
+        <div className="w-[200px] h-[140px] sm:w-[280px] sm:h-[180px] bg-white rounded-xl flex items-center justify-center p-4 shadow-sm">
+          <Image
+            src={getProductImageUrl(product.imageId)}
+            alt={product.name}
+            width={260}
+            height={160}
+            className="w-full h-full object-contain transition-all duration-300"
+            unoptimized
+            key={product.nobbNr}
+          />
+        </div>
+
+        <ArrowButton direction="right" onClick={onNext} />
+
+        {/* Right ghost */}
+        <div className="hidden sm:flex items-center">
+          <GhostProduct product={nextProduct} />
+        </div>
+      </div>
+
+      {/* Product name */}
+      <p className="text-xs text-text-light mt-2 text-center max-w-[280px] truncate">
+        {product.name}
+      </p>
+    </div>
+  );
+}
+
+export default function ProductShowcase() {
+  const [selections, setSelections] = useState([0, 0, 0]);
+
+  const navigate = useCallback(
+    (layerIdx: number, direction: number) => {
+      setSelections((prev) => {
+        const next = [...prev];
+        const len = layers[layerIdx].products.length;
+        next[layerIdx] = (prev[layerIdx] + direction + len) % len;
+        return next;
+      });
+    },
+    []
+  );
+
+  return (
+    <section className="py-20 px-6 bg-gray-bg" id="produkter">
       <div className="max-w-[1200px] mx-auto">
         {/* Animated headline */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl max-md:text-2xl font-bold text-navy leading-tight">
+        <div className="text-center mb-14">
+          <h2 className="text-3xl max-md:text-2xl font-bold text-navy leading-tight mb-3">
             Forenkler byggeprosessen fra{" "}
             <AnimatedWord words={animWords1} /> til{" "}
             <AnimatedWord words={animWords2} />
           </h2>
+          <p className="text-[16px] text-text-light font-light max-w-[550px] mx-auto">
+            Sett sammen din egen løsning. Alt passer sammen.
+          </p>
         </div>
 
-        {/* Row selector */}
-        <div className="flex justify-center gap-2 mb-8">
-          {rows.map((row, i) => (
-            <button
-              key={row.label}
-              onClick={() => handleRowChange(i)}
-              className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all cursor-pointer ${
-                activeRow === i
-                  ? "bg-orange text-white shadow-[0_4px_14px_rgba(251,92,19,0.3)]"
-                  : "bg-gray-bg text-text-light hover:text-navy"
-              }`}
-            >
-              {row.label}
-              <span className="ml-1.5 text-xs opacity-60">
-                ({row.products.length})
-              </span>
-            </button>
+        {/* Configurator */}
+        <div className="max-w-[700px] mx-auto border-2 border-dashed border-navy/15 rounded-3xl py-10 px-4 bg-white/50 space-y-10">
+          {layers.map((layer, i) => (
+            <div key={i}>
+              {/* Divider between sections */}
+              {i === 1 && (
+                <div className="text-center mb-6 -mt-2">
+                  <div className="w-px h-8 bg-navy/15 mx-auto mb-2" />
+                </div>
+              )}
+              {i === 2 && (
+                <div className="text-center mb-6 -mt-2">
+                  <div className="w-px h-8 bg-navy/15 mx-auto mb-2" />
+                </div>
+              )}
+              <LayerRow
+                layer={layer}
+                selectedIdx={selections[i]}
+                onPrev={() => navigate(i, -1)}
+                onNext={() => navigate(i, 1)}
+              />
+            </div>
           ))}
         </div>
 
-        {/* Product display */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-          {/* Left: Large product image */}
-          <div className="bg-gray-bg rounded-2xl p-8 flex items-center justify-center aspect-square max-h-[500px]">
-            <Image
-              src={getProductImageUrl(current.imageId)}
-              alt={current.name}
-              width={400}
-              height={400}
-              className="w-full h-full object-contain transition-opacity duration-300"
-              unoptimized
-              key={current.nobbNr}
-            />
-          </div>
-
-          {/* Right: Product info + selector */}
-          <div>
-            <div className="mb-6">
-              <span className="text-xs font-semibold uppercase tracking-wider text-orange mb-2 block">
-                {rows[activeRow].label}
-              </span>
-              <h3 className="text-2xl font-bold text-navy mb-3 min-h-[64px]">
-                {current.name}
-              </h3>
-              {current.description && (
-                <p className="text-[15px] text-text-light leading-[1.7] mb-4">
-                  {current.description}
-                </p>
-              )}
-
-              {/* Specs */}
-              <div className="flex flex-wrap gap-2 mb-4">
-                {current.lengthMm && (
-                  <span className="text-xs bg-navy/6 text-navy px-2.5 py-1 rounded font-medium">
-                    L {current.lengthMm} mm
-                  </span>
-                )}
-                {current.widthMm && (
-                  <span className="text-xs bg-navy/6 text-navy px-2.5 py-1 rounded font-medium">
-                    B {current.widthMm} mm
-                  </span>
-                )}
-                {current.heightMm && (
-                  <span className="text-xs bg-navy/6 text-navy px-2.5 py-1 rounded font-medium">
-                    H {current.heightMm} mm
-                  </span>
-                )}
-                {current.diameterMm && (
-                  <span className="text-xs bg-navy/6 text-navy px-2.5 py-1 rounded font-medium">
-                    &Oslash; {current.diameterMm} mm
-                  </span>
-                )}
-                {current.finish && (
-                  <span className="text-xs bg-orange/8 text-orange px-2.5 py-1 rounded font-medium">
-                    {current.finish}
-                  </span>
-                )}
-              </div>
-
-              <div className="grid grid-cols-2 gap-3 mb-6">
-                <div className="bg-gray-bg rounded-lg p-3">
-                  <span className="text-[10px] text-text-light uppercase tracking-wide">
-                    NOBB
-                  </span>
-                  <p className="font-mono text-sm text-navy font-medium">
-                    {current.nobbNr}
-                  </p>
-                </div>
-                <div className="bg-gray-bg rounded-lg p-3">
-                  <span className="text-[10px] text-text-light uppercase tracking-wide">
-                    NRF
-                  </span>
-                  <p className="font-mono text-sm text-navy font-medium">
-                    {current.nrfNr}
-                  </p>
-                </div>
-              </div>
-
-              <Link
-                href={`/produkter/${current.slug}`}
-                className="inline-flex items-center gap-2 bg-orange text-white px-6 py-3 rounded-lg font-semibold text-sm hover:bg-orange-dark transition-all hover:-translate-y-0.5 shadow-[0_4px_14px_rgba(251,92,19,0.3)]"
-              >
-                Se produktdetaljer
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="w-4 h-4">
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </Link>
-            </div>
-
-            {/* Product thumbnails */}
-            <div className="border-t border-navy/8 pt-4">
-              <p className="text-xs text-text-light mb-3 font-medium uppercase tracking-wide">
-                Velg produkt ({currentProducts.length})
-              </p>
-              <div className="flex flex-wrap gap-2 max-h-[200px] overflow-y-auto">
-                {currentProducts.map((p, i) => (
-                  <button
-                    key={p.nobbNr}
-                    onClick={() => setActiveProduct(i)}
-                    className={`w-14 h-14 rounded-lg border-2 overflow-hidden transition-all cursor-pointer ${
-                      activeProduct === i
-                        ? "border-orange shadow-[0_0_0_1px_rgba(251,92,19,0.3)]"
-                        : "border-navy/10 hover:border-navy/30"
-                    }`}
-                    title={p.name}
-                  >
-                    <Image
-                      src={getProductImageUrl(p.imageId)}
-                      alt={p.name}
-                      width={56}
-                      height={56}
-                      className="w-full h-full object-contain p-1"
-                      unoptimized
-                    />
-                  </button>
-                ))}
-              </div>
-            </div>
-          </div>
+        {/* Slidedrain logo at bottom */}
+        <div className="flex justify-center mt-8">
+          <Image
+            src="https://slidedrain.no/wp-content/uploads/2020/08/Full-logo_Orange.webp?x59798"
+            alt="Slidedrain"
+            width={140}
+            height={28}
+            className="h-6 w-auto opacity-50"
+          />
         </div>
       </div>
     </section>
