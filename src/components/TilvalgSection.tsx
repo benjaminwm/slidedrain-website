@@ -63,12 +63,12 @@ export default function TilvalgSection() {
               {t.featured && (
                 <div className="absolute top-0 left-0 right-0 h-1 bg-orange" />
               )}
-              <div className="w-20 h-20 bg-gray-bg rounded-xl flex items-center justify-center mb-5 p-2">
+              <div className="bg-gray-bg rounded-xl flex items-center justify-center mb-6 p-4 aspect-square">
                 <Image
                   src={`${CDN}/${t.imageId}/square`}
                   alt={t.title}
-                  width={72}
-                  height={72}
+                  width={300}
+                  height={300}
                   className="w-full h-full object-contain"
                   unoptimized
                 />
