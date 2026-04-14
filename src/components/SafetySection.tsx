@@ -29,8 +29,8 @@ export default function SafetySection() {
         {/* Intro */}
         <FadeUp className="text-center max-w-[800px] mx-auto mb-16">
           <h2 className="text-4xl max-md:text-[28px] font-bold mb-5 leading-tight">
-            Full valgfrihet og{" "}
-            <span className="text-orange">minimal vannskaderisiko</span>
+            Reduser prosjektets{" "}
+            <span className="text-orange">vannskaderisiko</span>
           </h2>
           <p className="text-[17px] text-text-light leading-[1.7] font-light">
             Skreddersydd design uten tradisjonelle feilkilder. Slidedrain er

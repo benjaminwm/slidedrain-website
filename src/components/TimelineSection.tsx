@@ -14,7 +14,7 @@ const steps = [
     tag: "Oppstart",
     tagColor: "bg-blue-500/12 text-blue-600",
     title: "Prosjektering",
-    desc: "Alle designvalg tegnes inn uten behov for omprosjektering.",
+    desc: "De tre designvalgene, basis, pluss og premium, prosjekteres inn.",
     active: true,
   },
   {
@@ -23,9 +23,9 @@ const steps = [
         <circle cx="12" cy="12" r="5" fill="#22c55e" stroke="#22c55e" />
       </svg>
     ),
-    tag: "Tilvalg åpnes",
+    tag: "Åpen valgfrihet",
     tagColor: "bg-green/12 text-green",
-    title: "Full valgfrihet",
+    title: "Tilvalg åpnes",
     desc: "Full valgfrihet for kunden helt frem til støping av fall.",
     active: true,
   },
@@ -85,8 +85,7 @@ export default function TimelineSection() {
             <span className="text-orange">i prosjektet</span>
           </h2>
           <p className="text-[17px] text-text-light leading-[1.7] font-light">
-            Slidedrain leveres modulært gjennom Brødrene Dahl og
-            Flisekompaniet. Systemet sikrer at vareflyten følger byggets
+            Sluksystemets oppbygging sikrer at vareflyten følger byggets
             fremdrift og maksimerer salgsvinduet for tilvalg.
           </p>
         </FadeUp>
