@@ -67,7 +67,7 @@ const steps = [
   },
   {
     icon: <CheckCircleIcon className="w-[22px] h-[22px] stroke-orange" />,
-    tag: "Ferdigstilling",
+    tag: "Installasjon ferdigstilles",
     tagColor: "bg-blue-500/12 text-blue-600",
     title: "Montering og flislegging",
     desc: "Gulvstøp avrettes med monteringsverktøy, membran legges, og hjørnerist eller slukrist monteres.",
