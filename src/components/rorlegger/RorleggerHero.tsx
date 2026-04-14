@@ -21,10 +21,10 @@ export default function RorleggerHero() {
             feilkilder og minimere vannskaderisikoen ved gulvsluk og membran.
           </p>
           <a
-            href="#problemer"
+            href="#kontakt"
             className="inline-flex items-center gap-2.5 bg-orange text-white px-8 py-4 rounded-lg font-semibold text-base hover:bg-orange-dark transition-all hover:-translate-y-0.5 shadow-[0_4px_14px_rgba(251,92,19,0.3)] hover:shadow-[0_6px_20px_rgba(251,92,19,0.4)]"
           >
-            Se fordelene for ditt fag
+            Book et møte
             <ArrowRight />
           </a>
         </div>
