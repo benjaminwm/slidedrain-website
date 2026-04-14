@@ -13,14 +13,13 @@ const logos = [
   { src: "/images/partners/mask-group-4.png", alt: "Prorør AS" },
   { src: "/images/partners/wyvfnyrdkpddkdiztnreqqlnwk.png-1.png", alt: "Knutshaug VVS" },
   { src: "/images/partners/images-4-1.png", alt: "Flow VVS" },
-  { src: "/images/logo-brodrenedahl.png", alt: "Brødrene Dahl" },
 ];
 
 const allLogos = [...logos, ...logos];
 
 export default function LogoBanner() {
   return (
-    <div className="relative py-6 border-t border-navy/6 overflow-hidden">
+    <div className="relative py-6 overflow-hidden mx-[20%]">
       {/* Fade edges */}
       <div className="absolute left-0 top-0 bottom-0 w-[15%] bg-gradient-to-r from-[#fef7f3] to-transparent z-10 pointer-events-none" />
       <div className="absolute right-0 top-0 bottom-0 w-[15%] bg-gradient-to-l from-[#fef7f3] to-transparent z-10 pointer-events-none" />

@@ -21,6 +21,25 @@ export default function HomeHero() {
             teknologi som setter en ny standard for våtromssikkerhet,
             vedlikehold og stilrent resultat. Norskprodusert og SINTEF-godkjent.
           </p>
+          <div className="flex items-center gap-5 mb-8">
+            <span className="text-xs text-text-light font-medium uppercase tracking-wider">
+              Tilgjengelig hos
+            </span>
+            <Image
+              src="/images/logo-brodrenedahl.png"
+              alt="Brødrene Dahl"
+              width={140}
+              height={32}
+              className="h-7 w-auto"
+            />
+            <Image
+              src="/images/logo-flisekompaniet.png"
+              alt="Flisekompaniet"
+              width={140}
+              height={32}
+              className="h-7 w-auto"
+            />
+          </div>
           <div className="flex flex-wrap gap-3">
             <a
               href="#produkter"
