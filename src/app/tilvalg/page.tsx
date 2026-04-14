@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import StandardiseringSection from "@/components/StandardiseringSection";
 import TilvalgSection from "@/components/TilvalgSection";
 import ComparisonSection from "@/components/ComparisonSection";
 import BenefitsSection from "@/components/BenefitsSection";
@@ -22,6 +23,7 @@ export default function LandingPage() {
       <Navbar />
       <main>
         <Hero />
+        <StandardiseringSection />
         <TilvalgSection />
         <ComparisonSection />
         <BenefitsSection />
