@@ -17,9 +17,9 @@ export default function SluttkundeHero() {
           </h1>
           <p className="text-lg text-text-light leading-[1.7] mb-8 font-light">
             Skap et sømløst baderomsgulv med prisvinnende norsk design.
-            Slidedrain forener skandinavisk minimalisme med en patentert
-            teknologi som setter en ny standard for våtromssikkerhet,
-            vedlikehold og stilrent resultat.
+            Slidedrain forener skandinavisk minimalisme med patentert
+            teknologi som setter en ny standard for vannskaderisiko og
+            vedlikehold.
           </p>
           <a
             href="#slik-gjor-du"
