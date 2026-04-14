@@ -73,10 +73,10 @@ function ArrowBtn({ direction, onClick }: { direction: "left" | "right"; onClick
 }
 
 function Ghost({ product }: { product: Product | undefined }) {
-  if (!product) return <div className="w-10 h-10" />;
+  if (!product) return <div className="w-14 h-14" />;
   return (
-    <div className="w-10 h-10 opacity-20 shrink-0">
-      <Image src={getProductImageUrl(product.imageId)} alt="" width={40} height={40} className="w-full h-full object-contain" unoptimized />
+    <div className="w-14 h-14 opacity-20 shrink-0">
+      <Image src={getProductImageUrl(product.imageId)} alt="" width={56} height={56} className="w-full h-full object-contain" unoptimized />
     </div>
   );
 }
@@ -104,12 +104,12 @@ function LayerRow({
       <div className="flex items-center gap-1 justify-center">
         <Ghost product={prev} />
         <ArrowBtn direction="left" onClick={onPrev} />
-        <div className="w-[120px] h-[90px] bg-white rounded-lg flex items-center justify-center p-2 shadow-sm">
+        <div className="w-[160px] h-[120px] bg-white rounded-xl flex items-center justify-center p-3 shadow-sm">
           <Image
             src={getProductImageUrl(product.imageId)}
             alt={product.name}
-            width={110}
-            height={80}
+            width={150}
+            height={110}
             className="w-full h-full object-contain"
             unoptimized
             key={product.nobbNr}
@@ -119,7 +119,7 @@ function LayerRow({
         <Ghost product={next} />
       </div>
 
-      <p className="text-[9px] text-text-light mt-1 text-center max-w-[160px] truncate">
+      <p className="text-[10px] text-text-light mt-1 text-center max-w-[200px] truncate">
         {product.name}
       </p>
     </div>
@@ -141,7 +141,7 @@ export default function ProductShowcase() {
   return (
     <section className="py-16 px-6 bg-gray-bg" id="produkter">
       <div className="max-w-[1200px] mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-10 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left: Text */}
           <div className="max-w-[520px]">
             <span className="inline-block bg-orange/10 text-orange text-[12px] font-semibold px-3 py-1 rounded-full mb-4 uppercase tracking-wide">
@@ -184,7 +184,7 @@ export default function ProductShowcase() {
           </div>
 
           {/* Right: Compact configurator */}
-          <div className="border-2 border-dashed border-navy/12 rounded-2xl py-5 px-3 bg-white/60 space-y-1 w-[340px] max-lg:mx-auto">
+          <div className="border-2 border-dashed border-navy/12 rounded-2xl py-6 px-4 bg-white/60 space-y-1 w-[420px] max-lg:mx-auto">
             {layers.map((layer, i) => (
               <div key={i}>
                 {i > 0 && (
