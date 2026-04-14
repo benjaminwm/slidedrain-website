@@ -42,10 +42,10 @@ const rows = [
 
 export default function ComparisonTable() {
   return (
-    <section className="py-20 px-6 bg-navy text-white" id="sammenligning">
+    <section className="py-20 px-6 bg-white" id="sammenligning">
       <div className="max-w-[1200px] mx-auto">
         <FadeUp className="text-center max-w-[800px] mx-auto mb-15">
-          <h2 className="text-4xl max-md:text-[28px] font-bold mb-4 leading-tight">
+          <h2 className="text-4xl max-md:text-[28px] font-bold mb-4 leading-tight text-navy">
             Slidedrain vs.{" "}
             <span className="text-orange">tradisjonelle løsninger</span>
           </h2>
@@ -53,14 +53,14 @@ export default function ComparisonTable() {
         <FadeUp className="overflow-x-auto">
           <table className="w-full text-left text-sm">
             <thead>
-              <tr className="border-b border-white/15">
-                <th className="py-4 px-4 font-semibold text-white/50 w-1/5">
+              <tr className="border-b border-navy/15">
+                <th className="py-4 px-4 font-semibold text-text-light w-1/5">
                   Funksjon
                 </th>
                 <th className="py-4 px-4 font-semibold text-orange w-2/5">
                   Slidedrain Sluksystem
                 </th>
-                <th className="py-4 px-4 font-semibold text-white/50 w-2/5">
+                <th className="py-4 px-4 font-semibold text-text-light w-2/5">
                   Tradisjonelt linjesluk
                 </th>
               </tr>
@@ -69,18 +69,18 @@ export default function ComparisonTable() {
               {rows.map((r, i) => (
                 <tr
                   key={i}
-                  className="border-b border-white/8 hover:bg-white/5 transition-colors"
+                  className="border-b border-navy/8 hover:bg-gray-bg transition-colors"
                 >
-                  <td className="py-4 px-4 font-semibold text-white">
+                  <td className="py-4 px-4 font-semibold text-navy">
                     {r.feature}
                   </td>
-                  <td className="py-4 px-4 text-green">
+                  <td className="py-4 px-4 text-green-700">
                     <span className="font-bold">{r.sdBold}</span>{" "}
-                    <span className="font-normal opacity-80">{r.sdReg}</span>
+                    <span className="font-normal text-text-light">{r.sdReg}</span>
                   </td>
-                  <td className="py-4 px-4 text-white/50">
-                    <span className="font-bold text-white/70">{r.trBold}</span>{" "}
-                    <span className="font-normal">{r.trReg}</span>
+                  <td className="py-4 px-4 text-red-400">
+                    <span className="font-bold">{r.trBold}</span>{" "}
+                    <span className="font-normal text-text-light">{r.trReg}</span>
                   </td>
                 </tr>
               ))}
