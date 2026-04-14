@@ -30,6 +30,25 @@ export default function HomeHero() {
             teknologi som setter en ny standard for våtromssikkerhet,
             vedlikehold og stilrent resultat. Norskprodusert og SINTEF-godkjent.
           </p>
+          <div className="flex items-center gap-5 mb-8">
+            <span className="text-xs text-text-light font-medium uppercase tracking-wider">
+              Tilgjengelig hos
+            </span>
+            <Image
+              src="https://slidedrain.no/wp-content/uploads/2022/05/BD-Logo-neg-2linjers-300x71.png"
+              alt="Brødrene Dahl"
+              width={100}
+              height={24}
+              className="h-5 w-auto opacity-40 hover:opacity-70 transition-opacity"
+            />
+            <Image
+              src="https://slidedrain.no/wp-content/uploads/2022/05/flisekompaniet_logo_neg-300x49.png"
+              alt="Flisekompaniet"
+              width={100}
+              height={24}
+              className="h-5 w-auto opacity-40 hover:opacity-70 transition-opacity"
+            />
+          </div>
           <div className="flex flex-wrap gap-3">
             <a
               href="#produkter"
