@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { productCategories, getProductImageUrl } from "@/data/products";
 import type { Product } from "@/data/products";
 
@@ -68,35 +69,25 @@ function ArrowButton({
   return (
     <button
       onClick={onClick}
-      className="w-10 h-10 rounded-full flex items-center justify-center text-orange hover:bg-orange/10 transition-colors cursor-pointer shrink-0"
+      className="w-8 h-8 rounded-full flex items-center justify-center text-orange hover:bg-orange/10 transition-colors cursor-pointer shrink-0"
       aria-label={direction === "left" ? "Forrige" : "Neste"}
     >
-      <svg
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth={3}
-        className="w-5 h-5"
-      >
-        {direction === "left" ? (
-          <path d="M15 18l-6-6 6-6" />
-        ) : (
-          <path d="M9 18l6-6-6-6" />
-        )}
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={3} className="w-4 h-4">
+        {direction === "left" ? <path d="M15 18l-6-6 6-6" /> : <path d="M9 18l6-6-6-6" />}
       </svg>
     </button>
   );
 }
 
 function GhostProduct({ product }: { product: Product | undefined }) {
-  if (!product) return <div className="w-16 h-16 sm:w-20 sm:h-20" />;
+  if (!product) return <div className="w-14 h-14" />;
   return (
-    <div className="w-16 h-16 sm:w-20 sm:h-20 opacity-30 shrink-0">
+    <div className="w-14 h-14 opacity-25 shrink-0">
       <Image
         src={getProductImageUrl(product.imageId)}
         alt=""
-        width={80}
-        height={80}
+        width={56}
+        height={56}
         className="w-full h-full object-contain"
         unoptimized
       />
@@ -121,28 +112,21 @@ function LayerRow({
 
   return (
     <div className="flex flex-col items-center">
-      {/* Label */}
-      <div className="text-center mb-3">
-        <p className="font-bold text-navy text-[15px]">{layer.label}</p>
-        <p className="text-sm text-text-light italic">{layer.subtitle}</p>
+      <div className="text-center mb-2">
+        <p className="font-bold text-navy text-[13px]">{layer.label}</p>
+        <p className="text-xs text-text-light italic">{layer.subtitle}</p>
       </div>
 
-      {/* Carousel row */}
-      <div className="flex items-center gap-2 sm:gap-4 w-full justify-center">
-        {/* Left ghost */}
-        <div className="hidden sm:flex items-center">
-          <GhostProduct product={prevProduct} />
-        </div>
-
+      <div className="flex items-center gap-1 w-full justify-center">
+        <GhostProduct product={prevProduct} />
         <ArrowButton direction="left" onClick={onPrev} />
 
-        {/* Main product */}
-        <div className="w-[200px] h-[140px] sm:w-[280px] sm:h-[180px] bg-white rounded-xl flex items-center justify-center p-4 shadow-sm">
+        <div className="w-[180px] h-[120px] bg-white rounded-xl flex items-center justify-center p-3 shadow-sm">
           <Image
             src={getProductImageUrl(product.imageId)}
             alt={product.name}
-            width={260}
-            height={160}
+            width={160}
+            height={100}
             className="w-full h-full object-contain transition-all duration-300"
             unoptimized
             key={product.nobbNr}
@@ -150,15 +134,10 @@ function LayerRow({
         </div>
 
         <ArrowButton direction="right" onClick={onNext} />
-
-        {/* Right ghost */}
-        <div className="hidden sm:flex items-center">
-          <GhostProduct product={nextProduct} />
-        </div>
+        <GhostProduct product={nextProduct} />
       </div>
 
-      {/* Product name */}
-      <p className="text-xs text-text-light mt-2 text-center max-w-[280px] truncate">
+      <p className="text-[10px] text-text-light mt-1.5 text-center max-w-[200px] truncate">
         {product.name}
       </p>
     </div>
@@ -183,52 +162,77 @@ export default function ProductShowcase() {
   return (
     <section className="py-20 px-6 bg-gray-bg" id="produkter">
       <div className="max-w-[1200px] mx-auto">
-        {/* Animated headline */}
-        <div className="text-center mb-14">
-          <h2 className="text-3xl max-md:text-2xl font-bold text-navy leading-tight mb-3">
-            Forenkler byggeprosessen fra{" "}
-            <AnimatedWord words={animWords1} /> til{" "}
-            <AnimatedWord words={animWords2} />
-          </h2>
-          <p className="text-[16px] text-text-light font-light max-w-[550px] mx-auto">
-            Sett sammen din egen løsning. Alt passer sammen.
-          </p>
-        </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Left: Text */}
+          <div>
+            <span className="inline-block bg-orange/10 text-orange text-[13px] font-semibold px-3.5 py-1.5 rounded-full mb-5 uppercase tracking-wide">
+              Modulært sluksystem
+            </span>
+            <h2 className="text-[38px] max-lg:text-[30px] max-sm:text-[26px] font-bold leading-[1.15] mb-5 text-navy">
+              Forenkler byggeprosessen fra{" "}
+              <AnimatedWord words={animWords1} /> til{" "}
+              <AnimatedWord words={animWords2} />
+            </h2>
+            <p className="text-[17px] text-text-light leading-[1.7] font-light mb-6">
+              Slidedrain er et komplett modulært sluksystem der den tekniske
+              installasjonen er den samme, uansett hvilket designuttrykk
+              sluttkunden velger. Sett sammen din egen løsning &ndash; alt
+              passer sammen.
+            </p>
+            <ul className="space-y-3 mb-8">
+              {[
+                "Velg blant 25+ slukrenner og slukrister",
+                "Samme slukoverdel og slukpotte for alle design",
+                "Designvalg kan endres helt frem til flislegging",
+              ].map((item, i) => (
+                <li key={i} className="flex items-start gap-3 text-[15px] text-text-light">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#22c55e" strokeWidth={2} className="w-5 h-5 shrink-0 mt-0.5">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  {item}
+                </li>
+              ))}
+            </ul>
+            <Link
+              href="/produkter"
+              className="inline-flex items-center gap-2.5 bg-orange text-white px-7 py-3.5 rounded-lg font-semibold text-[15px] hover:bg-orange-dark transition-all hover:-translate-y-0.5 shadow-[0_4px_14px_rgba(251,92,19,0.3)]"
+            >
+              Se alle produkter
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="w-4 h-4">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </Link>
+          </div>
 
-        {/* Configurator */}
-        <div className="max-w-[700px] mx-auto border-2 border-dashed border-navy/15 rounded-3xl py-10 px-4 bg-white/50 space-y-10">
-          {layers.map((layer, i) => (
-            <div key={i}>
-              {/* Divider between sections */}
-              {i === 1 && (
-                <div className="text-center mb-6 -mt-2">
-                  <div className="w-px h-8 bg-navy/15 mx-auto mb-2" />
-                </div>
-              )}
-              {i === 2 && (
-                <div className="text-center mb-6 -mt-2">
-                  <div className="w-px h-8 bg-navy/15 mx-auto mb-2" />
-                </div>
-              )}
-              <LayerRow
-                layer={layer}
-                selectedIdx={selections[i]}
-                onPrev={() => navigate(i, -1)}
-                onNext={() => navigate(i, 1)}
+          {/* Right: Configurator */}
+          <div className="border-2 border-dashed border-navy/15 rounded-3xl py-8 px-3 bg-white/50 space-y-6">
+            {layers.map((layer, i) => (
+              <div key={i}>
+                {i > 0 && (
+                  <div className="flex justify-center mb-4">
+                    <div className="w-px h-6 bg-navy/15" />
+                  </div>
+                )}
+                <LayerRow
+                  layer={layer}
+                  selectedIdx={selections[i]}
+                  onPrev={() => navigate(i, -1)}
+                  onNext={() => navigate(i, 1)}
+                />
+              </div>
+            ))}
+
+            {/* Logo */}
+            <div className="flex justify-center pt-2">
+              <Image
+                src="https://slidedrain.no/wp-content/uploads/2020/08/Full-logo_Orange.webp?x59798"
+                alt="Slidedrain"
+                width={120}
+                height={24}
+                className="h-5 w-auto opacity-40"
               />
             </div>
-          ))}
-        </div>
-
-        {/* Slidedrain logo at bottom */}
-        <div className="flex justify-center mt-8">
-          <Image
-            src="https://slidedrain.no/wp-content/uploads/2020/08/Full-logo_Orange.webp?x59798"
-            alt="Slidedrain"
-            width={140}
-            height={28}
-            className="h-6 w-auto opacity-50"
-          />
+          </div>
         </div>
       </div>
     </section>
