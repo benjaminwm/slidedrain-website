@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import FadeUp from "./FadeUp";
 import VideoEmbed from "./VideoEmbed";
@@ -35,18 +35,13 @@ const tilvalg = [
 ];
 
 export default function TilvalgSection() {
-  const [inView, setInView] = useState(false);
-  const gridRef = useRef<HTMLDivElement>(null);
+  const [showInsitu, setShowInsitu] = useState(false);
 
   useEffect(() => {
-    const el = gridRef.current;
-    if (!el) return;
-    const obs = new IntersectionObserver(
-      ([entry]) => setInView(entry.isIntersecting),
-      { threshold: 0.35 }
-    );
-    obs.observe(el);
-    return () => obs.disconnect();
+    const interval = setInterval(() => {
+      setShowInsitu((prev) => !prev);
+    }, 3000);
+    return () => clearInterval(interval);
   }, []);
 
   return (
@@ -68,7 +63,7 @@ export default function TilvalgSection() {
 
         <VideoEmbed />
 
-        <div ref={gridRef} className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-14">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-14">
           {tilvalg.map((t, i) => (
             <FadeUp
               key={i}
@@ -88,7 +83,7 @@ export default function TilvalgSection() {
                   width={400}
                   height={400}
                   className={`absolute inset-4 w-[calc(100%-2rem)] h-[calc(100%-2rem)] object-contain transition-opacity duration-700 ${
-                    inView ? "opacity-0" : "opacity-100"
+                    showInsitu ? "opacity-0" : "opacity-100"
                   }`}
                   unoptimized
                 />
@@ -98,7 +93,7 @@ export default function TilvalgSection() {
                   width={600}
                   height={600}
                   className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${
-                    inView ? "opacity-100" : "opacity-0"
+                    showInsitu ? "opacity-100" : "opacity-0"
                   }`}
                 />
               </div>
