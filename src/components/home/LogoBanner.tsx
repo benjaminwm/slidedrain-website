@@ -1,0 +1,57 @@
+"use client";
+
+import Image from "next/image";
+
+const logos = [
+  { src: "/images/partners/hovedlogo+rosendal+byggutenhvit.png-1.png", alt: "Rosendal Bygg" },
+  { src: "/images/partners/lomundalbygg_logo-1.png", alt: "Lømundal Bygg" },
+  { src: "/images/partners/group-8964.png", alt: "BM Rørservice" },
+  { src: "/images/partners/group-9089.png", alt: "Romerike Bad AS" },
+  { src: "/images/partners/mask-group.png", alt: "Rørproff" },
+  { src: "/images/partners/mask-group-1.png", alt: "Christiania Rørleggerbedrift" },
+  { src: "/images/partners/mask-group-2.png", alt: "Bærum Rørleggerbedrift" },
+  { src: "/images/partners/mask-group-4.png", alt: "Prorør AS" },
+  { src: "/images/partners/wyvfnyrdkpddkdiztnreqqlnwk.png-1.png", alt: "Knutshaug VVS" },
+  { src: "/images/partners/images-4-1.png", alt: "Flow VVS" },
+  { src: "/images/logo-brodrenedahl.png", alt: "Brødrene Dahl" },
+];
+
+// Duplicate for seamless loop
+const allLogos = [...logos, ...logos];
+
+export default function LogoBanner() {
+  return (
+    <div className="overflow-hidden py-6 border-t border-navy/6">
+      <div className="flex items-center animate-scroll">
+        {allLogos.map((logo, i) => (
+          <div
+            key={i}
+            className="flex items-center justify-center shrink-0 px-8"
+          >
+            <Image
+              src={logo.src}
+              alt={logo.alt}
+              width={120}
+              height={40}
+              className="h-8 w-auto object-contain opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
+            />
+          </div>
+        ))}
+      </div>
+
+      <style>{`
+        @keyframes scroll {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
+        }
+        .animate-scroll {
+          animation: scroll 40s linear infinite;
+          width: max-content;
+        }
+        .animate-scroll:hover {
+          animation-play-state: paused;
+        }
+      `}</style>
+    </div>
+  );
+}

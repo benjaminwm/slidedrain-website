@@ -2,11 +2,12 @@
 
 import Image from "next/image";
 import { ArrowRight } from "../icons";
+import LogoBanner from "./LogoBanner";
 
 export default function HomeHero() {
   return (
-    <section className="pt-[140px] pb-20 px-6 bg-gradient-to-br from-white to-[#fef7f3] overflow-hidden">
-      <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-15 items-center">
+    <section className="pt-[140px] bg-gradient-to-br from-white to-[#fef7f3] overflow-hidden">
+      <div className="max-w-[1200px] mx-auto px-6 pb-10 grid grid-cols-1 lg:grid-cols-2 gap-15 items-center">
         <div>
           <span className="inline-block bg-orange/10 text-orange text-[13px] font-semibold px-3.5 py-1.5 rounded-full mb-5 uppercase tracking-wide">
             Neste generasjons gulvsluk
@@ -15,30 +16,11 @@ export default function HomeHero() {
             Ett sluksystem,<br />
             <span className="text-orange">mange muligheter.</span>
           </h1>
-          <p className="text-lg text-text-light leading-[1.7] mb-6 font-light">
+          <p className="text-lg text-text-light leading-[1.7] mb-8 font-light">
             Slidedrain forener skandinavisk minimalisme med en patentert
             teknologi som setter en ny standard for våtromssikkerhet,
             vedlikehold og stilrent resultat. Norskprodusert og SINTEF-godkjent.
           </p>
-          <div className="flex items-center gap-5 mb-8">
-            <span className="text-xs text-text-light font-medium uppercase tracking-wider">
-              Tilgjengelig hos
-            </span>
-            <Image
-              src="/images/logo-brodrenedahl.png"
-              alt="Brødrene Dahl"
-              width={140}
-              height={32}
-              className="h-7 w-auto"
-            />
-            <Image
-              src="/images/logo-flisekompaniet.png"
-              alt="Flisekompaniet"
-              width={140}
-              height={32}
-              className="h-7 w-auto"
-            />
-          </div>
           <div className="flex flex-wrap gap-3">
             <a
               href="#produkter"
@@ -66,6 +48,9 @@ export default function HomeHero() {
           />
         </div>
       </div>
+
+      {/* Scrolling logo banner */}
+      <LogoBanner />
     </section>
   );
 }
