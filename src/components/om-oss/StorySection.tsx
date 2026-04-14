@@ -6,12 +6,12 @@ const milestones = [
   {
     year: "Ideen",
     title: "Et problem som krevde en ny løsning",
-    desc: "Hvert år oppstår vannskader for hundrevis av millioner kroner i norske bad. Hovedårsaken? Den fragmenterte overgangen mellom gulvsluk og membran med forhøyningsringer, løse pakninger og klemringer. Slidedrain ble startet for å eliminere disse feilkildene.",
+    desc: "Slidedrain AS har utspring som startup fra NTNU. Hvert år oppstår vannskader for hundrevis av millioner kroner i norske bad, og selskapet ble startet for å eliminere de tradisjonelle feilkildene i overgangen mellom gulvsluk og membran.",
   },
   {
     year: "Utviklingen",
-    title: "Designet med fagfolk for fagfolk",
-    desc: "I tett samarbeid med rørleggere, flisleggere og entreprenører utviklet vi et modulært sluksystem som forenkler installasjonen og fjerner behovet for skruer, klemringer og forhøyningsringer.",
+    title: "Lansering med Brødrene Dahl",
+    desc: "Første produkt ble lansert i mars 2023 hos Brødrene Dahl, etter et mangeårig utviklingssamarbeid med den ledende VVS-grossisten. Alle produkter er utviklet i tett samarbeid med rørleggere, flisleggere og entreprenører.",
   },
   {
     year: "Anerkjennelse",
@@ -21,7 +21,7 @@ const milestones = [
   {
     year: "I dag",
     title: "Tilgjengelig i hele Norge",
-    desc: "Slidedrain er lagerført hos Brødrene Dahl og Flisekompaniet med over 80 utsalgssteder. Produsert i Norge av 100 % resirkulert plast.",
+    desc: "Slidedrain har landsdekkende distribusjon gjennom Brødrene Dahl og Flisekompaniet, med en egenutviklet produktportefølje på over 20 produkter. Alle er norskproduserte i resirkulert plast og rustfritt stål.",
   },
 ];
 

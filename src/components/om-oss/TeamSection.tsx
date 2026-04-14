@@ -4,10 +4,10 @@ import Image from "next/image";
 import FadeUp from "../FadeUp";
 
 const team = [
-  { src: "/images/team-1.jpg", name: "Teammedlem", role: "Slidedrain" },
-  { src: "/images/team-2.jpg", name: "Teammedlem", role: "Slidedrain" },
-  { src: "/images/team-3.jpg", name: "Teammedlem", role: "Slidedrain" },
-  { src: "/images/team-4.jpg", name: "Teammedlem", role: "Slidedrain" },
+  { src: "/images/team-1.jpg", name: "Stian Bongard", role: "Daglig leder" },
+  { src: "/images/team-2.jpg", name: "Henning Patricksson", role: "Produktsjef" },
+  { src: "/images/team-3.jpg", name: "Fredrik Fretheim", role: "Salgsansvarlig" },
+  { src: "/images/team-4.jpg", name: "Joakim Delebekk", role: "Salgsansvarlig" },
 ];
 
 export default function TeamSection() {
