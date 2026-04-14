@@ -1,19 +1,39 @@
 "use client";
 
+import Image from "next/image";
 import FadeUp from "../FadeUp";
+
+const CDN = "https://cdn.byggtjeneste.no/nobb";
 
 const modules = [
   {
+    label: "Teknisk",
     title: "Slukpotte",
     desc: "Leveres med side-, bunn- eller skrått utløp (Ø75) for sømløs tilkobling til standard røropplegg.",
+    images: [
+      { id: "45f4deba-9a2f-4d53-930a-f86f4da7195e", alt: "Slukpotte Sideutløp" },
+      { id: "07decb8c-c781-4d15-a9d3-99cf1203d253", alt: "Slukpotte Bunnutløp" },
+      { id: "8ad5b7b6-8c9c-4e0f-9547-19e1532ddf5f", alt: "Slukpotte Skrått utløp" },
+    ],
   },
   {
+    label: "Teknisk",
     title: "Høydejusterbar slukoverdel",
     desc: "Teleskopfunksjon for 40 mm trinnløs høydejustering med integrert slukmansjett eller klemring i stål.",
+    images: [
+      { id: "2b80cbbb-4a19-4b47-9867-a6aec78fa29a", alt: "Slukoverdel APEX-mansjett" },
+      { id: "a6097e40-733a-4e5f-9a01-a7a6ac86691f", alt: "Slukoverdel med Klemring" },
+    ],
   },
   {
-    title: "Topp-del",
+    label: "Synlig",
+    title: "Slukrenner & Slukrister",
     desc: "Velg fritt mellom 25+ ulike design av slukrenner, hjørnerister og klassiske kvadratiske rister \u2013 uten å endre på den tekniske montasjen mellom gulvsluk og membran.",
+    images: [
+      { id: "c8a4aea6-2ad4-4a36-890c-d893335e7ccd", alt: "Slukrenne Tile Insert" },
+      { id: "ec9e04c6-976c-4613-bb65-6f7927aac975", alt: "Slukrenne Rist" },
+      { id: "356ad341-895f-46ea-919a-7910d7126651", alt: "Hjørnerist Tile Insert" },
+    ],
   },
 ];
 
@@ -42,13 +62,37 @@ export default function SystemSection() {
               <div className="absolute top-4 right-6 text-[72px] font-bold text-navy/5 leading-none">
                 {i + 1}
               </div>
-              <div className="w-12 h-12 bg-orange/8 rounded-[10px] flex items-center justify-center mb-5">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-6 h-6 stroke-orange">
-                  <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
-                  <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
-                  <line x1="12" y1="22.08" x2="12" y2="12" />
-                </svg>
+
+              {/* Label */}
+              <span
+                className={`inline-block text-[11px] font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full mb-4 ${
+                  m.label === "Teknisk"
+                    ? "bg-navy/8 text-navy"
+                    : "bg-orange/10 text-orange"
+                }`}
+              >
+                {m.label}
+              </span>
+
+              {/* Product images row */}
+              <div className="flex items-center justify-start gap-2 mb-5">
+                {m.images.map((img, j) => (
+                  <div
+                    key={j}
+                    className="w-16 h-16 bg-gray-bg rounded-lg flex items-center justify-center p-1.5"
+                  >
+                    <Image
+                      src={`${CDN}/${img.id}/square`}
+                      alt={img.alt}
+                      width={56}
+                      height={56}
+                      className="w-full h-full object-contain"
+                      unoptimized
+                    />
+                  </div>
+                ))}
               </div>
+
               <h3 className="text-xl font-semibold mb-3">{m.title}</h3>
               <p className="text-[15px] text-text-light leading-[1.7]">
                 {m.desc}
