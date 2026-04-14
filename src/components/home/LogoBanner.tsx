@@ -16,32 +16,27 @@ const logos = [
   { src: "/images/logo-brodrenedahl.png", alt: "Brødrene Dahl" },
 ];
 
-// Duplicate for seamless loop
 const allLogos = [...logos, ...logos];
 
 export default function LogoBanner() {
   return (
-    <div className="relative py-6 border-t border-navy/6">
+    <div className="relative py-6 border-t border-navy/6 overflow-hidden">
       {/* Fade edges */}
-      <div className="absolute left-0 top-0 bottom-0 w-[20%] bg-gradient-to-r from-[#fef7f3] to-transparent z-10 pointer-events-none" />
-      <div className="absolute right-0 top-0 bottom-0 w-[20%] bg-gradient-to-l from-[#fef7f3] to-transparent z-10 pointer-events-none" />
-      <div className="overflow-hidden mx-[20%]">
+      <div className="absolute left-0 top-0 bottom-0 w-[15%] bg-gradient-to-r from-[#fef7f3] to-transparent z-10 pointer-events-none" />
+      <div className="absolute right-0 top-0 bottom-0 w-[15%] bg-gradient-to-l from-[#fef7f3] to-transparent z-10 pointer-events-none" />
+
       <div className="flex items-center animate-scroll">
         {allLogos.map((logo, i) => (
-          <div
-            key={i}
-            className="flex items-center justify-center shrink-0 px-8"
-          >
+          <div key={i} className="flex items-center justify-center shrink-0 px-8">
             <Image
               src={logo.src}
               alt={logo.alt}
               width={120}
               height={40}
-              className="h-8 w-auto object-contain opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0"
+              className="h-8 w-auto object-contain"
             />
           </div>
         ))}
-      </div>
       </div>
 
       <style>{`
@@ -52,9 +47,6 @@ export default function LogoBanner() {
         .animate-scroll {
           animation: scroll 40s linear infinite;
           width: max-content;
-        }
-        .animate-scroll:hover {
-          animation-play-state: paused;
         }
       `}</style>
     </div>
