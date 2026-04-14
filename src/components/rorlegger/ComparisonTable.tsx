@@ -5,28 +5,38 @@ import FadeUp from "../FadeUp";
 const rows = [
   {
     feature: "Monteringstid",
-    slidedrain: "~15 min. Trinnløs justering i alle retninger.",
-    traditional: "30\u2013120 min. Krever millimeterpresisjon.",
+    sdBold: "~15 min.",
+    sdReg: "Trinnløs justering i alle retninger.",
+    trBold: "30\u2013120 min.",
+    trReg: "Krever millimeterpresisjon.",
   },
   {
     feature: "Høydejustering",
-    slidedrain: "40 mm integrert. Trinnløs teleskopfunksjon.",
-    traditional: "0 mm. Forhøyningsringer med fastsatte høyder.",
+    sdBold: "40 mm integrert.",
+    sdReg: "Trinnløs teleskopfunksjon.",
+    trBold: "0 mm.",
+    trReg: "Forhøyningsringer med fastsatte høyder.",
   },
   {
     feature: "Vannskaderisiko",
-    slidedrain: "Minimal. 2+ deler og skrueløst med integrert mansjett.",
-    traditional: "Høy. 5\u20138+ deler med kritiske skruekoblinger.",
+    sdBold: "Minimal.",
+    sdReg: "2+ deler og skrueløst med integrert mansjett.",
+    trBold: "Høy.",
+    trReg: "5\u20138+ deler med kritiske skruekoblinger.",
   },
   {
     feature: "Vedlikehold",
-    slidedrain: "2\u20136 ganger/år. Stor vannlås som sjelden tettes.",
-    traditional: "26\u201352 ganger/år. Smal vannlås som tettes raskt.",
+    sdBold: "2\u20136 ganger/år.",
+    sdReg: "Stor vannlås som sjelden tettes.",
+    trBold: "26\u201352 ganger/år.",
+    trReg: "Smal vannlås som tettes raskt.",
   },
   {
     feature: "Fleksibilitet",
-    slidedrain: "Full. Designvalg kan endres frem til tynnavretting.",
-    traditional: "Låst. Design kan ikke endres etter prosjektering.",
+    sdBold: "Full.",
+    sdReg: "Designvalg kan endres frem til tynnavretting.",
+    trBold: "Låst.",
+    trReg: "Design kan ikke endres etter prosjektering.",
   },
 ];
 
@@ -65,10 +75,12 @@ export default function ComparisonTable() {
                     {r.feature}
                   </td>
                   <td className="py-4 px-4 text-green">
-                    {r.slidedrain}
+                    <span className="font-bold">{r.sdBold}</span>{" "}
+                    <span className="font-normal opacity-80">{r.sdReg}</span>
                   </td>
                   <td className="py-4 px-4 text-white/50">
-                    {r.traditional}
+                    <span className="font-bold text-white/70">{r.trBold}</span>{" "}
+                    <span className="font-normal">{r.trReg}</span>
                   </td>
                 </tr>
               ))}
