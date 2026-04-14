@@ -39,10 +39,10 @@ const steps = [
   },
   {
     icon: <WrenchIcon className="w-[22px] h-[22px] stroke-orange" />,
-    tag: "Installasjon",
+    tag: "Installasjon startes",
     tagColor: "bg-blue-500/12 text-blue-600",
     title: "Rørlegging",
-    desc: "Slukpotten installeres på prosjektert plassering.",
+    desc: "Slukpotten installeres etter prosjektert plassering i hjørnet.",
     active: false,
   },
   {
