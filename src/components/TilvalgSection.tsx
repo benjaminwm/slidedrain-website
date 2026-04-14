@@ -34,8 +34,8 @@ export default function TilvalgSection() {
       <div className="max-w-[1200px] mx-auto">
         <FadeUp className="text-center max-w-[800px] mx-auto mb-15">
           <h2 className="text-4xl max-md:text-[28px] font-bold mb-4 leading-tight">
-            Standardiserte tilvalg &ndash;{" "}
-            <span className="text-orange">fra funksjonelt til eksklusivt</span>
+            Standardisert byggeprosess med{" "}
+            <span className="text-orange">fleksibelt tilvalg</span>
           </h2>
           <p className="text-[17px] text-text-light leading-[1.7] font-light">
             Slidedrain muliggjør en full teknisk standardisering med fritt
