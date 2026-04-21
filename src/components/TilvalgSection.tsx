@@ -49,15 +49,14 @@ export default function TilvalgSection() {
       <div className="max-w-[1200px] mx-auto">
         <FadeUp className="text-center max-w-[800px] mx-auto mb-15">
           <h2 className="text-4xl max-md:text-[28px] font-bold mb-4 leading-tight">
-            Standardisert byggeprosess med{" "}
-            <span className="text-orange">fleksibelt tilvalg</span>
+            Samme gulvsluk,{" "}
+            <span className="text-orange">flere kundevalg</span>
           </h2>
           <p className="text-[17px] text-text-light leading-[1.7] font-light">
-            Slidedrain muliggjør en full teknisk standardisering med fritt
-            tilvalg. Ved å benytte et hjørneplassert gulvsluk som felles teknisk
-            løsning for rørføring, membran og tetningsdetaljer, sikres en
-            identisk utførelse i hele prosjektet. Sluttkunden kan deretter velge
-            mellom ulike synlige designnivåer sent i byggeprosessen.
+            Ved å bruke Slidedrain som felles teknisk løsning sikres lik
+            utførelse i hele prosjektet, uavhengig av kundens designvalg. Dette
+            standardiserer tekniske detaljer, utvider tilvalgsvinduet og
+            effektiviserer byggeprosessen.
           </p>
         </FadeUp>
 
