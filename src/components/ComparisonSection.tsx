@@ -5,7 +5,7 @@ import { XCircleIcon, CheckCircle2Icon } from "./icons";
 
 const challenges = [
   "Låste løsninger gjør kundetilvalg krevende etter byggestart.",
-  "Kort salgsvindu fører til tapte inntekter og redusert konkurransekraft.",
+  "Kort salgsvindu gir tapte inntekter og svekket konkurransekraft.",
   "Sene kundekrav fører til kostbar omprosjektering, pigging og avvik.",
 ];
 
