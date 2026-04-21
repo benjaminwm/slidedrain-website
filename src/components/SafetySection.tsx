@@ -58,12 +58,11 @@ export default function SafetySection() {
               Tradisjonelle feilkilder
             </h3>
             <p className="text-[16px] text-text-light leading-[1.7]">
-              Hvert år oppstår det vannskader for hundrevis av millioner kroner
-              i overgangen mellom sluk og membran. Problemet skyldes
-              tradisjonelle løsningers fragmenterte design med
-              forhøyningsringer, løse pakninger og klemring. Når ulike
-              fagområder må montere separate deler på ulike tidspunkt, oppstår
-              en unødvendig risiko for menneskelig svikt.
+              Hvert år oppstår vannskader for store verdier i overgangen
+              mellom sluk og membran. Utfordringen ligger i tradisjonelle
+              løsningers fragmenterte oppbygging, der flere komponenter
+              monteres av ulike fag på ulike tidspunkt. Dette øker risikoen
+              for feil og avvik i utførelsen.
             </p>
           </FadeUp>
         </div>
@@ -87,12 +86,11 @@ export default function SafetySection() {
               Målsatt presisjon og skrueløs montasje
             </h3>
             <p className="text-[16px] text-text-light leading-[1.7]">
-              Slidedrain erstatter det fragmenterte designet med et patentert
-              system som sikrer nøyaktig installasjon på badets laveste punkt.
-              Det høydejusterbare sluket og monteringsverktøyet eliminerer
-              behovet for forhøyningsringer og løse pakninger. Ved bruk av
-              smøremembran leveres systemet med integrert mansjett som gjør
-              klemringen overflødig.
+              Hvert år oppstår vannskader for store verdier i overgangen
+              mellom sluk og membran. Utfordringen ligger i tradisjonelle
+              løsningers fragmenterte oppbygging, der flere komponenter
+              monteres av ulike fag på ulike tidspunkt. Dette øker risikoen
+              for feil og avvik i utførelsen.
             </p>
           </FadeUp>
         </div>
