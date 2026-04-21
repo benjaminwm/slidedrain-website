@@ -10,7 +10,7 @@ export default function VideoSection() {
         <FadeUp className="flex justify-center">
           <div className="w-full max-w-[360px] rounded-2xl overflow-hidden shadow-[0_20px_60px_rgba(40,52,71,0.15)]">
             <iframe
-              src="https://player.mux.com/V9LeahuWNKZNGNCK007IfljcMptA5A2sK8wN00aiMHs02A?autoplay=1&muted=1&loop=1"
+              src="https://player.mux.com/V9LeahuWNKZNGNCK007IfljcMptA5A2sK8wN00aiMHs02A?autoplay=1&muted=1&loop=1&thumbnail-time=1"
               style={{ width: "100%", border: "none", aspectRatio: "9/16" }}
               allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture"
               allowFullScreen
