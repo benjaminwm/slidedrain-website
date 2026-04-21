@@ -25,8 +25,8 @@ export default function StandardiseringSection() {
               Hjørneplassert gulvsluk
             </span>
             <h2 className="text-[32px] max-md:text-[26px] font-bold leading-[1.2] mb-5 text-navy">
-              Samme gulvsluk,{" "}
-              <span className="text-orange">flere kundevalg</span>
+              Standardiser byggeprosjektet fra{" "}
+              <span className="text-orange">planlegging til flislegging</span>
             </h2>
             <p className="text-[17px] text-text-light leading-[1.7] font-light mb-6">
               Standardiser byggeprosjektet fra planlegging til flislegging, ved å
