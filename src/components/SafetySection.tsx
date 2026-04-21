@@ -33,10 +33,9 @@ export default function SafetySection() {
             <span className="text-orange">vannskaderisiko</span>
           </h2>
           <p className="text-[17px] text-text-light leading-[1.7] font-light">
-            Skreddersydd design uten tradisjonelle feilkilder. Slidedrain er
-            ikke bare et tilvalgskonsept, det er et prisvinnende sluksystem
-            utviklet for å eliminere risiko der tradisjonelle løsninger er på
-            sitt svakeste.
+            Slidedrain er ikke bare et tilvalgskonsept, men et prisvinnende
+            sluksystem utviklet for å eliminere risiko der tradisjonelle
+            løsninger er mest sårbare.
           </p>
         </FadeUp>
 
