@@ -8,17 +8,17 @@ const features = [
   {
     icon: <ShieldIcon className="w-6 h-6 stroke-orange" />,
     title: "Patentert innovasjon",
-    desc: "Høydejusterbart system med monteringsverktøy sikrer montering på badets laveste punkt og forhindrer avvik og risiko for usynlige feil.",
+    desc: "Høydejusterbart system med monteringsverktøy sikrer presis plassering på badets laveste punkt og reduserer risiko for avvik og skjulte feil.",
   },
   {
     icon: <TrendingDownIcon className="w-6 h-6 stroke-orange" />,
     title: "Minimert vannskaderisiko",
-    desc: "Eliminering av forhøyningsringer, skruer og klemringer fjerner risikoen for menneskelig svikt i den kritiske overgangen mellom sluk og membran.",
+    desc: "Færre komponenter i overgangen mellom sluk og membran reduserer risikoen for menneskelig svikt i den kritiske utførelsen.",
   },
   {
     icon: <FileTextIcon className="w-6 h-6 stroke-orange" />,
-    title: "Sertifisert trygghet",
-    desc: "Systemet tilfredsstiller TEK-krav, og det nyskapende designet er dokumentert med SINTEF Teknisk Godkjenning (TG XXXXX).",
+    title: "SINTEF-godkjent",
+    desc: "Systemet tilfredsstiller TEK-krav og er dokumentert med SINTEF Teknisk Godkjenning (TG 20991).",
   },
 ];
 
