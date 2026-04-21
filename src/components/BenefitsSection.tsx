@@ -27,14 +27,14 @@ export default function BenefitsSection() {
       <div className="max-w-[1200px] mx-auto">
         <FadeUp className="text-center max-w-[800px] mx-auto mb-15">
           <h2 className="text-4xl max-md:text-[28px] font-bold mb-4 leading-tight">
-            En mer lønnsom og forutsigbar{" "}
-            <span className="text-orange">byggeprosess for alle fag</span>
+            Forutsigbar byggeprosess{" "}
+            <span className="text-orange">for alle fag</span>
           </h2>
           <p className="text-[17px] text-white/70 leading-[1.7] font-light">
-            Eliminer kostbar omprosjektering og risikoen for avvik på tvers av
-            alle fag. Slidedrain Sluksystem erstatter låste tekniske valg med et
-            fleksibelt system som utvider tilvalgsvinduet, maksimerer
-            prosjektets marginer og sikrer en feilfri utførelse.
+            Eliminer kostbar omprosjektering og risiko for avvik på tvers av
+            fag. Slidedrain sluksystem erstatter låste tekniske løsninger med
+            et fleksibelt system som utvider tilvalgsvinduet, øker prosjektets
+            marginer og sikrer feilfri utførelse.
           </p>
         </FadeUp>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
