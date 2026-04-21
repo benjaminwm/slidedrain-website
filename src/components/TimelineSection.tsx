@@ -58,19 +58,19 @@ const steps = [
     active: true,
   },
   {
-    icon: <WrenchIcon className="w-[22px] h-[22px] stroke-orange" />,
-    tag: "Installasjon: Støp av fall",
-    tagColor: "bg-blue-500/12 text-blue-600",
-    title: "Tynnavretning",
-    desc: "Fall støpes med monteringsverktøy tilpasset hjørnerist eller slukrenne.",
-    active: false,
-  },
-  {
     icon: <PackageIcon className="w-[22px] h-[22px] stroke-orange" />,
     tag: "Varelevering 2",
     tagColor: "bg-orange/12 text-orange",
     title: "Hjørnerist eller slukrenne",
     desc: "Bestilt av rørentreprenør eller flislegger etter kundens valg.",
+    active: false,
+  },
+  {
+    icon: <WrenchIcon className="w-[22px] h-[22px] stroke-orange" />,
+    tag: "Installasjon: Støp av fall",
+    tagColor: "bg-blue-500/12 text-blue-600",
+    title: "Tynnavretning",
+    desc: "Fall støpes med monteringsverktøy tilpasset hjørnerist eller slukrenne.",
     active: false,
   },
   {
