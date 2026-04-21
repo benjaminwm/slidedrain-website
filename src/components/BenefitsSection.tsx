@@ -23,14 +23,14 @@ const benefits = [
 
 export default function BenefitsSection() {
   return (
-    <section className="py-20 px-6 bg-orange text-white" id="fordeler">
+    <section className="py-20 px-6 bg-[#FFEFE8]" id="fordeler">
       <div className="max-w-[1200px] mx-auto">
         <FadeUp className="text-center max-w-[800px] mx-auto mb-15">
-          <h2 className="text-4xl max-md:text-[28px] font-bold mb-4 leading-tight">
+          <h2 className="text-4xl max-md:text-[28px] font-bold mb-4 leading-tight text-navy">
             Forutsigbar byggeprosess{" "}
-            <span className="text-navy">for alle fag</span>
+            <span className="text-orange">for alle fag</span>
           </h2>
-          <p className="text-[17px] text-white/85 leading-[1.7] font-light">
+          <p className="text-[17px] text-text-light leading-[1.7] font-light">
             Eliminer kostbar omprosjektering og risiko for avvik på tvers av
             fag. Slidedrain sluksystem erstatter låste tekniske løsninger med
             et fleksibelt system som utvider tilvalgsvinduet, øker prosjektets
@@ -41,7 +41,7 @@ export default function BenefitsSection() {
           {benefits.map((b, i) => (
             <FadeUp
               key={i}
-              className="bg-white rounded-xl p-9 shadow-[0_4px_20px_rgba(0,0,0,0.08)]"
+              className="bg-white rounded-xl p-9 shadow-[0_4px_20px_rgba(0,0,0,0.06)]"
             >
               <div className="w-12 h-12 bg-orange/10 rounded-[10px] flex items-center justify-center mb-5">
                 {b.icon}
