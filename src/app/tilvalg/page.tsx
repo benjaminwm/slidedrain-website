@@ -23,11 +23,11 @@ export default function LandingPage() {
       <Navbar />
       <main>
         <Hero />
+        <VideoSection />
         <StandardiseringSection />
         <TilvalgSection />
         <ComparisonSection />
         <BenefitsSection />
-        <VideoSection />
         <SafetySection />
         <TimelineSection />
         <CtaSection />

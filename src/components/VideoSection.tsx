@@ -28,15 +28,15 @@ export default function VideoSection() {
             <span className="text-orange">ferdig resultat</span>
           </h2>
           <p className="text-[17px] text-text-light leading-[1.7] font-light mb-6">
-            Se hvordan Slidedrain Sluksystem monteres trinn for trinn. Den
-            modulære oppbyggingen sikrer en effektiv og feilfri installasjon
-            for alle involverte fagområder.
+            Se hvordan Slidedrain sluksystem monteres trinn for trinn. Den
+            modulære oppbyggingen sikrer effektiv og feilfri installasjon for
+            alle involverte fag.
           </p>
           <ul className="space-y-4">
             {[
               "Én felles teknisk løsning for rørlegger, membranlegger og flislegger",
-              "Trinnløs høydejustering med patentert monteringsverktøy",
-              "Designvalg monteres ved flislegging – uten omprosjektering",
+              "Høydejustering før gulvstøp med etterjustering i bredde og lengde",
+              "Slukets design tilpasses kjøperens preferanser i et utvidet tilvalgsvindu",
             ].map((item, i) => (
               <li key={i} className="flex items-start gap-3 text-[15px] text-text-light">
                 <svg viewBox="0 0 24 24" fill="none" stroke="#22c55e" strokeWidth={2} className="w-5 h-5 shrink-0 mt-0.5">
