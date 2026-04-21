@@ -23,3 +23,34 @@ body {
   background-color: #ffffff;
   -webkit-font-smoothing: antialiased;
 }
+
+/* Shine animation for orange CTA buttons */
+.shine-btn {
+  position: relative;
+  overflow: hidden;
+}
+.shine-btn > * {
+  position: relative;
+  z-index: 1;
+}
+.shine-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.35) 50%,
+    transparent 100%
+  );
+  animation: shine 3.5s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+@keyframes shine {
+  0% { left: -100%; }
+  40%, 100% { left: 200%; }
+}

@@ -23,9 +23,9 @@ export default function SluttkundeHero() {
           </p>
           <a
             href="#slik-gjor-du"
-            className="inline-flex items-center gap-2.5 bg-orange text-white px-8 py-4 rounded-lg font-semibold text-base hover:bg-orange-dark transition-all hover:-translate-y-0.5 shadow-[0_4px_14px_rgba(251,92,19,0.3)] hover:shadow-[0_6px_20px_rgba(251,92,19,0.4)]"
+            className="shine-btn inline-flex items-center gap-2.5 bg-orange text-white px-8 py-4 rounded-lg font-semibold text-base hover:bg-orange-dark transition-all hover:-translate-y-0.5 shadow-[0_4px_14px_rgba(251,92,19,0.3)] hover:shadow-[0_6px_20px_rgba(251,92,19,0.4)]"
           >
-            Se hvordan du kommer i gang
+            <span>Se hvordan du kommer i gang</span>
             <ArrowRight />
           </a>
         </div>

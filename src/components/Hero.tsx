@@ -10,20 +10,19 @@ export default function Hero() {
             For byggherrer & entreprenører
           </span>
           <h1 className="text-[42px] max-lg:text-[34px] max-sm:text-[28px] font-bold leading-[1.2] mb-5 text-navy">
-            Sluksystemet som maksimerer{" "}
+            Sluksystemet som øker{" "}
             <span className="text-orange">prosjektets lønnsomhet</span>
           </h1>
           <p className="text-lg text-text-light leading-[1.7] mb-8 font-light">
-            Utvid tilvalgsperioden med flere måneder og eliminer behovet for
-            omprosjektering. Slidedrain sin patenterte teknologi fjerner
-            samtidig de vanligste årsakene til vannskader i overgangen mellom
-            gulvsluk og membran.
+            Forleng tilvalgsperioden og maksimer mersalget uten
+            omprosjektering. Slidedrain sin patenterte teknologi forenkler
+            utførelsen og reduserer risikoen for vannskader i prosjektet.
           </p>
           <a
             href="#kontakt"
-            className="inline-flex items-center gap-2.5 bg-orange text-white px-8 py-4 rounded-lg font-semibold text-base hover:bg-orange-dark transition-all hover:-translate-y-0.5 shadow-[0_4px_14px_rgba(251,92,19,0.3)] hover:shadow-[0_6px_20px_rgba(251,92,19,0.4)]"
+            className="shine-btn inline-flex items-center gap-2.5 bg-orange text-white px-8 py-4 rounded-lg font-semibold text-base hover:bg-orange-dark transition-all hover:-translate-y-0.5 shadow-[0_4px_14px_rgba(251,92,19,0.3)] hover:shadow-[0_6px_20px_rgba(251,92,19,0.4)]"
           >
-            Book et 15-min møte for ditt neste prosjekt
+            <span>Book et 15-min møte for ditt neste prosjekt</span>
             <ArrowRight />
           </a>
         </div>

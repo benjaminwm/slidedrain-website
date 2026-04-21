@@ -201,26 +201,6 @@ export default function Navbar() {
           from { opacity: 0; transform: translateY(-4px); }
           to { opacity: 1; transform: translateY(0); }
         }
-        .shine-btn::before {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: -100%;
-          width: 60%;
-          height: 100%;
-          background: linear-gradient(
-            90deg,
-            transparent 0%,
-            rgba(255, 255, 255, 0.35) 50%,
-            transparent 100%
-          );
-          animation: shine 3.5s ease-in-out infinite;
-          pointer-events: none;
-        }
-        @keyframes shine {
-          0% { left: -100%; }
-          40%, 100% { left: 200%; }
-        }
       `}</style>
     </nav>
   );

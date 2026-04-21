@@ -18,9 +18,9 @@ export default function SluttkundeCtaSection() {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href="https://slidedrain.no"
-            className="inline-flex items-center justify-center gap-2.5 bg-orange text-white px-8 py-4 rounded-lg font-semibold text-base hover:bg-orange-dark transition-all hover:-translate-y-0.5 shadow-[0_4px_14px_rgba(251,92,19,0.3)]"
+            className="shine-btn inline-flex items-center justify-center gap-2.5 bg-orange text-white px-8 py-4 rounded-lg font-semibold text-base hover:bg-orange-dark transition-all hover:-translate-y-0.5 shadow-[0_4px_14px_rgba(251,92,19,0.3)]"
           >
-            Se alle produkter
+            <span>Se alle produkter</span>
             <ArrowRight />
           </a>
           <a
