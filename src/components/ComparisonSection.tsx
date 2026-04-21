@@ -12,7 +12,7 @@ const challenges = [
 const solutions = [
   "Full valgfrihet frem til flislegging og en mer oversiktlig byggeprosess.",
   "Utvidet salgsvindu gir økt mersalg og høyere kundetilfredshet.",
-  "Standardisert systemløsning fjerner tekniske endringer og sikrer feilfri utførelse.",
+  "Standardisert system som sikrer effektiv utførelse uten tekniske endringer.",
 ];
 
 export default function ComparisonSection() {
