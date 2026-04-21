@@ -21,16 +21,14 @@ export default function ComparisonSection() {
       <div className="max-w-[1200px] mx-auto">
         <FadeUp className="text-center max-w-[800px] mx-auto mb-15">
           <h2 className="text-4xl max-md:text-[28px] font-bold mb-4 leading-tight">
-            Økt lønnsomhet gjennom{" "}
-            <span className="text-orange">forenklet prosess</span>
+            Utvidet tilvalgsperiode for{" "}
+            <span className="text-orange">økt mersalg</span>
           </h2>
           <p className="text-[17px] text-text-light leading-[1.7] font-light">
-            Denne standardiseringen gjør det mulig å tilby attraktive
-            oppgraderinger underveis i byggeprosessen, også til sluttkunder som
-            kjøper bolig lenge etter byggestart. Siden den tekniske utførelsen
-            for rørføring og membran er identisk for alle nivåer frem til
-            tynnavretting, øker man kundetilfredsheten og mersalget, uten risiko
-            for fordyrende avvik, pigging eller omprosjektering.
+            Slidedrain sitt modulerbare konsept standardiserer byggeprosessen
+            og muliggjør oppgraderinger langt ut i prosjektet. Når den tekniske
+            utførelsen er identisk frem til flislegging, økes mersalget uten
+            risiko for omprosjektering eller kostbare avvik.
           </p>
         </FadeUp>
 
