@@ -12,6 +12,9 @@ const items = [
     ),
     title: "SINTEF Teknisk Godkjenning",
     desc: "Slidedrain tilfredsstiller alle krav i TEK17 og er grundig testet og dokumentert (TG 20991).",
+    href: "/downloads/TG-20991-Slidedrain-Sluksystem.pdf",
+    linkLabel: "Last ned TG-dokumentet",
+    external: true,
   },
   {
     icon: (
@@ -23,6 +26,9 @@ const items = [
     ),
     title: "Lagerført hos Brødrene Dahl",
     desc: "Alt teknisk utstyr, fra slukpotter til monteringsverktøy, er lagerført hos Norges største VVS-grossist for rask levering til byggeplass.",
+    href: "https://www.dahl.no/merker/slidedrain",
+    linkLabel: "Se hos Brødrene Dahl",
+    external: true,
   },
   {
     icon: (
@@ -33,6 +39,9 @@ const items = [
     ),
     title: "Norskprodusert med EPD",
     desc: "Produsert i Norge av 100 % resirkulert plast, med full miljødokumentasjon for prosjekter med miljøkrav (BREEAM).",
+    href: "/downloads/EPD-Slidedrain-Model-1.pdf",
+    linkLabel: "Last ned EPD-dokumentet",
+    external: true,
   },
 ];
 
@@ -63,6 +72,19 @@ export default function TrustSection() {
               <p className="text-[15px] text-text-light leading-[1.7]">
                 {item.desc}
               </p>
+              {item.href && (
+                <a
+                  href={item.href}
+                  target={item.external ? "_blank" : undefined}
+                  rel={item.external ? "noopener noreferrer" : undefined}
+                  className="inline-flex items-center gap-1.5 mt-4 text-sm font-semibold text-orange hover:text-orange-dark transition-colors"
+                >
+                  {item.linkLabel}
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="w-4 h-4">
+                    <path d="M5 12h14M13 5l7 7-7 7" />
+                  </svg>
+                </a>
+              )}
             </FadeUp>
           ))}
         </div>

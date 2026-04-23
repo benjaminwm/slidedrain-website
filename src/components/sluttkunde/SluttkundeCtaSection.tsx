@@ -35,11 +35,11 @@ export default function SluttkundeCtaSection() {
             Tilgjengelig hos
           </span>
           <Image
-            src="/images/logo-brodrenedahl.png"
+            src="/images/logo-brodrenedahl-white.svg"
             alt="Brødrene Dahl"
             width={120}
             height={28}
-            className="h-7 w-auto brightness-0 invert"
+            className="h-7 w-auto"
           />
           <Image
             src="/images/logo-flisekompaniet.png"

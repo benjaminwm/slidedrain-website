@@ -149,7 +149,7 @@ export default function ProductDetail({
                   >
                     <div className="flex items-center gap-4">
                       <Image
-                        src="/images/logo-brodrenedahl.png"
+                        src="/images/logo-brodrenedahl.svg"
                         alt="Brødrene Dahl"
                         width={100}
                         height={24}

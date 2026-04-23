@@ -10,27 +10,8 @@ const problems = [
         <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
       </svg>
     ),
-    title: "Slipp feilstøp og kostbar pigging",
-    desc: "Unikt monteringsverktøy og trinnløs høydejustering sikrer eksakt plassering og korrekt høyde ved tynnavretting. Dette sørger for at sluket havner på badets laveste punkt, fjerner behovet for forhøyningsringer og eliminerer risiko for kostbar pigging.",
-  },
-  {
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-6 h-6 stroke-orange">
-        <circle cx="12" cy="12" r="10" />
-        <polyline points="12 6 12 12 16 14" />
-      </svg>
-    ),
-    title: "Aldri mer tidstyver ved montasje",
-    desc: "Den patenterte teknologien fjerner behovet for klemring ved folie- og banemembran, samt forhøyningsring, skruer og løse pakninger for alle membrantyper. Dette forenkler monteringen, reduserer installasjonstiden og senker materialkostnaden per sluk.",
-  },
-  {
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-6 h-6 stroke-orange">
-        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-      </svg>
-    ),
-    title: "Montasje med mindre risiko for lekkasje",
-    desc: "Ved å fjerne tradisjonelle feilkilder i overgangen mellom sluk og membran, settes en ny standard for lekkasjesikkerhet. Færre komponenter reduserer muligheten for feilmontering ved baderommets mest kritiske lekkasjepunkter.",
+    title: "Større justerbarhet og enklere montering",
+    desc: "Unikt monteringsverktøy kombinert med høydejusterbart gulvsluk, slukrenner og slukrister som kan tilpasses både i dybde og bredde, gir et fleksibelt system i alle dimensjoner. Resultatet er raskere og mer effektiv installasjon på hver eneste jobb.",
   },
   {
     icon: (
@@ -39,28 +20,17 @@ const problems = [
         <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
       </svg>
     ),
-    title: "Frihet fra låste systemløsninger",
-    desc: "Systemet er kompatibelt med alle membraner, og Slidedrain slukrister og slukrenner passer til alle sirkulære gulvsluk i plast, stål eller støpejern. Dette muliggjør en identisk teknisk utførelse fra prosjektering til tynnavretting.",
+    title: "Økt fleksibilitet gjennom hele byggeprosjektet",
+    desc: "Sluksystemet er kompatibelt med alle typer membraner, samtidig som det åpner for en mer standardisert byggeprosess. Med en hjørneplassert slukpotte kan man enkelt velge mellom hjørnerist og slukrenne senere i prosjektet \u2013 noe som gir økt fleksibilitet og muligheter for mersalg.",
   },
   {
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-6 h-6 stroke-orange">
-        <rect x="3" y="3" width="18" height="18" rx="2" />
-        <path d="M3 9h18" />
-        <path d="M9 3v18" />
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
       </svg>
     ),
-    title: "Designendringer uten teknisk hodebry",
-    desc: "Med Tile Insert integreres baderomsflisen direkte i sluket for et sømløst og moderne uttrykk. Sluttkunden får et sluttresultat som matcher deres valgte fliser, mens byggeprosessen blir forutsigbar med en standardisert teknisk utførelse.",
-  },
-  {
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-6 h-6 stroke-orange">
-        <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z" />
-      </svg>
-    ),
-    title: "Slutt på kundeservice for tette sluk",
-    desc: "Slidedrain bygger på bruk av sirkulære sluk med store vannlåser som reduserer vedlikeholdsbehovet drastisk sammenlignet med tradisjonelle linjesluk. Dette gir færre servicehenvendelser og økt kundetilfredshet.",
+    title: "Redusert risiko og minimalt vedlikehold",
+    desc: "Slidedrains patenterte teknologi eliminerer tradisjonelle feilkilder i overgangen mellom gulvsluk og membran, og reduserer dermed risikoen for vannskader betydelig. Samtidig er alle Slidedrain-løsninger designet for en stor vannlås som minimerer behovet for vedlikehold vesentlig.",
   },
 ];
 

@@ -9,8 +9,8 @@ const features = [
         <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z" />
       </svg>
     ),
-    title: "Færre fuger, enklere renhold",
-    desc: "Slidedrain slukrenne er optimalisert for store fliser i dusjsonen. Dette gir et moderne uttrykk med færre fuger, noe som fjerner de mest krevende områdene å holde rene.",
+    title: "Enklere renhold med færre fuger",
+    desc: "Slidedrain er tilpasset større flisformat, som gir færre fuger og et mer vedlikeholdsvennlig bad.",
   },
   {
     icon: (
@@ -20,7 +20,7 @@ const features = [
       </svg>
     ),
     title: "Sjeldnere rens med stor vannlås",
-    desc: "Slidedrain er designet med og for sirkulære sluk med stor vannlås. Det gir langt mindre vedlikehold enn tradisjonelle linjesluk, da store vannlåser må renses betydelig sjeldnere.",
+    desc: "Slidedrain er utviklet for sirkulære sluk med stor vannlås, som trenger rens langt sjeldnere enn tradisjonelle linjesluk. Resultatet er mindre vedlikehold i hverdagen.",
   },
   {
     icon: (
@@ -28,8 +28,8 @@ const features = [
         <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
       </svg>
     ),
-    title: "Enkel tilgang ved behov",
-    desc: "Skulle du trenge å komme til for å renholde, er systemet designet slik at vannlåsen enkelt kan tas ut og settes inn igjen. Det gjør den årlige sjekken unnagjort på sekunder.",
+    title: "Superenkelt vedlikehold",
+    desc: "Slukrenne og slukrist med tile insert kan enkelt løftes ut med det medfølgende rist-verktøyet, og den store vannlåsen tas enkelt ut for rens ved behov.",
   },
 ];
 
@@ -39,8 +39,8 @@ export default function MaintenanceSection() {
       <div className="max-w-[1200px] mx-auto">
         <FadeUp className="text-center max-w-[800px] mx-auto mb-15">
           <h2 className="text-4xl max-md:text-[28px] font-bold mb-4 leading-tight">
-            Betydelig{" "}
-            <span className="text-orange">mindre vedlikehold</span>
+            Designet for{" "}
+            <span className="text-orange">minimalt vedlikehold</span>
           </h2>
         </FadeUp>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

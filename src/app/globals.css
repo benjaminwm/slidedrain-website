@@ -46,11 +46,11 @@ body {
     rgba(255, 255, 255, 0.35) 50%,
     transparent 100%
   );
-  animation: shine 3.5s ease-in-out infinite;
+  animation: shine 10s ease-in-out infinite;
   pointer-events: none;
   z-index: 0;
 }
 @keyframes shine {
   0% { left: -100%; }
-  40%, 100% { left: 200%; }
+  14%, 100% { left: 200%; }
 }

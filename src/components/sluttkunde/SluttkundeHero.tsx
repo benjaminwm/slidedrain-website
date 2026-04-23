@@ -12,8 +12,8 @@ export default function SluttkundeHero() {
             For privatkunder
           </span>
           <h1 className="text-[42px] max-lg:text-[34px] max-sm:text-[28px] font-bold leading-[1.2] mb-5 text-navy">
-            Den usynlige detaljen som utgjør{" "}
-            <span className="text-orange">hele forskjellen</span>
+            Den usynlige detaljen som løfter{" "}
+            <span className="text-orange">hele badet</span>
           </h1>
           <p className="text-lg text-text-light leading-[1.7] mb-8 font-light">
             Skap et sømløst baderomsgulv med prisvinnende norsk design.

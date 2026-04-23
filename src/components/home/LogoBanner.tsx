@@ -3,16 +3,15 @@
 import Image from "next/image";
 
 const logos = [
-  { src: "/images/partners/hovedlogo+rosendal+byggutenhvit.png-1.png", alt: "Rosendal Bygg" },
-  { src: "/images/partners/lomundalbygg_logo-1.png", alt: "Lømundal Bygg" },
-  { src: "/images/partners/group-8964.png", alt: "BM Rørservice" },
-  { src: "/images/partners/group-9089.png", alt: "Romerike Bad AS" },
-  { src: "/images/partners/mask-group.png", alt: "Rørproff" },
-  { src: "/images/partners/mask-group-1.png", alt: "Christiania Rørleggerbedrift" },
-  { src: "/images/partners/mask-group-2.png", alt: "Bærum Rørleggerbedrift" },
-  { src: "/images/partners/mask-group-4.png", alt: "Prorør AS" },
-  { src: "/images/partners/wyvfnyrdkpddkdiztnreqqlnwk.png-1.png", alt: "Knutshaug VVS" },
-  { src: "/images/partners/images-4-1.png", alt: "Flow VVS" },
+  { src: "/images/partners/Logo - Rosendal bygg.png", alt: "Rosendal Bygg" },
+  { src: "/images/partners/Logo - Lomundal Bygg.png", alt: "Lomundal Bygg" },
+  { src: "/images/partners/Logo - BM Rørservice.png", alt: "BM Rørservice" },
+  { src: "/images/partners/Logo - Romerike Bad.png", alt: "Romerike Bad" },
+  { src: "/images/partners/Logo - Rørproff.png", alt: "Rørproff" },
+  { src: "/images/partners/Logo - Christiania Rørleggerbedrift.png", alt: "Christiania Rørleggerbedrift" },
+  { src: "/images/partners/Logo - Prorør.png", alt: "Prorør" },
+  { src: "/images/partners/Logo - Knutshaug VVS.png", alt: "Knutshaug VVS" },
+  { src: "/images/partners/Logo - Flow Trøndelag VVS.png", alt: "Flow Trøndelag VVS" },
 ];
 
 const allLogos = [...logos, ...logos];

@@ -58,7 +58,7 @@ export async function POST(req: NextRequest) {
           </div>
           <div style="padding: 20px 30px; background: #f6f6f6; border-radius: 0 0 12px 12px; text-align: center;">
             <p style="font-size: 12px; color: #8899aa; margin: 0;">
-              Slidedrain AS &middot; slidedrain.no &middot; post@slidedrain.no
+              Slidedrain AS &middot; slidedrain.no &middot; kontakt@slidedrain.no
             </p>
           </div>
         </div>

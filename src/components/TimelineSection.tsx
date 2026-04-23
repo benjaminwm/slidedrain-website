@@ -138,14 +138,6 @@ export default function TimelineSection() {
           ))}
         </div>
 
-        <FadeUp
-          className="text-center mt-8 text-sm text-text-light max-w-[700px] mx-auto"
-          style={{ transitionDelay: `${steps.length * 120}ms` }}
-        >
-          <strong>Fleksibel logistikk:</strong> Monteringsverktøy og slukoverdel
-          kan leveres sammen med slukpotten i Varelevering 1, for en samlet
-          leveranse av alt teknisk utstyr til rørfaget.
-        </FadeUp>
       </div>
     </section>
   );

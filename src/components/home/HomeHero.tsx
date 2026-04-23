@@ -6,8 +6,8 @@ import LogoBanner from "./LogoBanner";
 
 export default function HomeHero() {
   return (
-    <section className="min-h-screen pt-[140px] bg-gradient-to-br from-white to-[#fef7f3] overflow-hidden flex flex-col justify-between">
-      <div className="max-w-[1200px] mx-auto px-6 pb-10 grid grid-cols-1 lg:grid-cols-2 gap-15 items-center flex-1">
+    <section className="pt-[110px] pb-6 bg-gradient-to-br from-white to-[#fef7f3] overflow-hidden">
+      <div className="max-w-[1200px] mx-auto px-6 pb-10 grid grid-cols-1 lg:grid-cols-2 gap-15 items-center">
         <div>
           <span className="inline-block bg-orange/10 text-orange text-[13px] font-semibold px-3.5 py-1.5 rounded-full mb-5 uppercase tracking-wide">
             Neste generasjons gulvsluk
@@ -21,24 +21,26 @@ export default function HomeHero() {
             teknologi som setter en ny standard for våtromssikkerhet,
             vedlikehold og stilrent resultat. Norskprodusert og SINTEF-godkjent.
           </p>
-          <div className="flex items-center gap-5 mb-8">
-            <span className="text-xs text-text-light font-medium uppercase tracking-wider">
+          <div className="mb-8">
+            <span className="block text-xs text-text-light font-medium uppercase tracking-wider mb-3">
               Tilgjengelig hos
             </span>
-            <Image
-              src="/images/logo-brodrenedahl.png"
-              alt="Brødrene Dahl"
-              width={140}
-              height={32}
-              className="h-7 w-auto"
-            />
-            <Image
-              src="/images/logo-flisekompaniet.png"
-              alt="Flisekompaniet"
-              width={140}
-              height={32}
-              className="h-7 w-auto"
-            />
+            <div className="flex items-center gap-6">
+              <Image
+                src="/images/logo-brodrenedahl.svg"
+                alt="Brødrene Dahl"
+                width={140}
+                height={32}
+                className="h-6 sm:h-7 w-auto"
+              />
+              <Image
+                src="/images/logo-flisekompaniet.png"
+                alt="Flisekompaniet"
+                width={140}
+                height={32}
+                className="h-6 sm:h-7 w-auto"
+              />
+            </div>
           </div>
           <div className="flex flex-wrap gap-3">
             <a

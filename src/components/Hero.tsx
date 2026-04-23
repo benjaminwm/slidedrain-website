@@ -28,10 +28,10 @@ export default function Hero() {
         </div>
         <div className="flex justify-center items-center max-lg:order-first">
           <Image
-            src="/images/hero-installation.jpg"
-            alt="Slidedrain slukpotte installert i hjørnet med vannbåren varme"
-            width={600}
-            height={450}
+            src="/images/hero-render.png"
+            alt="Slidedrain slukrenne installert på dusjgulv"
+            width={1301}
+            height={731}
             className="w-full rounded-2xl shadow-[0_20px_60px_rgba(40,52,71,0.12)]"
             priority
           />

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import FadeUp from "./FadeUp";
 import { TrendingUpIcon, DollarIcon, ClockIcon } from "./icons";
 
@@ -35,6 +36,18 @@ export default function BenefitsSection() {
             fag. Slidedrain sluksystem erstatter låste tekniske løsninger med
             et fleksibelt system som utvider tilvalgsvinduet, øker prosjektets
             marginer og sikrer feilfri utførelse.
+          </p>
+        </FadeUp>
+        <FadeUp className="max-w-[900px] mx-auto mb-12">
+          <Image
+            src="/images/bathroom-ullernfaret.jpg"
+            alt="Moderne bad med Slidedrain-installasjon"
+            width={3681}
+            height={2455}
+            className="w-full rounded-2xl shadow-[0_20px_60px_rgba(40,52,71,0.12)]"
+          />
+          <p className="italic text-xs text-text-light text-center mt-3">
+            Bilde av Lomundal Oslo AS
           </p>
         </FadeUp>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

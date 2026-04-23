@@ -67,7 +67,7 @@ export default function TrustBar() {
               Tilgjengelig hos
             </span>
             <Image
-              src="/images/logo-brodrenedahl.png"
+              src="/images/logo-brodrenedahl.svg"
               alt="Brødrene Dahl"
               width={120}
               height={28}

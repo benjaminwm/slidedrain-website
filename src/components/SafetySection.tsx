@@ -19,6 +19,8 @@ const features = [
     icon: <FileTextIcon className="w-6 h-6 stroke-orange" />,
     title: "SINTEF-godkjent",
     desc: "Systemet tilfredsstiller TEK-krav og er dokumentert med SINTEF Teknisk Godkjenning (TG 20991).",
+    href: "/downloads/TG-20991-Slidedrain-Sluksystem.pdf",
+    linkLabel: "Last ned TG-dokumentet",
   },
 ];
 
@@ -110,6 +112,19 @@ export default function SafetySection() {
               <p className="text-sm text-text-light leading-[1.7]">
                 {f.desc}
               </p>
+              {f.href && (
+                <a
+                  href={f.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 mt-4 text-sm font-semibold text-orange hover:text-orange-dark transition-colors"
+                >
+                  {f.linkLabel}
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="w-4 h-4">
+                    <path d="M5 12h14M13 5l7 7-7 7" />
+                  </svg>
+                </a>
+              )}
             </FadeUp>
           ))}
         </div>

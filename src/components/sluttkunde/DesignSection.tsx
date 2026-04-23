@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import FadeUp from "../FadeUp";
 
 const features = [
@@ -11,8 +12,8 @@ const features = [
         <path d="M9 3v18" />
       </svg>
     ),
-    title: "Sammenhengende flismønster",
-    desc: "Ved å flislegge slukrennen eller slukristen med samme flis som resten av baderomsgulvet, gjør du sluket nesten usynlig. Dette lar flismønsteret flyte uavbrutt over hele gulvet for et perfekt, minimalistisk resultat.",
+    title: "Sømløst flismønster",
+    desc: "Flislegg slukrennen eller slukristen med samme flis som gulvet, og gjør sluket nærmest usynlig. Resultatet er et helhetlig, minimalistisk uttrykk hvor flismønsteret flyter uavbrutt.",
   },
   {
     icon: (
@@ -21,7 +22,7 @@ const features = [
       </svg>
     ),
     title: "Perfekt for store flisformater",
-    desc: "Slidedrain er skreddersydd for moderne storformat-fliser. Det tilpassede formatet eliminerer behovet for oppstykking av flisene, noe som sikrer en eksklusiv finish med rene linjer og færre fuger.",
+    desc: "Slidedrain er tilpasset moderne storformat-fliser og reduserer behovet for oppstykking av flisene. Resultatet er rene linjer, færre fuger og et mer eksklusivt uttrykk.",
   },
   {
     icon: (
@@ -31,7 +32,7 @@ const features = [
       </svg>
     ),
     title: "Designvalg for enhver stil",
-    desc: "Enten du drømmer om en elegant slukrenne med innfelt flis, et diskré hjørnesluk eller en klassisk rist, tilbyr Slidedrain et bredt utvalg av løsninger som komplementerer stilen på ditt bad.",
+    desc: "Velg mellom slukrenne med innfelt flis, diskré hjørnesluk eller klassisk rist. Slidedrain gir deg løsninger som løfter helheten på badet.",
   },
 ];
 
@@ -41,9 +42,18 @@ export default function DesignSection() {
       <div className="max-w-[1200px] mx-auto">
         <FadeUp className="text-center max-w-[800px] mx-auto mb-15">
           <h2 className="text-4xl max-md:text-[28px] font-bold mb-4 leading-tight">
-            Designet for et{" "}
-            <span className="text-orange">sømløst uttrykk</span>
+            Skapt for et{" "}
+            <span className="text-orange">stilrent baderom</span>
           </h2>
+        </FadeUp>
+        <FadeUp className="max-w-[900px] mx-auto mb-12">
+          <Image
+            src="/images/hero-render.png"
+            alt="Slidedrain slukrenne installert på dusjgulv"
+            width={1301}
+            height={731}
+            className="w-full rounded-2xl shadow-[0_20px_60px_rgba(40,52,71,0.12)]"
+          />
         </FadeUp>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {features.map((f, i) => (

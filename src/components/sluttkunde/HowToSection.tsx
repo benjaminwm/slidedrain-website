@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import FadeUp from "../FadeUp";
 
 const steps = [
@@ -12,8 +13,21 @@ const steps = [
       </svg>
     ),
     step: "1",
-    title: "Utforsk mulighetene",
-    desc: "På våre nettsider finner du full oversikt over alle modeller, tekniske spesifikasjoner og inspirasjon som hjelper deg å velge riktig løsning for ditt prosjekt.",
+    title: "Velg ditt design",
+    desc: "På våre nettsider finner du full oversikt over modeller, tekniske spesifikasjoner og inspirasjon som hjelper deg å velge riktig løsning til ditt prosjekt.",
+    href: "/produkter",
+    linkLabel: "Finn sluk og design",
+  },
+  {
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-6 h-6 stroke-orange">
+        <path d="M9 11l3 3L22 4" />
+        <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" />
+      </svg>
+    ),
+    step: "2",
+    title: "Planlegg med håndverkeren",
+    desc: "Del dine valg og bruk dem i planleggingen sammen med håndverkeren, slik at du sikrer riktig Slidedrain-løsning og en enkel installasjon fra start.",
   },
   {
     icon: (
@@ -23,19 +37,9 @@ const steps = [
         <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
       </svg>
     ),
-    step: "2",
-    title: "Handle hos Flisekompaniet",
-    desc: "Slidedrain kan kjøpes på nett eller direkte hos alle Flisekompaniets utsalgssteder i hele landet. Her får du hjelp til å bestille de delene du trenger for å matche dine flisvalg perfekt.",
-  },
-  {
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-6 h-6 stroke-orange">
-        <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
-      </svg>
-    ),
     step: "3",
-    title: "Tilgjengelig for din håndverker",
-    desc: "Slidedrain er en lagerført systemløsning hos Brødrene Dahl, Norges største VVS-grossist. Det betyr at din rørlegger eller entreprenør har rask tilgang til alle komponenter.",
+    title: "Kjøp hos forhandler",
+    desc: "Din håndverker kan bestille Slidedrain via proffhandelen hos Brødrene Dahl eller Flisekompaniet. Hos Flisekompaniet kan du også kjøpe selv og se utvalgte modeller i utstilling.",
   },
 ];
 
@@ -46,11 +50,23 @@ export default function HowToSection() {
         <FadeUp className="text-center max-w-[800px] mx-auto mb-15">
           <h2 className="text-4xl max-md:text-[28px] font-bold mb-4 leading-tight">
             Slik realiserer du{" "}
-            <span className="text-orange">drømmebadet</span> med Slidedrain
+            <span className="text-orange">drømmebadet</span>
           </h2>
           <p className="text-[17px] text-text-light leading-[1.7] font-light">
             Vi samarbeider med de største aktørene i bransjen for å gjøre veien
             fra planlegging til ferdig bad så enkel som mulig.
+          </p>
+        </FadeUp>
+        <FadeUp className="max-w-[900px] mx-auto mb-12">
+          <Image
+            src="/images/bathroom-ullernfaret.jpg"
+            alt="Moderne bad med Slidedrain-installasjon"
+            width={3681}
+            height={2455}
+            className="w-full rounded-2xl shadow-[0_20px_60px_rgba(40,52,71,0.12)]"
+          />
+          <p className="italic text-xs text-text-light text-center mt-3">
+            Bilde av Lomundal Oslo AS
           </p>
         </FadeUp>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -69,6 +85,17 @@ export default function HowToSection() {
               <p className="text-[15px] text-text-light leading-[1.7]">
                 {s.desc}
               </p>
+              {s.href && (
+                <a
+                  href={s.href}
+                  className="inline-flex items-center gap-1.5 mt-4 text-sm font-semibold text-orange hover:text-orange-dark transition-colors"
+                >
+                  {s.linkLabel}
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="w-4 h-4">
+                    <path d="M5 12h14M13 5l7 7-7 7" />
+                  </svg>
+                </a>
+              )}
             </FadeUp>
           ))}
         </div>
