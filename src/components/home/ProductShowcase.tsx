@@ -24,13 +24,21 @@ function AnimatedWord({ words }: { words: string[] }) {
     return () => clearInterval(interval);
   }, [words.length]);
 
+  // Lengste ord setter bredden så ingen tekstlinjer endrer seg under animasjonen
+  const longest = words.reduce((a, b) => (a.length >= b.length ? a : b));
+
   return (
-    <span
-      className={`inline-block text-orange transition-all duration-400 ${
-        fade ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"
-      }`}
-    >
-      {words[idx]}
+    <span className="relative inline-block text-orange align-baseline">
+      <span aria-hidden className="invisible">
+        {longest}
+      </span>
+      <span
+        className={`absolute inset-0 transition-all duration-400 ${
+          fade ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"
+        }`}
+      >
+        {words[idx]}
+      </span>
     </span>
   );
 }

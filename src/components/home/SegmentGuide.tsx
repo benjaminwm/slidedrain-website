@@ -31,7 +31,7 @@ const segments = [
     desc: "Oppdag hvordan utvidet tilvalgsperiode kan redusere omprosjektering og øke mersalget med Slidedrain Sluksystem.",
     image: "/images/hjorneplassert-gulvsluk.png",
     imageObjectFit: "contain" as const,
-    imageBg: "bg-white",
+    imageBg: "bg-gray-bg",
   },
 ];
 
