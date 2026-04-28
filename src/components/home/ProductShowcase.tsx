@@ -104,12 +104,12 @@ function LayerRow({
       <div className="flex items-center gap-1 justify-center">
         <Ghost product={prev} />
         <ArrowBtn direction="left" onClick={onPrev} />
-        <div className="w-[180px] h-[140px] flex items-center justify-center">
+        <div className="w-[170px] h-[120px] flex items-center justify-center">
           <Image
             src={getProductImageUrl(product.imageId)}
             alt={product.name}
-            width={180}
-            height={140}
+            width={170}
+            height={120}
             className="w-full h-full object-contain"
             unoptimized
             key={product.nobbNr}
@@ -184,7 +184,7 @@ export default function ProductShowcase() {
           </div>
 
           {/* Right: Compact configurator */}
-          <div className="rounded-2xl py-6 px-4 space-y-1 w-[460px] max-lg:mx-auto">
+          <div className="border-2 border-dashed border-navy/12 rounded-2xl py-5 px-3 bg-white/40 space-y-0 w-[420px] max-lg:mx-auto">
             {layers.map((layer, i) => (
               <div key={i}>
                 {i > 0 && (
