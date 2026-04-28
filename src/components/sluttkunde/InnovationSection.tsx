@@ -47,10 +47,10 @@ export default function InnovationSection() {
         </FadeUp>
         <FadeUp className="max-w-[900px] mx-auto mb-12">
           <Image
-            src="/images/team-meeting.jpg"
-            alt="Slidedrain teamet diskuterer innovasjon"
-            width={600}
-            height={400}
+            src="/images/henning-utendors.webp"
+            alt="Henning fra Slidedrain med Slukoverdel-produktbokser"
+            width={1600}
+            height={1067}
             className="w-full rounded-2xl shadow-[0_20px_60px_rgba(40,52,71,0.12)]"
           />
         </FadeUp>
