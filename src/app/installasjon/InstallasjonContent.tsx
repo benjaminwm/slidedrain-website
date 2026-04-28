@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
+import Image from "next/image";
 import FadeUp from "@/components/FadeUp";
 
 const gulvslukSteps = [
@@ -10,63 +10,118 @@ const gulvslukSteps = [
     title: "Installer slukpotten",
     desc: "Lag et Ø182 mm hull i sponplaten, eller bygg en ramme med trebjelkelaget. Plasser slukpotten i hullet og koble utløpet på avløpsrøret. Skru potten fast med rustfrie skruer med forsenket hode. Plasser monteringsverktøyet på slukpotten og kontroller at den er installert i vater.",
     note: "Flensen på slukpotten er designet for å passe i et Ø215 mm nedfreset spor.",
+    image: "/images/installasjon/steg-1.webp",
   },
   {
     step: 2,
     title: "Still inn monteringsverktøyet",
     desc: "Plasser monteringsverktøyet på slukpotten og kontroller at det står i vater. Still den ytre forskalingsringen inn til ønsket gulvhøyde ved hjelp av måleskalaen på sidene. Skalaen måler 0–40 mm fra flensen av slukpotten.",
     note: "Påfør litt silikon på verktøyet der støpen vil være i kontakt, for enkel løsning etterpå.",
+    image: "/images/installasjon/steg-2.webp",
   },
   {
     step: 3,
     title: "Støp gulvet",
     desc: "Legg gulvstøpen mens verktøyet fortsatt er plassert på slukpotten, ferdig innstilt til ønsket gulvhøyde. Fyll på med støpemasse helt til gulvet er på linje med kanten markert med piler. La monteringsverktøyet stå i ro til støpen har herdet ferdig.",
+    image: "/images/installasjon/steg-3.webp",
   },
   {
     step: 4,
     title: "Ta vekk monteringsverktøyet",
     desc: "Kontroller at gulvstøpen er herdet i henhold til leverandørens brukerveiledning. Vrikk forsiktig på forskalingsringen og ta den av. Gjør det samme med kjernen. Fjern smuss og rund av kantene på støpen dersom de er skarpe.",
+    image: "/images/installasjon/steg-4.webp",
   },
   {
     step: 5,
     title: "Skyv slukoverdelen ned i slukpotten",
     desc: "Ta ut vannlåsen og legg den til sides. Sjekk at veggene i slukpotten er frie for smuss. Smør leppepakningen med silikon. Styr snap-låsene på slukoverdelen inn mot matchende mot-snaps i slukpotten, og dytt ned helt til slukoverdelen går i flukt med gulvet.",
     note: "NB! Snap-låsene lar seg ikke demontere etter de går i lås!",
+    image: "/images/installasjon/steg-5-apex.webp",
   },
   {
     step: 6,
     title: "Stryk ut slukmansjetten våt-i-våt",
     desc: "Brett slukmansjetten inn mot midten av innløpet. Påfør smøremembran på gulvet under slukmansjetten. Stryk mansjetten ut over den våte smøremembranen uten kroll. Påfør et nytt lag med smøremembran på oversiden. Installer vannlåsen ved å først fukte o-ringen og så dytte den ned.",
+    image: "/images/installasjon/steg-6-apex.webp",
   },
 ];
 
-const renneSteps = [
+const klemringSteps = [
+  {
+    step: 5,
+    title: "Sett slukoverdelen ned i slukpotten",
+    desc: "Ta ut vannlåsen og legg den til side. Sjekk at slukpotten er fri for smuss. Smør leppepakningen med silikon. Styr snap-låsene på slukoverdelen inn mot matchende mot-snaps i slukpotten, og dytt ned helt til slukoverdelen går i flukt med gulvet. Installer baneveremembranen i henhold til leverandørens anvisning, og kutt et lite hull i membranen over slukåpningen.",
+    note: "NB! Snap-låsene lar seg ikke demontere etter de går i lås!",
+    image: "/images/installasjon/steg-5-klemring.webp",
+  },
+  {
+    step: 6,
+    title: "Form membranen og stram klemringen",
+    desc: "Varm opp membranen og tre skruene gjennom klemringen uten å stramme. Form membranen rundt klemringen mens den avkjøles. Trykk klemringen ned mens du strammer skruene med skrutrekker. Trim hullet langs kanten av klemringen. Installer vannlåsen ved å først fukte o-ringen og så dytte den ned.",
+    note: "Unngå å varme opp membranen for mye, da plasten kan mykne.",
+    image: "/images/installasjon/steg-6-klemring.webp",
+  },
+];
+
+const renneTileSteps = [
   {
     step: 1,
     title: "Plasser slukrennen",
     desc: "Plasser rennen over gulvsluket slik at du kan planlegge flisleggingen av gulvet. Kontroller at vannlåsen kan frigjøres. Ved vegg-nær installasjon, plasser rennen etter flislegging av vegg.",
+    image: "/images/installasjon/renne-tile-1.webp",
   },
   {
     step: 2,
     title: "Påfør flislim og fest rennen",
     desc: "Påfør flislim og fest rennen i ønsket plassering. For å få samme høyde på ferdig flislagt gulv og tile insert, må flislimet på utsiden av rennen bygge 5,5 mm mer enn flislimet under rennen.",
     note: "Ved flistykkelser under 9,5 mm må du påføre ekstra flislim på utsiden av rennen.",
+    image: "/images/installasjon/renne-tile-2.webp",
   },
   {
     step: 3,
     title: "Legg gulvflisene rundt rennen",
     desc: "Legg gulvflisene rundt rennen. Sørg for at flisene legges i en høyde som vil være lik som høyden til din flislagte tile insert.",
+    image: "/images/installasjon/renne-tile-3.webp",
   },
   {
     step: 4,
     title: "Tilskjær og lim flis til tile inserten",
-    desc: "Kutt flis tilpasset målene til tile inserten. Bruk vannbestandig monteringslim eller flislim ved festing av flis.",
+    desc: "Kutt flis tilpasset målene til tile inserten (785,8 × 185,8 mm). Bruk vannbestandig monteringslim eller flislim ved festing av flis.",
     note: "Ved flistykkelser under 9,5 mm må du påføre et lag med flislim eller ekstra monteringslim under flis i tile inserten.",
+    image: "/images/installasjon/renne-tile-4.webp",
   },
   {
     step: 5,
     title: "Fug flisene og installer tile inserten",
     desc: "Fug flisene rundt slukrennen. Rengjør rennen og plasser den flislagte tile inserten i rennen. Du har nå installert slukrennen!",
+    image: "/images/installasjon/renne-tile-5.webp",
+  },
+];
+
+const renneRistSteps = [
+  {
+    step: 1,
+    title: "Plasser slukrennen",
+    desc: "Plasser rennen over gulvsluket slik at du kan planlegge flisleggingen av gulvet. Kontroller at vannlåsen kan frigjøres. Ved vegg-nær installasjon, plasser rennen etter flislegging av vegg.",
+    image: "/images/installasjon/renne-rist-1.webp",
+  },
+  {
+    step: 2,
+    title: "Påfør flislim og fest rennen",
+    desc: "Påfør flislim og fest rennen i ønsket plassering. Rennen må plasseres i en høyde som tilsvarer 1 mm lavere enn flisgulvet. Slukrennen bygger totalt 9 mm, mens rennen bygger 8 mm.",
+    image: "/images/installasjon/renne-rist-2.webp",
+  },
+  {
+    step: 3,
+    title: "Legg gulvflisene rundt rennen",
+    desc: "Legg gulvflisene rundt rennen. Flisene legges 1 mm over rennen, i samme høyde som risten.",
+    image: "/images/installasjon/renne-rist-3.webp",
+  },
+  {
+    step: 4,
+    title: "Fug flisene og installer risten",
+    desc: "Fug flisene rundt slukrennen, inkludert over kantene. Etter herding rengjør du rennen, fjerner beskyttelsesfolien på risten og plasserer den i rennen.",
+    image: "/images/installasjon/renne-rist-4.webp",
   },
 ];
 
@@ -196,8 +251,17 @@ export default function InstallasjonContent() {
                   className="mb-6"
                   style={{ transitionDelay: `${i * 80}ms` }}
                 >
-                  <div className="bg-gray-bg rounded-xl p-6">
-                    <div className="flex items-start gap-4">
+                  <div className="bg-gray-bg rounded-xl overflow-hidden">
+                    <div className="bg-white border-b border-navy/5">
+                      <Image
+                        src={s.image}
+                        alt={`Steg ${s.step}: ${s.title}`}
+                        width={1024}
+                        height={768}
+                        className="w-full h-auto"
+                      />
+                    </div>
+                    <div className="p-6 flex items-start gap-4">
                       <div className="shrink-0 w-10 h-10 rounded-full bg-orange text-white flex items-center justify-center font-bold text-sm">
                         {s.step}
                       </div>
@@ -219,14 +283,99 @@ export default function InstallasjonContent() {
                 </FadeUp>
               ))}
 
-              <FadeUp className="mt-10">
-                <h3 className="text-xl font-bold text-navy mb-3">
+              <FadeUp className="mt-12">
+                <h3 className="text-2xl max-md:text-xl font-bold text-navy mb-3">
+                  Alternativ: Slukoverdel med klemring
+                </h3>
+                <p className="text-[14px] text-text-light leading-[1.7] mb-6">
+                  Bruker du slukoverdel med klemring (for baneveremembran), er
+                  steg 1–4 identiske. Følg disse stegene for steg 5 og 6 i
+                  stedet:
+                </p>
+              </FadeUp>
+              {klemringSteps.map((s, i) => (
+                <FadeUp
+                  key={`klem-${s.step}`}
+                  className="mb-6"
+                  style={{ transitionDelay: `${i * 80}ms` }}
+                >
+                  <div className="bg-gray-bg rounded-xl overflow-hidden">
+                    <div className="bg-white border-b border-navy/5">
+                      <Image
+                        src={s.image}
+                        alt={`Klemring steg ${s.step}: ${s.title}`}
+                        width={1024}
+                        height={765}
+                        className="w-full h-auto"
+                      />
+                    </div>
+                    <div className="p-6 flex items-start gap-4">
+                      <div className="shrink-0 w-10 h-10 rounded-full bg-orange text-white flex items-center justify-center font-bold text-sm">
+                        {s.step}
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="font-semibold text-navy text-[16px] mb-2">
+                          {s.title}
+                        </h3>
+                        <p className="text-[14px] text-text-light leading-[1.7]">
+                          {s.desc}
+                        </p>
+                        {s.note && (
+                          <p className="text-[13px] text-orange mt-2 font-medium">
+                            {s.note}
+                          </p>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                </FadeUp>
+              ))}
+
+              <FadeUp className="mt-12 bg-gray-bg rounded-xl p-6">
+                <h3 className="text-xl font-bold text-navy mb-4">
+                  Membrankompatibilitet
+                </h3>
+                <div className="grid md:grid-cols-2 gap-6 text-[14px]">
+                  <div>
+                    <h4 className="font-semibold text-orange mb-2">
+                      Slukoverdel med Apex-mansjett
+                    </h4>
+                    <p className="text-text-light leading-[1.7]">
+                      Kompatibel med alle SINTEF-godkjente smøremembraner og
+                      foliemembraner.
+                    </p>
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-orange mb-2">
+                      Slukoverdel med klemring
+                    </h4>
+                    <p className="text-text-light leading-[1.7]">
+                      Kompatibel med alle SINTEF-godkjente smøremembraner,
+                      foliemembraner og baneveremembraner.
+                    </p>
+                  </div>
+                </div>
+              </FadeUp>
+
+              <FadeUp className="mt-12">
+                <h3 className="text-2xl max-md:text-xl font-bold text-navy mb-3">
                   Rengjøring av vannlås
                 </h3>
-                <p className="text-[14px] text-text-light leading-[1.7] mb-3">
+                <p className="text-[14px] text-text-light leading-[1.7] mb-5">
                   Vannlåsen har en klassisk design bestående av to deler. Du bør
                   rense vannlås og sluk hvert halvår, eller ved behov.
                 </p>
+                <div className="bg-gray-bg rounded-xl overflow-hidden mb-5">
+                  <div className="bg-white">
+                    <Image
+                      src="/images/installasjon/vannlas-rengjoring.webp"
+                      alt="Rengjøring av vannlås til Slidedrain gulvsluk"
+                      width={1010}
+                      height={1024}
+                      className="w-full h-auto max-w-md mx-auto"
+                    />
+                  </div>
+                </div>
                 <ol className="list-decimal list-inside space-y-2 text-[14px] text-text-light leading-[1.7]">
                   <li>Løsne vannlåsen fra sluket ved å dra i håndtaket merket &ldquo;Pull&rdquo;.</li>
                   <li>Del vannlåsen i to ved å klemme sammen de to stiplede områdene på underdelen.</li>
@@ -241,13 +390,12 @@ export default function InstallasjonContent() {
             <>
               <FadeUp>
                 <h2 className="text-3xl max-md:text-2xl font-bold text-navy mb-3">
-                  Installasjon av slukrenne med tile insert
+                  Installasjon av slukrenner og rister
                 </h2>
                 <p className="text-[15px] text-text-light leading-relaxed mb-4">
-                  Slukrennen har en maksimal justering på 50 mm i bredden og
-                  105 mm i lengden. Ved vegg-nær plassering: monter slukpotten
-                  med avstand X = T &minus; 8 mm fra vegg uten fliser, der T er
-                  veggtykkelsen.
+                  Slidedrain Slukrenner installeres ovenfor membranen og passer
+                  med alle sirkulære gulvsluk. Velg mellom variant med
+                  flislagt tile insert eller med rist.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-10">
                   <a
@@ -263,14 +411,97 @@ export default function InstallasjonContent() {
                   </a>
                 </div>
               </FadeUp>
-              {renneSteps.map((s, i) => (
+
+              <FadeUp className="mt-4">
+                <h3 className="text-2xl max-md:text-xl font-bold text-navy mb-3">
+                  Posisjonering av gulvsluk og slukrenne
+                </h3>
+                <p className="text-[14px] text-text-light leading-[1.7] mb-5">
+                  Slukrennen kan justeres opptil 50 mm i bredden og 105 mm i
+                  lengden over et tradisjonelt sirkulært gulvsluk med Ø130 mm
+                  vannlås. Det gir stor frihet i plasseringen uten at
+                  rørleggeren må treffe millimeterpresist.
+                </p>
+                <div className="grid md:grid-cols-2 gap-4 mb-10">
+                  <div className="bg-gray-bg rounded-xl overflow-hidden">
+                    <Image
+                      src="/images/installasjon/vannlas-sentrering-1.webp"
+                      alt="Vannlås-sentrering del 1"
+                      width={1024}
+                      height={553}
+                      className="w-full h-auto"
+                    />
+                  </div>
+                  <div className="bg-gray-bg rounded-xl overflow-hidden">
+                    <Image
+                      src="/images/installasjon/vannlas-sentrering-2.webp"
+                      alt="Vannlås-sentrering del 2"
+                      width={1024}
+                      height={542}
+                      className="w-full h-auto"
+                    />
+                  </div>
+                </div>
+              </FadeUp>
+
+              <FadeUp className="mt-4">
+                <h3 className="text-2xl max-md:text-xl font-bold text-navy mb-3">
+                  Veggnær plassering av gulvsluket
+                </h3>
+                <p className="text-[14px] text-text-light leading-[1.7] mb-5">
+                  Ved veggnær installasjon plasseres slukpotten med avstand{" "}
+                  <strong className="text-navy">X = T − 8 mm</strong> fra
+                  veggen uten fliser, der T er veggtykkelsen. Dette sentrerer
+                  slukrennen over vannlåsen og gir 25 mm justeringsmulighet.
+                </p>
+                <div className="grid md:grid-cols-2 gap-4 mb-10">
+                  <div className="bg-gray-bg rounded-xl overflow-hidden">
+                    <Image
+                      src="/images/installasjon/veggnar-A.webp"
+                      alt="Veggnær plassering steg A"
+                      width={1024}
+                      height={661}
+                      className="w-full h-auto"
+                    />
+                  </div>
+                  <div className="bg-gray-bg rounded-xl overflow-hidden">
+                    <Image
+                      src="/images/installasjon/veggnar-B.webp"
+                      alt="Veggnær plassering steg B"
+                      width={1024}
+                      height={660}
+                      className="w-full h-auto"
+                    />
+                  </div>
+                </div>
+              </FadeUp>
+
+              <FadeUp className="mt-4">
+                <h3 className="text-2xl max-md:text-xl font-bold text-navy mb-3">
+                  Slukrenne med Tile Insert
+                </h3>
+                <p className="text-[14px] text-text-light leading-[1.7] mb-6">
+                  Tile insert-varianten flislegges av flislegger og blir
+                  nærmest usynlig i gulvet.
+                </p>
+              </FadeUp>
+              {renneTileSteps.map((s, i) => (
                 <FadeUp
-                  key={s.step}
+                  key={`tile-${s.step}`}
                   className="mb-6"
                   style={{ transitionDelay: `${i * 80}ms` }}
                 >
-                  <div className="bg-gray-bg rounded-xl p-6">
-                    <div className="flex items-start gap-4">
+                  <div className="bg-gray-bg rounded-xl overflow-hidden">
+                    <div className="bg-white border-b border-navy/5">
+                      <Image
+                        src={s.image}
+                        alt={`Tile insert steg ${s.step}: ${s.title}`}
+                        width={1024}
+                        height={811}
+                        className="w-full h-auto"
+                      />
+                    </div>
+                    <div className="p-6 flex items-start gap-4">
                       <div className="shrink-0 w-10 h-10 rounded-full bg-orange text-white flex items-center justify-center font-bold text-sm">
                         {s.step}
                       </div>
@@ -291,6 +522,91 @@ export default function InstallasjonContent() {
                   </div>
                 </FadeUp>
               ))}
+
+              <FadeUp className="mt-12">
+                <h3 className="text-2xl max-md:text-xl font-bold text-navy mb-3">
+                  Slukrenne med Rist
+                </h3>
+                <p className="text-[14px] text-text-light leading-[1.7] mb-6">
+                  Med rist-varianten leveres en ferdig produsert rist som
+                  monteres i rennen etter flislegging.
+                </p>
+              </FadeUp>
+              {renneRistSteps.map((s, i) => (
+                <FadeUp
+                  key={`rist-${s.step}`}
+                  className="mb-6"
+                  style={{ transitionDelay: `${i * 80}ms` }}
+                >
+                  <div className="bg-gray-bg rounded-xl overflow-hidden">
+                    <div className="bg-white border-b border-navy/5">
+                      <Image
+                        src={s.image}
+                        alt={`Rist steg ${s.step}: ${s.title}`}
+                        width={1024}
+                        height={811}
+                        className="w-full h-auto"
+                      />
+                    </div>
+                    <div className="p-6 flex items-start gap-4">
+                      <div className="shrink-0 w-10 h-10 rounded-full bg-orange text-white flex items-center justify-center font-bold text-sm">
+                        {s.step}
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="font-semibold text-navy text-[16px] mb-2">
+                          {s.title}
+                        </h3>
+                        <p className="text-[14px] text-text-light leading-[1.7]">
+                          {s.desc}
+                        </p>
+                        {s.note && (
+                          <p className="text-[13px] text-orange mt-2 font-medium">
+                            {s.note}
+                          </p>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                </FadeUp>
+              ))}
+
+              <FadeUp className="mt-12">
+                <h3 className="text-2xl max-md:text-xl font-bold text-navy mb-3">
+                  Rengjøring av slukrennen
+                </h3>
+                <p className="text-[14px] text-text-light leading-[1.7] mb-5">
+                  Løft risten og legg den til siden. For tile insert-varianten
+                  benyttes det medfølgende rist-verktøyet til løfting. Spyl
+                  slukrennen med dusjen og fjern smuss.
+                </p>
+                <div className="grid md:grid-cols-2 gap-4 mb-5">
+                  <div className="bg-gray-bg rounded-xl overflow-hidden">
+                    <Image
+                      src="/images/installasjon/rengjoring-tile-1.webp"
+                      alt="Løft tile insert med medfølgende verktøy"
+                      width={1024}
+                      height={490}
+                      className="w-full h-auto"
+                    />
+                  </div>
+                  <div className="bg-gray-bg rounded-xl overflow-hidden">
+                    <Image
+                      src="/images/installasjon/rengjoring-tile-2.webp"
+                      alt="Spyl slukrennen og fjern smuss"
+                      width={1024}
+                      height={490}
+                      className="w-full h-auto"
+                    />
+                  </div>
+                </div>
+                <div className="bg-orange/8 border-l-4 border-orange rounded-r-lg p-4">
+                  <p className="text-[13px] text-navy leading-[1.6]">
+                    <strong className="text-orange">Advarsel:</strong> Bruk av
+                    harde skrubber og sterke kjemikalier medfører risiko for
+                    skade på lakken på de sortlakkerte produktene.
+                  </p>
+                </div>
+              </FadeUp>
             </>
           )}
 

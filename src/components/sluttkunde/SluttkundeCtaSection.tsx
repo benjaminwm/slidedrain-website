@@ -32,24 +32,26 @@ export default function SluttkundeCtaSection() {
             Handle hos Flisekompaniet
           </a>
         </div>
-        <div className="flex gap-10 justify-center items-center mt-12 opacity-60">
-          <span className="text-[13px] text-white/50 uppercase tracking-wider">
+        <div className="flex flex-col sm:flex-row gap-6 sm:gap-10 justify-center items-center mt-12 opacity-60">
+          <span className="text-[13px] text-white/50 uppercase tracking-wider whitespace-nowrap">
             Kjøp i dag hos
           </span>
-          <Image
-            src="/images/logo-brodrenedahl-white.svg"
-            alt="Brødrene Dahl"
-            width={219}
-            height={39}
-            className="h-7 w-auto"
-          />
-          <Image
-            src="/images/logo-flisekompaniet.svg"
-            alt="Flisekompaniet"
-            width={148}
-            height={39}
-            className="h-7 w-auto brightness-0 invert"
-          />
+          <div className="flex flex-wrap gap-8 sm:gap-10 justify-center items-center">
+            <Image
+              src="/images/logo-brodrenedahl-white.svg"
+              alt="Brødrene Dahl"
+              width={219}
+              height={39}
+              className="h-7 w-auto"
+            />
+            <Image
+              src="/images/logo-flisekompaniet.svg"
+              alt="Flisekompaniet"
+              width={148}
+              height={39}
+              className="h-7 w-auto brightness-0 invert"
+            />
+          </div>
         </div>
       </FadeUp>
     </section>

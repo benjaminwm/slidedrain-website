@@ -56,10 +56,7 @@ export default function InnovationSection() {
         </FadeUp>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {features.map((f, i) => (
-            <FadeUp
-              key={i}
-              className="bg-white rounded-xl p-9 shadow-[0_4px_20px_rgba(0,0,0,0.06)]"
-            >
+            <FadeUp key={i}>
               <div className="w-12 h-12 bg-orange/10 rounded-[10px] flex items-center justify-center mb-5">
                 {f.icon}
               </div>

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import FadeUp from "../FadeUp";
 
 const rows = [
@@ -50,19 +51,46 @@ export default function ComparisonTable() {
             tradisjonelle løsninger
           </h2>
         </FadeUp>
-        <FadeUp className="overflow-x-auto">
+        <FadeUp className="hidden md:block overflow-x-auto">
           <table className="w-full text-left text-sm">
             <thead>
+              <tr className="border-b border-navy/15 align-bottom">
+                <th className="py-4 px-4 font-semibold text-text-light w-1/5" />
+                <th className="py-4 px-4 w-2/5">
+                  <div className="flex flex-col items-center gap-3">
+                    <Image
+                      src="/images/comparison-slidedrain.png"
+                      alt="Slidedrain Sluksystem"
+                      width={300}
+                      height={240}
+                      className="h-32 max-md:h-20 w-auto object-contain"
+                    />
+                    <span className="font-semibold text-orange text-center">
+                      Slidedrain Sluksystem
+                    </span>
+                  </div>
+                </th>
+                <th className="py-4 px-4 w-2/5">
+                  <div className="flex flex-col items-center gap-3">
+                    <Image
+                      src="/images/comparison-traditional.png"
+                      alt="Tradisjonelt linjesluk"
+                      width={240}
+                      height={240}
+                      className="h-32 max-md:h-20 w-auto object-contain"
+                    />
+                    <span className="font-semibold text-text-light text-center">
+                      Tradisjonelt linjesluk
+                    </span>
+                  </div>
+                </th>
+              </tr>
               <tr className="border-b border-navy/15">
-                <th className="py-4 px-4 font-semibold text-text-light w-1/5">
+                <th className="py-3 px-4 font-semibold text-text-light text-left">
                   Funksjon
                 </th>
-                <th className="py-4 px-4 font-semibold text-orange w-2/5">
-                  Slidedrain Sluksystem
-                </th>
-                <th className="py-4 px-4 font-semibold text-text-light w-2/5">
-                  Tradisjonelt linjesluk
-                </th>
+                <th />
+                <th />
               </tr>
             </thead>
             <tbody>
@@ -86,6 +114,57 @@ export default function ComparisonTable() {
               ))}
             </tbody>
           </table>
+        </FadeUp>
+
+        <FadeUp className="md:hidden">
+          <div className="grid grid-cols-2 gap-4 mb-8">
+            <div className="flex flex-col items-center gap-2">
+              <Image
+                src="/images/comparison-slidedrain.png"
+                alt="Slidedrain Sluksystem"
+                width={300}
+                height={240}
+                className="h-20 w-auto object-contain"
+              />
+              <span className="font-semibold text-orange text-center text-sm">
+                Slidedrain Sluksystem
+              </span>
+            </div>
+            <div className="flex flex-col items-center gap-2">
+              <Image
+                src="/images/comparison-traditional.png"
+                alt="Tradisjonelt linjesluk"
+                width={240}
+                height={240}
+                className="h-20 w-auto object-contain"
+              />
+              <span className="font-semibold text-text-light text-center text-sm">
+                Tradisjonelt linjesluk
+              </span>
+            </div>
+          </div>
+          <ul className="space-y-4">
+            {rows.map((r, i) => (
+              <li
+                key={i}
+                className="rounded-xl border border-navy/10 bg-white overflow-hidden"
+              >
+                <div className="px-4 py-2.5 bg-gray-bg font-semibold text-navy text-sm">
+                  {r.feature}
+                </div>
+                <div className="grid grid-cols-2 divide-x divide-navy/10 text-[13px]">
+                  <div className="p-4">
+                    <div className="font-bold text-orange mb-1">{r.sdBold}</div>
+                    <div className="text-text-light leading-snug">{r.sdReg}</div>
+                  </div>
+                  <div className="p-4">
+                    <div className="font-bold text-navy mb-1">{r.trBold}</div>
+                    <div className="text-text-light leading-snug">{r.trReg}</div>
+                  </div>
+                </div>
+              </li>
+            ))}
+          </ul>
         </FadeUp>
       </div>
     </section>
