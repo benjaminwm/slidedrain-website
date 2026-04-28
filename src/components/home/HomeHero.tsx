@@ -29,15 +29,15 @@ export default function HomeHero() {
               <Image
                 src="/images/logo-brodrenedahl.svg"
                 alt="Brødrene Dahl"
-                width={140}
-                height={32}
+                width={219}
+                height={39}
                 className="h-6 sm:h-7 w-auto"
               />
               <Image
-                src="/images/logo-flisekompaniet.png"
+                src="/images/logo-flisekompaniet.svg"
                 alt="Flisekompaniet"
-                width={140}
-                height={32}
+                width={148}
+                height={39}
                 className="h-6 sm:h-7 w-auto"
               />
             </div>

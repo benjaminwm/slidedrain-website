@@ -151,8 +151,8 @@ export default function ProductDetail({
                       <Image
                         src="/images/logo-brodrenedahl.svg"
                         alt="Brødrene Dahl"
-                        width={100}
-                        height={24}
+                        width={219}
+                        height={39}
                         className="h-5 w-auto"
                       />
                       <span className="text-sm font-medium text-navy">
@@ -180,10 +180,10 @@ export default function ProductDetail({
                   >
                     <div className="flex items-center gap-4">
                       <Image
-                        src="/images/logo-flisekompaniet.png"
+                        src="/images/logo-flisekompaniet.svg"
                         alt="Flisekompaniet"
-                        width={100}
-                        height={24}
+                        width={148}
+                        height={39}
                         className="h-5 w-auto"
                       />
                       <span className="text-sm font-medium text-navy">
