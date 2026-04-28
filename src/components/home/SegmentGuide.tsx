@@ -21,8 +21,8 @@ const segments = [
     title: "Ønsker du mer fleksibilitet og enklere montering?",
     desc: "Lær om Slidedrain Sluksystems fleksibilitet og justeringsmuligheter som gir raskere og mer presis montering med færre feilkilder.",
     image: "/images/segment-rorlegger.png",
-    imageObjectFit: "contain" as const,
-    imageBg: "bg-gray-bg",
+    imageObjectFit: "cover" as const,
+    imageBg: "bg-white",
   },
   {
     href: "/tilvalg",
