@@ -81,22 +81,22 @@ export default function SintefDogaSection() {
               height={600}
               className="w-full h-full object-cover"
             />
-            {/* DOGA + Norskprodusert-merker overlay */}
-            <div className="absolute top-5 right-5 bg-white/95 rounded-xl px-4 py-3 shadow-lg flex flex-col items-center gap-2">
+            {/* DOGA + Norge produsert-merker overlay */}
+            <div className="absolute top-5 right-5 bg-white/95 rounded-xl px-4 py-3 shadow-lg flex items-center gap-4">
               <Image
                 src="/images/badges/badge-doga.png"
                 alt="DOGA Merket Nykommer"
                 width={180}
                 height={60}
-                className="h-10 w-auto"
+                className="h-12 w-auto"
               />
-              <div className="w-full h-px bg-navy/10" />
+              <div className="w-px h-12 bg-navy/10" />
               <Image
-                src="/images/badges/badge-nit-norsk.jpg"
-                alt="Norskprodusert"
-                width={200}
-                height={50}
-                className="h-7 w-auto"
+                src="/images/badges/badge-norge-produsert.svg"
+                alt="Norge produsert"
+                width={70}
+                height={71}
+                className="h-14 w-auto"
               />
             </div>
           </div>
