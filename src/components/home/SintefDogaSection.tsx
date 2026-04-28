@@ -5,15 +5,15 @@ import FadeUp from "../FadeUp";
 
 /**
  * Erstatter de 4 verdi-badgene i TrustBar.
- * NB: bildene under er placeholders – Stian sender:
- *  - SINTEF: close-up av Slukrenne fra Lommundal med SINTEF-Teknisk godkjent logo over
- *  - DOGA: Slidedrain Gulvsluk med Monteringsverktøy fra Melhus med DOGA-logo over
+ * NB: bakgrunnsbildene er placeholders – Stian sender:
+ *  - SINTEF: close-up av Slukrenne fra Lommundal
+ *  - DOGA: Slidedrain Gulvsluk med Monteringsverktøy fra Melhus
  */
 export default function SintefDogaSection() {
   return (
     <section className="py-20 px-6 bg-gray-bg">
       <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
-        {/* SINTEF Teknisk Godkjenning */}
+        {/* SINTEF Teknisk Godkjenning + EPD */}
         <FadeUp className="bg-white rounded-2xl overflow-hidden shadow-[0_2px_16px_rgba(40,52,71,0.04)]">
           <div className="relative aspect-[4/3] overflow-hidden bg-navy/5">
             {/* TODO: bytt til close-up av Slukrenne fra Lommundal */}
@@ -24,17 +24,23 @@ export default function SintefDogaSection() {
               height={600}
               className="w-full h-full object-cover"
             />
-            {/* SINTEF-logo overlay */}
-            <div className="absolute top-5 right-5 bg-white/95 rounded-xl px-4 py-3 shadow-lg flex flex-col items-center">
-              <span className="text-[10px] font-bold text-navy uppercase tracking-wider">
-                SINTEF
-              </span>
-              <span className="text-[10px] font-semibold text-navy/70">
-                Teknisk Godkjenning
-              </span>
-              <span className="text-[10px] text-text-light mt-0.5">
-                TG 20991
-              </span>
+            {/* SINTEF + EPD-merker overlay */}
+            <div className="absolute top-5 right-5 bg-white/95 rounded-xl px-4 py-3 shadow-lg flex items-center gap-4">
+              <Image
+                src="/images/badges/badge-sintef.png"
+                alt="SINTEF Teknisk Godkjenning"
+                width={64}
+                height={64}
+                className="h-14 w-auto"
+              />
+              <div className="w-px h-12 bg-navy/10" />
+              <Image
+                src="/images/badges/badge-epd.png"
+                alt="EPD-Norge"
+                width={48}
+                height={64}
+                className="h-14 w-auto"
+              />
             </div>
           </div>
           <div className="p-8">
@@ -53,7 +59,7 @@ export default function SintefDogaSection() {
           </div>
         </FadeUp>
 
-        {/* DOGA – Prisvinnende design, utviklet i Norge */}
+        {/* DOGA – Prisvinnende design + Norskprodusert */}
         <FadeUp className="bg-white rounded-2xl overflow-hidden shadow-[0_2px_16px_rgba(40,52,71,0.04)]">
           <div className="relative aspect-[4/3] overflow-hidden bg-navy/5">
             {/* TODO: bytt til Slidedrain Gulvsluk med Monteringsverktøy fra Melhus */}
@@ -64,14 +70,23 @@ export default function SintefDogaSection() {
               height={600}
               className="w-full h-full object-cover"
             />
-            {/* DOGA-logo overlay */}
-            <div className="absolute top-5 right-5 bg-white/95 rounded-xl px-4 py-3 shadow-lg flex flex-col items-center">
-              <span className="text-[10px] font-bold text-orange uppercase tracking-wider">
-                DOGA
-              </span>
-              <span className="text-[10px] font-semibold text-navy/70">
-                Merket Nykommer
-              </span>
+            {/* DOGA + Norskprodusert-merker overlay */}
+            <div className="absolute top-5 right-5 bg-white/95 rounded-xl px-4 py-3 shadow-lg flex flex-col items-center gap-2">
+              <Image
+                src="/images/badges/badge-doga.png"
+                alt="DOGA Merket Nykommer"
+                width={180}
+                height={60}
+                className="h-10 w-auto"
+              />
+              <div className="w-full h-px bg-navy/10" />
+              <Image
+                src="/images/badges/badge-nit-norsk.jpg"
+                alt="Norskprodusert"
+                width={200}
+                height={50}
+                className="h-7 w-auto"
+              />
             </div>
           </div>
           <div className="p-8">
