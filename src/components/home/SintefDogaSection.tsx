@@ -56,6 +56,17 @@ export default function SintefDogaSection() {
               Godkjenningen gjelder systemet i sin helhet, slik at du kan bygge
               trygt i henhold til gjeldende regelverk.
             </p>
+            <a
+              href="https://www.sintefcertification.no/Product/Download/11692"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 mt-5 text-sm font-semibold text-orange hover:text-orange-dark transition-colors"
+            >
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="w-4 h-4">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" />
+              </svg>
+              Last ned her
+            </a>
           </div>
         </FadeUp>
 
@@ -107,6 +118,17 @@ export default function SintefDogaSection() {
                 – Juryen, DOGA-merket Nykommer
               </footer>
             </blockquote>
+            <a
+              href="https://doga.no/forbilder-og-eksempler/slidedrain"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 mt-5 text-sm font-semibold text-orange hover:text-orange-dark transition-colors"
+            >
+              Les juryens vurdering på doga.no
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="w-4 h-4">
+                <path d="M7 17L17 7M17 7H7M17 7v10" />
+              </svg>
+            </a>
           </div>
         </FadeUp>
       </div>
