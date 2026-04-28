@@ -50,7 +50,7 @@ export default function HowToSection() {
         <FadeUp className="text-center max-w-[800px] mx-auto mb-15">
           <h2 className="text-4xl max-md:text-[28px] font-bold mb-4 leading-tight">
             Slik realiserer du{" "}
-            <span className="text-orange">drømmebadet</span>
+            <span className="text-orange">ditt drømmebad</span>
           </h2>
           <p className="text-[17px] text-text-light leading-[1.7] font-light">
             Vi samarbeider med de største aktørene i bransjen for å gjøre veien

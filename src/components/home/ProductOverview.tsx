@@ -33,7 +33,7 @@ export default function ProductOverview() {
             </div>
             <div className="p-8">
               <span className="text-xs font-semibold uppercase tracking-wider text-orange mb-2 block">
-                Det tekniske
+                Teknisk VVS
               </span>
               <h3 className="text-2xl font-bold text-navy mb-3">
                 Slidedrain Gulvsluk
@@ -47,7 +47,7 @@ export default function ProductOverview() {
                 {[
                   "Trinnløs 40 mm høydejustering",
                   "Integrert slukmansjett for skrueløs montasje",
-                  "Kompatibel med alle membrantyper",
+                  "Klemring i stål for kompatibilitet til alle typer membran",
                 ].map((item, i) => (
                   <li
                     key={i}
@@ -66,8 +66,9 @@ export default function ProductOverview() {
           {/* Product 2: Slukrenner & Slukrister */}
           <FadeUp className="bg-gray-bg rounded-2xl overflow-hidden group">
             <div className="aspect-[4/3] overflow-hidden">
+              {/* TODO: Stian sender eget slukrenne-bilde – placeholder bytter ut hero-duplikat */}
               <Image
-                src="/images/hero-bathroom.jpg"
+                src="/images/bathroom-ullernfaret.jpg"
                 alt="Slidedrain slukrenne i moderne baderom"
                 width={600}
                 height={450}
@@ -76,21 +77,21 @@ export default function ProductOverview() {
             </div>
             <div className="p-8">
               <span className="text-xs font-semibold uppercase tracking-wider text-orange mb-2 block">
-                Det synlige
+                Synlig VVS
               </span>
               <h3 className="text-2xl font-bold text-navy mb-3">
                 Slukrenner & Slukrister
               </h3>
               <p className="text-[15px] text-text-light leading-[1.7] mb-4">
                 Velg blant 25+ design med tile insert og rist som monteres ved
-                flislegging. Alle passer til det samme gulvsluket for maksimal
-                fleksibilitet.
+                flislegging. Alle design til Slidedrain Gulvsluk og andre
+                sirkulære sluk på markedet.
               </p>
               <ul className="space-y-2">
                 {[
-                  "Hjørnerister i rustfritt stål",
                   "Tile Insert for usynlig integrering",
-                  "Slukrenner 700\u20131200 mm for storformat-fliser",
+                  "Stor justerbarhet i bredde- og lengderetning",
+                  "Slukrenner 600\u20131200 mm for storformat-fliser",
                 ].map((item, i) => (
                   <li
                     key={i}

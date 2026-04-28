@@ -6,11 +6,11 @@ const features = [
   {
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-6 h-6 stroke-orange">
-        <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z" />
+        <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
       </svg>
     ),
-    title: "Enklere renhold med færre fuger",
-    desc: "Slidedrain er tilpasset større flisformat, som gir færre fuger og et mer vedlikeholdsvennlig bad.",
+    title: "Superenkelt vedlikehold",
+    desc: "Slukrenne og slukrist med tile insert kan enkelt løftes ut med det medfølgende rist-verktøyet, og den store vannlåsen tas enkelt ut for rens ved behov.",
   },
   {
     icon: (
@@ -25,11 +25,11 @@ const features = [
   {
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-6 h-6 stroke-orange">
-        <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+        <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z" />
       </svg>
     ),
-    title: "Superenkelt vedlikehold",
-    desc: "Slukrenne og slukrist med tile insert kan enkelt løftes ut med det medfølgende rist-verktøyet, og den store vannlåsen tas enkelt ut for rens ved behov.",
+    title: "Enklere renhold med færre fuger",
+    desc: "Slidedrain er tilpasset større flisformat, som gir færre fuger og et mer vedlikeholdsvennlig bad.",
   },
 ];
 
@@ -39,7 +39,7 @@ export default function MaintenanceSection() {
       <div className="max-w-[1200px] mx-auto">
         <FadeUp className="text-center max-w-[800px] mx-auto mb-15">
           <h2 className="text-4xl max-md:text-[28px] font-bold mb-4 leading-tight">
-            Designet for{" "}
+            Utviklet for{" "}
             <span className="text-orange">minimalt vedlikehold</span>
           </h2>
         </FadeUp>

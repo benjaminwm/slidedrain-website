@@ -63,7 +63,7 @@ export default function CtaSection() {
             {/* Partners */}
             <div className="flex gap-10 items-center opacity-60">
               <span className="text-[13px] text-white/50 uppercase tracking-wider">
-                Tilgjengelig hos
+                Kjøp i dag hos
               </span>
               <Image
                 src="/images/logo-brodrenedahl-white.svg"

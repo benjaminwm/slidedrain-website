@@ -23,7 +23,7 @@ export default function HomeHero() {
           </p>
           <div className="mb-8">
             <span className="block text-xs text-text-light font-medium uppercase tracking-wider mb-3">
-              Tilgjengelig hos
+              Kjøp i dag hos
             </span>
             <div className="flex items-center gap-6">
               <Image

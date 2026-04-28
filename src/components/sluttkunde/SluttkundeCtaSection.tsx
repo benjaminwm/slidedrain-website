@@ -17,14 +17,16 @@ export default function SluttkundeCtaSection() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
-            href="https://slidedrain.no"
+            href="/produkter"
             className="shine-btn inline-flex items-center justify-center gap-2.5 bg-orange text-white px-8 py-4 rounded-lg font-semibold text-base hover:bg-orange-dark transition-all hover:-translate-y-0.5 shadow-[0_4px_14px_rgba(251,92,19,0.3)]"
           >
             <span>Se alle produkter</span>
             <ArrowRight />
           </a>
           <a
-            href="https://www.flisekompaniet.no"
+            href="https://www.flisekompaniet.no/bad/sluk-og-slukrister/slukrister/?facets=%7B%22selectFilters%22%3A%5B%7B%22groupId%22%3A%22brand%22%2C%22valueId%22%3A%5B%22SLIDEDRAIN%22%5D%7D%5D%7D&sortBy=RELEVANCE"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2.5 bg-white/10 text-white px-8 py-4 rounded-lg font-semibold text-base hover:bg-white/20 transition-all border border-white/20"
           >
             Handle hos Flisekompaniet
@@ -32,7 +34,7 @@ export default function SluttkundeCtaSection() {
         </div>
         <div className="flex gap-10 justify-center items-center mt-12 opacity-60">
           <span className="text-[13px] text-white/50 uppercase tracking-wider">
-            Tilgjengelig hos
+            Kjøp i dag hos
           </span>
           <Image
             src="/images/logo-brodrenedahl-white.svg"

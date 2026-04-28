@@ -4,6 +4,7 @@ import ValueProps from "@/components/home/ValueProps";
 import ProductShowcase from "@/components/home/ProductShowcase";
 import ProductOverview from "@/components/home/ProductOverview";
 import SegmentGuide from "@/components/home/SegmentGuide";
+import SintefDogaSection from "@/components/home/SintefDogaSection";
 import TrustBar from "@/components/home/TrustBar";
 import CtaSection from "@/components/CtaSection";
 import Footer from "@/components/Footer";
@@ -25,6 +26,7 @@ export default function HomePage() {
         <ProductShowcase />
         <ProductOverview />
         <SegmentGuide />
+        <SintefDogaSection />
         <TrustBar />
         <CtaSection />
       </main>
