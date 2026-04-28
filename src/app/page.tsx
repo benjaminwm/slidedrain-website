@@ -6,6 +6,7 @@ import ProductOverview from "@/components/home/ProductOverview";
 import SegmentGuide from "@/components/home/SegmentGuide";
 import SintefDogaSection from "@/components/home/SintefDogaSection";
 import TrustBar from "@/components/home/TrustBar";
+import VideoEmbed from "@/components/VideoEmbed";
 import CtaSection from "@/components/CtaSection";
 import Footer from "@/components/Footer";
 import CaseStudyPopup from "@/components/CaseStudyPopup";
@@ -25,6 +26,9 @@ export default function HomePage() {
         <ValueProps />
         <ProductShowcase />
         <ProductOverview />
+        <section className="pt-4 pb-16 px-6 bg-white">
+          <VideoEmbed />
+        </section>
         <SegmentGuide />
         <SintefDogaSection />
         <TrustBar />
