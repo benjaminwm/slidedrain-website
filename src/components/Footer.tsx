@@ -9,11 +9,11 @@ export default function Footer() {
           {/* Brand */}
           <div className="md:col-span-2">
             <Image
-              src="/images/logo-slidedrain-retro.png"
+              src="/images/logo-slidedrain.webp"
               alt="Slidedrain"
-              width={400}
-              height={120}
-              className="h-12 w-auto mb-4 [image-rendering:pixelated]"
+              width={140}
+              height={28}
+              className="h-7 w-auto mb-4"
             />
             <p className="text-sm leading-relaxed max-w-sm">
               Neste generasjons gulvsluk. Prisbelønt design med
