@@ -31,7 +31,7 @@ export default function LogoBanner() {
               alt={logo.alt}
               width={120}
               height={40}
-              className="h-8 w-auto object-contain"
+              className="h-8 w-auto object-contain opacity-60 [filter:grayscale(1)_brightness(0.55)_sepia(0.6)_hue-rotate(180deg)_saturate(2.5)] hover:opacity-100 hover:[filter:none] transition-all duration-300"
             />
           </div>
         ))}
