@@ -73,9 +73,9 @@ function ArrowBtn({ direction, onClick }: { direction: "left" | "right"; onClick
 }
 
 function Ghost({ product }: { product: Product | undefined }) {
-  if (!product) return <div className="w-14 h-14" />;
+  if (!product) return <div className="w-14 h-14 max-sm:hidden" />;
   return (
-    <div className="w-14 h-14 opacity-20 shrink-0">
+    <div className="w-14 h-14 opacity-20 shrink-0 max-sm:hidden">
       <Image src={getProductImageUrl(product.imageId)} alt="" width={56} height={56} className="w-full h-full object-contain" unoptimized />
     </div>
   );
@@ -104,7 +104,7 @@ function LayerRow({
       <div className="flex items-center gap-1 justify-center">
         <Ghost product={prev} />
         <ArrowBtn direction="left" onClick={onPrev} />
-        <div className="w-[170px] h-[120px] flex items-center justify-center">
+        <div className="w-[170px] h-[120px] max-sm:w-[140px] max-sm:h-[100px] flex items-center justify-center">
           <Image
             src={getProductImageUrl(product.imageId)}
             alt={product.name}
@@ -184,7 +184,7 @@ export default function ProductShowcase() {
           </div>
 
           {/* Right: Compact configurator */}
-          <div className="border-2 border-dashed border-navy/12 rounded-2xl py-5 px-3 bg-white/40 space-y-0 w-[420px] max-lg:mx-auto">
+          <div className="border-2 border-dashed border-navy/12 rounded-2xl py-5 px-3 bg-white/40 space-y-0 w-full max-w-[420px] max-lg:mx-auto">
             {layers.map((layer, i) => (
               <div key={i}>
                 {i > 0 && (
