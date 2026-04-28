@@ -66,11 +66,11 @@ export default function CtaSection() {
                 Kjøp i dag hos
               </span>
               <Image
-                src="/images/logo-brodrenedahl.svg"
+                src="/images/logo-brodrenedahl-white.svg"
                 alt="Brødrene Dahl"
                 width={219}
                 height={39}
-                className="h-7 w-auto brightness-0 invert"
+                className="h-7 w-auto"
               />
               <Image
                 src="/images/logo-flisekompaniet.svg"
