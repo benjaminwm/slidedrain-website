@@ -9,7 +9,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="md:col-span-2">
             <Image
-              src="https://slidedrain.no/wp-content/uploads/2020/08/Full-logo_Orange.webp?x59798"
+              src="/images/logo-slidedrain.webp"
               alt="Slidedrain"
               width={140}
               height={28}

@@ -211,7 +211,7 @@ export default function ProductShowcase() {
 
             <div className="flex justify-center pt-1">
               <Image
-                src="https://slidedrain.no/wp-content/uploads/2020/08/Full-logo_Orange.webp?x59798"
+                src="/images/logo-slidedrain.webp"
                 alt="Slidedrain"
                 width={100}
                 height={20}

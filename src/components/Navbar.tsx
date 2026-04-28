@@ -51,7 +51,7 @@ export default function Navbar() {
       <div className="max-w-[1200px] mx-auto px-6 py-4 flex items-center justify-between">
         <Link href="/">
           <Image
-            src="https://slidedrain.no/wp-content/uploads/2020/08/Full-logo_Orange.webp?x59798"
+            src="/images/logo-slidedrain.webp"
             alt="Slidedrain"
             width={160}
             height={32}
