@@ -46,17 +46,17 @@ const props = [
 
 export default function ValueProps() {
   return (
-    <section className="py-16 px-6 bg-navy">
+    <section className="py-16 px-6 bg-white">
       <div className="max-w-[1200px] mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
         {props.map((p, i) => (
           <FadeUp key={i} className="text-center">
-            <div className="w-14 h-14 bg-white/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+            <div className="w-14 h-14 bg-orange/10 rounded-xl flex items-center justify-center mx-auto mb-4">
               {p.icon}
             </div>
-            <h3 className="text-white font-semibold text-[15px] mb-2">
+            <h3 className="text-navy font-semibold text-[15px] mb-2">
               {p.title}
             </h3>
-            <p className="text-white/60 text-sm leading-relaxed">{p.desc}</p>
+            <p className="text-text-light text-sm leading-relaxed">{p.desc}</p>
           </FadeUp>
         ))}
       </div>
