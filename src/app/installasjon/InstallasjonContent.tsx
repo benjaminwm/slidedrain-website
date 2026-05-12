@@ -222,7 +222,7 @@ export default function InstallasjonContent() {
                 </p>
                 <div className="flex flex-wrap gap-2 mb-10">
                   <a
-                    href="https://slidedrain.no/wp-content/uploads/2024/04/Monteringsanvisning-Slidedrain-Model-1.pdf"
+                    href="/downloads/Monteringsanvisning-Slidedrain-Model-1-Slukmansjett.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-sm bg-gray-bg text-navy px-4 py-2 rounded-lg hover:bg-navy/10 transition-colors font-medium"
@@ -230,7 +230,18 @@ export default function InstallasjonContent() {
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-4 h-4">
                       <path d="M12 5v14M5 12l7 7 7-7" />
                     </svg>
-                    Monteringsanvisning (PDF)
+                    Monteringsanvisning – Slukmansjett
+                  </a>
+                  <a
+                    href="/downloads/Monteringsanvisning-Slidedrain-Model-1-Klemring.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-sm bg-gray-bg text-navy px-4 py-2 rounded-lg hover:bg-navy/10 transition-colors font-medium"
+                  >
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-4 h-4">
+                      <path d="M12 5v14M5 12l7 7 7-7" />
+                    </svg>
+                    Monteringsanvisning – Klemring
                   </a>
                   <a
                     href="https://slidedrain.no/wp-content/uploads/2024/04/Slidedrain-Model-1-FDV.pdf"
