@@ -3,6 +3,8 @@ import Footer from "@/components/Footer";
 import RorleggerHero from "@/components/rorlegger/RorleggerHero";
 import ProblemsSection from "@/components/rorlegger/ProblemsSection";
 import SystemSection from "@/components/rorlegger/SystemSection";
+import StandardiseringRorlegger from "@/components/rorlegger/StandardiseringRorlegger";
+import ProductFeaturesSection from "@/components/rorlegger/ProductFeaturesSection";
 import ComparisonTable from "@/components/rorlegger/ComparisonTable";
 import TrustSection from "@/components/rorlegger/TrustSection";
 import RorleggerCtaSection from "@/components/rorlegger/RorleggerCtaSection";
@@ -22,6 +24,8 @@ export default function RorleggerPage() {
         <RorleggerHero />
         <ProblemsSection />
         <SystemSection />
+        <StandardiseringRorlegger />
+        <ProductFeaturesSection />
         <ComparisonTable />
         <TrustSection />
         <RorleggerCtaSection />
