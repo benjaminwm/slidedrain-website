@@ -4,7 +4,6 @@ import StandardiseringSection from "@/components/StandardiseringSection";
 import TilvalgSection from "@/components/TilvalgSection";
 import ComparisonSection from "@/components/ComparisonSection";
 import BenefitsSection from "@/components/BenefitsSection";
-import VideoSection from "@/components/VideoSection";
 import SafetySection from "@/components/SafetySection";
 import TimelineSection from "@/components/TimelineSection";
 import CtaSection from "@/components/CtaSection";
@@ -23,7 +22,6 @@ export default function LandingPage() {
       <Navbar />
       <main>
         <Hero />
-        <VideoSection />
         <StandardiseringSection />
         <TilvalgSection />
         <ComparisonSection />
