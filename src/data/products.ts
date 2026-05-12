@@ -49,7 +49,7 @@ export const productCategories: ProductCategory[] = [
       "Slukpotten kobles til avløpsrøret og danner fundamentet i Slidedrain-systemet. Tilgjengelig med side-, bunn- og skrått utløp.",
     products: [
       {
-        name: "Slukpotte Ø75 Sideutløp",
+        name: "Gulvsluk Slukpotte, Ø75 Sideutløp",
         slug: "slukpotte-75-sideutlop",
         nobbNr: "60159271",
         nrfNr: "3411004",
@@ -63,7 +63,7 @@ export const productCategories: ProductCategory[] = [
         dahlUrl: `${BD}/model-1-slukpotte-o75-mm-sideutlop-m3c_bd_p_101463741`,
       },
       {
-        name: "Slukpotte Ø75 Bunnutløp",
+        name: "Gulvsluk Slukpotte, Ø75 Bunnutløp",
         slug: "slukpotte-75-bunnutlop",
         nobbNr: "60159272",
         nrfNr: "3411005",
@@ -77,7 +77,7 @@ export const productCategories: ProductCategory[] = [
         dahlUrl: `${BD}/model-1-slukpotte-o75-mm-bunnutlop-m3c_bd_p_101463742`,
       },
       {
-        name: "Slukpotte Ø75 Skrått utløp",
+        name: "Gulvsluk Slukpotte, Ø75 Skrått utløp",
         slug: "slukpotte-75-skratt-utlop",
         nobbNr: "60159273",
         nrfNr: "3411006",
@@ -99,7 +99,7 @@ export const productCategories: ProductCategory[] = [
       "Slukoverdelen monteres på slukpotten og sikrer vanntett overgang til membran. Tilgjengelig med klemring eller integrert APEX-mansjett.",
     products: [
       {
-        name: "Slukoverdel med Klemring",
+        name: "Gulvsluk Slukoverdel, Klemring",
         slug: "slukoverdel-klemring",
         nobbNr: "60159268",
         nrfNr: "3411002",
@@ -111,7 +111,7 @@ export const productCategories: ProductCategory[] = [
         dahlUrl: `${BD}/slukoverdel-mklemring-m3c_bd_p_101884878`,
       },
       {
-        name: "Slukoverdel APEX-mansjett",
+        name: "Gulvsluk Slukoverdel, Apex-mansjett",
         slug: "slukoverdel-apex-mansjett",
         nobbNr: "60795685",
         nrfNr: "1459485",
@@ -131,7 +131,7 @@ export const productCategories: ProductCategory[] = [
       "Gjenbrukbart verktøy for presis installasjon av slukoverdelen på badets laveste punkt.",
     products: [
       {
-        name: "Monteringsverktøy, gjenbrukbart",
+        name: "Monteringsverktøy, Gjenbrukbart",
         slug: "monteringsverktoy",
         nobbNr: "60159259",
         nrfNr: "3411001",
@@ -183,7 +183,7 @@ export const productCategories: ProductCategory[] = [
         flisekompanietUrl: `${FK}/slidedrain-slukrist-20x20-kvadrat-sort-matt/`,
       },
       {
-        name: "Slukrist Kv Tile Insert RF Stål",
+        name: "Slukrist Kvadrat Tile Insert RF Stål",
         slug: "slukrist-tile-insert-rf-stal",
         nobbNr: "60159277",
         nrfNr: "3406118",
@@ -199,7 +199,7 @@ export const productCategories: ProductCategory[] = [
         flisekompanietUrl: `${FK}/slidedrain-slukrist-20x20-kvadrat-tile-insert-rustfritt-stal/`,
       },
       {
-        name: "Slukrist Kv Tile Insert Matt Sort",
+        name: "Slukrist Kvadrat Tile Insert Matt Sort",
         slug: "slukrist-tile-insert-matt-sort",
         nobbNr: "60159278",
         nrfNr: "3406119",
@@ -215,7 +215,7 @@ export const productCategories: ProductCategory[] = [
         flisekompanietUrl: `${FK}/slidedrain-slukrist-20x20-kvadrat-tile-insert-sort-matt/`,
       },
       {
-        name: "Sirkulær Slukrist Børstet Stål",
+        name: "Slukrist Sirkulær Børstet Stål",
         slug: "sirkulaer-slukrist-borstet-stal",
         nobbNr: "60615860",
         nrfNr: "3406115",
@@ -236,7 +236,7 @@ export const productCategories: ProductCategory[] = [
       "Hjørnerister med Tile Insert 297 × 297 mm. Plasseres i hjørnet for å maksimere bruken av storformat-fliser.",
     products: [
       {
-        name: "Hjørnerist Tile Insert RF Stål",
+        name: "Hjørnerist 300 Tile Insert RF Stål",
         slug: "hjornerist-tile-insert-rf-stal",
         nobbNr: "60657701",
         nrfNr: "1382608",
@@ -252,7 +252,7 @@ export const productCategories: ProductCategory[] = [
         flisekompanietUrl: `${FK}/slidedrain-hjorneslukrist-30x30-tile-insert-rustfritt-stal/`,
       },
       {
-        name: "Hjørnerist Tile Insert Matt Sort",
+        name: "Hjørnerist 300 Tile Insert Matt Sort",
         slug: "hjornerist-tile-insert-matt-sort",
         nobbNr: "60657704",
         nrfNr: "1382611",
@@ -276,7 +276,7 @@ export const productCategories: ProductCategory[] = [
       "Slukrenner med Tile Insert for usynlig integrering med baderommets fliser. Tilgjengelig i 600–1200 mm.",
     products: [
       {
-        name: "Slukrenne Tile Insert 600 RF Stål",
+        name: "Slukrenne 600 Tile Insert RF Stål",
         slug: "slukrenne-tile-insert-600-rf-stal",
         nobbNr: "60657681",
         nrfNr: "1382595",
@@ -292,7 +292,7 @@ export const productCategories: ProductCategory[] = [
         flisekompanietUrl: `${FK}/slidedrain-slukrenne-60x20-tile-insert-rustfritt-stal/`,
       },
       {
-        name: "Slukrenne Tile Insert 600 Matt Sort",
+        name: "Slukrenne 600 Tile Insert Matt Sort",
         slug: "slukrenne-tile-insert-600-matt-sort",
         nobbNr: "60657688",
         nrfNr: "1382596",
@@ -308,7 +308,7 @@ export const productCategories: ProductCategory[] = [
         flisekompanietUrl: `${FK}/slidedrain-slukrenne-60x20-tile-insert-sort-matt/`,
       },
       {
-        name: "Slukrenne Tile Insert 700 RF Stål",
+        name: "Slukrenne 700 Tile Insert RF Stål",
         slug: "slukrenne-tile-insert-700-rf-stal",
         nobbNr: "60657691",
         nrfNr: "1382598",
@@ -324,7 +324,7 @@ export const productCategories: ProductCategory[] = [
         flisekompanietUrl: `${FK}/slidedrain-slukrenne-70x20-tile-insert-rustfritt-stal/`,
       },
       {
-        name: "Slukrenne Tile Insert 700 Matt Sort",
+        name: "Slukrenne 700 Tile Insert Matt Sort",
         slug: "slukrenne-tile-insert-700-matt-sort",
         nobbNr: "60657692",
         nrfNr: "1382599",
@@ -340,7 +340,7 @@ export const productCategories: ProductCategory[] = [
         flisekompanietUrl: `${FK}/slidedrain-slukrenne-70x20-tile-insert-sort-matt/`,
       },
       {
-        name: "Slukrenne Tile Insert 800 RF Stål",
+        name: "Slukrenne 800 Tile Insert RF Stål",
         slug: "slukrenne-tile-insert-800-rf-stal",
         nobbNr: "60159282",
         nrfNr: "3406123",
@@ -356,7 +356,7 @@ export const productCategories: ProductCategory[] = [
         flisekompanietUrl: `${FK}/slidedrain-slukrenne-80x20-tile-insert-rustfritt-stal/`,
       },
       {
-        name: "Slukrenne Tile Insert 800 Matt Sort",
+        name: "Slukrenne 800 Tile Insert Matt Sort",
         slug: "slukrenne-tile-insert-800-matt-sort",
         nobbNr: "60159283",
         nrfNr: "3406124",
@@ -372,7 +372,7 @@ export const productCategories: ProductCategory[] = [
         flisekompanietUrl: `${FK}/slidedrain-slukrenne-80x20-tile-insert-sort-matt/`,
       },
       {
-        name: "Slukrenne Tile Insert 900 RF Stål",
+        name: "Slukrenne 900 Tile Insert RF Stål",
         slug: "slukrenne-tile-insert-900-rf-stal",
         nobbNr: "60657693",
         nrfNr: "1382600",
@@ -388,7 +388,7 @@ export const productCategories: ProductCategory[] = [
         flisekompanietUrl: `${FK}/slidedrain-slukrenne-90x20-tile-insert-rustfritt-stal/`,
       },
       {
-        name: "Slukrenne Tile Insert 900 Matt Sort",
+        name: "Slukrenne 900 Tile Insert Matt Sort",
         slug: "slukrenne-tile-insert-900-matt-sort",
         nobbNr: "60657694",
         nrfNr: "1382601",
@@ -404,7 +404,7 @@ export const productCategories: ProductCategory[] = [
         flisekompanietUrl: `${FK}/slidedrain-slukrenne-90x20-tile-insert-sort-matt/`,
       },
       {
-        name: "Slukrenne Tile Insert 1000 RF Stål",
+        name: "Slukrenne 1000 Tile Insert RF Stål",
         slug: "slukrenne-tile-insert-1000-rf-stal",
         nobbNr: "60657695",
         nrfNr: "1382602",
@@ -420,7 +420,7 @@ export const productCategories: ProductCategory[] = [
         flisekompanietUrl: `${FK}/slidedrain-slukrenne-100x20-tile-insert-rustfritt-stal/`,
       },
       {
-        name: "Slukrenne Tile Insert 1000 Sort",
+        name: "Slukrenne 1000 Tile Insert Matt Sort",
         slug: "slukrenne-tile-insert-1000-matt-sort",
         nobbNr: "60657696",
         nrfNr: "1382603",
@@ -436,7 +436,7 @@ export const productCategories: ProductCategory[] = [
         flisekompanietUrl: `${FK}/slidedrain-slukrenne-100x20-tile-insert-sort-matt/`,
       },
       {
-        name: "Slukrenne Tile Insert 1200 RF Stål",
+        name: "Slukrenne 1200 Tile Insert RF Stål",
         slug: "slukrenne-tile-insert-1200-rf-stal",
         nobbNr: "60795654",
         nrfNr: "1459481",
@@ -458,7 +458,7 @@ export const productCategories: ProductCategory[] = [
       "Premium slukrenner med eksentrisk hull for ensidig fall mot vegg. Perfekt for moderne storformat-fliser.",
     products: [
       {
-        name: "Slukrenne Eksentrisk Tile 700 Stål",
+        name: "Slukrenne 700 Eksentrisk Tile RF Stål",
         slug: "slukrenne-eksentrisk-tile-700-stal",
         nobbNr: "60795570",
         nrfNr: "1459464",
@@ -473,7 +473,7 @@ export const productCategories: ProductCategory[] = [
         dahlUrl: `${BD}/slidedrain-slukrenne-tile-insert-eksentrisk-m3c_bd_68c150e2fd18130a69f8a3d4`,
       },
       {
-        name: "Slukrenne Eksentrisk Tile 800 Stål",
+        name: "Slukrenne 800 Eksentrisk Tile RF Stål",
         slug: "slukrenne-eksentrisk-tile-800-stal",
         nobbNr: "60657699",
         nrfNr: "1382606",
@@ -489,7 +489,7 @@ export const productCategories: ProductCategory[] = [
         flisekompanietUrl: `${FK}/slidedrain-slukrenne-80x20-eksentrisk-tile-insert-rustfritt-stal/`,
       },
       {
-        name: "Slukrenne Eksentrisk Tile 800 Sort",
+        name: "Slukrenne 800 Eksentrisk Tile Matt Sort",
         slug: "slukrenne-eksentrisk-tile-800-sort",
         nobbNr: "60657700",
         nrfNr: "1382607",
@@ -505,7 +505,7 @@ export const productCategories: ProductCategory[] = [
         flisekompanietUrl: `${FK}/slidedrain-slukrenne-80x20-eksentrisk-tile-insert-sort-matt/`,
       },
       {
-        name: "Slukrenne Eksentrisk Tile 900 Stål",
+        name: "Slukrenne 900 Eksentrisk Tile RF Stål",
         slug: "slukrenne-eksentrisk-tile-900-stal",
         nobbNr: "60795572",
         nrfNr: "1459466",
@@ -520,7 +520,7 @@ export const productCategories: ProductCategory[] = [
         dahlUrl: `${BD}/slidedrain-slukrenne-tile-insert-eksentrisk-m3c_bd_68c150e2fd18130a69f8a3d4`,
       },
       {
-        name: "Slukrenne Eksentrisk Tile 1000 Stål",
+        name: "Slukrenne 1000 Eksentrisk Tile RF Stål",
         slug: "slukrenne-eksentrisk-tile-1000-stal",
         nobbNr: "60795649",
         nrfNr: "1459475",
@@ -535,7 +535,7 @@ export const productCategories: ProductCategory[] = [
         dahlUrl: `${BD}/slidedrain-slukrenne-tile-insert-eksentrisk-m3c_bd_68c150e2fd18130a69f8a3d4`,
       },
       {
-        name: "Slukrenne Eksentrisk Tile 1200 Stål",
+        name: "Slukrenne 1200 Eksentrisk Tile RF Stål",
         slug: "slukrenne-eksentrisk-tile-1200-stal",
         nobbNr: "60795683",
         nrfNr: "1459483",
@@ -558,7 +558,7 @@ export const productCategories: ProductCategory[] = [
       "Langsgående slukrenner med rist i børstet stål eller matt sort.",
     products: [
       {
-        name: "Slukrenne Rist 800 Børstet Stål",
+        name: "Slukrenne 800 Rist Børstet Stål",
         slug: "slukrenne-rist-800-borstet-stal",
         nobbNr: "60159280",
         nrfNr: "3406121",
@@ -574,7 +574,7 @@ export const productCategories: ProductCategory[] = [
         flisekompanietUrl: `${FK}/slidedrain-slukrenne-80x20-mrist-mattborstet/`,
       },
       {
-        name: "Slukrenne Rist 800 Matt Sort",
+        name: "Slukrenne 800 Rist Matt Sort",
         slug: "slukrenne-rist-800-matt-sort",
         nobbNr: "60159281",
         nrfNr: "3406122",
