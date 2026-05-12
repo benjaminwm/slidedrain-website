@@ -220,6 +220,17 @@ export default function InstallasjonContent() {
         <div className="max-w-[800px] mx-auto">
           {activeTab === "gulvsluk" && (
             <>
+              <FadeUp className="mb-10">
+                <div className="rounded-2xl overflow-hidden shadow-[0_20px_60px_rgba(40,52,71,0.12)]">
+                  <iframe
+                    src="https://player.mux.com/uilDZqS46Gezh3hdn4mkIwBp4a3SMRb4t3jXwzsaN00M?metadata-video-title=Installasjonfilm+kort+norsk&accent-color=%23ff7300&primary-color=%23ffffff&secondary-color=%23ff7300"
+                    style={{ width: "100%", border: "none", aspectRatio: "1/1" }}
+                    allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture"
+                    allowFullScreen
+                    title="Installasjonsfilm Slidedrain"
+                  />
+                </div>
+              </FadeUp>
               <FadeUp>
                 <h2 className="text-3xl max-md:text-2xl font-bold text-navy mb-3">
                   Installasjon av gulvsluket på 6 steg

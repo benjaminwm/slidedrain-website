@@ -8,12 +8,13 @@ export default function VideoSection() {
       <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         {/* Video */}
         <FadeUp className="flex justify-center">
-          <div className="w-full max-w-[360px] rounded-2xl overflow-hidden shadow-[0_20px_60px_rgba(40,52,71,0.15)]">
+          <div className="w-full max-w-[520px] rounded-2xl overflow-hidden shadow-[0_20px_60px_rgba(40,52,71,0.15)]">
             <iframe
-              src="https://player.mux.com/V9LeahuWNKZNGNCK007IfljcMptA5A2sK8wN00aiMHs02A?autoplay=1&muted=1&loop=1&thumbnail-time=90"
-              style={{ width: "100%", border: "none", aspectRatio: "9/16" }}
+              src="https://player.mux.com/uilDZqS46Gezh3hdn4mkIwBp4a3SMRb4t3jXwzsaN00M?metadata-video-title=Installasjonfilm+kort+norsk&accent-color=%23ff7300&primary-color=%23ffffff&secondary-color=%23ff7300"
+              style={{ width: "100%", border: "none", aspectRatio: "1/1" }}
               allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture"
               allowFullScreen
+              title="Installasjonsfilm Slidedrain"
             />
           </div>
         </FadeUp>
