@@ -4,7 +4,15 @@ import { useState } from "react";
 import Image from "next/image";
 import FadeUp from "@/components/FadeUp";
 
-const gulvslukSteps = [
+type Step = {
+  step: number;
+  title: string;
+  desc: string;
+  image: string;
+  note?: string;
+};
+
+const gulvslukSteps: Step[] = [
   {
     step: 1,
     title: "Installer slukpotten",
@@ -46,7 +54,7 @@ const gulvslukSteps = [
   },
 ];
 
-const klemringSteps = [
+const klemringSteps: Step[] = [
   {
     step: 5,
     title: "Sett slukoverdelen ned i slukpotten",
@@ -63,7 +71,7 @@ const klemringSteps = [
   },
 ];
 
-const renneTileSteps = [
+const renneTileSteps: Step[] = [
   {
     step: 1,
     title: "Plasser slukrennen",
@@ -98,7 +106,7 @@ const renneTileSteps = [
   },
 ];
 
-const renneRistSteps = [
+const renneRistSteps: Step[] = [
   {
     step: 1,
     title: "Plasser slukrennen",
