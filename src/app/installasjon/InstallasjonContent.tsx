@@ -252,7 +252,7 @@ export default function InstallasjonContent() {
                     Monteringsanvisning – Klemring
                   </a>
                   <a
-                    href="https://slidedrain.no/wp-content/uploads/2024/04/Slidedrain-Model-1-FDV.pdf"
+                    href="/downloads/FDV-Slidedrain-Model-1.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-sm bg-gray-bg text-navy px-4 py-2 rounded-lg hover:bg-navy/10 transition-colors font-medium"
@@ -263,7 +263,7 @@ export default function InstallasjonContent() {
                     Bruk og vedlikehold (FDV)
                   </a>
                   <a
-                    href="/downloads/TG-20991-Slidedrain-Sluksystem.pdf"
+                    href="/downloads/Produktsertifikat-Slidedrain-Model-1.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-sm bg-gray-bg text-navy px-4 py-2 rounded-lg hover:bg-navy/10 transition-colors font-medium"
@@ -271,7 +271,7 @@ export default function InstallasjonContent() {
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-4 h-4">
                       <path d="M12 5v14M5 12l7 7 7-7" />
                     </svg>
-                    Teknisk Godkjenning (TG-20991)
+                    Produktsertifikat
                   </a>
                   <a
                     href="/downloads/EPD-Slidedrain-Model-1.pdf"
@@ -460,7 +460,7 @@ export default function InstallasjonContent() {
                     Monteringsanvisning (PDF)
                   </a>
                   <a
-                    href="/downloads/TG-20991-Slidedrain-Sluksystem.pdf"
+                    href="/downloads/Produktsertifikat-Slidedrain-Model-1.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-sm bg-gray-bg text-navy px-4 py-2 rounded-lg hover:bg-navy/10 transition-colors font-medium"
@@ -468,7 +468,7 @@ export default function InstallasjonContent() {
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-4 h-4">
                       <path d="M12 5v14M5 12l7 7 7-7" />
                     </svg>
-                    Teknisk Godkjenning (TG-20991)
+                    Produktsertifikat
                   </a>
                   <a
                     href="/downloads/EPD-Slidedrain-Model-1.pdf"
