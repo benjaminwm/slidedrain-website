@@ -5,6 +5,7 @@ import ProductShowcase from "@/components/home/ProductShowcase";
 import ProductOverview from "@/components/home/ProductOverview";
 import SegmentGuide from "@/components/home/SegmentGuide";
 import SintefDogaSection from "@/components/home/SintefDogaSection";
+import TestimonialsMarquee from "@/components/TestimonialsMarquee";
 import TrustBar from "@/components/home/TrustBar";
 import VideoEmbed from "@/components/VideoEmbed";
 import CtaSection from "@/components/CtaSection";
@@ -31,6 +32,7 @@ export default function HomePage() {
         </section>
         <SegmentGuide />
         <SintefDogaSection />
+        <TestimonialsMarquee />
         <TrustBar />
         <CtaSection />
       </main>

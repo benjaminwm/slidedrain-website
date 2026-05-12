@@ -6,6 +6,7 @@ import MaintenanceSection from "@/components/sluttkunde/MaintenanceSection";
 import InnovationSection from "@/components/sluttkunde/InnovationSection";
 import HowToSection from "@/components/sluttkunde/HowToSection";
 import SluttkundeCtaSection from "@/components/sluttkunde/SluttkundeCtaSection";
+import TestimonialsMarquee from "@/components/TestimonialsMarquee";
 import CaseStudyPopup from "@/components/CaseStudyPopup";
 
 export const metadata = {
@@ -24,6 +25,7 @@ export default function SluttkunderPage() {
         <MaintenanceSection />
         <InnovationSection />
         <HowToSection />
+        <TestimonialsMarquee />
         <SluttkundeCtaSection />
       </main>
       <Footer />
