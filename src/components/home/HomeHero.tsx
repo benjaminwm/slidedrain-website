@@ -7,7 +7,7 @@ import LogoBanner from "./LogoBanner";
 export default function HomeHero() {
   return (
     <section className="pt-[110px] pb-6 bg-gradient-to-br from-white to-[#fef7f3] overflow-hidden">
-      <div className="max-w-[1200px] mx-auto px-6 pb-10 grid grid-cols-1 lg:grid-cols-2 gap-15 items-center">
+      <div className="max-w-[1200px] mx-auto px-6 pb-10 grid grid-cols-1 lg:grid-cols-[5fr_7fr] gap-15 items-center">
         <div>
           <span className="inline-block bg-orange/10 text-orange text-[13px] font-semibold px-3.5 py-1.5 rounded-full mb-5 uppercase tracking-wide">
             Neste generasjons gulvsluk
@@ -58,13 +58,14 @@ export default function HomeHero() {
             </a>
           </div>
         </div>
-        <div className="flex justify-center items-center max-lg:order-first">
+        <div className="max-lg:order-first">
           <Image
             src="/images/hero-bathroom.jpg"
             alt="Moderne baderom med Slidedrain slukrenne"
-            width={600}
-            height={450}
-            className="w-full rounded-2xl shadow-[0_20px_60px_rgba(40,52,71,0.12)]"
+            width={1200}
+            height={900}
+            sizes="(min-width: 1024px) 60vw, 100vw"
+            className="w-full rounded-2xl shadow-[0_20px_60px_rgba(40,52,71,0.12)] aspect-[4/3] object-cover"
             priority
           />
         </div>
