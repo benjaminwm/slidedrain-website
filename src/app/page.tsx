@@ -26,7 +26,17 @@ export default function HomePage() {
         <HomeHero />
         <ValueProps />
         <ProductOverview />
-        <section className="pt-4 pb-16 px-6 bg-white">
+        <section className="pt-16 pb-16 px-6 bg-white">
+          <div className="text-center max-w-[800px] mx-auto mb-10">
+            <h2 className="text-4xl max-md:text-[28px] font-bold mb-4 leading-tight text-navy">
+              Slidedrain{" "}
+              <span className="text-orange">i praksis</span>
+            </h2>
+            <p className="text-[17px] text-text-light leading-[1.7] font-light">
+              Se hvordan sluksystemet kommer sammen — fra teknisk
+              installasjon til ferdig flislagt resultat.
+            </p>
+          </div>
           <VideoEmbed />
         </section>
         <SegmentGuide />

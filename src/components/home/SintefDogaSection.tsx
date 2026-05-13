@@ -12,7 +12,18 @@ import FadeUp from "../FadeUp";
 export default function SintefDogaSection() {
   return (
     <section className="py-20 px-6 bg-gray-bg">
-      <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div className="max-w-[1200px] mx-auto">
+        <FadeUp className="text-center max-w-[800px] mx-auto mb-12">
+          <h2 className="text-4xl max-md:text-[28px] font-bold mb-4 leading-tight text-navy">
+            Sertifisert og{" "}
+            <span className="text-orange">prisbelønnet</span>
+          </h2>
+          <p className="text-[17px] text-text-light leading-[1.7] font-light">
+            Slidedrain Sluksystem er teknisk godkjent, miljødeklarert og
+            tildelt designprisen DOGA-merket Nykommer.
+          </p>
+        </FadeUp>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* SINTEF Teknisk Godkjenning + EPD */}
         <FadeUp className="bg-white rounded-2xl overflow-hidden shadow-[0_2px_16px_rgba(40,52,71,0.04)]">
           <div className="relative aspect-[4/3] overflow-hidden bg-navy/5">
@@ -131,6 +142,7 @@ export default function SintefDogaSection() {
             </a>
           </div>
         </FadeUp>
+        </div>
       </div>
     </section>
   );

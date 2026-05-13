@@ -148,6 +148,16 @@ export default function ProductShowcase() {
   return (
     <section className="py-16 px-6 bg-gray-bg" id="produkter">
       <div className="max-w-[1200px] mx-auto">
+        <div className="text-center max-w-[800px] mx-auto mb-12">
+          <h2 className="text-4xl max-md:text-[28px] font-bold mb-4 leading-tight text-navy">
+            Bygget for{" "}
+            <span className="text-orange">maksimal fleksibilitet</span>
+          </h2>
+          <p className="text-[17px] text-text-light leading-[1.7] font-light">
+            Bla gjennom kombinasjonene og se hvor enkelt slukpotte, slukoverdel
+            og synlig design passer sammen.
+          </p>
+        </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left: Text */}
           <div className="max-w-[520px]">
