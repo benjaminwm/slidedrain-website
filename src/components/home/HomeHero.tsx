@@ -18,7 +18,22 @@ export default function HomeHero() {
             teknologi som setter en ny standard for våtromssikkerhet,
             vedlikehold og stilrent resultat. Norskprodusert og SINTEF-godkjent.
           </p>
-          <div className="mb-8">
+          <div className="flex flex-wrap gap-3 mb-8">
+            <a
+              href="#produkter"
+              className="shine-btn inline-flex items-center gap-2.5 bg-orange text-white px-8 py-4 rounded-lg font-semibold text-base hover:bg-orange-dark transition-all hover:-translate-y-0.5 shadow-[0_4px_14px_rgba(251,92,19,0.3)] hover:shadow-[0_6px_20px_rgba(251,92,19,0.4)]"
+            >
+              <span>Utforsk produktene</span>
+              <ArrowRight />
+            </a>
+            <a
+              href="#velg-segment"
+              className="inline-flex items-center gap-2.5 bg-navy/8 text-navy px-8 py-4 rounded-lg font-semibold text-base hover:bg-navy/15 transition-all"
+            >
+              Finn din løsning
+            </a>
+          </div>
+          <div>
             <span className="block text-xs text-text-light font-medium uppercase tracking-wider mb-3">
               Kjøp i dag hos
             </span>
@@ -38,21 +53,6 @@ export default function HomeHero() {
                 className="h-6 sm:h-7 w-auto"
               />
             </div>
-          </div>
-          <div className="flex flex-wrap gap-3">
-            <a
-              href="#produkter"
-              className="shine-btn inline-flex items-center gap-2.5 bg-orange text-white px-8 py-4 rounded-lg font-semibold text-base hover:bg-orange-dark transition-all hover:-translate-y-0.5 shadow-[0_4px_14px_rgba(251,92,19,0.3)] hover:shadow-[0_6px_20px_rgba(251,92,19,0.4)]"
-            >
-              <span>Utforsk produktene</span>
-              <ArrowRight />
-            </a>
-            <a
-              href="#velg-segment"
-              className="inline-flex items-center gap-2.5 bg-navy/8 text-navy px-8 py-4 rounded-lg font-semibold text-base hover:bg-navy/15 transition-all"
-            >
-              Finn din løsning
-            </a>
           </div>
         </div>
         <div className="max-lg:order-first">
