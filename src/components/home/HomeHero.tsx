@@ -9,9 +9,6 @@ export default function HomeHero() {
     <section className="min-h-screen pt-[110px] bg-gradient-to-br from-white to-[#fef7f3] overflow-hidden flex flex-col">
       <div className="max-w-[1600px] w-full mx-auto px-6 py-10 grid grid-cols-1 lg:grid-cols-[5fr_7fr] gap-15 items-center flex-1">
         <div>
-          <span className="inline-block bg-orange/10 text-orange text-[13px] font-semibold px-3.5 py-1.5 rounded-full mb-5 uppercase tracking-wide">
-            Neste generasjons gulvsluk
-          </span>
           <h1 className="text-[46px] max-lg:text-[36px] max-sm:text-[30px] font-bold leading-[1.15] mb-5 text-navy">
             Ett sluksystem,<br />
             <span className="text-orange">mange muligheter.</span>
