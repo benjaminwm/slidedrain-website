@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Fira_Sans } from "next/font/google";
 import "./globals.css";
 import CookieBanner from "@/components/CookieBanner";
+import MeetingsSlideIn from "@/components/MeetingsSlideIn";
 
 const firaSans = Fira_Sans({
   variable: "--font-fira-sans",
@@ -27,6 +28,7 @@ export default function RootLayout({
     <html lang="nb" className={`${firaSans.variable} antialiased`}>
       <body className="min-h-screen flex flex-col">
         {children}
+        <MeetingsSlideIn />
         <CookieBanner />
       </body>
     </html>
