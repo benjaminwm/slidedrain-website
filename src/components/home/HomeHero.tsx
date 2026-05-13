@@ -6,8 +6,8 @@ import LogoBanner from "./LogoBanner";
 
 export default function HomeHero() {
   return (
-    <section className="pt-[110px] pb-6 bg-gradient-to-br from-white to-[#fef7f3] overflow-hidden">
-      <div className="max-w-[1200px] mx-auto px-6 pb-10 grid grid-cols-1 lg:grid-cols-[5fr_7fr] gap-15 items-center">
+    <section className="min-h-screen pt-[110px] bg-gradient-to-br from-white to-[#fef7f3] overflow-hidden flex flex-col">
+      <div className="max-w-[1600px] w-full mx-auto px-6 py-10 grid grid-cols-1 lg:grid-cols-[5fr_7fr] gap-15 items-center flex-1">
         <div>
           <span className="inline-block bg-orange/10 text-orange text-[13px] font-semibold px-3.5 py-1.5 rounded-full mb-5 uppercase tracking-wide">
             Neste generasjons gulvsluk
