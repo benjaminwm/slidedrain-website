@@ -25,13 +25,13 @@ export default function HomePage() {
       <main>
         <HomeHero />
         <ValueProps />
-        <ProductShowcase />
         <ProductOverview />
         <section className="pt-4 pb-16 px-6 bg-white">
           <VideoEmbed />
         </section>
         <SegmentGuide />
         <SintefDogaSection />
+        <ProductShowcase />
         <TestimonialsMarquee />
         <TrustBar />
         <CtaSection />
