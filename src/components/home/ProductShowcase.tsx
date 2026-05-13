@@ -106,7 +106,6 @@ function LayerRow({
 
   return (
     <div className="flex flex-col items-center">
-      <p className="font-bold text-navy text-xs">{layer.label}</p>
       <p className="text-[11px] text-text-light italic mb-1">{layer.subtitle}</p>
 
       <div className="flex items-center gap-1 justify-center">
@@ -208,16 +207,6 @@ export default function ProductShowcase() {
                 />
               </div>
             ))}
-
-            <div className="flex justify-center pt-1">
-              <Image
-                src="/images/logo-slidedrain.webp"
-                alt="Slidedrain"
-                width={100}
-                height={20}
-                className="h-4 w-auto opacity-35"
-              />
-            </div>
           </div>
         </div>
       </div>
