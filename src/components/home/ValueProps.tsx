@@ -40,7 +40,7 @@ const props = [
       </svg>
     ),
     title: "Redusert vannskaderisiko",
-    desc: "Eliminerer kjente lekkasjepunkter som klemring og forhøyningsringer ved montering.",
+    desc: "Eliminerer kjente lekkasjepunkter som klemring og forhøyningsringer.",
   },
 ];
 
