@@ -74,7 +74,7 @@ export default function CaseStudyPopup() {
       />
 
       {/* Modal */}
-      <div className="relative bg-white rounded-2xl shadow-[0_25px_60px_rgba(0,0,0,0.25)] max-w-[520px] w-full animate-[slideUp_0.4s_ease] overflow-hidden">
+      <div className="relative bg-white rounded-2xl shadow-[0_25px_60px_rgba(0,0,0,0.25)] max-w-[520px] w-full animate-[slideUp_0.4s_ease] overflow-hidden max-h-[92vh] overflow-y-auto">
         {/* Close button */}
         <button
           onClick={handleClose}
@@ -125,7 +125,7 @@ export default function CaseStudyPopup() {
             </a>
           </div>
         ) : (
-          <div className="p-8">
+          <div className="p-8 max-sm:p-5">
             {/* Preview image */}
             <div className="rounded-xl overflow-hidden mb-5 aspect-[16/9]">
               <Image
@@ -151,7 +151,7 @@ export default function CaseStudyPopup() {
             </p>
 
             {/* What's included */}
-            <div className="bg-gray-bg rounded-lg p-4 mb-5">
+            <div className="bg-gray-bg rounded-lg p-4 max-sm:p-3 mb-5">
               <ul className="space-y-1.5">
                 {[
                   "Reelle sitater fra rørlegger Ole Olsen",

@@ -70,7 +70,7 @@ export default function LeadMagnetPopup() {
       />
 
       {/* Modal */}
-      <div className="relative bg-white rounded-2xl shadow-[0_25px_60px_rgba(0,0,0,0.25)] max-w-[520px] w-full animate-[slideUp_0.4s_ease] overflow-hidden">
+      <div className="relative bg-white rounded-2xl shadow-[0_25px_60px_rgba(0,0,0,0.25)] max-w-[520px] w-full animate-[slideUp_0.4s_ease] overflow-hidden max-h-[92vh] overflow-y-auto">
         {/* Close button */}
         <button
           onClick={handleClose}
@@ -86,7 +86,7 @@ export default function LeadMagnetPopup() {
         <div className="h-1.5 bg-gradient-to-r from-orange to-orange-dark" />
 
         {submitted ? (
-          <div className="p-10 text-center">
+          <div className="p-10 max-sm:p-6 text-center">
             <div className="w-16 h-16 bg-green/10 rounded-full flex items-center justify-center mx-auto mb-5">
               <svg viewBox="0 0 24 24" fill="none" stroke="#22c55e" strokeWidth={2} className="w-8 h-8">
                 <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
@@ -105,7 +105,7 @@ export default function LeadMagnetPopup() {
             </button>
           </div>
         ) : (
-          <div className="p-8">
+          <div className="p-8 max-sm:p-5">
             {/* Icon */}
             <div className="w-12 h-12 bg-orange/8 rounded-xl flex items-center justify-center mb-5">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-6 h-6 stroke-orange">
@@ -126,7 +126,7 @@ export default function LeadMagnetPopup() {
             </p>
 
             {/* What's included */}
-            <div className="bg-gray-bg rounded-lg p-4 mb-6">
+            <div className="bg-gray-bg rounded-lg p-4 max-sm:p-3 mb-6 max-sm:mb-4">
               <p className="text-xs font-semibold text-navy mb-2 uppercase tracking-wide">Innholdet inkluderer:</p>
               <ul className="space-y-1.5">
                 {[
