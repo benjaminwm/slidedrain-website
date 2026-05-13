@@ -15,7 +15,7 @@ const HOST = {
   role: "Salgsansvarlig, Slidedrain",
   photo: "/images/team-2.jpg",
   pitch:
-    "Vi tar gjerne en uforpliktende prat om hvordan Slidedrain kan passe i ditt prosjekt.",
+    "Jeg tar gjerne et lite kvarter med deg på telefon eller meets hvis du lurer på hvordan Slidedrain kan passe inn i ditt prosjekt!",
 };
 
 const WEEKDAY_LABELS = ["Man", "Tir", "Ons", "Tor", "Fre"];
