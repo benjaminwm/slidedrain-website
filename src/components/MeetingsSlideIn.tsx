@@ -11,9 +11,9 @@ const COUNTDOWN_SECONDS = 3 * 60;
 const STORAGE_KEY = "slidedrain:meetings-slidein-minimized";
 
 const HOST = {
-  name: "Stian Bjørnstad",
-  role: "Daglig leder, Slidedrain",
-  photo: "/images/team-1.jpg",
+  name: "Joakim Delebekk",
+  role: "Salgsansvarlig, Slidedrain",
+  photo: "/images/team-2.jpg",
   pitch:
     "Vi tar gjerne en uforpliktende prat om hvordan Slidedrain kan passe i ditt prosjekt.",
 };
