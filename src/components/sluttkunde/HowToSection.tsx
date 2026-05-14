@@ -54,7 +54,8 @@ export default function HowToSection() {
           </h2>
           <p className="text-[17px] text-text-light leading-[1.7] font-light">
             Vi samarbeider med de største aktørene i bransjen for å gjøre veien
-            fra planlegging til ferdig bad så enkel som mulig.
+            fra planlegging til ferdig bad så enkel som mulig. Slik går du fra
+            idé til drømmebad med Slidedrain – i tre enkle steg.
           </p>
         </FadeUp>
         <FadeUp className="max-w-[900px] mx-auto mb-12">

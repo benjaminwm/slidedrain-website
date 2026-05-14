@@ -143,16 +143,20 @@ const faqs = [
     a: "Monteringsverktøyet er designet for å være robust og tåle forhold som kan oppstå på byggeplass. Dersom du skyller monteringsverktøyet og fjerner smuss etter bruk, så skal det vare i lang tid.",
   },
   {
-    q: "Hvilken type slukrist passer til Slidedrain Model 1?",
-    a: "Du kan benytte vanlige sirkulære og rektangulære slukrister med ramme til flisbelagt gulv. Det viktigste er å sørge for at det er mulig å få ut vannlåsen, som har en diameter på Ø126 mm.",
+    q: "Hvilken type slukrist passer til Slidedrain Gulvsluk?",
+    a: "Du kan benytte vanlige sirkulære og rektangulære slukrister med ramme til flisbelagt gulv. Det viktigste er å sørge for at det er mulig å få ut vannlåsen, som har en diameter på Ø126 mm. Slidedrain sine egne Slukrister og Slukrenner er perfekt tilpasset bruk med Slidedrain Gulvsluk, med stor fleksibilitet under installasjon.",
+  },
+  {
+    q: "Fungerer Slidedrain Gulvsluk til vinylgulv?",
+    a: "Slukoverdelen med klemring i rustfritt stål kan du uten problem legge både vinyl og alle andre typer membraner.",
   },
   {
     q: "Må jeg kjøpe alle tre gulvsluk-produktene?",
-    a: "Du er nødt til å ha både slukpotte, slukoverdel og monteringsverktøy for en optimal installasjon. Monteringsverktøyet er gjenbrukbart, så du behøver ikke å kjøpe dette nytt for hvert sluk.",
+    a: "For en komplett og profesjonell installasjon kreves det bruk av slukpotte, slukoverdel og monteringsverktøy. Husk at monteringsverktøyet kan gjenbrukes i fremtidige prosjekter, slik at du ikke trenger å anskaffe dette for hver montasje.",
   },
   {
     q: "Hva slags membran kan jeg benytte?",
-    a: "Slidedrain Model 1 sin slukoverdel med Apex-mansjett kan benyttes med alle SINTEF-godkjente påstryknings- og foliemembraner. Slukoverdel med klemring kan i tillegg benyttes med baneväremembraner.",
+    a: "Slidedrain Gulvsluk sin Slukoverdel med påstøpt mansjett kan brukes med alle SINTEF-godkjente påstrykningsmembraner og foliemembraner. Se oversikt her: https://www.sintefcertification.no/Contents/Index/29. Slidedrain Slukoverdel med klemring kan brukes med alle SINTEF-godkjente påstrykningsmembraner, foliemembraner og banevaremembraner.",
   },
   {
     q: "Hva slags gulvsluk kan jeg bruke med slukrennene?",
@@ -220,10 +224,10 @@ export default function InstallasjonContent() {
         <div className="max-w-[800px] mx-auto">
           {activeTab === "gulvsluk" && (
             <>
-              <FadeUp className="mb-10">
+              <FadeUp className="mb-8">
                 <div className="rounded-2xl overflow-hidden shadow-[0_20px_60px_rgba(40,52,71,0.12)]">
                   <iframe
-                    src="https://player.mux.com/uilDZqS46Gezh3hdn4mkIwBp4a3SMRb4t3jXwzsaN00M?metadata-video-title=Installasjonfilm+kort+norsk&accent-color=%23ff7300&primary-color=%23ffffff&secondary-color=%23ff7300"
+                    src="https://player.mux.com/uilDZqS46Gezh3hdn4mkIwBp4a3SMRb4t3jXwzsaN00M?metadata-video-title=Installasjonfilm+kort+norsk&thumbnail-time=20&start-time=20&accent-color=%23ff7300&primary-color=%23ffffff&secondary-color=%23ff7300"
                     style={{ width: "100%", border: "none", aspectRatio: "1/1" }}
                     allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture"
                     allowFullScreen
@@ -231,15 +235,11 @@ export default function InstallasjonContent() {
                   />
                 </div>
               </FadeUp>
-              <FadeUp>
-                <h2 className="text-3xl max-md:text-2xl font-bold text-navy mb-3">
-                  Installasjon av gulvsluket på 6 steg
-                </h2>
-                <p className="text-[15px] text-text-light leading-relaxed mb-4">
-                  Stegene inkluderer installasjon av slukoverdel med integrert
-                  Apex-mansjett. For installasjon i støpt dekke, start fra steg 2.
+              <FadeUp className="mb-10">
+                <p className="text-xs font-semibold text-text-light uppercase tracking-wider mb-3">
+                  Nedlastbare ressurser
                 </p>
-                <div className="flex flex-wrap gap-2 mb-10">
+                <div className="flex flex-wrap gap-2">
                   <a
                     href="/downloads/Monteringsanvisning-Slidedrain-Model-1-Slukmansjett.pdf"
                     target="_blank"
@@ -305,6 +305,15 @@ export default function InstallasjonContent() {
                     BIM-modeller (IFC/RFA/SAT)
                   </a>
                 </div>
+              </FadeUp>
+              <FadeUp>
+                <h2 className="text-3xl max-md:text-2xl font-bold text-navy mb-3">
+                  Installasjon av gulvsluket på 6 steg
+                </h2>
+                <p className="text-[15px] text-text-light leading-relaxed mb-8">
+                  Stegene inkluderer installasjon av slukoverdel med integrert
+                  Apex-mansjett. For installasjon i støpt dekke, start fra steg 2.
+                </p>
               </FadeUp>
               {gulvslukSteps.map((s, i) => (
                 <FadeUp

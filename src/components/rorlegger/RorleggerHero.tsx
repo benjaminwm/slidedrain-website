@@ -12,8 +12,8 @@ export default function RorleggerHero() {
             For rørleggere & flisleggere
           </span>
           <h1 className="text-[42px] max-lg:text-[34px] max-sm:text-[28px] font-bold leading-[1.2] mb-5 text-navy">
-            Utviklet med fagfolk{" "}
-            <span className="text-orange">for fagfolk</span>
+            Fleksibelt sluksystem utviklet{" "}
+            <span className="text-orange">sammen med fagfolk</span>
           </h1>
           <p className="text-lg text-text-light leading-[1.7] mb-8 font-light">
             Slidedrain Sluksystem forenkler monteringen og samspillet mellom alle

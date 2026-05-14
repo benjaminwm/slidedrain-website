@@ -20,8 +20,8 @@ const features = [
         <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
       </svg>
     ),
-    title: "Dokumentert trygghet og kompatibilitet",
-    desc: "Slidedrain har løsninger for alle membraner på markedet med Teknisk Godkjenning fra SINTEF. Dette sikrer en løsning som er grundig testet og trygg i bruk.",
+    title: "Testet og godkjent av SINTEF",
+    desc: "Slidedrain har løsninger for alle membraner på markedet med Teknisk Godkjenning fra SINTEF. Dette gir en grundig testet og trygg løsning.",
   },
   {
     icon: (
@@ -31,7 +31,7 @@ const features = [
       </svg>
     ),
     title: "Redusert risiko for vannskader",
-    desc: "Hvert år oppstår vannskader for store verdier i våtrom, ofte knyttet til overgangen mellom sluk og membran. Slidedrain sluksystem har et unikt design som eliminerer overgangens mest kjente feilkilder og reduserer risikoen for skade.",
+    desc: "Vannskader i våtrom skyldes ofte overgangen mellom sluk og membran. Slidedrain Sluksystem har et unikt design som eliminerer kjente feilkilder og reduserer risikoen for vannskader.",
   },
 ];
 

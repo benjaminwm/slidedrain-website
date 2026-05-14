@@ -23,20 +23,20 @@ export default function StandardiseringRorlegger() {
               Hjørneplassert gulvsluk
             </span>
             <h2 className="text-[32px] max-md:text-[26px] font-bold leading-[1.2] mb-5 text-navy">
-              Én teknisk montasje{" "}
-              <span className="text-orange">– 25+ design</span>
+              Ett sluk{" "}
+              <span className="text-orange">– flere tilvalg</span>
             </h2>
             <p className="text-[17px] text-text-light leading-[1.7] font-light mb-6">
-              Slukpotten plasseres i hjørnet og passer som linjesluk,
-              hjørnesluk eller punktsluk uten å endre rørarbeidet. Det gir
-              rørleggeren én standard montasje på alle bad i prosjektet,
-              uavhengig av hvilket design som velges senere.
+              Slukpotten plasseres i hjørnet og kan brukes som hjørnesluk
+              eller linjesluk uten endringer i prosjektering eller rørarbeid.
+              Det gir én standardisert montasje på alle bad i prosjektet,
+              uavhengig av senere designvalg.
             </p>
             <ul className="space-y-3">
               {[
-                "Samme slukpotte og monteringsverktøy på alle bad",
-                "Designvalg påvirker ikke rørarbeidet",
-                "Færre varianter å holde styr på i lager og på byggeplass",
+                "Forenklet byggeprosess for alle fag",
+                "Forlenget tilvalgsperiode for gulvsluk",
+                "Øker tilvalgssalg i prosjektet",
               ].map((item, i) => (
                 <li
                   key={i}

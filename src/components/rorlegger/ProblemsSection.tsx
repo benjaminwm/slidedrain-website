@@ -11,7 +11,7 @@ const problems = [
       </svg>
     ),
     title: "Større justerbarhet og enklere montering",
-    desc: "Unikt monteringsverktøy kombinert med høydejusterbart gulvsluk, slukrenner og slukrister som kan tilpasses både i dybde og bredde, gir et fleksibelt system i alle dimensjoner. Resultatet er raskere og mer effektiv installasjon på hver eneste jobb.",
+    desc: "Slidedrain er et fleksibelt sluksystem som kan tilpasses i høyde, bredde og dybde. Unikt monteringsverktøy og justerbare komponenter gir en effektiv og presis installasjon hver gang.",
   },
   {
     icon: (
@@ -21,7 +21,7 @@ const problems = [
       </svg>
     ),
     title: "Økt fleksibilitet gjennom hele byggeprosjektet",
-    desc: "Sluksystemet er kompatibelt med alle typer membraner, samtidig som det åpner for en mer standardisert byggeprosess. Med en hjørneplassert slukpotte kan man enkelt velge mellom hjørnerist og slukrenne senere i prosjektet \u2013 noe som gir økt fleksibilitet og muligheter for mersalg.",
+    desc: "Sluksystemet er kompatibelt med alle typer membraner og legger til rette for en mer standardisert byggeprosess. Med hjørneplassert slukpotte kan man enkelt velge mellom hjørnerist og slukrenne senere i prosjektet, noe som gir større fleksibilitet og økt mersalg.",
   },
   {
     icon: (
@@ -30,7 +30,7 @@ const problems = [
       </svg>
     ),
     title: "Redusert risiko og minimalt vedlikehold",
-    desc: "Slidedrains patenterte teknologi eliminerer tradisjonelle feilkilder i overgangen mellom gulvsluk og membran, og reduserer dermed risikoen for vannskader betydelig. Samtidig er alle Slidedrain-løsninger designet for en stor vannlås som minimerer behovet for vedlikehold vesentlig.",
+    desc: "Slidedrains patenterte teknologi eliminerer tradisjonelle feilkilder i overgangen mellom gulvsluk og membran, og reduserer risikoen for vannskader betydelig. Samtidig er alle løsninger designet med stor vannlås som gir minimalt behov for vedlikehold.",
   },
 ];
 

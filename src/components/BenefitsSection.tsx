@@ -60,9 +60,14 @@ export default function BenefitsSection() {
                 {b.icon}
               </div>
               <h3 className="text-[19px] font-semibold mb-3 text-navy">{b.title}</h3>
-              <p className="text-[15px] leading-[1.7] text-text-light">
-                {b.desc}
-              </p>
+              {b.desc.split(/(?<=\. )(?=[A-ZÆØÅ])/).map((para, j) => (
+                <p
+                  key={j}
+                  className="text-[15px] leading-[1.7] text-text-light mb-3 last:mb-0"
+                >
+                  {para.trim()}
+                </p>
+              ))}
             </FadeUp>
           ))}
         </div>

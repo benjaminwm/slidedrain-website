@@ -29,8 +29,8 @@ export default function HomePage() {
         <section className="pt-16 pb-16 px-6 bg-white">
           <div className="text-center max-w-[800px] mx-auto mb-10">
             <h2 className="text-4xl max-md:text-[28px] font-bold mb-4 leading-tight text-navy">
-              Slidedrain{" "}
-              <span className="text-orange">i praksis</span>
+              Slik fungerer{" "}
+              <span className="text-orange">Slidedrain Sluksystem</span>
             </h2>
             <p className="text-[17px] text-text-light leading-[1.7] font-light">
               Se hvordan sluksystemet kommer sammen — fra teknisk

@@ -21,8 +21,8 @@ export default function TestimonialsMarquee() {
     <section className="py-20 overflow-hidden bg-white">
       <FadeUp className="text-center max-w-[800px] mx-auto mb-12 px-6">
         <h2 className="text-4xl max-md:text-[28px] font-bold mb-4 leading-tight text-navy">
-          Dette sier{" "}
-          <span className="text-orange">fagfolket</span>
+          Derfor velger fagfolk{" "}
+          <span className="text-orange">Slidedrain</span>
         </h2>
         <p className="text-[17px] text-text-light leading-[1.7] font-light">
           Rørleggere, prosjektledere og baderomsbyggere over hele landet bruker

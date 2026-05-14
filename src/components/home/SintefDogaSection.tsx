@@ -15,12 +15,13 @@ export default function SintefDogaSection() {
       <div className="max-w-[1200px] mx-auto">
         <FadeUp className="text-center max-w-[800px] mx-auto mb-12">
           <h2 className="text-4xl max-md:text-[28px] font-bold mb-4 leading-tight text-navy">
-            Sertifisert og{" "}
-            <span className="text-orange">prisbelønnet</span>
+            Norsk innovasjon for{" "}
+            <span className="text-orange">tryggere våtrom</span>
           </h2>
           <p className="text-[17px] text-text-light leading-[1.7] font-light">
             Slidedrain Sluksystem er teknisk godkjent, miljødeklarert og
-            tildelt designprisen DOGA-merket Nykommer.
+            tildelt designprisen DOGA-merket Nykommer — utviklet for å
+            redusere risiko for vannskader i norske våtrom.
           </p>
         </FadeUp>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -56,7 +57,7 @@ export default function SintefDogaSection() {
           </div>
           <div className="p-8">
             <h3 className="text-2xl max-md:text-xl font-bold text-navy mb-4 leading-tight">
-              Et komplett sluksystem med SINTEF Teknisk Godkjenning
+              SINTEF-godkjent sluksystem
             </h3>
             <p className="text-[15px] text-text-light leading-[1.7]">
               Slidedrain Sluksystem er tildelt SINTEF Teknisk Godkjenning

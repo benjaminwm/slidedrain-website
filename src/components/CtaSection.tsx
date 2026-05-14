@@ -16,11 +16,11 @@ export default function CtaSection() {
           {/* Left: text + trust */}
           <div>
             <h2 className="text-4xl max-md:text-[28px] font-bold mb-4">
-              Klar for en mer lønnsom byggeprosess?
+              Klar for en enklere byggeprosess?
             </h2>
             <p className="text-[17px] text-white/70 mb-8 font-light leading-[1.7]">
-              Book et kort møte for å se hvordan Slidedrain kan maksimere
-              marginen og forenkle tilvalg i ditt neste prosjekt.
+              Book et kort møte og se hvordan Slidedrain forenkler
+              prosjektering, installasjon og tilvalg i ditt neste prosjekt.
             </p>
 
             {/* Team avatars */}

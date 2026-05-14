@@ -14,9 +14,9 @@ export default function HomeHero() {
             <span className="text-orange">mange muligheter.</span>
           </h1>
           <p className="text-lg max-sm:text-[15px] text-text-light leading-[1.7] mb-8 max-sm:mb-6 font-light">
-            Slidedrain forener skandinavisk minimalisme med en patentert
-            teknologi som setter en ny standard for våtromssikkerhet,
-            vedlikehold og stilrent resultat. Norskprodusert og SINTEF-godkjent.
+            Slidedrain forener skandinavisk minimalisme med et SINTEF-godkjent
+            design som gir enkel installasjon, tryggere våtrom og et stilrent
+            resultat med lite vedlikehold.
           </p>
           <div className="flex flex-wrap gap-3 mb-8 max-sm:mb-6">
             <a

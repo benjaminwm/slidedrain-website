@@ -13,7 +13,7 @@ const features = [
       </svg>
     ),
     title: "Sømløst flismønster",
-    desc: "Flislegg slukrennen eller slukristen med samme flis som gulvet, og gjør sluket nærmest usynlig. Resultatet er et helhetlig, minimalistisk uttrykk hvor flismønsteret flyter uavbrutt.",
+    desc: "Flislegg slukrennen eller slukristen med samme flis som gulvet for et nesten usynlig sluk og helhetlig, minimalistisk uttrykk.",
   },
   {
     icon: (
@@ -22,7 +22,7 @@ const features = [
       </svg>
     ),
     title: "Perfekt for store flisformater",
-    desc: "Slidedrain er tilpasset moderne storformat-fliser og reduserer behovet for oppstykking av flisene. Resultatet er rene linjer, færre fuger og et mer eksklusivt uttrykk.",
+    desc: "Slidedrain er tilpasset moderne storformatfliser og reduserer behovet for oppdeling, noe som gir rene linjer, færre fuger og et mer eksklusivt uttrykk.",
   },
   {
     icon: (
@@ -32,7 +32,7 @@ const features = [
       </svg>
     ),
     title: "Designvalg for enhver stil",
-    desc: "Velg mellom slukrenne med innfelt flis, diskré hjørnesluk eller klassisk rist. Slidedrain gir deg løsninger som løfter helheten på badet.",
+    desc: "Velg mellom slukrenne med innfelt flis, diskré hjørnesluk eller klassisk rist – løsninger som løfter helheten på badet.",
   },
 ];
 
