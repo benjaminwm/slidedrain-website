@@ -29,8 +29,8 @@ const segments = [
     tag: "Entreprenør & Byggherre",
     title: "Vil du gjøre ditt neste prosjekt mer lønnsomt?",
     desc: "Oppdag hvordan utvidet tilvalgsperiode kan redusere omprosjektering og øke mersalget med Slidedrain Sluksystem.",
-    image: "/images/hjorneplassert-gulvsluk.png",
-    imageObjectFit: "contain" as const,
+    image: "/images/slukpotte-installed.jpg",
+    imageObjectFit: "cover" as const,
     imageBg: "bg-gray-bg",
   },
 ];
