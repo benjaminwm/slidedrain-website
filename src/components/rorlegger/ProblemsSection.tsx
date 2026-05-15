@@ -51,13 +51,28 @@ export default function ProblemsSection() {
               key={i}
               className="bg-white rounded-xl p-8 border border-navy/8 transition-all hover:-translate-y-1 hover:shadow-lg"
             >
-              <div className="w-12 h-12 bg-orange/8 rounded-[10px] flex items-center justify-center mb-5">
-                {p.icon}
-              </div>
-              <h3 className="text-lg font-semibold mb-3">{p.title}</h3>
-              <p className="text-[15px] text-text-light leading-[1.7]">
-                {p.desc}
-              </p>
+              <details className="group">
+                <summary className="list-none cursor-pointer flex flex-col">
+                  <div className="w-12 h-12 bg-orange/8 rounded-[10px] flex items-center justify-center mb-5">
+                    {p.icon}
+                  </div>
+                  <div className="flex items-start justify-between gap-3">
+                    <h3 className="text-lg font-semibold">{p.title}</h3>
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth={2}
+                      className="w-5 h-5 shrink-0 mt-1 text-text-light transition-transform group-open:rotate-180"
+                    >
+                      <path d="M6 9l6 6 6-6" />
+                    </svg>
+                  </div>
+                </summary>
+                <p className="text-[15px] text-text-light leading-[1.7] mt-3">
+                  {p.desc}
+                </p>
+              </details>
             </FadeUp>
           ))}
         </div>
