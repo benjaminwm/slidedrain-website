@@ -23,8 +23,8 @@ export default function StandardiseringRorlegger() {
               Hjørneplassert gulvsluk
             </span>
             <h2 className="text-[32px] max-md:text-[26px] font-bold leading-[1.2] mb-5 text-navy">
-              Ett sluk{" "}
-              <span className="text-orange">– flere tilvalg</span>
+              Ett sluk,{" "}
+              <span className="text-orange">flere tilvalg</span>
             </h2>
             <p className="text-[17px] text-text-light leading-[1.7] font-light mb-6">
               Slukpotten plasseres i hjørnet og kan brukes som hjørnesluk
