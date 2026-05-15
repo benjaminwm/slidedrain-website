@@ -2,9 +2,19 @@
 
 import Image from "next/image";
 import FadeUp from "./FadeUp";
-import { ShieldIcon, TrendingDownIcon, FileTextIcon } from "./icons";
+import { ShieldIcon, TrendingDownIcon } from "./icons";
 
-const features = [
+type Feature = {
+  icon?: React.ReactNode;
+  logoSrc?: string;
+  logoAlt?: string;
+  title: string;
+  desc: string;
+  href?: string;
+  linkLabel?: string;
+};
+
+const features: Feature[] = [
   {
     icon: <ShieldIcon className="w-6 h-6 stroke-orange" />,
     title: "Patentert innovasjon",
@@ -16,11 +26,12 @@ const features = [
     desc: "Færre komponenter i overgangen mellom sluk og membran reduserer risikoen for menneskelig svikt i den kritiske utførelsen.",
   },
   {
-    icon: <FileTextIcon className="w-6 h-6 stroke-orange" />,
+    logoSrc: "/images/badges/badge-sintef.png",
+    logoAlt: "SINTEF Teknisk Godkjenning",
     title: "SINTEF-godkjent",
     desc: "Systemet tilfredsstiller TEK-krav og er dokumentert med SINTEF Teknisk Godkjenning (TG 20991).",
-    href: "/downloads/TG-20991-Slidedrain-Sluksystem.pdf",
-    linkLabel: "Last ned TG-dokumentet",
+    href: "/downloads/Produktsertifikat-Slidedrain-Model-1.pdf",
+    linkLabel: "Last ned Produktsertifikatet",
   },
 ];
 
@@ -105,9 +116,21 @@ export default function SafetySection() {
               className="bg-white rounded-xl p-7 shadow-[0_2px_16px_rgba(40,52,71,0.06)] border border-navy/6"
               style={{ transitionDelay: `${i * 100}ms` }}
             >
-              <div className="w-12 h-12 bg-orange/8 rounded-xl flex items-center justify-center mb-4">
-                {f.icon}
-              </div>
+              {f.logoSrc ? (
+                <div className="mb-4 h-12 flex items-center">
+                  <Image
+                    src={f.logoSrc}
+                    alt={f.logoAlt ?? ""}
+                    width={48}
+                    height={48}
+                    className="h-12 w-auto object-contain"
+                  />
+                </div>
+              ) : (
+                <div className="w-12 h-12 bg-orange/8 rounded-xl flex items-center justify-center mb-4">
+                  {f.icon}
+                </div>
+              )}
               <h4 className="text-lg font-semibold mb-3 text-navy">{f.title}</h4>
               <p className="text-sm text-text-light leading-[1.7]">
                 {f.desc}
