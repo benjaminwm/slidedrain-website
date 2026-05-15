@@ -156,7 +156,11 @@ const faqs = [
   },
   {
     q: "Hva slags membran kan jeg benytte?",
-    a: "Slidedrain Gulvsluk sin Slukoverdel med påstøpt mansjett kan brukes med alle SINTEF-godkjente påstrykningsmembraner og foliemembraner. Se oversikt her: https://www.sintefcertification.no/Contents/Index/29. Slidedrain Slukoverdel med klemring kan brukes med alle SINTEF-godkjente påstrykningsmembraner, foliemembraner og banevaremembraner.",
+    a: [
+      "Slidedrain Gulvsluk sin Slukoverdel med påstøpt mansjett kan brukes med alle SINTEF-godkjente påstrykningsmembraner og foliemembraner.",
+      "Se oversikt her: https://www.sintefcertification.no/Contents/Index/29",
+      "Slidedrain Slukoverdel med klemring kan brukes med alle SINTEF-godkjente påstrykningsmembraner, foliemembraner og banevaremembraner.",
+    ],
   },
   {
     q: "Hva slags gulvsluk kan jeg bruke med slukrennene?",
@@ -754,9 +758,30 @@ export default function InstallasjonContent() {
                         <path d="M6 9l6 6 6-6" />
                       </svg>
                     </summary>
-                    <p className="text-[14px] text-text-light leading-[1.7] mt-3">
-                      {f.a}
-                    </p>
+                    <div className="text-[14px] text-text-light leading-[1.7] mt-3 space-y-3">
+                      {(Array.isArray(f.a) ? f.a : [f.a]).map((para, j) => {
+                        const parts = para.split(/(https?:\/\/[^\s]+)/g);
+                        return (
+                          <p key={j}>
+                            {parts.map((part, k) =>
+                              part.startsWith("http") ? (
+                                <a
+                                  key={k}
+                                  href={part}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="text-orange hover:text-orange-dark underline break-all"
+                                >
+                                  {part}
+                                </a>
+                              ) : (
+                                <span key={k}>{part}</span>
+                              )
+                            )}
+                          </p>
+                        );
+                      })}
+                    </div>
                   </details>
                 </FadeUp>
               ))}
