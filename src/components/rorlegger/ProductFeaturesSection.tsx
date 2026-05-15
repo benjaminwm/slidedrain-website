@@ -73,14 +73,16 @@ export default function ProductFeaturesSection() {
               <FadeUp className="flex justify-center">
                 <div className="w-full max-w-[520px] bg-white rounded-2xl overflow-hidden shadow-[0_8px_30px_rgba(40,52,71,0.08)]">
                   {f.imageSrc ? (
-                    <Image
-                      src={f.imageSrc}
-                      alt={f.imageAlt}
-                      width={1024}
-                      height={1024}
-                      className="w-full h-auto"
-                      unoptimized
-                    />
+                    <div className="aspect-[4/3] overflow-hidden">
+                      <Image
+                        src={f.imageSrc}
+                        alt={f.imageAlt}
+                        width={1024}
+                        height={1024}
+                        className="w-full h-full object-cover scale-[1.5]"
+                        unoptimized
+                      />
+                    </div>
                   ) : (
                     <Image
                       src={f.image!}
