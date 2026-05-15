@@ -27,10 +27,11 @@ const items: Item[] = [
   },
   {
     logos: [
-      { src: "/images/logo-brodrenedahl.svg", alt: "Brødrene Dahl", height: 36 },
+      { src: "/images/logo-brodrenedahl.svg", alt: "Brødrene Dahl", height: 32 },
+      { src: "/images/logo-flisekompaniet.svg", alt: "Flisekompaniet", height: 28 },
     ],
-    title: "Lagerført hos Brødrene Dahl",
-    desc: "Alt teknisk utstyr, fra slukpotter til monteringsverktøy, er lagerført hos Norges største VVS-grossist for rask levering til byggeplass.",
+    title: "Lagerført over hele Norge",
+    desc: "Slidedrain Sluksystem er lagerført hos Brødrene Dahl og Flisekompaniet – klart for rask levering til ditt prosjekt.",
     href: "https://www.dahl.no/merker/slidedrain",
     linkLabel: "Se hos Brødrene Dahl",
     external: true,
