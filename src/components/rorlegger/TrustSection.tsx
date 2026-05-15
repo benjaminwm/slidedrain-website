@@ -1,29 +1,34 @@
 "use client";
 
+import Image from "next/image";
 import FadeUp from "../FadeUp";
 
-const items = [
+type Logo = { src: string; alt: string; height: number };
+
+type Item = {
+  logos: Logo[];
+  title: string;
+  desc: string;
+  href?: string;
+  linkLabel?: string;
+  external?: boolean;
+};
+
+const items: Item[] = [
   {
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-6 h-6 stroke-orange">
-        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-        <polyline points="22 4 12 14.01 9 11.01" />
-      </svg>
-    ),
+    logos: [
+      { src: "/images/badges/badge-sintef.png", alt: "SINTEF Teknisk Godkjenning", height: 56 },
+    ],
     title: "SINTEF Teknisk Godkjenning",
     desc: "Slidedrain tilfredsstiller alle krav i TEK17 og er grundig testet og dokumentert (TG 20991).",
-    href: "/downloads/TG-20991-Slidedrain-Sluksystem.pdf",
-    linkLabel: "Last ned TG-dokumentet",
+    href: "/downloads/Produktsertifikat-Slidedrain-Model-1.pdf",
+    linkLabel: "Last ned Produktsertifikatet",
     external: true,
   },
   {
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-6 h-6 stroke-orange">
-        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
-        <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
-        <line x1="12" y1="22.08" x2="12" y2="12" />
-      </svg>
-    ),
+    logos: [
+      { src: "/images/logo-brodrenedahl.svg", alt: "Brødrene Dahl", height: 36 },
+    ],
     title: "Lagerført hos Brødrene Dahl",
     desc: "Alt teknisk utstyr, fra slukpotter til monteringsverktøy, er lagerført hos Norges største VVS-grossist for rask levering til byggeplass.",
     href: "https://www.dahl.no/merker/slidedrain",
@@ -31,12 +36,10 @@ const items = [
     external: true,
   },
   {
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-6 h-6 stroke-orange">
-        <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" />
-        <line x1="4" y1="22" x2="4" y2="15" />
-      </svg>
-    ),
+    logos: [
+      { src: "/images/badges/badge-norge-produsert.svg", alt: "Norge produsert", height: 56 },
+      { src: "/images/badges/badge-epd.png", alt: "EPD-Norge", height: 56 },
+    ],
     title: "Norskprodusert med EPD",
     desc: "Produsert i Norge av 100 % resirkulert plast, med full miljødokumentasjon for prosjekter med miljøkrav (BREEAM).",
     href: "/downloads/EPD-Slidedrain-Model-1.pdf",
@@ -65,8 +68,18 @@ export default function TrustSection() {
               key={i}
               className="bg-white rounded-xl p-9 border border-navy/8 shadow-[0_2px_16px_rgba(40,52,71,0.04)]"
             >
-              <div className="w-12 h-12 bg-orange/8 rounded-[10px] flex items-center justify-center mb-5">
-                {item.icon}
+              <div className="flex items-center gap-4 mb-5 h-14">
+                {item.logos.map((logo, j) => (
+                  <Image
+                    key={j}
+                    src={logo.src}
+                    alt={logo.alt}
+                    width={logo.height * 2}
+                    height={logo.height}
+                    style={{ height: logo.height, width: "auto" }}
+                    className="object-contain"
+                  />
+                ))}
               </div>
               <h3 className="text-xl font-semibold mb-3">{item.title}</h3>
               <p className="text-[15px] text-text-light leading-[1.7]">
