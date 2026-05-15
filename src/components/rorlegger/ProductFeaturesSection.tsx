@@ -10,8 +10,8 @@ const features = [
     pill: "Monteringsverktøy",
     title: "Trinnløs høydejustering",
     accent: "0–40 mm",
-    image: "/images/rorlegger/hoydejustering.webp",
-    imageAlt: "Slidedrain monteringsverktøy med høydejustering",
+    image: "/images/slukpotte-installed.jpg",
+    imageAlt: "Slidedrain monteringsverktøy installert i betong",
     body: "Slukoverdelen kan høydejusteres trinnløst opptil 40 mm etter montering av slukpotte, slik at sluket enkelt plasseres på badets laveste punkt. Monteringsverktøyet fungerer som forskaling med integrert vater og måleskala, og kan gjenbrukes i alle prosjekter.",
     bullets: [
       "Eliminerer behovet for forhøyningsringer",
