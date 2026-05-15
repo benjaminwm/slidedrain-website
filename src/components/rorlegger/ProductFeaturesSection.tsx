@@ -23,7 +23,7 @@ const features = [
     pill: "Apex-mansjett",
     title: "Skrueløs overgang til membran",
     accent: "uten klemring",
-    image: "/images/rorlegger/slukmansjett.webp",
+    image: "/images/rorlegger/slukoverdel-apex.png",
     imageAlt: "Slidedrain slukoverdel med integrert Apex-mansjett",
     body: "Slukoverdelen leveres med ferdig integrert slukmansjett som legges vått-i-vått med smøre- eller foliemembran. Dette gir en sømløs og tett overgang uten klemring, skruer og løse pakninger, og reduserer antall kritiske lekkasjepunkter.",
     bullets: [
