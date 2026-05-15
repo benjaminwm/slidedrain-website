@@ -10,8 +10,8 @@ const features = [
     pill: "Monteringsverktøy",
     title: "Trinnløs høydejustering",
     accent: "0–40 mm",
-    image: "/images/slukpotte-installed.jpg",
-    imageAlt: "Slidedrain monteringsverktøy installert i betong",
+    image: "/images/rorlegger/monteringsverktoy.png",
+    imageAlt: "Slidedrain monteringsverktøy, gjenbrukbart",
     body: "Slukoverdelen kan høydejusteres trinnløst opptil 40 mm etter montering av slukpotte, slik at sluket enkelt plasseres på badets laveste punkt. Monteringsverktøyet fungerer som forskaling med integrert vater og måleskala, og kan gjenbrukes i alle prosjekter.",
     bullets: [
       "Eliminerer behovet for forhøyningsringer",
@@ -53,8 +53,8 @@ export default function ProductFeaturesSection() {
       <div className="max-w-[1200px] mx-auto">
         <FadeUp className="text-center max-w-[800px] mx-auto mb-15">
           <h2 className="text-4xl max-md:text-[28px] font-bold mb-4 leading-tight text-navy">
-            Bygget for rørleggerens{" "}
-            <span className="text-orange">hverdag</span>
+            Designet for en{" "}
+            <span className="text-orange">enklere montering</span>
           </h2>
           <p className="text-[17px] text-text-light leading-[1.7] font-light">
             Tre tekniske valg som gjør monteringen raskere, mer fleksibel og

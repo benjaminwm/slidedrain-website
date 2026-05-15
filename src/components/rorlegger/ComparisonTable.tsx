@@ -117,32 +117,6 @@ export default function ComparisonTable() {
         </FadeUp>
 
         <FadeUp className="md:hidden">
-          <div className="grid grid-cols-2 gap-4 mb-8">
-            <div className="flex flex-col items-center gap-2">
-              <Image
-                src="/images/comparison-slidedrain.png"
-                alt="Slidedrain Sluksystem"
-                width={300}
-                height={240}
-                className="h-20 w-auto object-contain"
-              />
-              <span className="font-semibold text-orange text-center text-sm">
-                Slidedrain Sluksystem
-              </span>
-            </div>
-            <div className="flex flex-col items-center gap-2">
-              <Image
-                src="/images/comparison-traditional.png"
-                alt="Tradisjonelt linjesluk"
-                width={240}
-                height={240}
-                className="h-20 w-auto object-contain"
-              />
-              <span className="font-semibold text-text-light text-center text-sm">
-                Tradisjonelt linjesluk
-              </span>
-            </div>
-          </div>
           <ul className="space-y-4">
             {rows.map((r, i) => (
               <li
