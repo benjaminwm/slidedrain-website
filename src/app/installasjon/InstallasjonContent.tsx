@@ -553,8 +553,8 @@ export default function InstallasjonContent() {
                 <div className="grid md:grid-cols-2 gap-4 mb-10">
                   <div className="bg-white rounded-xl overflow-hidden border border-navy/10 shadow-[0_4px_20px_rgba(40,52,71,0.06)]">
                     <Image
-                      src="/images/installasjon/vannlas-sentrering-1.webp"
-                      alt="Vannlås-sentrering del 1"
+                      src="/images/installasjon/vannlas-sentrering-1.png"
+                      alt="Vannlås-sentrering — vertikal justering 130 mm med 25 mm slingringsrom topp og bunn"
                       width={1024}
                       height={553}
                       className="w-full h-auto"
@@ -562,8 +562,8 @@ export default function InstallasjonContent() {
                   </div>
                   <div className="bg-white rounded-xl overflow-hidden border border-navy/10 shadow-[0_4px_20px_rgba(40,52,71,0.06)]">
                     <Image
-                      src="/images/installasjon/vannlas-sentrering-2.webp"
-                      alt="Vannlås-sentrering del 2"
+                      src="/images/installasjon/vannlas-sentrering-2.png"
+                      alt="Vannlås-sentrering — horisontal justering 130 mm med 52,5 mm slingringsrom på hver side"
                       width={1024}
                       height={542}
                       className="w-full h-auto"
