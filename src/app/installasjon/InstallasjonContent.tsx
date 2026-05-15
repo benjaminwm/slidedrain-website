@@ -282,7 +282,7 @@ export default function InstallasjonContent() {
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-4 h-4">
                       <path d="M12 5v14M5 12l7 7 7-7" />
                     </svg>
-                    Produktsertifikat
+                    Teknisk Godkjenning
                   </a>
                   <a
                     href="/downloads/EPD-Slidedrain-Model-1.pdf"
@@ -313,15 +313,16 @@ export default function InstallasjonContent() {
                 <p className="text-[15px] text-text-light leading-relaxed mb-8">
                   Stegene inkluderer installasjon av slukoverdel med integrert
                   Apex-mansjett. For installasjon i støpt dekke, start fra steg 2.
+                  Installasjon med klemring finner du lenger ned på siden.
                 </p>
               </FadeUp>
               {gulvslukSteps.map((s, i) => (
                 <FadeUp
                   key={s.step}
-                  className="mb-6"
+                  className="mb-8"
                   style={{ transitionDelay: `${i * 80}ms` }}
                 >
-                  <div className="bg-gray-bg rounded-xl overflow-hidden">
+                  <div className="bg-white rounded-xl overflow-hidden border border-navy/10 shadow-[0_4px_20px_rgba(40,52,71,0.06)]">
                     <div className="bg-white border-b border-navy/5">
                       <Image
                         src={s.image}
@@ -366,10 +367,10 @@ export default function InstallasjonContent() {
               {klemringSteps.map((s, i) => (
                 <FadeUp
                   key={`klem-${s.step}`}
-                  className="mb-6"
+                  className="mb-8"
                   style={{ transitionDelay: `${i * 80}ms` }}
                 >
-                  <div className="bg-gray-bg rounded-xl overflow-hidden">
+                  <div className="bg-white rounded-xl overflow-hidden border border-navy/10 shadow-[0_4px_20px_rgba(40,52,71,0.06)]">
                     <div className="bg-white border-b border-navy/5">
                       <Image
                         src={s.image}
@@ -406,23 +407,45 @@ export default function InstallasjonContent() {
                   Membrankompatibilitet
                 </h3>
                 <div className="grid md:grid-cols-2 gap-6 text-[14px]">
-                  <div>
+                  <div className="flex flex-col">
                     <h4 className="font-semibold text-orange mb-2">
                       Slukoverdel med Apex-mansjett
                     </h4>
-                    <p className="text-text-light leading-[1.7]">
+                    <p className="text-text-light leading-[1.7] mb-4">
                       Kompatibel med alle SINTEF-godkjente smøremembraner og
                       foliemembraner.
                     </p>
+                    <a
+                      href="https://www.sintefcertification.no/Contents/Index/29"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 mt-auto text-sm font-semibold text-orange hover:text-orange-dark transition-colors"
+                    >
+                      Se godkjente membraner på SINTEF
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="w-4 h-4">
+                        <path d="M7 17L17 7M17 7H7M17 7v10" />
+                      </svg>
+                    </a>
                   </div>
-                  <div>
+                  <div className="flex flex-col">
                     <h4 className="font-semibold text-orange mb-2">
                       Slukoverdel med klemring
                     </h4>
-                    <p className="text-text-light leading-[1.7]">
+                    <p className="text-text-light leading-[1.7] mb-4">
                       Kompatibel med alle SINTEF-godkjente smøremembraner,
                       foliemembraner og baneveremembraner.
                     </p>
+                    <a
+                      href="https://www.sintefcertification.no/Contents/Index/29"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 mt-auto text-sm font-semibold text-orange hover:text-orange-dark transition-colors"
+                    >
+                      Se godkjente membraner på SINTEF
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="w-4 h-4">
+                        <path d="M7 17L17 7M17 7H7M17 7v10" />
+                      </svg>
+                    </a>
                   </div>
                 </div>
               </FadeUp>
@@ -488,7 +511,7 @@ export default function InstallasjonContent() {
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-4 h-4">
                       <path d="M12 5v14M5 12l7 7 7-7" />
                     </svg>
-                    Produktsertifikat
+                    Teknisk Godkjenning
                   </a>
                   <a
                     href="/downloads/EPD-Slidedrain-Model-1.pdf"
@@ -524,7 +547,7 @@ export default function InstallasjonContent() {
                   rørleggeren må treffe millimeterpresist.
                 </p>
                 <div className="grid md:grid-cols-2 gap-4 mb-10">
-                  <div className="bg-gray-bg rounded-xl overflow-hidden">
+                  <div className="bg-white rounded-xl overflow-hidden border border-navy/10 shadow-[0_4px_20px_rgba(40,52,71,0.06)]">
                     <Image
                       src="/images/installasjon/vannlas-sentrering-1.webp"
                       alt="Vannlås-sentrering del 1"
@@ -533,7 +556,7 @@ export default function InstallasjonContent() {
                       className="w-full h-auto"
                     />
                   </div>
-                  <div className="bg-gray-bg rounded-xl overflow-hidden">
+                  <div className="bg-white rounded-xl overflow-hidden border border-navy/10 shadow-[0_4px_20px_rgba(40,52,71,0.06)]">
                     <Image
                       src="/images/installasjon/vannlas-sentrering-2.webp"
                       alt="Vannlås-sentrering del 2"
@@ -556,7 +579,7 @@ export default function InstallasjonContent() {
                   slukrennen over vannlåsen og gir 25 mm justeringsmulighet.
                 </p>
                 <div className="grid md:grid-cols-2 gap-4 mb-10">
-                  <div className="bg-gray-bg rounded-xl overflow-hidden">
+                  <div className="bg-white rounded-xl overflow-hidden border border-navy/10 shadow-[0_4px_20px_rgba(40,52,71,0.06)]">
                     <Image
                       src="/images/installasjon/veggnar-A.webp"
                       alt="Veggnær plassering steg A"
@@ -565,7 +588,7 @@ export default function InstallasjonContent() {
                       className="w-full h-auto"
                     />
                   </div>
-                  <div className="bg-gray-bg rounded-xl overflow-hidden">
+                  <div className="bg-white rounded-xl overflow-hidden border border-navy/10 shadow-[0_4px_20px_rgba(40,52,71,0.06)]">
                     <Image
                       src="/images/installasjon/veggnar-B.webp"
                       alt="Veggnær plassering steg B"
@@ -589,10 +612,10 @@ export default function InstallasjonContent() {
               {renneTileSteps.map((s, i) => (
                 <FadeUp
                   key={`tile-${s.step}`}
-                  className="mb-6"
+                  className="mb-8"
                   style={{ transitionDelay: `${i * 80}ms` }}
                 >
-                  <div className="bg-gray-bg rounded-xl overflow-hidden">
+                  <div className="bg-white rounded-xl overflow-hidden border border-navy/10 shadow-[0_4px_20px_rgba(40,52,71,0.06)]">
                     <div className="bg-white border-b border-navy/5">
                       <Image
                         src={s.image}
@@ -636,10 +659,10 @@ export default function InstallasjonContent() {
               {renneRistSteps.map((s, i) => (
                 <FadeUp
                   key={`rist-${s.step}`}
-                  className="mb-6"
+                  className="mb-8"
                   style={{ transitionDelay: `${i * 80}ms` }}
                 >
-                  <div className="bg-gray-bg rounded-xl overflow-hidden">
+                  <div className="bg-white rounded-xl overflow-hidden border border-navy/10 shadow-[0_4px_20px_rgba(40,52,71,0.06)]">
                     <div className="bg-white border-b border-navy/5">
                       <Image
                         src={s.image}
@@ -681,7 +704,7 @@ export default function InstallasjonContent() {
                   slukrennen med dusjen og fjern smuss.
                 </p>
                 <div className="grid md:grid-cols-2 gap-4 mb-5">
-                  <div className="bg-gray-bg rounded-xl overflow-hidden">
+                  <div className="bg-white rounded-xl overflow-hidden border border-navy/10 shadow-[0_4px_20px_rgba(40,52,71,0.06)]">
                     <Image
                       src="/images/installasjon/rengjoring-tile-1.webp"
                       alt="Løft tile insert med medfølgende verktøy"
@@ -690,7 +713,7 @@ export default function InstallasjonContent() {
                       className="w-full h-auto"
                     />
                   </div>
-                  <div className="bg-gray-bg rounded-xl overflow-hidden">
+                  <div className="bg-white rounded-xl overflow-hidden border border-navy/10 shadow-[0_4px_20px_rgba(40,52,71,0.06)]">
                     <Image
                       src="/images/installasjon/rengjoring-tile-2.webp"
                       alt="Spyl slukrennen og fjern smuss"

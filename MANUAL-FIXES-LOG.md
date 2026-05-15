@@ -78,3 +78,9 @@ trenger manuell utførelse / nye filer fra Stian.
   header-bilde på entreprenør, og produktbilde-formatkonsistens).
 - **Video-redigering**: Installasjonsfilmen bør redigeres for å fjerne
   "Model 1"-omtaler. Krever ny opptak eller post-produksjon.
+
+## 🛠 Installasjon — feedback v3 (2026-05-15)
+
+- [ ] **Slukrenne — oppdaterte uthulling-diagrammer på "Posisjonering"-seksjonen.** Stian ønsker å bytte de to bildene som viser slukpotte-sentrering (`vannlas-sentrering-1.webp` og `vannlas-sentrering-2.webp`) med oppdaterte versjoner som viser ny uthulling (235×180 mm, 130 mm sentral, 52,5 mm sider, 25 mm topp/bunn). Krever de nye bildefilene fra Stian.
+
+- [ ] **SINTEF-filter-URL på Membrankompatibilitet.** Lagt til to "Se godkjente membraner på SINTEF"-knapper. Begge lenker nå til hovedsiden `https://www.sintefcertification.no/Contents/Index/29`. Stian må sende de eksakte filter-URLene (én for smøre+folie, én for smøre+folie+banevare) for å skille de to knappene.
