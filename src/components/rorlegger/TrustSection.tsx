@@ -3,7 +3,7 @@
 import Image from "next/image";
 import FadeUp from "../FadeUp";
 
-type Logo = { src: string; alt: string; height: number };
+type Logo = { src: string; alt: string; heightClass: string };
 
 type Item = {
   logos: Logo[];
@@ -17,7 +17,11 @@ type Item = {
 const items: Item[] = [
   {
     logos: [
-      { src: "/images/badges/badge-sintef.png", alt: "SINTEF Teknisk Godkjenning", height: 56 },
+      {
+        src: "/images/badges/badge-sintef.png",
+        alt: "SINTEF Teknisk Godkjenning",
+        heightClass: "h-12 sm:h-14",
+      },
     ],
     title: "SINTEF Teknisk Godkjenning",
     desc: "Slidedrain tilfredsstiller alle krav i TEK17 og er grundig testet og dokumentert (TG 20991).",
@@ -27,8 +31,16 @@ const items: Item[] = [
   },
   {
     logos: [
-      { src: "/images/logo-brodrenedahl.svg", alt: "Brødrene Dahl", height: 22 },
-      { src: "/images/logo-flisekompaniet.svg", alt: "Flisekompaniet", height: 20 },
+      {
+        src: "/images/logo-brodrenedahl.svg",
+        alt: "Brødrene Dahl",
+        heightClass: "h-5 sm:h-6",
+      },
+      {
+        src: "/images/logo-flisekompaniet.svg",
+        alt: "Flisekompaniet",
+        heightClass: "h-4 sm:h-5",
+      },
     ],
     title: "Lagerført over hele Norge",
     desc: "Slidedrain Sluksystem er lagerført hos Brødrene Dahl og Flisekompaniet – klart for rask levering til ditt prosjekt.",
@@ -38,8 +50,16 @@ const items: Item[] = [
   },
   {
     logos: [
-      { src: "/images/badges/badge-norge-produsert.svg", alt: "Norge produsert", height: 56 },
-      { src: "/images/badges/badge-epd.png", alt: "EPD-Norge", height: 56 },
+      {
+        src: "/images/badges/badge-norge-produsert.svg",
+        alt: "Norge produsert",
+        heightClass: "h-12 sm:h-14",
+      },
+      {
+        src: "/images/badges/badge-epd.png",
+        alt: "EPD-Norge",
+        heightClass: "h-12 sm:h-14",
+      },
     ],
     title: "Norskprodusert med EPD",
     desc: "Produsert i Norge av 100 % resirkulert plast, med full miljødokumentasjon for prosjekter med miljøkrav (BREEAM).",
@@ -69,16 +89,15 @@ export default function TrustSection() {
               key={i}
               className="bg-white rounded-xl p-9 border border-navy/8 shadow-[0_2px_16px_rgba(40,52,71,0.04)]"
             >
-              <div className="flex items-center gap-4 mb-5 h-14">
+              <div className="flex items-center gap-4 mb-5 h-12 sm:h-14">
                 {item.logos.map((logo, j) => (
                   <Image
                     key={j}
                     src={logo.src}
                     alt={logo.alt}
-                    width={logo.height * 2}
-                    height={logo.height}
-                    style={{ height: logo.height, width: "auto" }}
-                    className="object-contain"
+                    width={120}
+                    height={56}
+                    className={`w-auto object-contain ${logo.heightClass}`}
                   />
                 ))}
               </div>
