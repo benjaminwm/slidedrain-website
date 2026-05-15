@@ -11,13 +11,13 @@ export default function AboutHero() {
             Om Slidedrain
           </span>
           <h1 className="text-[42px] max-lg:text-[34px] max-sm:text-[28px] font-bold leading-[1.2] mb-5 text-navy">
-            Norsk innovasjon for{" "}
-            <span className="text-orange">tryggere bad</span>
+            Om <span className="text-orange">Slidedrain</span>
           </h1>
           <p className="text-lg text-text-light leading-[1.7] font-light">
-            Slidedrain er utviklet i tett samarbeid med norske håndverkere for
-            norske forhold. Vår patenterte teknologi eliminerer de vanligste
-            årsakene til vannskader i overgangen mellom gulvsluk og membran.
+            Slidedrain AS utvikler neste generasjons gulvsluk. Selskapet har
+            utspring som startup fra NTNU, og lanserte sitt første produkt i
+            mars 2023 hos Brødrene Dahl, etter et mangeårig utviklingssamarbeid
+            med den ledende VVS-grossisten.
           </p>
         </div>
         <div className="flex justify-center items-center max-lg:order-first">
