@@ -100,8 +100,8 @@ export default function Footer() {
             <Link href="/personvern" className="hover:text-navy transition-colors">
               Personvern
             </Link>
-            <Link href="/vilkar" className="hover:text-navy transition-colors">
-              Vilkår
+            <Link href="/cookies" className="hover:text-navy transition-colors">
+              Cookies
             </Link>
           </div>
         </div>

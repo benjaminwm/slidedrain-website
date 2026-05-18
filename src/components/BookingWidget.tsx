@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { trackConversion, trackEvent } from "@/lib/analytics";
 
 export default function BookingWidget() {
   const [formData, setFormData] = useState({
@@ -9,13 +10,43 @@ export default function BookingWidget() {
     company: "",
     phone: "",
     message: "",
+    company_url: "", // honeypot
   });
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // TODO: Integrate with Supabase / calendar API
-    setSubmitted(true);
+    setSending(true);
+    setError(null);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          ...formData,
+          source: "booking-widget",
+        }),
+      });
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        throw new Error(data.error || "Kunne ikke sende meldingen");
+      }
+      trackEvent("contact_form_submit", {
+        lead_source: "booking-widget",
+        value: 100,
+        currency: "NOK",
+      });
+      trackConversion("contact_submit", { lead_source: "booking-widget" });
+      setSubmitted(true);
+    } catch (err) {
+      setError(
+        err instanceof Error ? err.message : "Noe gikk galt. Prøv igjen."
+      );
+    } finally {
+      setSending(false);
+    }
   };
 
   if (submitted) {
@@ -48,6 +79,25 @@ export default function BookingWidget() {
         Fyll inn skjemaet, så kontakter vi deg for å avtale et tidspunkt.
       </p>
       <form onSubmit={handleSubmit} className="space-y-4">
+        {/* Honeypot — skjult fra ekte brukere */}
+        <input
+          type="text"
+          name="company_url"
+          tabIndex={-1}
+          autoComplete="off"
+          value={formData.company_url}
+          onChange={(e) =>
+            setFormData({ ...formData, company_url: e.target.value })
+          }
+          aria-hidden="true"
+          style={{
+            position: "absolute",
+            left: "-10000px",
+            width: "1px",
+            height: "1px",
+            overflow: "hidden",
+          }}
+        />
         <div className="grid grid-cols-2 gap-4">
           <div>
             <label className="block text-xs font-medium text-text-light mb-1">
@@ -110,9 +160,10 @@ export default function BookingWidget() {
         </div>
         <div>
           <label className="block text-xs font-medium text-text-light mb-1">
-            Melding
+            Melding *
           </label>
           <textarea
+            required
             rows={3}
             value={formData.message}
             onChange={(e) =>
@@ -122,11 +173,15 @@ export default function BookingWidget() {
             placeholder="Fortell oss litt om prosjektet..."
           />
         </div>
+        {error && (
+          <p className="text-[12px] text-red font-medium">{error}</p>
+        )}
         <button
           type="submit"
-          className="w-full bg-orange text-white py-3 rounded-lg font-semibold text-sm hover:bg-orange-dark transition-all hover:-translate-y-0.5 shadow-[0_4px_14px_rgba(251,92,19,0.3)] cursor-pointer"
+          disabled={sending}
+          className="w-full bg-orange text-white py-3 rounded-lg font-semibold text-sm hover:bg-orange-dark transition-all hover:-translate-y-0.5 shadow-[0_4px_14px_rgba(251,92,19,0.3)] cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed"
         >
-          Send forespørsel
+          {sending ? "Sender..." : "Send forespørsel"}
         </button>
         <p className="text-[11px] text-text-light/60 text-center">
           Vi svarer normalt innen 24 timer

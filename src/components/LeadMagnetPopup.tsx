@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { trackConversion, trackEvent } from "@/lib/analytics";
 
 export default function LeadMagnetPopup() {
   const [open, setOpen] = useState(false);
@@ -50,6 +51,14 @@ export default function LeadMagnetPopup() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
+      });
+      trackEvent("generate_lead", {
+        lead_source: "leadmagnet-prosjektmappe",
+        value: 50,
+        currency: "NOK",
+      });
+      trackConversion("leadmagnet_download", {
+        lead_source: "leadmagnet-prosjektmappe",
       });
     } catch {
       // Still show success - PDF is available as direct download fallback

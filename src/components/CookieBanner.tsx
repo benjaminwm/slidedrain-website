@@ -1,12 +1,13 @@
 "use client";
 
 import { useEffect, useState } from "react";
-
-type CookieConsent = {
-  necessary: boolean;
-  analytics: boolean;
-  marketing: boolean;
-};
+import {
+  CookieConsent,
+  persistConsent,
+  readConsent,
+  trackEvent,
+  updateConsentMode,
+} from "@/lib/analytics";
 
 export default function CookieBanner() {
   const [show, setShow] = useState(false);
@@ -18,31 +19,35 @@ export default function CookieBanner() {
   });
 
   useEffect(() => {
-    const stored = localStorage.getItem("cookie-consent");
-    if (!stored) {
-      // Small delay to not flash on load
+    const existing = readConsent();
+    if (!existing) {
       const timer = setTimeout(() => setShow(true), 800);
       return () => clearTimeout(timer);
     }
+    // Sørg for at Consent Mode reflekterer lagret valg ved page load
+    updateConsentMode(existing);
   }, []);
 
   const saveConsent = (c: CookieConsent) => {
-    localStorage.setItem("cookie-consent", JSON.stringify(c));
+    persistConsent(c);
+    updateConsentMode(c);
+    // Custom event så direkte-Meta-Pixel og andre kan reagere
+    window.dispatchEvent(
+      new CustomEvent("sd-consent-update", { detail: c })
+    );
+    // Track for debugging i GTM Preview
+    trackEvent("cookie_consent_set", {
+      analytics: c.analytics,
+      marketing: c.marketing,
+    });
     setShow(false);
-    // TODO: Initialize analytics/marketing scripts based on consent
   };
 
-  const acceptAll = () => {
+  const acceptAll = () =>
     saveConsent({ necessary: true, analytics: true, marketing: true });
-  };
-
-  const acceptNecessary = () => {
+  const acceptNecessary = () =>
     saveConsent({ necessary: true, analytics: false, marketing: false });
-  };
-
-  const saveSelected = () => {
-    saveConsent(consent);
-  };
+  const saveSelected = () => saveConsent(consent);
 
   if (!show) return null;
 
@@ -56,7 +61,11 @@ export default function CookieBanner() {
           <p className="text-sm text-text-light leading-relaxed mb-4">
             Vi bruker informasjonskapsler for å sikre at nettsiden fungerer
             optimalt. I tillegg bruker vi cookies for analyse og
-            markedsføring, men kun med ditt samtykke.
+            markedsføring, men kun med ditt samtykke. Les mer i vår{" "}
+            <a href="/personvern" className="underline hover:text-orange">
+              personvernerklæring
+            </a>
+            .
           </p>
 
           {showDetails && (
@@ -83,7 +92,7 @@ export default function CookieBanner() {
                     Analyse
                   </span>
                   <p className="text-xs text-text-light">
-                    Hjelper oss å forstå bruksmønstre
+                    Hjelper oss å forstå bruksmønstre (GA4)
                   </p>
                 </div>
                 <input
@@ -101,7 +110,7 @@ export default function CookieBanner() {
                     Markedsføring
                   </span>
                   <p className="text-xs text-text-light">
-                    Brukes for å vise relevante annonser
+                    Brukes for å vise relevante annonser (Meta, Google Ads)
                   </p>
                 </div>
                 <input

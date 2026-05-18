@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import { trackConversion, trackEvent } from "@/lib/analytics";
 
 export default function CaseStudyPopup() {
   const [open, setOpen] = useState(false);
@@ -54,6 +55,14 @@ export default function CaseStudyPopup() {
           ...formData,
           source: "casestudy-rosendal",
         }),
+      });
+      trackEvent("generate_lead", {
+        lead_source: "casestudy-rosendal",
+        value: 50,
+        currency: "NOK",
+      });
+      trackConversion("casestudy_download", {
+        lead_source: "casestudy-rosendal",
       });
     } catch {
       // Still show success
