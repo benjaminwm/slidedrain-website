@@ -51,6 +51,33 @@ Begge har honeypot og enkel validering.
    - Target: **Web**
 2. Kopier `GTM-XXXXXXX`-ID-en til `NEXT_PUBLIC_GTM_ID` i Vercel.
 
+### 🚀 Hurtigvei: Importer ferdig oppsett
+
+Du kan importere hele oppsettet (variabler, triggere, alle 9 tags
+med consent-gating) direkte:
+
+1. I GTM: **Admin → Container → Import Container**
+2. Velg `gtm-import.json` fra repoet (eller [last ned fra GitHub](gtm-import.json))
+3. **Workspace**: Default Workspace
+4. **Import option**: Merge → Overwrite conflicting tags, triggers, and variables
+5. Klikk **Confirm**
+
+Etter import, fyll inn faktiske verdier i disse 6 Constants-variablene:
+
+| Variabel | Verdi (eksempel) |
+|---|---|
+| `Const — GA4 Measurement ID` | `G-XXXXXXXXXX` |
+| `Const — Meta Pixel ID` | `1234567890123456` |
+| `Const — Ads Conversion ID Contact` | `AW-1234567890` |
+| `Const — Ads Conversion Label Contact` | `aBcDeFgHiJkLmNoP` |
+| `Const — Ads Conversion ID Lead` | `AW-1234567890` |
+| `Const — Ads Conversion Label Lead` | `qRsTuVwXyZ123456` |
+
+Trykk så **Submit → Publish**. Da er du klar.
+
+Resten av denne seksjonen beskriver hva som er i import-filen (for
+referanse om du vil bygge manuelt eller endre noe).
+
 ### 3.1 Variabler i GTM
 
 Lag disse **Built-in Variables**:

@@ -1,0 +1,514 @@
+{
+  "exportFormatVersion": 2,
+  "exportTime": "2026-05-18T08:00:00.000Z",
+  "containerVersion": {
+    "path": "accounts/0/containers/0/versions/0",
+    "accountId": "0",
+    "containerId": "0",
+    "containerVersionId": "0",
+    "name": "Slidedrain — Launch v1",
+    "description": "GA4 + Meta Pixel + Google Ads med Consent Mode v2. Sett verdier i Constants-variablene før publish.",
+    "container": {
+      "path": "accounts/0/containers/0",
+      "accountId": "0",
+      "containerId": "0",
+      "name": "slidedrain.no",
+      "publicId": "GTM-XXXXXXX",
+      "usageContext": ["WEB"],
+      "fingerprint": "1747549200000",
+      "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/0/containers/0/workspaces?apiLink=container",
+      "features": {
+        "supportUserPermissions": true,
+        "supportEnvironments": true,
+        "supportWorkspaces": true,
+        "supportGtagConfigs": true,
+        "supportBuiltInVariables": true,
+        "supportClients": true,
+        "supportFolders": true,
+        "supportTags": true,
+        "supportTemplates": true,
+        "supportTriggers": true,
+        "supportVariables": true,
+        "supportVersions": true,
+        "supportZones": true,
+        "supportTransformations": true
+      },
+      "tagIds": ["GTM-XXXXXXX"]
+    },
+    "tag": [
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "tagId": "1",
+        "name": "GA4 — Configuration",
+        "type": "googtag",
+        "parameter": [
+          { "type": "TEMPLATE", "key": "tagId", "value": "{{Const — GA4 Measurement ID}}" }
+        ],
+        "fingerprint": "1747549200001",
+        "firingTriggerId": ["2147479553"],
+        "tagFiringOption": "ONCE_PER_EVENT",
+        "consentSettings": {
+          "consentStatus": "NEEDED",
+          "consentType": {
+            "type": "LIST",
+            "list": [{ "type": "TEMPLATE", "value": "analytics_storage" }]
+          }
+        }
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "tagId": "2",
+        "name": "GA4 — Event: contact_form_submit",
+        "type": "gaawe",
+        "parameter": [
+          { "type": "TEMPLATE", "key": "eventName", "value": "contact_form_submit" },
+          { "type": "TEMPLATE", "key": "measurementId", "value": "{{Const — GA4 Measurement ID}}" },
+          {
+            "type": "LIST",
+            "key": "eventParameters",
+            "list": [
+              {
+                "type": "MAP",
+                "map": [
+                  { "type": "TEMPLATE", "key": "name", "value": "lead_source" },
+                  { "type": "TEMPLATE", "key": "value", "value": "{{DLV — lead_source}}" }
+                ]
+              },
+              {
+                "type": "MAP",
+                "map": [
+                  { "type": "TEMPLATE", "key": "name", "value": "value" },
+                  { "type": "TEMPLATE", "key": "value", "value": "{{DLV — value}}" }
+                ]
+              },
+              {
+                "type": "MAP",
+                "map": [
+                  { "type": "TEMPLATE", "key": "name", "value": "currency" },
+                  { "type": "TEMPLATE", "key": "value", "value": "{{DLV — currency}}" }
+                ]
+              }
+            ]
+          }
+        ],
+        "fingerprint": "1747549200002",
+        "firingTriggerId": ["10"],
+        "tagFiringOption": "ONCE_PER_EVENT",
+        "consentSettings": {
+          "consentStatus": "NEEDED",
+          "consentType": {
+            "type": "LIST",
+            "list": [{ "type": "TEMPLATE", "value": "analytics_storage" }]
+          }
+        }
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "tagId": "3",
+        "name": "GA4 — Event: generate_lead",
+        "type": "gaawe",
+        "parameter": [
+          { "type": "TEMPLATE", "key": "eventName", "value": "generate_lead" },
+          { "type": "TEMPLATE", "key": "measurementId", "value": "{{Const — GA4 Measurement ID}}" },
+          {
+            "type": "LIST",
+            "key": "eventParameters",
+            "list": [
+              {
+                "type": "MAP",
+                "map": [
+                  { "type": "TEMPLATE", "key": "name", "value": "lead_source" },
+                  { "type": "TEMPLATE", "key": "value", "value": "{{DLV — lead_source}}" }
+                ]
+              },
+              {
+                "type": "MAP",
+                "map": [
+                  { "type": "TEMPLATE", "key": "name", "value": "value" },
+                  { "type": "TEMPLATE", "key": "value", "value": "{{DLV — value}}" }
+                ]
+              },
+              {
+                "type": "MAP",
+                "map": [
+                  { "type": "TEMPLATE", "key": "name", "value": "currency" },
+                  { "type": "TEMPLATE", "key": "value", "value": "{{DLV — currency}}" }
+                ]
+              }
+            ]
+          }
+        ],
+        "fingerprint": "1747549200003",
+        "firingTriggerId": ["11"],
+        "tagFiringOption": "ONCE_PER_EVENT",
+        "consentSettings": {
+          "consentStatus": "NEEDED",
+          "consentType": {
+            "type": "LIST",
+            "list": [{ "type": "TEMPLATE", "value": "analytics_storage" }]
+          }
+        }
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "tagId": "4",
+        "name": "Meta Pixel — Base + PageView",
+        "type": "html",
+        "parameter": [
+          {
+            "type": "TEMPLATE",
+            "key": "html",
+            "value": "<script>\n!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');\nfbq('init', '{{Const — Meta Pixel ID}}');\nfbq('track', 'PageView');\n</script>"
+          },
+          { "type": "BOOLEAN", "key": "supportDocumentWrite", "value": "false" }
+        ],
+        "fingerprint": "1747549200004",
+        "firingTriggerId": ["2147479553"],
+        "tagFiringOption": "ONCE_PER_LOAD",
+        "consentSettings": {
+          "consentStatus": "NEEDED",
+          "consentType": {
+            "type": "LIST",
+            "list": [{ "type": "TEMPLATE", "value": "ad_storage" }]
+          }
+        }
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "tagId": "5",
+        "name": "Meta Pixel — Lead",
+        "type": "html",
+        "parameter": [
+          {
+            "type": "TEMPLATE",
+            "key": "html",
+            "value": "<script>\nif (window.fbq) { fbq('track', 'Lead', { content_name: {{DLV — lead_source}}, value: {{DLV — value}}, currency: {{DLV — currency}} }); }\n</script>"
+          },
+          { "type": "BOOLEAN", "key": "supportDocumentWrite", "value": "false" }
+        ],
+        "fingerprint": "1747549200005",
+        "firingTriggerId": ["11"],
+        "tagFiringOption": "ONCE_PER_EVENT",
+        "consentSettings": {
+          "consentStatus": "NEEDED",
+          "consentType": {
+            "type": "LIST",
+            "list": [{ "type": "TEMPLATE", "value": "ad_storage" }]
+          }
+        }
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "tagId": "6",
+        "name": "Meta Pixel — Contact",
+        "type": "html",
+        "parameter": [
+          {
+            "type": "TEMPLATE",
+            "key": "html",
+            "value": "<script>\nif (window.fbq) { fbq('track', 'Contact', { content_name: {{DLV — lead_source}}, value: {{DLV — value}}, currency: {{DLV — currency}} }); }\n</script>"
+          },
+          { "type": "BOOLEAN", "key": "supportDocumentWrite", "value": "false" }
+        ],
+        "fingerprint": "1747549200006",
+        "firingTriggerId": ["10"],
+        "tagFiringOption": "ONCE_PER_EVENT",
+        "consentSettings": {
+          "consentStatus": "NEEDED",
+          "consentType": {
+            "type": "LIST",
+            "list": [{ "type": "TEMPLATE", "value": "ad_storage" }]
+          }
+        }
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "tagId": "7",
+        "name": "Google Ads — Conversion Linker",
+        "type": "gclidw",
+        "parameter": [
+          { "type": "BOOLEAN", "key": "enableCrossDomain", "value": "false" }
+        ],
+        "fingerprint": "1747549200007",
+        "firingTriggerId": ["2147479553"],
+        "tagFiringOption": "ONCE_PER_LOAD",
+        "consentSettings": {
+          "consentStatus": "NEEDED",
+          "consentType": {
+            "type": "LIST",
+            "list": [{ "type": "TEMPLATE", "value": "ad_storage" }]
+          }
+        }
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "tagId": "8",
+        "name": "Google Ads — Conversion: Contact",
+        "type": "awct",
+        "parameter": [
+          { "type": "TEMPLATE", "key": "conversionId", "value": "{{Const — Ads Conversion ID Contact}}" },
+          { "type": "TEMPLATE", "key": "conversionLabel", "value": "{{Const — Ads Conversion Label Contact}}" },
+          { "type": "TEMPLATE", "key": "conversionValue", "value": "{{DLV — value}}" },
+          { "type": "TEMPLATE", "key": "currencyCode", "value": "{{DLV — currency}}" },
+          { "type": "BOOLEAN", "key": "enableConversionLinker", "value": "true" }
+        ],
+        "fingerprint": "1747549200008",
+        "firingTriggerId": ["10"],
+        "tagFiringOption": "ONCE_PER_EVENT",
+        "consentSettings": {
+          "consentStatus": "NEEDED",
+          "consentType": {
+            "type": "LIST",
+            "list": [{ "type": "TEMPLATE", "value": "ad_storage" }]
+          }
+        }
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "tagId": "9",
+        "name": "Google Ads — Conversion: Lead",
+        "type": "awct",
+        "parameter": [
+          { "type": "TEMPLATE", "key": "conversionId", "value": "{{Const — Ads Conversion ID Lead}}" },
+          { "type": "TEMPLATE", "key": "conversionLabel", "value": "{{Const — Ads Conversion Label Lead}}" },
+          { "type": "TEMPLATE", "key": "conversionValue", "value": "{{DLV — value}}" },
+          { "type": "TEMPLATE", "key": "currencyCode", "value": "{{DLV — currency}}" },
+          { "type": "BOOLEAN", "key": "enableConversionLinker", "value": "true" }
+        ],
+        "fingerprint": "1747549200009",
+        "firingTriggerId": ["11"],
+        "tagFiringOption": "ONCE_PER_EVENT",
+        "consentSettings": {
+          "consentStatus": "NEEDED",
+          "consentType": {
+            "type": "LIST",
+            "list": [{ "type": "TEMPLATE", "value": "ad_storage" }]
+          }
+        }
+      }
+    ],
+    "trigger": [
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "triggerId": "10",
+        "name": "Custom Event — contact_form_submit",
+        "type": "CUSTOM_EVENT",
+        "customEventFilter": [
+          {
+            "type": "EQUALS",
+            "parameter": [
+              { "type": "TEMPLATE", "key": "arg0", "value": "{{_event}}" },
+              { "type": "TEMPLATE", "key": "arg1", "value": "contact_form_submit" }
+            ]
+          }
+        ],
+        "fingerprint": "1747549200010"
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "triggerId": "11",
+        "name": "Custom Event — generate_lead",
+        "type": "CUSTOM_EVENT",
+        "customEventFilter": [
+          {
+            "type": "EQUALS",
+            "parameter": [
+              { "type": "TEMPLATE", "key": "arg0", "value": "{{_event}}" },
+              { "type": "TEMPLATE", "key": "arg1", "value": "generate_lead" }
+            ]
+          }
+        ],
+        "fingerprint": "1747549200011"
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "triggerId": "12",
+        "name": "Custom Event — conversion",
+        "type": "CUSTOM_EVENT",
+        "customEventFilter": [
+          {
+            "type": "EQUALS",
+            "parameter": [
+              { "type": "TEMPLATE", "key": "arg0", "value": "{{_event}}" },
+              { "type": "TEMPLATE", "key": "arg1", "value": "conversion" }
+            ]
+          }
+        ],
+        "fingerprint": "1747549200012"
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "triggerId": "13",
+        "name": "Custom Event — cookie_consent_set",
+        "type": "CUSTOM_EVENT",
+        "customEventFilter": [
+          {
+            "type": "EQUALS",
+            "parameter": [
+              { "type": "TEMPLATE", "key": "arg0", "value": "{{_event}}" },
+              { "type": "TEMPLATE", "key": "arg1", "value": "cookie_consent_set" }
+            ]
+          }
+        ],
+        "fingerprint": "1747549200013"
+      }
+    ],
+    "variable": [
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "variableId": "100",
+        "name": "Const — GA4 Measurement ID",
+        "type": "c",
+        "parameter": [
+          { "type": "TEMPLATE", "key": "value", "value": "G-XXXXXXXXXX" }
+        ],
+        "fingerprint": "1747549200100"
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "variableId": "101",
+        "name": "Const — Meta Pixel ID",
+        "type": "c",
+        "parameter": [
+          { "type": "TEMPLATE", "key": "value", "value": "XXXXXXXXXXXXXXX" }
+        ],
+        "fingerprint": "1747549200101"
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "variableId": "102",
+        "name": "Const — Ads Conversion ID Contact",
+        "type": "c",
+        "parameter": [
+          { "type": "TEMPLATE", "key": "value", "value": "AW-XXXXXXXXXX" }
+        ],
+        "fingerprint": "1747549200102"
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "variableId": "103",
+        "name": "Const — Ads Conversion Label Contact",
+        "type": "c",
+        "parameter": [
+          { "type": "TEMPLATE", "key": "value", "value": "XXXXXXXXXXXXXXXX" }
+        ],
+        "fingerprint": "1747549200103"
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "variableId": "104",
+        "name": "Const — Ads Conversion ID Lead",
+        "type": "c",
+        "parameter": [
+          { "type": "TEMPLATE", "key": "value", "value": "AW-XXXXXXXXXX" }
+        ],
+        "fingerprint": "1747549200104"
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "variableId": "105",
+        "name": "Const — Ads Conversion Label Lead",
+        "type": "c",
+        "parameter": [
+          { "type": "TEMPLATE", "key": "value", "value": "XXXXXXXXXXXXXXXX" }
+        ],
+        "fingerprint": "1747549200105"
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "variableId": "200",
+        "name": "DLV — lead_source",
+        "type": "v",
+        "parameter": [
+          { "type": "INTEGER", "key": "dataLayerVersion", "value": "2" },
+          { "type": "BOOLEAN", "key": "setDefaultValue", "value": "true" },
+          { "type": "TEMPLATE", "key": "name", "value": "lead_source" },
+          { "type": "TEMPLATE", "key": "defaultValue", "value": "unknown" }
+        ],
+        "fingerprint": "1747549200200"
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "variableId": "201",
+        "name": "DLV — value",
+        "type": "v",
+        "parameter": [
+          { "type": "INTEGER", "key": "dataLayerVersion", "value": "2" },
+          { "type": "BOOLEAN", "key": "setDefaultValue", "value": "true" },
+          { "type": "TEMPLATE", "key": "name", "value": "value" },
+          { "type": "TEMPLATE", "key": "defaultValue", "value": "0" }
+        ],
+        "fingerprint": "1747549200201"
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "variableId": "202",
+        "name": "DLV — currency",
+        "type": "v",
+        "parameter": [
+          { "type": "INTEGER", "key": "dataLayerVersion", "value": "2" },
+          { "type": "BOOLEAN", "key": "setDefaultValue", "value": "true" },
+          { "type": "TEMPLATE", "key": "name", "value": "currency" },
+          { "type": "TEMPLATE", "key": "defaultValue", "value": "NOK" }
+        ],
+        "fingerprint": "1747549200202"
+      },
+      {
+        "accountId": "0",
+        "containerId": "0",
+        "variableId": "203",
+        "name": "DLV — conversion_id",
+        "type": "v",
+        "parameter": [
+          { "type": "INTEGER", "key": "dataLayerVersion", "value": "2" },
+          { "type": "BOOLEAN", "key": "setDefaultValue", "value": "true" },
+          { "type": "TEMPLATE", "key": "name", "value": "conversion_id" },
+          { "type": "TEMPLATE", "key": "defaultValue", "value": "" }
+        ],
+        "fingerprint": "1747549200203"
+      }
+    ],
+    "builtInVariable": [
+      { "accountId": "0", "containerId": "0", "type": "PAGE_URL", "name": "Page URL" },
+      { "accountId": "0", "containerId": "0", "type": "PAGE_HOSTNAME", "name": "Page Hostname" },
+      { "accountId": "0", "containerId": "0", "type": "PAGE_PATH", "name": "Page Path" },
+      { "accountId": "0", "containerId": "0", "type": "REFERRER", "name": "Referrer" },
+      { "accountId": "0", "containerId": "0", "type": "EVENT", "name": "Event" },
+      { "accountId": "0", "containerId": "0", "type": "CLICK_ELEMENT", "name": "Click Element" },
+      { "accountId": "0", "containerId": "0", "type": "CLICK_CLASSES", "name": "Click Classes" },
+      { "accountId": "0", "containerId": "0", "type": "CLICK_ID", "name": "Click ID" },
+      { "accountId": "0", "containerId": "0", "type": "CLICK_TARGET", "name": "Click Target" },
+      { "accountId": "0", "containerId": "0", "type": "CLICK_URL", "name": "Click URL" },
+      { "accountId": "0", "containerId": "0", "type": "CLICK_TEXT", "name": "Click Text" },
+      { "accountId": "0", "containerId": "0", "type": "FORM_ELEMENT", "name": "Form Element" },
+      { "accountId": "0", "containerId": "0", "type": "FORM_CLASSES", "name": "Form Classes" },
+      { "accountId": "0", "containerId": "0", "type": "FORM_ID", "name": "Form ID" },
+      { "accountId": "0", "containerId": "0", "type": "FORM_TARGET", "name": "Form Target" },
+      { "accountId": "0", "containerId": "0", "type": "FORM_URL", "name": "Form URL" },
+      { "accountId": "0", "containerId": "0", "type": "FORM_TEXT", "name": "Form Text" }
+    ],
+    "fingerprint": "1747549200999"
+  }
+}
