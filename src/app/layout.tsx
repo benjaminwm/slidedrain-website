@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Fira_Sans } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import CookieBanner from "@/components/CookieBanner";
 import MeetingsSlideIn from "@/components/MeetingsSlideIn";
@@ -50,6 +51,7 @@ export default function RootLayout({
         {children}
         <MeetingsSlideIn />
         <CookieBanner />
+        <Analytics />
       </body>
     </html>
   );
