@@ -26,10 +26,10 @@ export default function StandardiseringSection() {
             </span>
             <h2 className="text-[32px] max-md:text-[26px] font-bold leading-[1.2] mb-5 text-navy">
               Standardiser byggeprosjektet fra{" "}
-              <span className="text-orange">planlegging til flislegging</span>
+              <span className="text-orange">prosjektering til flislegging</span>
             </h2>
             <p className="text-[17px] text-text-light leading-[1.7] font-light mb-6">
-              Standardiser byggeprosjektet fra planlegging til flislegging, ved å
+              Standardiser byggeprosjektet fra prosjektering til flislegging, ved å
               forenkle prosjektering, innkjøp og montering av gulvsluk for alle
               flislagte bad.
             </p>

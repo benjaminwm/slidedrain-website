@@ -136,7 +136,7 @@ const renneRistSteps: Step[] = [
 const faqs = [
   {
     q: "Må jeg kjøpe slukmansjetten separat?",
-    a: "Nei. Slukmansjettene kommer ferdig påstøpt og tilkuttet slukoverdelen. Alt du behøver å gjøre er å smøre godkjent membran våt i våt, i henhold til membranleverandørens instrukser.",
+    a: "Nei. Slukoverdelen leveres med en ferdig integrert slukmansjett. Det eneste du trenger å gjøre er å påføre godkjent membran vått-i-vått, i henhold til membranleverandørens anvisninger.",
   },
   {
     q: "Hvor lenge kan jeg bruke monteringsverktøyet?",
@@ -144,15 +144,26 @@ const faqs = [
   },
   {
     q: "Hvilken type slukrist passer til Slidedrain Gulvsluk?",
-    a: "Du kan benytte vanlige sirkulære og rektangulære slukrister med ramme til flisbelagt gulv. Det viktigste er å sørge for at det er mulig å få ut vannlåsen, som har en diameter på Ø126 mm. Slidedrain sine egne Slukrister og Slukrenner er perfekt tilpasset bruk med Slidedrain Gulvsluk, med stor fleksibilitet under installasjon.",
+    a: [
+      "Du kan benytte vanlige rektangulære slukrister med ramme til flisbelagt gulv. Det viktigste er å sikre at vannlåsen, som har en diameter på Ø126 mm, enkelt kan tas ut for rengjøring og vedlikehold.",
+      "Slidedrain sine egne slukrister og slukrenner er spesielt utviklet for bruk med Slidedrain Gulvsluk, og gir stor fleksibilitet under installasjonen.",
+      "Slidedrain sin sirkulære slukrist er utviklet for slukoverdelen med klemring, og er beregnet for bruk på vinylgulv.",
+    ],
   },
   {
     q: "Fungerer Slidedrain Gulvsluk til vinylgulv?",
-    a: "Slukoverdelen med klemring i rustfritt stål kan du uten problem legge både vinyl og alle andre typer membraner.",
+    a: [
+      "Ja. Slidedrain Gulvsluk kan benyttes med vinylgulv ved bruk av slukoverdel med klemring i rustfritt stål. Løsningen er også kompatibel med andre typer membraner.",
+      "Slidedrain sin sirkulære slukrist er spesielt utviklet for slukoverdelen med klemring, og er beregnet for bruk sammen med vinylgulv.",
+    ],
   },
   {
     q: "Må jeg kjøpe alle tre gulvsluk-produktene?",
-    a: "For en komplett og profesjonell installasjon kreves det bruk av slukpotte, slukoverdel og monteringsverktøy. Husk at monteringsverktøyet kan gjenbrukes i fremtidige prosjekter, slik at du ikke trenger å anskaffe dette for hver montasje.",
+    a: [
+      "Monteringsverktøyet kan gjenbrukes i fremtidige prosjekter, slik at du ikke trenger å kjøpe dette på nytt ved hver installasjon.",
+      "Slidedrain Gulvsluk kan benyttes som punktsluk, linjesluk eller hjørnesluk. Løsningen kombineres med kvadratisk slukrist, slukrenne eller hjørnerist fra produktserien Slidedrain Slukrenner og Slukrister.",
+      "Slidedrain Sluksystem har teknisk godkjenning fra SINTEF og er utviklet for sikker og fleksibel installasjon i moderne våtrom.",
+    ],
   },
   {
     q: "Hva slags membran kan jeg benytte?",
@@ -163,8 +174,12 @@ const faqs = [
     ],
   },
   {
-    q: "Hva slags gulvsluk kan jeg bruke med slukrennene?",
-    a: "Slidedrain Slukrenner passer med alle sirkulære gulvsluk. Vi anbefaler Slidedrain Gulvsluk for mest mulig fleksibilitet og sikkerhet.",
+    q: "Hva slags gulvsluk kan jeg bruke til Slidedrain Slukrenner og Slukrister?",
+    a: [
+      "Slidedrain Slukrenner og Slukrister passer med alle sirkulære gulvsluk, og kan benyttes i henhold til bestemmelsene i TEK17 og Byggforskserien.",
+      "For maksimal fleksibilitet, optimal tilpasning og en trygg installasjon anbefaler vi bruk sammen med Slidedrain Gulvsluk.",
+      "Slidedrain Sluksystem har SINTEF Teknisk Godkjenning, og forutsetter at systemet benyttes i sin helhet med Slidedrain Gulvsluk i kombinasjon med Slidedrain Slukrenner og Slukrister.",
+    ],
   },
   {
     q: "Hvor mye vekt tåler slukrennene?",
@@ -496,7 +511,7 @@ export default function InstallasjonContent() {
                 </p>
                 <div className="flex flex-wrap gap-2 mb-10">
                   <a
-                    href="https://slidedrain.no/wp-content/uploads/2024/04/Monteringsanvisning-Slukrenner-og-Rister.pdf"
+                    href="/downloads/Monteringsanvisning-Slidedrain-Slukrenner.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 text-sm bg-gray-bg text-navy px-4 py-2 rounded-lg hover:bg-navy/10 transition-colors font-medium"
