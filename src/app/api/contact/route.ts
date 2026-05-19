@@ -73,33 +73,54 @@ export async function POST(req: NextRequest) {
     const safeMessage = escape(message).replace(/\n/g, "<br>");
     const safeSource = source ? escape(source) : "nettsiden";
 
-    // 1) Internal notification
-    const internalBody = `
-      <h2 style="font-size:20px; margin:0 0 16px;">Ny henvendelse fra ${safeName}</h2>
-      <p style="font-size:14px; color:#5a6a80; margin:0 0 20px;">
-        Innsendt via ${safeSource}.
-      </p>
-      <table cellpadding="0" cellspacing="0" style="width:100%; font-size:14px; margin-bottom:20px;">
-        <tr><td style="padding:6px 0; color:#5a6a80; width:120px;">Navn</td><td style="padding:6px 0; font-weight:600;">${safeName}</td></tr>
-        <tr><td style="padding:6px 0; color:#5a6a80;">E-post</td><td style="padding:6px 0;"><a href="mailto:${safeEmail}" style="color:#fb5c13;">${safeEmail}</a></td></tr>
-        ${safePhone ? `<tr><td style="padding:6px 0; color:#5a6a80;">Telefon</td><td style="padding:6px 0;">${safePhone}</td></tr>` : ""}
-        ${safeCompany ? `<tr><td style="padding:6px 0; color:#5a6a80;">Firma</td><td style="padding:6px 0;">${safeCompany}</td></tr>` : ""}
-      </table>
-      <div style="background:#f6f6f6; border-left:4px solid #fb5c13; padding:16px 20px; border-radius:0 8px 8px 0;">
-        <p style="font-size:13px; color:#283447; margin:0 0 8px; font-weight:600;">Melding</p>
-        <p style="font-size:14px; color:#5a6a80; margin:0; line-height:1.7;">${safeMessage}</p>
-      </div>
-    `;
+    // 1) Internal notification — bevisst tekst-aktig, ikke branded.
+    // Føles som en vanlig mail fra kunden; svar går rett til replyTo.
+    const meta: string[] = [];
+    if (safePhone) meta.push(`Telefon: ${safePhone}`);
+    if (safeCompany) meta.push(`Firma: ${safeCompany}`);
+    const metaLines = meta.length
+      ? meta.map((l) => `<div>${l}</div>`).join("")
+      : "";
+
+    const internalHtml = `<!DOCTYPE html>
+<html lang="nb">
+<head><meta charset="utf-8"></head>
+<body style="margin:0; padding:24px; background:#ffffff; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; color:#1a1a1a; font-size:15px; line-height:1.6;">
+<div style="display:none; max-height:0; overflow:hidden;">Ny henvendelse fra ${safeName}</div>
+<div style="max-width:560px;">
+  <div style="margin:0 0 4px;"><strong>${safeName}</strong> &lt;<a href="mailto:${safeEmail}" style="color:#1a1a1a;">${safeEmail}</a>&gt;</div>
+  ${metaLines}
+  <div style="margin:20px 0; white-space:pre-wrap;">${safeMessage}</div>
+  <hr style="border:none; border-top:1px solid #e5e5e5; margin:24px 0;">
+  <div style="font-size:13px; color:#888;">
+    Svar direkte på denne e-posten for å nå ${safeName}.<br>
+    Innsendt via ${safeSource} fra slidedrain.no.
+  </div>
+</div>
+</body>
+</html>`;
+
+    const internalText = [
+      `${name} <${email}>`,
+      phone ? `Telefon: ${phone}` : null,
+      company ? `Firma: ${company}` : null,
+      "",
+      message,
+      "",
+      "—",
+      `Svar direkte på denne e-posten for å nå ${name}.`,
+      `Innsendt via ${source || "nettsiden"} fra slidedrain.no.`,
+    ]
+      .filter((l) => l !== null)
+      .join("\n");
 
     const { data: internalData, error: internalErr } = await resend.emails.send({
       from: FROM_EMAIL,
       to: INTERNAL_NOTIFY,
       replyTo: email,
       subject: `Ny henvendelse: ${name}`,
-      html: emailTemplate({
-        preheader: `${name} har sendt en henvendelse via nettsiden`,
-        body: internalBody,
-      }),
+      html: internalHtml,
+      text: internalText,
     });
 
     if (internalErr) {
