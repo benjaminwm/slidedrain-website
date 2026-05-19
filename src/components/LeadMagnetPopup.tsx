@@ -2,6 +2,9 @@
 
 import { useEffect, useState } from "react";
 import { trackConversion, trackEvent } from "@/lib/analytics";
+import { dismissPopup, isPopupDismissed } from "@/lib/popupDismiss";
+
+const DISMISS_KEY = "leadmagnet-dismissed-until";
 
 export default function LeadMagnetPopup() {
   const [open, setOpen] = useState(false);
@@ -9,8 +12,7 @@ export default function LeadMagnetPopup() {
   const [submitted, setSubmitted] = useState(false);
 
   useEffect(() => {
-    // Don't show if already dismissed/submitted this session
-    if (sessionStorage.getItem("leadmagnet-dismissed")) return;
+    if (isPopupDismissed(DISMISS_KEY)) return;
 
     const handleScroll = () => {
       // Don't show if cookie banner is still visible
@@ -24,7 +26,7 @@ export default function LeadMagnetPopup() {
 
     // Also show after 30 seconds as fallback (after cookie banner is likely dismissed)
     const timer = setTimeout(() => {
-      if (!sessionStorage.getItem("leadmagnet-dismissed") && localStorage.getItem("cookie-consent")) {
+      if (!isPopupDismissed(DISMISS_KEY) && localStorage.getItem("cookie-consent")) {
         setOpen(true);
       }
     }, 30000);
@@ -38,7 +40,7 @@ export default function LeadMagnetPopup() {
 
   const handleClose = () => {
     setOpen(false);
-    sessionStorage.setItem("leadmagnet-dismissed", "true");
+    dismissPopup(DISMISS_KEY);
   };
 
   const [sending, setSending] = useState(false);
@@ -65,7 +67,7 @@ export default function LeadMagnetPopup() {
     }
     setSending(false);
     setSubmitted(true);
-    sessionStorage.setItem("leadmagnet-dismissed", "true");
+    dismissPopup(DISMISS_KEY);
   };
 
   if (!open) return null;

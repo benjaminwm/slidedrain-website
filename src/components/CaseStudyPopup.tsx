@@ -3,14 +3,9 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { trackConversion, trackEvent } from "@/lib/analytics";
+import { dismissPopup, isPopupDismissed } from "@/lib/popupDismiss";
 
 const DISMISS_KEY = "casestudy-dismissed-until";
-const DISMISS_WINDOW_MS = 48 * 60 * 60 * 1000;
-
-function isDismissed() {
-  const until = Number(localStorage.getItem(DISMISS_KEY) || 0);
-  return until > Date.now();
-}
 
 export default function CaseStudyPopup() {
   const [open, setOpen] = useState(false);
@@ -19,7 +14,7 @@ export default function CaseStudyPopup() {
   const [sending, setSending] = useState(false);
 
   useEffect(() => {
-    if (isDismissed()) return;
+    if (isPopupDismissed(DISMISS_KEY)) return;
 
     const handleScroll = () => {
       if (!localStorage.getItem("cookie-consent")) return;
@@ -32,7 +27,7 @@ export default function CaseStudyPopup() {
     };
 
     const timer = setTimeout(() => {
-      if (!isDismissed() && localStorage.getItem("cookie-consent")) {
+      if (!isPopupDismissed(DISMISS_KEY) && localStorage.getItem("cookie-consent")) {
         setOpen(true);
       }
     }, 30000);
@@ -46,7 +41,7 @@ export default function CaseStudyPopup() {
 
   const handleClose = () => {
     setOpen(false);
-    localStorage.setItem(DISMISS_KEY, String(Date.now() + DISMISS_WINDOW_MS));
+    dismissPopup(DISMISS_KEY);
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -74,7 +69,7 @@ export default function CaseStudyPopup() {
     }
     setSending(false);
     setSubmitted(true);
-    localStorage.setItem(DISMISS_KEY, String(Date.now() + DISMISS_WINDOW_MS));
+    dismissPopup(DISMISS_KEY);
   };
 
   if (!open) return null;
