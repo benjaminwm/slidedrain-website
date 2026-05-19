@@ -33,10 +33,10 @@ export default function PersonvernPage() {
               <p className="mt-3">
                 Kontakt:{" "}
                 <a
-                  href="mailto:post@slidedrain.no"
+                  href="mailto:kontakt@slidedrain.no"
                   className="text-orange hover:text-orange-dark"
                 >
-                  post@slidedrain.no
+                  kontakt@slidedrain.no
                 </a>
               </p>
             </section>
@@ -138,10 +138,10 @@ export default function PersonvernPage() {
               <p className="mt-3">
                 Kontakt{" "}
                 <a
-                  href="mailto:post@slidedrain.no"
+                  href="mailto:kontakt@slidedrain.no"
                   className="text-orange hover:text-orange-dark"
                 >
-                  post@slidedrain.no
+                  kontakt@slidedrain.no
                 </a>{" "}
                 for å utøve rettighetene dine.
               </p>

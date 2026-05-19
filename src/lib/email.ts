@@ -3,8 +3,8 @@
  *
  * Bruker miljøvariabler:
  *   RESEND_API_KEY               — Resend API-key (server-side)
- *   RESEND_FROM_EMAIL            — Verifisert avsender, f.eks. "Slidedrain <post@slidedrain.no>"
- *   RESEND_INTERNAL_NOTIFY_EMAIL — Mottaker for interne notifications, f.eks. "post@slidedrain.no"
+ *   RESEND_FROM_EMAIL            — Verifisert avsender, f.eks. "Slidedrain <kontakt@slidedrain.no>"
+ *   RESEND_INTERNAL_NOTIFY_EMAIL — Mottaker for interne notifications, f.eks. "kontakt@slidedrain.no"
  *
  * Verifisert sending krever at slidedrain.no er verifisert som domene
  * i Resend (DKIM + SPF i DNS).
@@ -20,10 +20,10 @@ export function getResend(): Resend | null {
 }
 
 export const FROM_EMAIL =
-  process.env.RESEND_FROM_EMAIL || "Slidedrain <post@slidedrain.no>";
+  process.env.RESEND_FROM_EMAIL || "Slidedrain <kontakt@slidedrain.no>";
 
 export const INTERNAL_NOTIFY =
-  process.env.RESEND_INTERNAL_NOTIFY_EMAIL || "post@slidedrain.no";
+  process.env.RESEND_INTERNAL_NOTIFY_EMAIL || "kontakt@slidedrain.no";
 
 /**
  * Slidedrain-mal — wrapper innhold i brand-styling.
@@ -59,7 +59,7 @@ export function emailTemplate(opts: {
         Slidedrain AS &middot;
         <a href="https://slidedrain.no" style="color:rgba(255,255,255,0.6); text-decoration:none;">slidedrain.no</a>
         &middot;
-        <a href="mailto:post@slidedrain.no" style="color:rgba(255,255,255,0.6); text-decoration:none;">post@slidedrain.no</a>
+        <a href="mailto:kontakt@slidedrain.no" style="color:rgba(255,255,255,0.6); text-decoration:none;">kontakt@slidedrain.no</a>
       </p>
     </div>
   </div>
