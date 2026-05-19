@@ -79,11 +79,11 @@ export default function LeadMagnetPopup() {
       />
 
       {/* Modal */}
-      <div className="relative bg-white rounded-2xl shadow-[0_25px_60px_rgba(0,0,0,0.25)] max-w-[520px] w-full animate-[slideUp_0.4s_ease] overflow-hidden max-h-[92vh] overflow-y-auto">
+      <div className="relative bg-white rounded-2xl shadow-[0_25px_60px_rgba(0,0,0,0.25)] max-w-[520px] w-full animate-[slideUp_0.4s_ease] overflow-hidden max-h-[calc(100dvh-2rem)] flex flex-col">
         {/* Close button */}
         <button
           onClick={handleClose}
-          className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full hover:bg-navy/5 transition-colors z-10 cursor-pointer"
+          className="absolute top-3 right-3 w-9 h-9 flex items-center justify-center rounded-full bg-white/90 hover:bg-navy/5 transition-colors z-20 cursor-pointer shadow-sm"
           aria-label="Lukk"
         >
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="w-5 h-5 text-text-light">
@@ -92,8 +92,9 @@ export default function LeadMagnetPopup() {
         </button>
 
         {/* Orange top accent */}
-        <div className="h-1.5 bg-gradient-to-r from-orange to-orange-dark" />
+        <div className="h-1.5 bg-gradient-to-r from-orange to-orange-dark shrink-0" />
 
+        <div className="overflow-y-auto overscroll-contain">
         {submitted ? (
           <div className="p-10 max-sm:p-6 text-center">
             <div className="w-16 h-16 bg-green/10 rounded-full flex items-center justify-center mx-auto mb-5">
@@ -191,6 +192,7 @@ export default function LeadMagnetPopup() {
             </form>
           </div>
         )}
+        </div>
       </div>
 
       <style>{`

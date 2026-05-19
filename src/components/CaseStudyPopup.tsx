@@ -4,6 +4,14 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import { trackConversion, trackEvent } from "@/lib/analytics";
 
+const DISMISS_KEY = "casestudy-dismissed-until";
+const DISMISS_WINDOW_MS = 48 * 60 * 60 * 1000;
+
+function isDismissed() {
+  const until = Number(localStorage.getItem(DISMISS_KEY) || 0);
+  return until > Date.now();
+}
+
 export default function CaseStudyPopup() {
   const [open, setOpen] = useState(false);
   const [formData, setFormData] = useState({ name: "", email: "", company: "" });
@@ -11,7 +19,7 @@ export default function CaseStudyPopup() {
   const [sending, setSending] = useState(false);
 
   useEffect(() => {
-    if (sessionStorage.getItem("casestudy-dismissed")) return;
+    if (isDismissed()) return;
 
     const handleScroll = () => {
       if (!localStorage.getItem("cookie-consent")) return;
@@ -24,10 +32,7 @@ export default function CaseStudyPopup() {
     };
 
     const timer = setTimeout(() => {
-      if (
-        !sessionStorage.getItem("casestudy-dismissed") &&
-        localStorage.getItem("cookie-consent")
-      ) {
+      if (!isDismissed() && localStorage.getItem("cookie-consent")) {
         setOpen(true);
       }
     }, 30000);
@@ -41,7 +46,7 @@ export default function CaseStudyPopup() {
 
   const handleClose = () => {
     setOpen(false);
-    sessionStorage.setItem("casestudy-dismissed", "true");
+    localStorage.setItem(DISMISS_KEY, String(Date.now() + DISMISS_WINDOW_MS));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -69,7 +74,7 @@ export default function CaseStudyPopup() {
     }
     setSending(false);
     setSubmitted(true);
-    sessionStorage.setItem("casestudy-dismissed", "true");
+    localStorage.setItem(DISMISS_KEY, String(Date.now() + DISMISS_WINDOW_MS));
   };
 
   if (!open) return null;
@@ -83,11 +88,11 @@ export default function CaseStudyPopup() {
       />
 
       {/* Modal */}
-      <div className="relative bg-white rounded-2xl shadow-[0_25px_60px_rgba(0,0,0,0.25)] max-w-[520px] w-full animate-[slideUp_0.4s_ease] overflow-hidden max-h-[92vh] overflow-y-auto">
+      <div className="relative bg-white rounded-2xl shadow-[0_25px_60px_rgba(0,0,0,0.25)] max-w-[520px] w-full animate-[slideUp_0.4s_ease] overflow-hidden max-h-[calc(100dvh-2rem)] flex flex-col">
         {/* Close button */}
         <button
           onClick={handleClose}
-          className="absolute top-4 right-4 w-8 h-8 flex items-center justify-center rounded-full hover:bg-navy/5 transition-colors z-10 cursor-pointer"
+          className="absolute top-3 right-3 w-9 h-9 flex items-center justify-center rounded-full bg-white/90 hover:bg-navy/5 transition-colors z-20 cursor-pointer shadow-sm"
           aria-label="Lukk"
         >
           <svg
@@ -102,8 +107,9 @@ export default function CaseStudyPopup() {
         </button>
 
         {/* Orange top accent */}
-        <div className="h-1.5 bg-gradient-to-r from-orange to-orange-dark" />
+        <div className="h-1.5 bg-gradient-to-r from-orange to-orange-dark shrink-0" />
 
+        <div className="overflow-y-auto overscroll-contain">
         {submitted ? (
           <div className="p-10 text-center">
             <div className="w-16 h-16 bg-green/10 rounded-full flex items-center justify-center mx-auto mb-5">
@@ -230,6 +236,7 @@ export default function CaseStudyPopup() {
             </form>
           </div>
         )}
+        </div>
       </div>
 
       <style>{`
