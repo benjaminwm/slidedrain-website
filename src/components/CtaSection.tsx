@@ -61,7 +61,7 @@ export default function CtaSection() {
             </div>
 
             {/* Partners */}
-            <div className="flex gap-10 items-center opacity-60">
+            <div className="flex flex-wrap gap-x-6 gap-y-4 sm:gap-10 items-center opacity-60">
               <span className="text-[13px] text-white/50 uppercase tracking-wider">
                 Kjøp i dag hos
               </span>
