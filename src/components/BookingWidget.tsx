@@ -3,23 +3,81 @@
 import { useState } from "react";
 import { trackConversion, trackEvent } from "@/lib/analytics";
 
+type FormData = {
+  name: string;
+  email: string;
+  company: string;
+  phone: string;
+  message: string;
+  company_url: string; // honeypot
+};
+
+type FieldErrors = Partial<Record<keyof FormData, string>>;
+
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+// 8+ siffer, valgfri + foran, mellomrom og bindestreker tillatt
+const PHONE_RE = /^\+?[\d\s-]{8,}$/;
+
+function validate(form: FormData): FieldErrors {
+  const errors: FieldErrors = {};
+  if (!form.name.trim()) errors.name = "Vennligst fyll inn navn";
+  if (!form.email.trim()) {
+    errors.email = "Vennligst fyll inn e-post";
+  } else if (!EMAIL_RE.test(form.email.trim())) {
+    errors.email = "Ugyldig e-postadresse";
+  }
+  if (!form.phone.trim()) {
+    errors.phone = "Vennligst fyll inn telefonnummer";
+  } else if (!PHONE_RE.test(form.phone.trim())) {
+    errors.phone = "Ugyldig telefonnummer";
+  }
+  if (!form.company.trim()) errors.company = "Vennligst fyll inn firma eller prosjekt";
+  if (!form.message.trim()) errors.message = "Vennligst skriv en kort melding";
+  return errors;
+}
+
 export default function BookingWidget() {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
     company: "",
     phone: "",
     message: "",
-    company_url: "", // honeypot
+    company_url: "",
   });
+  const [errors, setErrors] = useState<FieldErrors>({});
   const [submitted, setSubmitted] = useState(false);
   const [sending, setSending] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const [submitError, setSubmitError] = useState<string | null>(null);
+
+  const setField = (key: keyof FormData, value: string) => {
+    setFormData((f) => ({ ...f, [key]: value }));
+    if (errors[key]) {
+      // Clear the field error as soon as user starts editing
+      setErrors((e) => {
+        const next = { ...e };
+        delete next[key];
+        return next;
+      });
+    }
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    const v = validate(formData);
+    if (Object.keys(v).length > 0) {
+      setErrors(v);
+      setSubmitError(null);
+      // Fokus første felt med feil
+      const firstKey = Object.keys(v)[0];
+      const el = document.querySelector<HTMLInputElement>(
+        `[data-field="${firstKey}"]`
+      );
+      el?.focus();
+      return;
+    }
     setSending(true);
-    setError(null);
+    setSubmitError(null);
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
@@ -41,7 +99,7 @@ export default function BookingWidget() {
       trackConversion("contact_submit", { lead_source: "booking-widget" });
       setSubmitted(true);
     } catch (err) {
-      setError(
+      setSubmitError(
         err instanceof Error ? err.message : "Noe gikk galt. Prøv igjen."
       );
     } finally {
@@ -72,13 +130,22 @@ export default function BookingWidget() {
     );
   }
 
+  const errorCount = Object.keys(errors).length;
+  const fieldClass = (key: keyof FormData) =>
+    `w-full px-3.5 py-2.5 rounded-lg border text-sm focus:outline-none focus:ring-1 transition-colors ${
+      errors[key]
+        ? "border-red focus:border-red focus:ring-red"
+        : "border-navy/15 focus:border-orange focus:ring-orange"
+    }`;
+
   return (
     <div className="bg-white rounded-2xl p-8 text-navy shadow-[0_20px_60px_rgba(0,0,0,0.15)]">
       <h3 className="text-xl font-semibold mb-1">Book et 15-min møte</h3>
       <p className="text-sm text-text-light mb-6">
-        Fyll inn skjemaet, så kontakter vi deg for å avtale et tidspunkt.
+        Fyll inn skjemaet, så kontakter vi deg for å avtale et tidspunkt. Alle
+        felter er obligatoriske.
       </p>
-      <form onSubmit={handleSubmit} className="space-y-4">
+      <form onSubmit={handleSubmit} noValidate className="space-y-4">
         {/* Honeypot — skjult fra ekte brukere */}
         <input
           type="text"
@@ -86,9 +153,7 @@ export default function BookingWidget() {
           tabIndex={-1}
           autoComplete="off"
           value={formData.company_url}
-          onChange={(e) =>
-            setFormData({ ...formData, company_url: e.target.value })
-          }
+          onChange={(e) => setField("company_url", e.target.value)}
           aria-hidden="true"
           style={{
             position: "absolute",
@@ -98,84 +163,128 @@ export default function BookingWidget() {
             overflow: "hidden",
           }}
         />
+
         <div className="grid grid-cols-2 gap-4">
           <div>
             <label className="block text-xs font-medium text-text-light mb-1">
-              Navn *
+              Navn <span className="text-orange">*</span>
             </label>
             <input
+              data-field="name"
               type="text"
-              required
               value={formData.name}
-              onChange={(e) =>
-                setFormData({ ...formData, name: e.target.value })
-              }
-              className="w-full px-3.5 py-2.5 rounded-lg border border-navy/15 text-sm focus:outline-none focus:border-orange focus:ring-1 focus:ring-orange transition-colors"
+              onChange={(e) => setField("name", e.target.value)}
+              aria-invalid={!!errors.name}
+              aria-describedby={errors.name ? "err-name" : undefined}
+              className={fieldClass("name")}
               placeholder="Ditt navn"
             />
+            {errors.name && (
+              <p id="err-name" className="mt-1 text-[12px] text-red">
+                {errors.name}
+              </p>
+            )}
           </div>
           <div>
             <label className="block text-xs font-medium text-text-light mb-1">
-              Telefon
+              Telefon <span className="text-orange">*</span>
             </label>
             <input
+              data-field="phone"
               type="tel"
               value={formData.phone}
-              onChange={(e) =>
-                setFormData({ ...formData, phone: e.target.value })
-              }
-              className="w-full px-3.5 py-2.5 rounded-lg border border-navy/15 text-sm focus:outline-none focus:border-orange focus:ring-1 focus:ring-orange transition-colors"
-              placeholder="+47"
+              onChange={(e) => setField("phone", e.target.value)}
+              aria-invalid={!!errors.phone}
+              aria-describedby={errors.phone ? "err-phone" : undefined}
+              className={fieldClass("phone")}
+              placeholder="+47 …"
             />
+            {errors.phone && (
+              <p id="err-phone" className="mt-1 text-[12px] text-red">
+                {errors.phone}
+              </p>
+            )}
           </div>
         </div>
+
         <div>
           <label className="block text-xs font-medium text-text-light mb-1">
-            E-post *
+            E-post <span className="text-orange">*</span>
           </label>
           <input
+            data-field="email"
             type="email"
-            required
             value={formData.email}
-            onChange={(e) =>
-              setFormData({ ...formData, email: e.target.value })
-            }
-            className="w-full px-3.5 py-2.5 rounded-lg border border-navy/15 text-sm focus:outline-none focus:border-orange focus:ring-1 focus:ring-orange transition-colors"
+            onChange={(e) => setField("email", e.target.value)}
+            aria-invalid={!!errors.email}
+            aria-describedby={errors.email ? "err-email" : undefined}
+            className={fieldClass("email")}
             placeholder="din@epost.no"
           />
+          {errors.email && (
+            <p id="err-email" className="mt-1 text-[12px] text-red">
+              {errors.email}
+            </p>
+          )}
         </div>
+
         <div>
           <label className="block text-xs font-medium text-text-light mb-1">
-            Firma / Prosjekt
+            Firma / Prosjekt <span className="text-orange">*</span>
           </label>
           <input
+            data-field="company"
             type="text"
             value={formData.company}
-            onChange={(e) =>
-              setFormData({ ...formData, company: e.target.value })
-            }
-            className="w-full px-3.5 py-2.5 rounded-lg border border-navy/15 text-sm focus:outline-none focus:border-orange focus:ring-1 focus:ring-orange transition-colors"
+            onChange={(e) => setField("company", e.target.value)}
+            aria-invalid={!!errors.company}
+            aria-describedby={errors.company ? "err-company" : undefined}
+            className={fieldClass("company")}
             placeholder="Firmanavn eller prosjekt"
           />
+          {errors.company && (
+            <p id="err-company" className="mt-1 text-[12px] text-red">
+              {errors.company}
+            </p>
+          )}
         </div>
+
         <div>
           <label className="block text-xs font-medium text-text-light mb-1">
-            Melding *
+            Melding <span className="text-orange">*</span>
           </label>
           <textarea
-            required
+            data-field="message"
             rows={3}
             value={formData.message}
-            onChange={(e) =>
-              setFormData({ ...formData, message: e.target.value })
-            }
-            className="w-full px-3.5 py-2.5 rounded-lg border border-navy/15 text-sm focus:outline-none focus:border-orange focus:ring-1 focus:ring-orange transition-colors resize-none"
+            onChange={(e) => setField("message", e.target.value)}
+            aria-invalid={!!errors.message}
+            aria-describedby={errors.message ? "err-message" : undefined}
+            className={`${fieldClass("message")} resize-none`}
             placeholder="Fortell oss litt om prosjektet..."
           />
+          {errors.message && (
+            <p id="err-message" className="mt-1 text-[12px] text-red">
+              {errors.message}
+            </p>
+          )}
         </div>
-        {error && (
-          <p className="text-[12px] text-red font-medium">{error}</p>
+
+        {errorCount > 0 && (
+          <div className="bg-red/8 border-l-4 border-red rounded-r-lg p-3">
+            <p className="text-[13px] text-red font-medium">
+              {errorCount === 1
+                ? "Ett felt mangler eller har feil."
+                : `${errorCount} felter mangler eller har feil.`}{" "}
+              Fyll inn det som mangler og prøv igjen.
+            </p>
+          </div>
         )}
+
+        {submitError && (
+          <p className="text-[13px] text-red font-medium">{submitError}</p>
+        )}
+
         <button
           type="submit"
           disabled={sending}
