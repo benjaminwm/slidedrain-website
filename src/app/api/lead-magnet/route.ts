@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
-import { Resend } from "resend";
+import { FROM_EMAIL, getResend } from "@/lib/email";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+export const runtime = "nodejs";
 
 export async function POST(req: NextRequest) {
   try {
@@ -14,6 +14,12 @@ export async function POST(req: NextRequest) {
       );
     }
 
+    const resend = getResend();
+    if (!resend) {
+      console.error("RESEND_API_KEY missing — skipping send");
+      return NextResponse.json({ success: true, dry: true });
+    }
+
     // Fetch PDF from public URL
     const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || req.nextUrl.origin;
     const pdfResponse = await fetch(`${baseUrl}/downloads/slidedrain-prosjektmappe.pdf`);
@@ -22,7 +28,7 @@ export async function POST(req: NextRequest) {
 
     // Send email with PDF attachment
     const { data, error } = await resend.emails.send({
-      from: process.env.RESEND_FROM_EMAIL || "Slidedrain <kontakt@slidedrain.no>",
+      from: FROM_EMAIL,
       to: email,
       subject: "Din Slidedrain Prosjektmappe",
       html: `
