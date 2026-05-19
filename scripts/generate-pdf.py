@@ -400,16 +400,16 @@ def page_logistics(c):
         intro_style
     )
     iw, ih = intro.wrap(content_w, 40*mm)
-    intro.drawOn(c, margin, H - 72*mm)
+    intro.drawOn(c, margin, H - 65*mm)
 
-    y = H - 95*mm
+    y = H - 80*mm
 
     # Phase 1 header
-    draw_rounded_rect(c, margin, y - 10*mm, content_w, 10*mm, 2*mm, fill_color=NAVY)
+    draw_rounded_rect(c, margin, y - 9*mm, content_w, 9*mm, 2*mm, fill_color=NAVY)
     c.setFillColor(WHITE)
-    c.setFont("Helvetica-Bold", 10)
-    c.drawString(margin + 5*mm, y - 7*mm, "FASE 1: RÅBYGG – BETONG OG RØRFAG")
-    y -= 16*mm
+    c.setFont("Helvetica-Bold", 9.5)
+    c.drawString(margin + 5*mm, y - 6.5*mm, "FASE 1: RÅBYGG – BETONG OG RØRFAG")
+    y -= 14*mm
 
     phase1 = [
         ("Prosjektering", "Alle designnivåer tegnes inn uten behov for unik omprosjektering."),
@@ -419,39 +419,41 @@ def page_logistics(c):
 
     dot_x = margin + 8*mm
     text_x = margin + 18*mm
+    ITEM_STEP = 19*mm
 
     for title, desc in phase1:
         # Timeline dot
         c.setFillColor(ORANGE)
-        c.circle(dot_x, y - 2*mm, 3*mm, fill=1, stroke=0)
+        c.circle(dot_x, y - 2*mm, 2.5*mm, fill=1, stroke=0)
         # Connecting line
         c.setStrokeColor(HexColor("#e0e0e0"))
         c.setLineWidth(1)
-        c.line(dot_x, y - 8*mm, dot_x, y - 22*mm)
+        c.line(dot_x, y - 6*mm, dot_x, y - ITEM_STEP + 2*mm)
 
         c.setFillColor(NAVY)
         c.setFont("Helvetica-Bold", 10)
         c.drawString(text_x, y, title)
 
-        desc_s = ParagraphStyle('d', fontName='Helvetica', fontSize=9, textColor=TEXT_LIGHT, leading=13)
+        desc_s = ParagraphStyle('d', fontName='Helvetica', fontSize=9, textColor=TEXT_LIGHT, leading=12)
         p = Paragraph(desc, desc_s)
         pw, ph = p.wrap(content_w - 22*mm, 20*mm)
-        p.drawOn(c, text_x, y - 6*mm - ph)
-        y -= 24*mm
+        p.drawOn(c, text_x, y - 5*mm - ph)
+        y -= ITEM_STEP
 
     # Gap indicator
-    draw_rounded_rect(c, margin + 15*mm, y - 8*mm, content_w - 30*mm, 12*mm, 2*mm, fill_color=LIGHT_ORANGE_BG)
+    y -= 2*mm
+    draw_rounded_rect(c, margin + 15*mm, y - 7*mm, content_w - 30*mm, 10*mm, 2*mm, fill_color=LIGHT_ORANGE_BG)
     c.setFillColor(ORANGE)
-    c.setFont("Helvetica-Bold", 9)
-    c.drawCentredString(W/2, y - 4*mm, "FLERE MÅNEDER GÅR")
-    y -= 22*mm
+    c.setFont("Helvetica-Bold", 8.5)
+    c.drawCentredString(W/2, y - 3.5*mm, "FLERE MÅNEDER GÅR")
+    y -= 16*mm
 
     # Phase 2 header
-    draw_rounded_rect(c, margin, y - 10*mm, content_w, 10*mm, 2*mm, fill_color=NAVY)
+    draw_rounded_rect(c, margin, y - 9*mm, content_w, 9*mm, 2*mm, fill_color=NAVY)
     c.setFillColor(WHITE)
-    c.setFont("Helvetica-Bold", 10)
-    c.drawString(margin + 5*mm, y - 7*mm, "FASE 2: INNREDNING – TILVALG OG FLISLEGGING")
-    y -= 16*mm
+    c.setFont("Helvetica-Bold", 9.5)
+    c.drawString(margin + 5*mm, y - 6.5*mm, "FASE 2: INNREDNING – TILVALG OG FLISLEGGING")
+    y -= 14*mm
 
     phase2 = [
         ("Tilvalg stenges", "Endelig design med hjørnerist eller slukrenne låses når badet er klart for tynnavretting."),
@@ -459,33 +461,37 @@ def page_logistics(c):
         ("Flislegging", "Flislegger støper fall, monterer slukoverdel og kundens valgte design feilfritt."),
     ]
 
-    for title, desc in phase2:
+    for i, (title, desc) in enumerate(phase2):
         c.setFillColor(ORANGE)
-        c.circle(dot_x, y - 2*mm, 3*mm, fill=1, stroke=0)
-        c.setStrokeColor(HexColor("#e0e0e0"))
-        c.setLineWidth(1)
-        c.line(dot_x, y - 8*mm, dot_x, y - 22*mm)
+        c.circle(dot_x, y - 2*mm, 2.5*mm, fill=1, stroke=0)
+        # Connecting line — drop on last item to avoid trailing line into tip box
+        if i < len(phase2) - 1:
+            c.setStrokeColor(HexColor("#e0e0e0"))
+            c.setLineWidth(1)
+            c.line(dot_x, y - 6*mm, dot_x, y - ITEM_STEP + 2*mm)
 
         c.setFillColor(NAVY)
         c.setFont("Helvetica-Bold", 10)
         c.drawString(text_x, y, title)
 
-        desc_s = ParagraphStyle('d', fontName='Helvetica', fontSize=9, textColor=TEXT_LIGHT, leading=13)
+        desc_s = ParagraphStyle('d', fontName='Helvetica', fontSize=9, textColor=TEXT_LIGHT, leading=12)
         p = Paragraph(desc, desc_s)
         pw, ph = p.wrap(content_w - 22*mm, 20*mm)
-        p.drawOn(c, text_x, y - 6*mm - ph)
-        y -= 24*mm
+        p.drawOn(c, text_x, y - 5*mm - ph)
+        y -= ITEM_STEP
 
-    # Tip box
-    draw_rounded_rect(c, margin, y - 5*mm, content_w, 22*mm, 3*mm, fill_color=GRAY_BG)
+    # Tip box — pinned to a safe distance above footer (footer line at 17mm)
+    tip_box_y = 28*mm  # bottom edge of tip box
+    tip_box_h = 18*mm
+    draw_rounded_rect(c, margin, tip_box_y, content_w, tip_box_h, 3*mm, fill_color=GRAY_BG)
     tip_style = ParagraphStyle('tip', fontName='Helvetica', fontSize=8.5, textColor=TEXT_LIGHT, leading=12)
     tip = Paragraph(
         "<b>Fleksibel logistikk:</b> Monteringsverktøy og slukoverdel kan inkluderes i Varelevering 1 "
         "for en samlet leveranse av alt teknisk utstyr til rørfaget fra start.",
         tip_style
     )
-    tipw, tiph = tip.wrap(content_w - 12*mm, 20*mm)
-    tip.drawOn(c, margin + 6*mm, y + 12*mm - tiph)
+    tipw, tiph = tip.wrap(content_w - 12*mm, tip_box_h)
+    tip.drawOn(c, margin + 6*mm, tip_box_y + (tip_box_h - tiph) / 2)
 
     draw_footer(c, 5)
 
@@ -548,7 +554,7 @@ def page_cta(c):
 
     # CTA Section
     y -= 10*mm
-    cta_h = 60*mm
+    cta_h = 70*mm
     draw_rounded_rect(c, margin, y - cta_h, content_w, cta_h, 4*mm, fill_color=NAVY)
 
     # CTA content
@@ -558,14 +564,14 @@ def page_cta(c):
 
     c.setFillColor(HexColor("#8899aa"))
     c.setFont("Helvetica", 10)
-    c.drawCentredString(W/2, y - 32*mm, "Vi tar gjerne en 15-minutters uforpliktende gjennomgang")
-    c.drawCentredString(W/2, y - 44*mm, "for å se på ditt konkrete prosjekt.")
+    c.drawCentredString(W/2, y - 30*mm, "Vi tar gjerne en 15-minutters uforpliktende gjennomgang")
+    c.drawCentredString(W/2, y - 42*mm, "for å se på ditt konkrete prosjekt.")
 
-    # CTA button
+    # CTA button — nok luft mellom undertekst og knapp
     btn_w = 70*mm
     btn_h = 12*mm
     btn_x = W/2 - btn_w/2
-    btn_y = y - cta_h + 6*mm
+    btn_y = y - cta_h + 10*mm
     draw_rounded_rect(c, btn_x, btn_y, btn_w, btn_h, 2*mm, fill_color=ORANGE)
     c.setFillColor(WHITE)
     c.setFont("Helvetica-Bold", 10)

@@ -54,18 +54,25 @@ const layers = [
     label: "Synlig VVS",
     subtitle: "Slukrenner & Slukrister",
     products: getProducts(["slukrenner-tile", "slukrenner-eksentrisk", "slukrenner", "slukrister", "hjornerister"]),
+    defaultName: "Slukrenne 800 Tile Insert RF Stål",
   },
   {
     label: "Teknisk VVS",
     subtitle: "Slukoverdel",
     products: getProducts(["slukoverdeler"]),
+    defaultName: "Gulvsluk Slukoverdel, Apex-mansjett",
   },
   {
     label: "Teknisk VVS",
     subtitle: "Slukpotte",
     products: getProducts(["slukpotter"]),
+    defaultName: "Gulvsluk Slukpotte, Ø75 Bunnutløp",
   },
 ];
+
+const initialSelections = layers.map((l) =>
+  Math.max(0, l.products.findIndex((p) => p.name === l.defaultName)),
+);
 
 function ArrowBtn({ direction, onClick }: { direction: "left" | "right"; onClick: () => void }) {
   return (
@@ -134,7 +141,7 @@ function LayerRow({
 }
 
 export default function ProductShowcase() {
-  const [selections, setSelections] = useState([0, 0, 0]);
+  const [selections, setSelections] = useState(initialSelections);
 
   const navigate = useCallback((layerIdx: number, direction: number) => {
     setSelections((prev) => {

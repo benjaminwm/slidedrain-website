@@ -14,10 +14,13 @@ export default function AboutHero() {
             Om <span className="text-orange">Slidedrain</span>
           </h1>
           <p className="text-lg text-text-light leading-[1.7] font-light">
-            Slidedrain AS utvikler neste generasjons gulvsluk. Selskapet har
-            utspring som startup fra NTNU, og lanserte sitt første produkt i
-            mars 2023 hos Brødrene Dahl, etter et mangeårig utviklingssamarbeid
-            med den ledende VVS-grossisten.
+            Slidedrain AS utvikler neste generasjon sluksystem. Selskapet ble
+            etablert som en startup fra NTNUs Entreprenørskole, og lanserte
+            sitt første produkt hos Brødrene Dahl i mars 2023 – etter et
+            mangeårig utviklingssamarbeid med den ledende VVS-grossisten.
+            Selskapets første produkt, Slidedrain Gulvsluk, er etter en idé
+            av flislegger Thomas Nygård, og produseres i dag i Norge av
+            resirkulert plast.
           </p>
         </div>
         <div className="flex justify-center items-center max-lg:order-first">

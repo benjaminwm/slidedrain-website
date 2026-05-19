@@ -99,11 +99,14 @@ export default function SafetySection() {
               Målsatt presisjon og skrueløs montasje
             </h3>
             <p className="text-[16px] text-text-light leading-[1.7]">
-              Hvert år oppstår vannskader for store verdier i overgangen
-              mellom sluk og membran. Utfordringen ligger i tradisjonelle
-              løsningers fragmenterte oppbygging, der flere komponenter
-              monteres av ulike fag på ulike tidspunkt. Dette øker risikoen
-              for feil og avvik i utførelsen.
+              Slidedrain erstatter det fragmenterte designet med et patentert
+              system som sikrer nøyaktig installasjon på badets laveste punkt.
+              Det høydejusterbare sluket og monteringsverktøyet eliminerer
+              behovet for forhøyningsringer og løse pakninger. Ved bruk av
+              smøremembran leveres systemet med integrert mansjett som gjør
+              klemringen overflødig, slik at hele overgangen blir fullstendig
+              skrueløs. Dette forenkler installasjonen for samtlige fagområder
+              og setter en ny, ledende teknisk standard.
             </p>
           </FadeUp>
         </div>

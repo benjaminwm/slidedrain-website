@@ -9,25 +9,38 @@ export default function StorySection() {
         <FadeUp>
           <div className="space-y-6 text-[17px] text-text-light leading-[1.8] font-light">
             <p>
-              I 2025 har selskapet en landsdekkende distribusjon gjennom
+              Slidedrain har i dag en landsdekkende distribusjon gjennom
               Brødrene Dahl og Flisekompaniet, med en egenutviklet
-              produktportefølje bestående av over et tjuetalls produkter, som
-              alle er norskproduserte i resirkulert plast og rustfritt stål.
+              produktportefølje. Flisekompaniet har også bidratt med innspill
+              til produktserien Slidedrain Slukrenner og Slukrister, som ble
+              lansert i 2024.
             </p>
             <p>
-              Selskapet er en nytenkende utfordrer med et sterkt miljøfokus og
-              store vekstambisjoner, i et etablert markedet med behov for
-              nyskaping. Derfor er alle Slidedrain-produkter utviklet med
-              fokus på bærekraft, og designet i tett samarbeidet med brukere
-              og kunder.
+              Vi er en nytenkende utfordrer i et etablert marked med stort
+              behov for fornyelse. Alle våre produkter er derfor utviklet i
+              tett samarbeid med erfarne håndverkere og aktører fra hele
+              verdikjeden i byggebransjen – fordi vi tror at de beste
+              løsningene oppstår når de som bruker produktene er med på å
+              forme dem.
             </p>
             <p>
-              Det har resultert i et produktkonsept som revolusjonerer dagens
-              praksis ved prosjektering, installering og innkjøp av alle typer
-              gulvsluk. Selskapets kraftig vekst kan indikere at også
-              markedet har ventet et gulvsluk som gir større fleksibilitet ved
-              montering og mindre vedlikehold i bruk, samtidig som det
-              kombinerer et moderne design med redusert vannskaderisiko.
+              Bærekraft er ikke et tillegg, det er utgangspunktet for alle
+              produktene vi designer. Derfor har selskapet produksjon i Norge
+              og velger materialer basert på lang levetid og lavt klimaavtrykk.
+              Slidedrain-systemet er utviklet for å eliminere hovedårsaken til
+              vannskader som oppstår mellom gulvsluk og membran – et problem
+              med en estimert samfunnsøkonomisk kostnad på mange hundre
+              millioner kroner årlig. For dette arbeidet mottok selskapet
+              DOGA-prisen Nykommer i 2020.
+            </p>
+            <p>
+              Resultatet er Slidedrain Sluksystem – som endrer måten gulvsluk
+              prosjekteres, installeres og kjøpes inn på, og som forenkler
+              byggeprosessen på tvers av alle fag. Den sterke veksten vi
+              opplever bekrefter det vi alltid har trodd: markedet har ventet
+              på et sluksystem som kombinerer fleksibel montering, redusert
+              vannskaderisiko og minimalt vedlikehold – med et moderne design
+              basert på skandinavisk minimalisme.
             </p>
           </div>
         </FadeUp>
