@@ -1,43 +1,31 @@
 "use client";
 
 import Image from "next/image";
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 
 const HIDDEN_PATHS = ["/personvern", "/cookies"];
 const SCROLL_THRESHOLD = 120;
 const TIME_DELAY_MS = 25_000;
-const COUNTDOWN_SECONDS = 3 * 60;
 const STORAGE_KEY = "slidedrain:meetings-slidein-minimized";
+const HOST_INDEX_KEY = "slidedrain:meetings-host-index";
 
-const HOST = {
-  name: "Joakim Delebekk",
-  role: "Salgsansvarlig, Slidedrain",
-  photo: "/images/team-2.jpg",
-  pitch:
-    "Jeg tar gjerne et lite kvarter med deg på telefon eller meets hvis du lurer på hvordan Slidedrain kan passe inn i ditt prosjekt!",
-};
-
-const WEEKDAY_LABELS = ["Man", "Tir", "Ons", "Tor", "Fre"];
-
-function getNextWeekdays(count: number) {
-  const out: { date: Date; label: string; day: number }[] = [];
-  const today = new Date();
-  today.setHours(0, 0, 0, 0);
-  let d = new Date(today);
-  while (out.length < count) {
-    const dow = d.getDay();
-    if (dow >= 1 && dow <= 5) {
-      out.push({
-        date: new Date(d),
-        label: WEEKDAY_LABELS[dow - 1],
-        day: d.getDate(),
-      });
-    }
-    d.setDate(d.getDate() + 1);
-  }
-  return out;
-}
+const HOSTS = [
+  {
+    name: "Joakim Delebekk",
+    role: "Salgsansvarlig, Slidedrain",
+    photo: "/images/team-2.jpg",
+    pitch:
+      "Jeg tar gjerne et lite kvarter med deg på telefon eller meets hvis du lurer på hvordan Slidedrain kan passe inn i ditt prosjekt!",
+  },
+  {
+    name: "Fredrik Fretheim",
+    role: "Salgsansvarlig, Slidedrain",
+    photo: "/images/team-1.jpg",
+    pitch:
+      "Jeg tar gjerne et lite kvarter med deg på telefon eller meets hvis du lurer på hvordan Slidedrain kan passe inn i ditt prosjekt!",
+  },
+];
 
 function CalendarIcon({ className = "w-5 h-5" }: { className?: string }) {
   return (
@@ -80,18 +68,21 @@ export default function MeetingsSlideIn() {
   const [mounted, setMounted] = useState(false);
   const [visible, setVisible] = useState(false);
   const [minimized, setMinimized] = useState(false);
-  const [selectedDay, setSelectedDay] = useState(0);
-  const [secondsLeft, setSecondsLeft] = useState(COUNTDOWN_SECONDS);
+  const [hostIdx, setHostIdx] = useState(0);
 
-  const weekdays = useMemo(() => getNextWeekdays(5), []);
   const isHidden = HIDDEN_PATHS.some((p) => pathname === p || pathname?.startsWith(p + "/"));
 
-  // Mount + restore minimized state from sessionStorage
+  // Mount: restore minimized state, pick host for this visit, bump index for next
   useEffect(() => {
     setMounted(true);
     try {
       const stored = sessionStorage.getItem(STORAGE_KEY);
       if (stored === "1") setMinimized(true);
+
+      const raw = parseInt(localStorage.getItem(HOST_INDEX_KEY) || "0", 10);
+      const idx = ((Number.isNaN(raw) ? 0 : raw) % HOSTS.length + HOSTS.length) % HOSTS.length;
+      setHostIdx(idx);
+      localStorage.setItem(HOST_INDEX_KEY, String((idx + 1) % HOSTS.length));
     } catch {}
   }, []);
 
@@ -120,16 +111,6 @@ export default function MeetingsSlideIn() {
     };
   }, [mounted, isHidden, visible]);
 
-  // Countdown — only runs when popup is open (not minimized)
-  useEffect(() => {
-    if (!visible || minimized) return;
-    if (secondsLeft <= 0) return;
-    const id = window.setInterval(() => {
-      setSecondsLeft((s) => Math.max(0, s - 1));
-    }, 1000);
-    return () => window.clearInterval(id);
-  }, [visible, minimized, secondsLeft]);
-
   const minimize = useCallback(() => {
     setMinimized(true);
     try {
@@ -155,10 +136,6 @@ export default function MeetingsSlideIn() {
   }, [minimize]);
 
   if (!mounted || !visible || isHidden) return null;
-
-  const mm = String(Math.floor(secondsLeft / 60)).padStart(2, "0");
-  const ss = String(secondsLeft % 60).padStart(2, "0");
-  const countdownPct = (secondsLeft / COUNTDOWN_SECONDS) * 100;
 
   // Minimized: floating action button
   if (minimized) {
@@ -191,18 +168,18 @@ export default function MeetingsSlideIn() {
       {/* Header */}
       <div className="flex items-start gap-3 p-5 pb-3">
         <Image
-          src={HOST.photo}
-          alt={HOST.name}
+          src={HOSTS[hostIdx].photo}
+          alt={HOSTS[hostIdx].name}
           width={40}
           height={40}
           className="w-10 h-10 rounded-full object-cover shrink-0"
         />
         <div className="flex-1 min-w-0">
           <p className="text-[13px] font-semibold text-navy leading-tight">
-            {HOST.name}
+            {HOSTS[hostIdx].name}
           </p>
           <p className="text-[11px] text-text-light leading-tight">
-            {HOST.role}
+            {HOSTS[hostIdx].role}
           </p>
         </div>
         <button
@@ -221,50 +198,8 @@ export default function MeetingsSlideIn() {
           Slå av en prat om sluk?
         </h3>
         <p className="text-[13px] text-text-light leading-[1.5] mb-4">
-          {HOST.pitch}
+          {HOSTS[hostIdx].pitch}
         </p>
-
-        {/* Weekday selector (visual) */}
-        <div className="flex gap-1.5 mb-3">
-          {weekdays.map((d, i) => {
-            const active = selectedDay === i;
-            return (
-              <button
-                key={i}
-                type="button"
-                onClick={() => setSelectedDay(i)}
-                className={`flex-1 flex flex-col items-center py-1.5 rounded-lg text-[10px] font-medium transition-colors ${
-                  active
-                    ? "bg-orange text-white"
-                    : "bg-gray-bg text-text-light hover:bg-navy/8 hover:text-navy"
-                }`}
-              >
-                <span className="uppercase tracking-wide">{d.label}</span>
-                <span className="text-[14px] font-bold leading-tight">
-                  {d.day}
-                </span>
-              </button>
-            );
-          })}
-        </div>
-
-        {/* Limited slots + countdown */}
-        <div className="mb-4">
-          <div className="flex items-center justify-between mb-1.5">
-            <span className="text-[11px] text-text-light">
-              Begrenset antall plasser denne uken
-            </span>
-            <span className="text-[11px] font-mono font-semibold text-orange tabular-nums">
-              {mm}:{ss}
-            </span>
-          </div>
-          <div className="h-1 bg-gray-bg rounded-full overflow-hidden">
-            <div
-              className="h-full bg-orange transition-all duration-1000 ease-linear"
-              style={{ width: `${countdownPct}%` }}
-            />
-          </div>
-        </div>
 
         {/* CTA */}
         <button
