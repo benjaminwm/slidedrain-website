@@ -80,10 +80,10 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="mailto:kontakt@slidedrain.no"
+                  href="mailto:post@slidedrain.no"
                   className="hover:text-navy transition-colors"
                 >
-                  kontakt@slidedrain.no
+                  post@slidedrain.no
                 </a>
               </li>
             </ul>

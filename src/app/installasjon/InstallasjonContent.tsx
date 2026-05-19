@@ -791,7 +791,7 @@ export default function InstallasjonContent() {
                   Fikk du ikke svar på det du lurer på?
                 </p>
                 <a
-                  href="mailto:kontakt@slidedrain.no"
+                  href="mailto:post@slidedrain.no"
                   className="text-orange font-semibold text-sm hover:underline"
                 >
                   Send oss en e-post →

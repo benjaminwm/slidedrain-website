@@ -15,8 +15,8 @@ og legg inn:
 |---|---|---|
 | `NEXT_PUBLIC_SITE_URL` | `https://slidedrain.no` | Production, Preview |
 | `RESEND_API_KEY` | `re_...` (fra resend.com) | Production, Preview |
-| `RESEND_FROM_EMAIL` | `Slidedrain <noreply@slidedrain.no>` | Production, Preview |
-| `RESEND_INTERNAL_NOTIFY_EMAIL` | `kontakt@slidedrain.no` | Production, Preview |
+| `RESEND_FROM_EMAIL` | `Slidedrain <post@slidedrain.no>` | Production, Preview |
+| `RESEND_INTERNAL_NOTIFY_EMAIL` | `post@slidedrain.no` | Production, Preview |
 | `NEXT_PUBLIC_GTM_ID` | `GTM-XXXXXXX` | Production, Preview |
 | `NEXT_PUBLIC_META_PIXEL_ID` | (la stå tom — bruk GTM) | — |
 
@@ -32,7 +32,7 @@ så de blir aktive.
 3. Legg DNS-postene Resend gir deg (DKIM + SPF + return-path) i
    domeneleverandørens DNS-panel.
 4. Vent på "Verified"-status (kan ta 30 min til noen timer).
-5. Bruk `noreply@slidedrain.no` eller `kontakt@slidedrain.no` som
+5. Bruk `post@slidedrain.no` eller `post@slidedrain.no` som
    `RESEND_FROM_EMAIL`.
 
 **Endpoints som sender e-post:**

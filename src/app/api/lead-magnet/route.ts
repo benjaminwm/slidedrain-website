@@ -22,7 +22,7 @@ export async function POST(req: NextRequest) {
 
     // Send email with PDF attachment
     const { data, error } = await resend.emails.send({
-      from: process.env.RESEND_FROM_EMAIL || "Slidedrain <onboarding@resend.dev>",
+      from: process.env.RESEND_FROM_EMAIL || "Slidedrain <post@slidedrain.no>",
       to: email,
       subject: "Din Slidedrain Prosjektmappe",
       html: `
@@ -58,7 +58,7 @@ export async function POST(req: NextRequest) {
           </div>
           <div style="padding: 20px 30px; background: #f6f6f6; border-radius: 0 0 12px 12px; text-align: center;">
             <p style="font-size: 12px; color: #8899aa; margin: 0;">
-              Slidedrain AS &middot; slidedrain.no &middot; kontakt@slidedrain.no
+              Slidedrain AS &middot; slidedrain.no &middot; post@slidedrain.no
             </p>
           </div>
         </div>
