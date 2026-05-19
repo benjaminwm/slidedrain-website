@@ -24,9 +24,6 @@ export const metadata: Metadata = {
   title: "Slidedrain // Neste generasjons gulvsluk",
   description:
     "Maksimer prosjektets lønnsomhet med markedets mest fleksible tilvalgsløsning for gulvsluk.",
-  icons: {
-    icon: "https://slidedrain.no/wp-content/uploads/2020/08/cropped-S-icon_Orange-32x32.webp",
-  },
   openGraph: {
     type: "website",
     locale: "nb_NO",
