@@ -158,6 +158,42 @@ Konverteringer i GA4: Gå til **Admin → Events → Conversions** og merk
 
 ---
 
+## 3.7 Slack — notifikasjon på kontaktskjema
+
+Når noen sender inn kontaktskjemaet får salgsteamet en melding i
+Slack med en **"✋ Jeg følger opp"**-knapp. Når noen klikker
+knappen, oppdateres meldingen til **"✅ Følges opp av @navn"** så
+resten av teamet ser hvem som har tatt den.
+
+### 3.7.1 Opprett Slack app
+
+1. Gå til [api.slack.com/apps](https://api.slack.com/apps) → **Create New App** → **From scratch**.
+   - Name: `Slidedrain Notifications`
+   - Workspace: velg Slidedrain-workspacet
+2. **Incoming Webhooks** → toggle **On** → **Add New Webhook to Workspace** → velg kanal (f.eks. `#salg-henvendelser`) → **Allow**.
+3. Kopier webhook URL-en (`https://hooks.slack.com/services/...`).
+4. **Interactivity & Shortcuts** → toggle **On**.
+   - **Request URL**: `https://slidedrain.no/api/slack/interactive`
+   - **Save Changes**.
+5. **Basic Information** → scroll til **App Credentials** → kopier **Signing Secret**.
+
+### 3.7.2 Legg inn env-vars i Vercel
+
+| Variabel | Verdi | Scope |
+|---|---|---|
+| `SLACK_WEBHOOK_URL` | `https://hooks.slack.com/services/...` | Production, Preview |
+| `SLACK_SIGNING_SECRET` | (fra Basic Information) | Production, Preview |
+
+Redeploy etter at de er lagt inn.
+
+### 3.7.3 Test
+
+Send inn kontaktskjemaet på `/`. Meldingen skal poppe opp i kanalen
+innen sekunder. Trykk **"Jeg følger opp"** — meldingen oppdaterer
+seg til å vise hvem som klaimet den.
+
+---
+
 ## 4. Consent Mode v2
 
 Koden setter default = **denied** for alle ikke-essential kategorier

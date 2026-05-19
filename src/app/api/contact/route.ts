@@ -16,6 +16,7 @@ import {
   getResend,
   isValidEmail,
 } from "@/lib/email";
+import { notifyContact } from "@/lib/slack";
 
 export const runtime = "nodejs";
 
@@ -139,6 +140,20 @@ export async function POST(req: NextRequest) {
     });
 
     console.log(`Contact: ${name} (${email}) — source: ${source || "n/a"}`);
+
+    try {
+      await notifyContact({
+        name,
+        email,
+        phone,
+        company,
+        message,
+        source,
+        resendId: internalData?.id,
+      });
+    } catch (slackErr) {
+      console.error("Slack notify failed:", slackErr);
+    }
 
     return NextResponse.json({ ok: true, id: internalData?.id });
   } catch (err) {
