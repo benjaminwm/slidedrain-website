@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import FadeUp from "../FadeUp";
 
 const rows = [
@@ -54,43 +53,16 @@ export default function ComparisonTable() {
         <FadeUp className="hidden md:block overflow-x-auto">
           <table className="w-full text-left text-sm">
             <thead>
-              <tr className="border-b border-navy/15 align-bottom">
-                <th className="py-4 px-4 font-semibold text-text-light w-1/5" />
-                <th className="py-4 px-4 w-2/5">
-                  <div className="flex flex-col items-center gap-3">
-                    <Image
-                      src="/images/comparison-slidedrain.png"
-                      alt="Slidedrain Sluksystem"
-                      width={300}
-                      height={240}
-                      className="h-32 max-md:h-20 w-auto object-contain"
-                    />
-                    <span className="font-semibold text-orange text-center">
-                      Slidedrain Sluksystem
-                    </span>
-                  </div>
-                </th>
-                <th className="py-4 px-4 w-2/5">
-                  <div className="flex flex-col items-center gap-3">
-                    <Image
-                      src="/images/comparison-traditional.png"
-                      alt="Tradisjonelt linjesluk"
-                      width={240}
-                      height={240}
-                      className="h-32 max-md:h-20 w-auto object-contain"
-                    />
-                    <span className="font-semibold text-text-light text-center">
-                      Tradisjonelt linjesluk
-                    </span>
-                  </div>
-                </th>
-              </tr>
               <tr className="border-b border-navy/15">
-                <th className="py-3 px-4 font-semibold text-text-light text-left">
+                <th className="py-4 px-4 font-semibold text-text-light text-left w-1/5">
                   Funksjon
                 </th>
-                <th />
-                <th />
+                <th className="py-4 px-4 font-semibold text-orange text-center w-2/5">
+                  Slidedrain Sluksystem
+                </th>
+                <th className="py-4 px-4 font-semibold text-text-light text-center w-2/5">
+                  Tradisjonelt linjesluk
+                </th>
               </tr>
             </thead>
             <tbody>
