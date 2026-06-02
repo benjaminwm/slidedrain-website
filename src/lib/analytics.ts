@@ -129,9 +129,22 @@ export function readConsent(): CookieConsent | null {
 export function updateConsentMode(c: CookieConsent) {
   if (typeof window === "undefined") return;
   const state = toConsentMode(c);
-  // gtag bruker arguments-objektet, så vi pusher direkte til dataLayer
   window.dataLayer = window.dataLayer || [];
-  window.dataLayer.push(["consent", "update", state]);
+  // VIKTIG: Consent Mode gjenkjenner KUN gtag sin arguments-form
+  // (gtag('consent','update',{...})). En vanlig array som
+  // dataLayer.push(['consent','update',{...}]) blir IKKE tolket som en
+  // consent-kommando, og analytics_storage forblir 'denied' for alltid.
+  // Vi bruker derfor gtag-shimen (definert i ConsentMode) som pusher
+  // selve arguments-objektet — med en lokal fallback hvis den mangler.
+  if (typeof window.gtag === "function") {
+    window.gtag("consent", "update", state);
+  } else {
+    const gtag: (...args: unknown[]) => void = function () {
+      // eslint-disable-next-line prefer-rest-params
+      window.dataLayer.push(arguments);
+    };
+    gtag("consent", "update", state);
+  }
   // Trigger en event så GTM kan re-fyre tags som ble blokkert
   window.dataLayer.push({ event: "consent_update", ...state });
 }
