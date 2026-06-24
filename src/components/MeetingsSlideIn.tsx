@@ -13,7 +13,7 @@ const HOST_INDEX_KEY = "slidedrain:meetings-host-index";
 const HOSTS = [
   {
     name: "Joakim Delebekk",
-    role: "Salgsansvarlig, Slidedrain",
+    role: "Salgssjef, Slidedrain",
     photo: "/images/team-2.jpg",
     pitch:
       "Jeg tar gjerne et lite kvarter med deg på telefon eller meets hvis du lurer på hvordan Slidedrain kan passe inn i ditt prosjekt!",

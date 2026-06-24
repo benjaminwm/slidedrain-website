@@ -14,9 +14,16 @@ const team = [
   {
     src: "/images/team-2.jpg",
     name: "Joakim Delebekk",
-    role: "Salgsansvarlig",
+    role: "Salgssjef",
     email: "joakim@slidedrain.no",
     phone: "458 16 622",
+  },
+  {
+    src: "/images/team-5.jpg",
+    name: "Espen Brenna",
+    role: "Salgsansvarlig",
+    email: "espen@slidedrain.no",
+    phone: "406 18 513",
   },
   {
     src: "/images/team-3.jpg",
