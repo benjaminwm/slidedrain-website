@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import { ArrowRight } from "./icons";
+import { trackEvent } from "@/lib/analytics";
 
 export default function Hero() {
   return (
@@ -20,6 +23,7 @@ export default function Hero() {
           </p>
           <a
             href="#kontakt"
+            onClick={() => trackEvent("book_meeting_click", { cta_location: "hero_tilvalg" })}
             className="shine-btn inline-flex items-center gap-2.5 bg-orange text-white px-8 py-4 rounded-lg font-semibold text-base hover:bg-orange-dark transition-all hover:-translate-y-0.5 shadow-[0_4px_14px_rgba(251,92,19,0.3)] hover:shadow-[0_6px_20px_rgba(251,92,19,0.4)]"
           >
             <span>Book et 15-min møte for ditt neste prosjekt</span>

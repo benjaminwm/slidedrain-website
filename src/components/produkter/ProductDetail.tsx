@@ -5,6 +5,7 @@ import Link from "next/link";
 import FadeUp from "../FadeUp";
 import { getProductImageUrl } from "@/data/products";
 import type { Product, ProductCategory } from "@/data/products";
+import { trackEvent } from "@/lib/analytics";
 
 function DimensionBadge({
   label,
@@ -145,6 +146,13 @@ export default function ProductDetail({
                     href={product.dahlUrl}
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={() =>
+                      trackEvent("retailer_click", {
+                        retailer: "brodrene_dahl",
+                        product_name: product.name,
+                        product_slug: product.slug,
+                      })
+                    }
                     className="flex items-center justify-between bg-white border-2 border-navy/12 rounded-xl px-6 py-4 hover:border-navy/30 hover:shadow-md transition-all group"
                   >
                     <div className="flex items-center gap-4">
@@ -176,6 +184,13 @@ export default function ProductDetail({
                     href={product.flisekompanietUrl}
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={() =>
+                      trackEvent("retailer_click", {
+                        retailer: "flisekompaniet",
+                        product_name: product.name,
+                        product_slug: product.slug,
+                      })
+                    }
                     className="flex items-center justify-between bg-white border-2 border-navy/12 rounded-xl px-6 py-4 hover:border-navy/30 hover:shadow-md transition-all group"
                   >
                     <div className="flex items-center gap-4">

@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useCallback, useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
+import { trackEvent } from "@/lib/analytics";
 
 const HIDDEN_PATHS = ["/personvern", "/cookies"];
 const SCROLL_THRESHOLD = 120;
@@ -126,6 +127,7 @@ export default function MeetingsSlideIn() {
   }, []);
 
   const goToContact = useCallback(() => {
+    trackEvent("book_meeting_click", { cta_location: "meetings_slidein" });
     minimize();
     const el = document.getElementById("kontakt");
     if (el) {
