@@ -1,6 +1,16 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  async redirects() {
+    return [
+      // QR-kode trykket på produktene peker hit
+      {
+        source: "/installasjonsveiledning-model-1",
+        destination: "/installasjon",
+        permanent: true,
+      },
+    ];
+  },
   images: {
     remotePatterns: [
       {

@@ -18,6 +18,13 @@ const stories = [
     image: "/images/kundehistorier/rosendal-2.jpg",
     tags: ["Boligprosjekt", "Slidedrain Sluksystem"],
   },
+  {
+    slug: "total-teknisk",
+    title: "Total Teknisk",
+    subtitle: "Sparer tid og oppmøter med Slidedrain",
+    image: "/images/kundehistorier/total-teknisk-1.jpg",
+    tags: ["Nybyggprosjekt", "Slidedrain Gulvsluk"],
+  },
 ];
 
 export default function KundehistorierPage() {
