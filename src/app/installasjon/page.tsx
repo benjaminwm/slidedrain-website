@@ -8,6 +8,7 @@ export const metadata = {
   title: "Slidedrain // Installasjonsveiledning",
   description:
     "Slidedrain Gulvsluk, Slukrenner og Slukrister er designet for stor fleksibilitet under installasjon. Steg-for-steg guide for rørleggere og flisleggere.",
+  alternates: { canonical: "/installasjon" },
 };
 
 export default function InstallasjonPage() {

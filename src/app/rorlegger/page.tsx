@@ -15,6 +15,7 @@ export const metadata = {
   title: "Slidedrain // Utviklet med fagfolk for fagfolk",
   description:
     "Slidedrain Sluksystem forenkler monteringen og samspillet mellom alle involverte fag. Eliminerer kjente feilkilder og minimerer vannskaderisikoen.",
+  alternates: { canonical: "/rorlegger" },
 };
 
 export default function RorleggerPage() {

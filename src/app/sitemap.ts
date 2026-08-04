@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { getAllProductSlugs } from "@/data/products";
+import { landingCategories } from "@/data/landingCategories";
 
 const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ||
@@ -26,10 +27,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/kundehistorier`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
     { url: `${SITE_URL}/kundehistorier/rosendal-bygg`, lastModified: now, changeFrequency: "yearly", priority: 0.6 },
     { url: `${SITE_URL}/kundehistorier/total-teknisk`, lastModified: now, changeFrequency: "yearly", priority: 0.6 },
+    { url: `${SITE_URL}/kundehistorier/muribo`, lastModified: now, changeFrequency: "yearly", priority: 0.6 },
     { url: `${SITE_URL}/om-oss`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
     { url: `${SITE_URL}/personvern`, lastModified: now, changeFrequency: "yearly", priority: 0.3 },
     { url: `${SITE_URL}/cookies`, lastModified: now, changeFrequency: "yearly", priority: 0.3 },
   ];
+
+  const categoryRoutes: MetadataRoute.Sitemap = landingCategories.map(
+    (l) => ({
+      url: `${SITE_URL}/produkter/${l.slug}`,
+      lastModified: now,
+      changeFrequency: "weekly",
+      priority: 0.85,
+    })
+  );
 
   const productRoutes: MetadataRoute.Sitemap = getAllProductSlugs().map(
     (slug) => ({
@@ -40,5 +51,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })
   );
 
-  return [...staticRoutes, ...productRoutes];
+  return [...staticRoutes, ...categoryRoutes, ...productRoutes];
 }

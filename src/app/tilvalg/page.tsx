@@ -13,6 +13,7 @@ export const metadata = {
   title: "Slidedrain // Markedets mest fleksible tilvalgsløsning for gulvsluk",
   description:
     "Maksimer prosjektets lønnsomhet med markedets mest fleksible tilvalgsløsning for gulvsluk. Utvid tilvalgsperioden og eliminer omprosjektering.",
+  alternates: { canonical: "/tilvalg" },
 };
 
 export default function LandingPage() {

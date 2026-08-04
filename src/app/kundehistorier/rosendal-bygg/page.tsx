@@ -7,6 +7,7 @@ export const metadata = {
   title: "Slidedrain // Rosendal Bygg – Kundehistorie",
   description:
     "Se hvordan Rosendal Bygg bruker Slidedrain Sluksystem for enklere planlegging, raskere montasje og tryggere bad i sine byggeprosjekter.",
+  alternates: { canonical: "/kundehistorier/rosendal-bygg" },
 };
 
 export default function RosendalByggPage() {

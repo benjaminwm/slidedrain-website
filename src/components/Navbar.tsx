@@ -3,7 +3,7 @@
 import { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { trackEvent } from "@/lib/analytics";
+import { trackBookMeetingClick } from "@/lib/analytics";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -117,7 +117,7 @@ export default function Navbar() {
 
           <a
             href="#kontakt"
-            onClick={() => trackEvent("book_meeting_click", { cta_location: "navbar" })}
+            onClick={() => trackBookMeetingClick("navbar")}
             className="relative overflow-hidden bg-orange text-white px-6 py-2.5 rounded-md font-medium text-sm hover:bg-orange-dark transition-all hover:-translate-y-0.5 shine-btn"
           >
             <span className="relative z-10">Book et møte</span>
@@ -192,7 +192,7 @@ export default function Navbar() {
             href="#kontakt"
             onClick={() => {
               setMobileOpen(false);
-              trackEvent("book_meeting_click", { cta_location: "navbar_mobile" });
+              trackBookMeetingClick("navbar_mobile");
             }}
             className="block bg-orange text-white px-6 py-2.5 rounded-md font-medium text-sm text-center hover:bg-orange-dark transition-all mt-2"
           >

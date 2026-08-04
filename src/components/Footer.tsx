@@ -1,11 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
+import { landingCategories } from "@/data/landingCategories";
 
 export default function Footer() {
   return (
     <footer className="bg-white text-text-light border-t border-navy/8">
       <div className="max-w-[1200px] mx-auto px-6 py-14">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-10">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-10 mb-10">
           {/* Brand */}
           <div className="md:col-span-2">
             <Image
@@ -79,6 +80,25 @@ export default function Footer() {
                   Om oss
                 </Link>
               </li>
+            </ul>
+          </div>
+
+          {/* Product categories */}
+          <div>
+            <h4 className="text-navy font-semibold text-sm mb-4">
+              Produktkategorier
+            </h4>
+            <ul className="space-y-2.5 text-sm">
+              {landingCategories.map((l) => (
+                <li key={l.slug}>
+                  <Link
+                    href={`/produkter/${l.slug}`}
+                    className="hover:text-navy transition-colors"
+                  >
+                    {l.badge}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 

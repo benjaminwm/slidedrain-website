@@ -49,6 +49,33 @@ export function trackEvent(
   window.dataLayer.push({ event, ...params });
 }
 
+const CTA_ORIGIN_KEY = "sd-cta-origin";
+
+/**
+ * Spor klikk på en "Book et møte"-CTA og husk plasseringen i
+ * sessionStorage, slik at contact_form_submit senere kan rapportere
+ * hvilken CTA som ledet brukeren til skjemaet (cta_origin). Overlever
+ * navigasjon (f.eks. MeetingsSlideIn → /#kontakt) men ikke ny fane.
+ */
+export function trackBookMeetingClick(ctaLocation: string) {
+  trackEvent("book_meeting_click", { cta_location: ctaLocation });
+  try {
+    sessionStorage.setItem(CTA_ORIGIN_KEY, ctaLocation);
+  } catch {}
+}
+
+/**
+ * Les siste CTA-plassering brukeren klikket på, eller null hvis
+ * brukeren scrollet/navigerte til skjemaet uten CTA-klikk.
+ */
+export function readCtaOrigin(): string | null {
+  try {
+    return sessionStorage.getItem(CTA_ORIGIN_KEY);
+  } catch {
+    return null;
+  }
+}
+
 /**
  * Push en konvertering. Bruker samme dataLayer-pattern men med
  * standard "conversion"-event som GTM mapper til riktig Ads/Meta event.

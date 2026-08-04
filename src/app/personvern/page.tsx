@@ -5,6 +5,7 @@ export const metadata = {
   title: "Slidedrain // Personvernerklæring",
   description:
     "Slidedrain AS sin personvernerklæring beskriver hvordan vi behandler personopplysninger fra besøkende på slidedrain.no.",
+  alternates: { canonical: "/personvern" },
 };
 
 export default function PersonvernPage() {

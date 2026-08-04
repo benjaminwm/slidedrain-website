@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { trackConversion, trackEvent } from "@/lib/analytics";
+import { readCtaOrigin, trackConversion, trackEvent } from "@/lib/analytics";
 
 type FormData = {
   name: string;
@@ -95,8 +95,13 @@ export default function BookingWidget() {
         lead_source: "booking-widget",
         value: 100,
         currency: "NOK",
+        page_path: window.location.pathname,
+        cta_origin: readCtaOrigin() ?? "direct",
       });
-      trackConversion("contact_submit", { lead_source: "booking-widget" });
+      trackConversion("contact_submit", {
+        lead_source: "booking-widget",
+        page_path: window.location.pathname,
+      });
       setSubmitted(true);
     } catch (err) {
       setSubmitError(

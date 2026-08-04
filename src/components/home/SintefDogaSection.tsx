@@ -5,9 +5,6 @@ import FadeUp from "../FadeUp";
 
 /**
  * Erstatter de 4 verdi-badgene i TrustBar.
- * NB: bakgrunnsbildene er placeholders – Stian sender:
- *  - SINTEF: close-up av Slukrenne fra Lommundal
- *  - DOGA: Slidedrain Gulvsluk med Monteringsverktøy fra Melhus
  */
 export default function SintefDogaSection() {
   return (
@@ -28,10 +25,9 @@ export default function SintefDogaSection() {
         {/* SINTEF Teknisk Godkjenning + EPD */}
         <FadeUp className="bg-white rounded-2xl overflow-hidden shadow-[0_2px_16px_rgba(40,52,71,0.04)]">
           <div className="relative aspect-[4/3] overflow-hidden bg-navy/5">
-            {/* TODO: bytt til close-up av Slukrenne fra Lommundal */}
             <Image
-              src="/images/slukpotte-installed.jpg"
-              alt="Slidedrain Slukrenne installert"
+              src="/images/sintef-slukrenne.jpg"
+              alt="Slidedrain slukrenne montert i dusjsonen med vannlås, klar for membran"
               width={800}
               height={600}
               className="w-full h-full object-cover"
@@ -85,10 +81,9 @@ export default function SintefDogaSection() {
         {/* DOGA – Prisvinnende design + Norskprodusert */}
         <FadeUp className="bg-white rounded-2xl overflow-hidden shadow-[0_2px_16px_rgba(40,52,71,0.04)]">
           <div className="relative aspect-[4/3] overflow-hidden bg-navy/5">
-            {/* TODO: bytt til Slidedrain Gulvsluk med Monteringsverktøy fra Melhus */}
             <Image
-              src="/images/product-packaging.jpg"
-              alt="Slidedrain Gulvsluk med monteringsverktøy"
+              src="/images/doga-kontor.jpg"
+              alt="Stian fra Slidedrain på kontoret med slukoverdeler og slukrenner"
               width={800}
               height={600}
               className="w-full h-full object-cover"

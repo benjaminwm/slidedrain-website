@@ -47,8 +47,8 @@ export default function InnovationSection() {
         </FadeUp>
         <FadeUp className="max-w-[900px] mx-auto mb-12">
           <Image
-            src="/images/henning-utendors.webp"
-            alt="Henning fra Slidedrain med Slukoverdel-produktbokser"
+            src="/images/innovasjon-produkter.jpg"
+            alt="Slidedrain slukoverdeler, slukrister og slukrenner på arbeidsbordet"
             width={1600}
             height={1067}
             className="w-full rounded-2xl shadow-[0_20px_60px_rgba(40,52,71,0.12)]"

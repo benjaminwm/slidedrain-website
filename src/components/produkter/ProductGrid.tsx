@@ -6,7 +6,7 @@ import FadeUp from "../FadeUp";
 import { productCategories, getProductImageUrl } from "@/data/products";
 import type { Product } from "@/data/products";
 
-function ProductCard({ product }: { product: Product }) {
+export function ProductCard({ product }: { product: Product }) {
   return (
     <Link
       href={`/produkter/${product.slug}`}

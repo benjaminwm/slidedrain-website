@@ -15,6 +15,7 @@ export const metadata = {
   title: "Slidedrain // Neste generasjons gulvsluk",
   description:
     "Prisbelønt design med SINTEF-godkjenning. Norskprodusert gulvsluk med patentert teknologi for redusert vannskaderisiko og økt fleksibilitet.",
+  alternates: { canonical: "/" },
 };
 
 export default function HomePage() {

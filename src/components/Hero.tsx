@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { ArrowRight } from "./icons";
-import { trackEvent } from "@/lib/analytics";
+import { trackBookMeetingClick } from "@/lib/analytics";
 
 export default function Hero() {
   return (
@@ -23,7 +23,7 @@ export default function Hero() {
           </p>
           <a
             href="#kontakt"
-            onClick={() => trackEvent("book_meeting_click", { cta_location: "hero_tilvalg" })}
+            onClick={() => trackBookMeetingClick("hero_tilvalg")}
             className="shine-btn inline-flex items-center gap-2.5 bg-orange text-white px-8 py-4 rounded-lg font-semibold text-base hover:bg-orange-dark transition-all hover:-translate-y-0.5 shadow-[0_4px_14px_rgba(251,92,19,0.3)] hover:shadow-[0_6px_20px_rgba(251,92,19,0.4)]"
           >
             <span>Book et 15-min møte for ditt neste prosjekt</span>
@@ -32,10 +32,10 @@ export default function Hero() {
         </div>
         <div className="flex justify-center items-center max-lg:order-first">
           <Image
-            src="/images/hero-render.png"
-            alt="Slidedrain slukrenne installert på dusjgulv"
-            width={1301}
-            height={731}
+            src="/images/montering-vater.jpg"
+            alt="Slidedrain monteringsverktøy med innebygd vater montert i dusjsonen"
+            width={1600}
+            height={1067}
             className="w-full rounded-2xl shadow-[0_20px_60px_rgba(40,52,71,0.12)]"
             priority
           />

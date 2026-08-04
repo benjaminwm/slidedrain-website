@@ -8,6 +8,7 @@ export const metadata = {
   title: "Slidedrain // Kundehistorier",
   description:
     "Se hvordan norske byggeprosjekter bruker Slidedrain Sluksystem for tryggere bad, enklere montasje og økt fleksibilitet.",
+  alternates: { canonical: "/kundehistorier" },
 };
 
 const stories = [
@@ -24,6 +25,13 @@ const stories = [
     subtitle: "Sparer tid og oppmøter med Slidedrain",
     image: "/images/kundehistorier/total-teknisk-1.jpg",
     tags: ["Nybyggprosjekt", "Slidedrain Gulvsluk"],
+  },
+  {
+    slug: "muribo",
+    title: "Muribø",
+    subtitle: "Totalrenoverer bad uten fallgruver",
+    image: "/images/kundehistorier/muribo-1.jpg",
+    tags: ["Rehabilitering", "Eksentrisk Slukrenne"],
   },
 ];
 

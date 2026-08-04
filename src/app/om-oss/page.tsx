@@ -10,6 +10,7 @@ export const metadata = {
   title: "Slidedrain // Om oss",
   description:
     "Slidedrain er utviklet i Norge med patentert teknologi som eliminerer vannskader. Prisbelønt design med SINTEF-godkjenning.",
+  alternates: { canonical: "/om-oss" },
 };
 
 export default function OmOssPage() {

@@ -6,6 +6,7 @@ export const metadata = {
   title: "Slidedrain // Informasjonskapsler",
   description:
     "Oversikt over informasjonskapsler (cookies) som brukes på slidedrain.no, og hvordan du kan administrere dine valg.",
+  alternates: { canonical: "/cookies" },
 };
 
 type CookieRow = {

@@ -13,6 +13,7 @@ export const metadata = {
   title: "Slidedrain // Den usynlige detaljen som utgjør hele forskjellen",
   description:
     "Skap et sømløst baderomsgulv med prisvinnende norsk design. Slidedrain forener skandinavisk minimalisme med patentert teknologi for våtromssikkerhet.",
+  alternates: { canonical: "/sluttkunde" },
 };
 
 export default function SluttkunderPage() {

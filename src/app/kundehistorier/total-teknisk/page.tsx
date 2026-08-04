@@ -7,6 +7,7 @@ export const metadata = {
   title: "Slidedrain // Total Teknisk – Kundehistorie",
   description:
     "Se hvordan Total Teknisk bruker Slidedrain gulvsluk til å spare tid og oppmøter på byggeplassen – sluket monteres først, og høyden avgjøres helt til slutt.",
+  alternates: { canonical: "/kundehistorier/total-teknisk" },
 };
 
 export default function TotalTekniskPage() {

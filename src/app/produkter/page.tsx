@@ -8,6 +8,7 @@ export const metadata = {
   title: "Slidedrain // Produkter",
   description:
     "Komplett produktoversikt for Slidedrain Gulvsluk. 37 produkter med NOBB- og NRF-nummer, dimensjoner og tekniske spesifikasjoner.",
+  alternates: { canonical: "/produkter" },
 };
 
 export default function ProdukterPage() {

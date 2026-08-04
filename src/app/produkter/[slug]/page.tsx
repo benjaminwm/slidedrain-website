@@ -3,17 +3,33 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import CtaSection from "@/components/CtaSection";
 import ProductDetail from "@/components/produkter/ProductDetail";
+import CategoryLanding from "@/components/produkter/CategoryLanding";
 import {
   getProductBySlug,
   getAllProductSlugs,
 } from "@/data/products";
+import {
+  getLandingBySlug,
+  landingCategories,
+} from "@/data/landingCategories";
 
 export function generateStaticParams() {
-  return getAllProductSlugs().map((slug) => ({ slug }));
+  return [
+    ...landingCategories.map((l) => ({ slug: l.slug })),
+    ...getAllProductSlugs().map((slug) => ({ slug })),
+  ];
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
+  const landing = getLandingBySlug(slug);
+  if (landing) {
+    return {
+      title: landing.metaTitle,
+      description: landing.metaDescription,
+      alternates: { canonical: `/produkter/${landing.slug}` },
+    };
+  }
   const result = getProductBySlug(slug);
   if (!result) return { title: "Produkt ikke funnet" };
   return {
@@ -21,11 +37,27 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     description:
       result.product.description ||
       `${result.product.name} – ${result.product.dimensions}. NOBB ${result.product.nobbNr}, NRF ${result.product.nrfNr}.`,
+    alternates: { canonical: `/produkter/${result.product.slug}` },
   };
 }
 
 export default async function ProductPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
+
+  const landing = getLandingBySlug(slug);
+  if (landing) {
+    return (
+      <>
+        <Navbar />
+        <main>
+          <CategoryLanding landing={landing} />
+          <CtaSection />
+        </main>
+        <Footer />
+      </>
+    );
+  }
+
   const result = getProductBySlug(slug);
   if (!result) notFound();
 
