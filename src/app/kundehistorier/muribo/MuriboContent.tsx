@@ -142,7 +142,6 @@ export default function MuriboContent() {
                 {[
                   "I rehabilitering ser du først hvor bjelkene går når badet er revet. Ligger det en bjelke der sluket skulle stått, må du omprosjektere og flytte sluket.",
                   "Med et tradisjonelt sluk må plassering og høyde låses på millimeteren i en veldig tidlig fase, og resten av badet må tilpasse seg sluket.",
-                  "Blir det avvik, risikerer du en centimeter mellom slukrennen og veggflisen, og en silikonfuge som blir hakket for stor på det ferdige badet.",
                 ].map((item, i) => (
                   <div key={i} className="flex items-start gap-3">
                     <svg viewBox="0 0 24 24" fill="none" stroke="#ef4444" strokeWidth={2} className="w-5 h-5 shrink-0 mt-0.5">
@@ -170,9 +169,8 @@ export default function MuriboContent() {
           <FadeUp className="mb-16">
             <blockquote className="border-l-4 border-orange pl-6 py-2 bg-gray-bg rounded-r-xl p-6">
               <p className="text-xl max-md:text-lg text-navy leading-[1.6] italic mb-3">
-                &ldquo;Du sparer kanskje ikke så mye arbeidstimer, men du
-                sparer fallgruver. Sluttresultatet blir akkurat som det var
-                tiltenkt.&rdquo;
+                &ldquo;Du sparer fallgruver. Sluttresultatet blir akkurat som
+                det var tiltenkt.&rdquo;
               </p>
               <cite className="text-sm text-text-light not-italic font-medium">
                 &mdash; Tomas Muribø, daglig leder i Muribø AS
@@ -247,7 +245,7 @@ export default function MuriboContent() {
             <h2 className="text-3xl max-md:text-2xl font-bold text-navy mb-5">
               Sluket settes igjen i forskalingen
             </h2>
-            <p className="text-[17px] text-text-light leading-[1.8] mb-4">
+            <p className="text-[17px] text-text-light leading-[1.8]">
               Slukrennen var starten, men nå har Muribø også brukt Slidedrain
               gulvsluk på rundt ti bad. Der er det støpeformen og
               høydejusteringen som gjør jobben enkel: Rørleggeren fester
@@ -257,12 +255,6 @@ export default function MuriboContent() {
               du opp til nivåpilen, gjenspeiler den nøyaktig høyden som er
               satt på innsiden, millimeterpresist.
             </p>
-            <p className="text-[17px] text-text-light leading-[1.8]">
-              Muribø har til og med utviklet sin egen beste praksis: De
-              klipper ut nivåpilen og setter den ved siden av sluket. Da
-              slipper mureren å myse ned i støpemasse som har skvulpet over
-              pilen. Nivået står tydelig ved siden av.
-            </p>
           </FadeUp>
 
           {/* Result */}
@@ -271,15 +263,16 @@ export default function MuriboContent() {
               Resultatet
             </h2>
             <p className="text-[17px] text-text-light leading-[1.8]">
-              Resultatet er bad som blir riktige på første forsøk. Med fast
-              metode for nedsenk og fall &laquo;blir det riktig hver
-              gang&raquo;, og må det av en eller annen grunn støpes høyere
+              Resultatet er bad som blir riktige på første forsøk. Med en
+              fast metode for nedsenk og fall blir det riktig hver gang
+              &ndash; og skulle det av en eller annen grunn bli støpt høyere
               enn planlagt, justeres sluket i stedet for at rørleggeren må
-              tilbake med en slukforhøyner. På dette prosjektet brukte Muribø
-              også påsveiset slukmansjett, som lar dem droppe klemringen. Den
-              beskriver de som &laquo;helt overlegen&raquo;. Og med både
-              Slidedrain gulvsluk og slukrenne har prosjektet SINTEF Teknisk
-              Godkjenning på hele konseptet, i henhold til TEK-17.
+              tilbake med en forhøyningsring. På dette prosjektet brukte
+              Muribø også påsveiset slukmansjett, noe de beskriver som
+              &laquo;helt overlegen&raquo; fordi det lar dem droppe
+              klemringen. Med både Slidedrain Gulvsluk og Slukrenne har
+              prosjektet dessuten SINTEF Teknisk Godkjenning på hele
+              konseptet.
             </p>
           </FadeUp>
 
@@ -365,7 +358,7 @@ export default function MuriboContent() {
                 },
                 {
                   title: "SINTEF-godkjent på hele konseptet",
-                  desc: "Både gulvsluk og slukrenne har SINTEF Teknisk Godkjenning i henhold til TEK-17, og påsveiset slukmansjett erstatter klemringen.",
+                  desc: "Både gulvsluk og slukrenne har SINTEF Teknisk Godkjenning, og påsveiset slukmansjett erstatter klemringen.",
                 },
               ].map((item, i) => (
                 <div key={i} className="flex items-start gap-4 p-5 bg-gray-bg rounded-xl">
