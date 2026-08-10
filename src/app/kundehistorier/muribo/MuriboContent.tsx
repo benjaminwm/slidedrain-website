@@ -40,17 +40,17 @@ export default function MuriboContent() {
               <div className="flex items-center gap-4 p-4 bg-gray-bg rounded-xl">
                 <Image
                   src="/images/kundehistorier/muribo-1.jpg"
-                  alt="Tomas Muribø"
+                  alt="Kristian Muribø"
                   width={48}
                   height={48}
                   className="w-12 h-12 rounded-full object-cover shrink-0"
                 />
                 <div>
                   <p className="font-semibold text-navy text-[15px]">
-                    Tomas Muribø
+                    Kristian Muribø
                   </p>
                   <p className="text-sm text-text-light">
-                    Daglig leder i Muribø AS, Oppegård
+                    Prosjektleder i Muribø AS, Oppegård
                   </p>
                 </div>
               </div>
@@ -58,7 +58,7 @@ export default function MuriboContent() {
             <div className="flex justify-center items-center max-lg:order-first">
               <Image
                 src="/images/kundehistorier/muribo-1.jpg"
-                alt="Tomas Muribø i Muribø AS med en Slidedrain slukpotte foran firmaskiltet"
+                alt="Kristian Muribø i Muribø AS med en Slidedrain slukpotte foran firmaskiltet"
                 width={700}
                 height={467}
                 className="w-full rounded-2xl shadow-[0_20px_60px_rgba(40,52,71,0.12)]"
@@ -98,7 +98,7 @@ export default function MuriboContent() {
                 flyter det.&rdquo;
               </p>
               <cite className="text-sm text-text-light not-italic font-medium">
-                &mdash; Tomas Muribø, daglig leder i Muribø AS
+                &mdash; Kristian Muribø, prosjektleder i Muribø AS
               </cite>
             </blockquote>
           </FadeUp>
@@ -127,7 +127,7 @@ export default function MuriboContent() {
                 slukrennen vi har forelsket oss helt i.&rdquo;
               </p>
               <cite className="text-sm text-text-light not-italic font-medium">
-                &mdash; Tomas Muribø, daglig leder i Muribø AS
+                &mdash; Kristian Muribø, prosjektleder i Muribø AS
               </cite>
             </blockquote>
           </FadeUp>
@@ -173,7 +173,7 @@ export default function MuriboContent() {
                 det var tiltenkt.&rdquo;
               </p>
               <cite className="text-sm text-text-light not-italic font-medium">
-                &mdash; Tomas Muribø, daglig leder i Muribø AS
+                &mdash; Kristian Muribø, prosjektleder i Muribø AS
               </cite>
             </blockquote>
           </FadeUp>
@@ -219,7 +219,7 @@ export default function MuriboContent() {
                 Det er helt perfekt.&rdquo;
               </p>
               <cite className="text-sm text-text-light not-italic font-medium">
-                &mdash; Tomas Muribø, daglig leder i Muribø AS
+                &mdash; Kristian Muribø, prosjektleder i Muribø AS
               </cite>
             </blockquote>
           </FadeUp>
@@ -285,7 +285,7 @@ export default function MuriboContent() {
                 vedlikehold.&rdquo;
               </p>
               <cite className="text-sm text-text-light not-italic font-medium">
-                &mdash; Tomas Muribø, daglig leder i Muribø AS
+                &mdash; Kristian Muribø, prosjektleder i Muribø AS
               </cite>
             </blockquote>
           </FadeUp>
