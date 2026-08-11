@@ -105,3 +105,22 @@ gbraid, utm_*) bevares gjennom redirectene.
 
 Alle interne lenker i kodebasen er verifisert mot rutelisten over —
 ingen peker til ikke-eksisterende ruter (sjekket 2026-08-03).
+
+## PDF-er fra gamle WordPress (/wp-content/uploads) — redirects lagt til 2026-08-11
+
+Rangerte fortsatt i Google (~150 organiske klikk/år per GSC-eksport aug 2026),
+men ga 403 etter relansering. Query-parametere (`?x59798` o.l.) bevares.
+
+| Gammel URL | Ny destinasjon |
+|---|---|
+| `/wp-content/uploads/2023/01/Monteringsanvisning-Slidedrain-Model-1.pdf` | `/downloads/Monteringsanvisning-Slidedrain-Model-1-Slukmansjett.pdf` |
+| `/wp-content/uploads/2025/12/A5-Monteringsanvisning-…-Klemring-digital-061125.pdf` | `/downloads/Monteringsanvisning-Slidedrain-Model-1-Klemring.pdf` |
+| `/wp-content/uploads/2024/01/Monteringsanvisning-Slukrenner-og-Rister.pdf` | `/downloads/Monteringsanvisning-Slidedrain-Slukrenner.pdf` |
+| `/wp-content/uploads/2023/03/Slidedrain-Model-1-FDV.pdf` | `/downloads/FDV-Slidedrain-Model-1.pdf` |
+| `/wp-content/uploads/2023/04/NEPD-4352-3563_Slidedrain-Model-1.pdf` | `/downloads/EPD-Slidedrain-Model-1.pdf` |
+| `/wp-content/uploads/2026/02/20991g.pdf` | `/downloads/TG-20991-Slidedrain-Sluksystem.pdf` |
+| `/wp-content/uploads/2022/10/3801s.pdf` | `/downloads/Produktsertifikat-Slidedrain-Model-1.pdf` |
+| `/wp-content/uploads/2024/03/Slidedrain-Produktkatalog-2024-spread.pdf` | `/produkter` |
+| `/wp-content/uploads/2025/06/Slidedrain-Gulvsluk-brosjyre-050325.pdf` | `/produkter/gulvsluk` |
+| `/wp-content/uploads/2025/06/Slidedrain-Slukrenner-Slukrister-080525.pdf` | `/produkter/slukrenner` |
+| `/wp-content/*` (alt annet: gamle bilder o.l.) | `/` |

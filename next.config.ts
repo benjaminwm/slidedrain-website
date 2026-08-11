@@ -60,6 +60,74 @@ const nextConfig: NextConfig = {
         destination: "/installasjon",
         permanent: true,
       },
+      // ── Gamle WordPress-PDF-er (/wp-content/uploads) ──
+      // Rangerer fortsatt i Google (~150 org. klikk/år, GSC aug 2026)
+      // og ga 403 etter relansering. Mappet til nye /downloads-filer.
+      {
+        source:
+          "/wp-content/uploads/2023/01/Monteringsanvisning-Slidedrain-Model-1.pdf",
+        destination:
+          "/downloads/Monteringsanvisning-Slidedrain-Model-1-Slukmansjett.pdf",
+        permanent: true,
+      },
+      {
+        source:
+          "/wp-content/uploads/2025/12/A5-Monteringsanvisning-Slidedrain-Gulvsluk-Klemring-digital-061125.pdf",
+        destination:
+          "/downloads/Monteringsanvisning-Slidedrain-Model-1-Klemring.pdf",
+        permanent: true,
+      },
+      {
+        source:
+          "/wp-content/uploads/2024/01/Monteringsanvisning-Slukrenner-og-Rister.pdf",
+        destination: "/downloads/Monteringsanvisning-Slidedrain-Slukrenner.pdf",
+        permanent: true,
+      },
+      {
+        source: "/wp-content/uploads/2023/03/Slidedrain-Model-1-FDV.pdf",
+        destination: "/downloads/FDV-Slidedrain-Model-1.pdf",
+        permanent: true,
+      },
+      {
+        source:
+          "/wp-content/uploads/2023/04/NEPD-4352-3563_Slidedrain-Model-1.pdf",
+        destination: "/downloads/EPD-Slidedrain-Model-1.pdf",
+        permanent: true,
+      },
+      {
+        source: "/wp-content/uploads/2026/02/20991g.pdf",
+        destination: "/downloads/TG-20991-Slidedrain-Sluksystem.pdf",
+        permanent: true,
+      },
+      {
+        source: "/wp-content/uploads/2022/10/3801s.pdf",
+        destination: "/downloads/Produktsertifikat-Slidedrain-Model-1.pdf",
+        permanent: true,
+      },
+      {
+        source:
+          "/wp-content/uploads/2024/03/Slidedrain-Produktkatalog-2024-spread.pdf",
+        destination: "/produkter",
+        permanent: true,
+      },
+      {
+        source:
+          "/wp-content/uploads/2025/06/Slidedrain-Gulvsluk-brosjyre-050325.pdf",
+        destination: "/produkter/gulvsluk",
+        permanent: true,
+      },
+      {
+        source:
+          "/wp-content/uploads/2025/06/Slidedrain-Slukrenner-Slukrister-080525.pdf",
+        destination: "/produkter/slukrenner",
+        permanent: true,
+      },
+      // Øvrige wp-content-stier (gamle bilder o.l.) → forsiden
+      {
+        source: "/wp-content/:rest*",
+        destination: "/",
+        permanent: true,
+      },
       {
         source: "/category/:rest*",
         destination: "/",
