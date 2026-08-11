@@ -22,9 +22,14 @@ export default function MuriboContent() {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <span className="inline-block bg-orange/10 text-orange text-[13px] font-semibold px-3.5 py-1.5 rounded-full mb-5 uppercase tracking-wide">
-                Kundehistorie
-              </span>
+              <div className="flex items-center gap-3 mb-5">
+                <span className="inline-block bg-orange/10 text-orange text-[13px] font-semibold px-3.5 py-1.5 rounded-full uppercase tracking-wide">
+                  Kundehistorie
+                </span>
+                <span className="text-[13px] text-text-light/70">
+                  August 2026
+                </span>
+              </div>
               <h1 className="text-[42px] max-lg:text-[34px] max-sm:text-[28px] font-bold leading-[1.15] mb-5 text-navy">
                 Muribø totalrenoverer bad uten fallgruver{" "}
                 <span className="text-orange">med Slidedrain</span>

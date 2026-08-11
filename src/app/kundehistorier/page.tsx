@@ -11,14 +11,15 @@ export const metadata = {
   alternates: { canonical: "/kundehistorier" },
 };
 
+// Nyeste først
 const stories = [
   {
-    slug: "rosendal-bygg",
-    title: "Rosendal Bygg",
-    subtitle: "Fra planlegging til ferdig bad",
-    image: "/images/kundehistorier/rosendal-2.jpg",
-    tags: ["Boligprosjekt", "Slidedrain Sluksystem"],
-    date: "April 2026",
+    slug: "muribo",
+    title: "Muribø",
+    subtitle: "Totalrenoverer bad uten fallgruver",
+    image: "/images/kundehistorier/muribo-1.jpg",
+    tags: ["Rehabilitering", "Eksentrisk Slukrenne"],
+    date: "August 2026",
   },
   {
     slug: "total-teknisk",
@@ -29,12 +30,12 @@ const stories = [
     date: "Juli 2026",
   },
   {
-    slug: "muribo",
-    title: "Muribø",
-    subtitle: "Totalrenoverer bad uten fallgruver",
-    image: "/images/kundehistorier/muribo-1.jpg",
-    tags: ["Rehabilitering", "Eksentrisk Slukrenne"],
-    date: "August 2026",
+    slug: "rosendal-bygg",
+    title: "Rosendal Bygg",
+    subtitle: "Fra planlegging til ferdig bad",
+    image: "/images/kundehistorier/rosendal-2.jpg",
+    tags: ["Boligprosjekt", "Slidedrain Sluksystem"],
+    date: "April 2026",
   },
 ];
 
