@@ -18,6 +18,7 @@ const stories = [
     subtitle: "Fra planlegging til ferdig bad",
     image: "/images/kundehistorier/rosendal-2.jpg",
     tags: ["Boligprosjekt", "Slidedrain Sluksystem"],
+    date: "April 2026",
   },
   {
     slug: "total-teknisk",
@@ -25,6 +26,7 @@ const stories = [
     subtitle: "Sparer tid og oppmøter med Slidedrain",
     image: "/images/kundehistorier/total-teknisk-1.jpg",
     tags: ["Nybyggprosjekt", "Slidedrain Gulvsluk"],
+    date: "Juli 2026",
   },
   {
     slug: "muribo",
@@ -32,6 +34,7 @@ const stories = [
     subtitle: "Totalrenoverer bad uten fallgruver",
     image: "/images/kundehistorier/muribo-1.jpg",
     tags: ["Rehabilitering", "Eksentrisk Slukrenne"],
+    date: "August 2026",
   },
 ];
 
@@ -87,6 +90,9 @@ export default function KundehistorierPage() {
                       {s.title}
                     </h2>
                     <p className="text-[15px] text-text-light">{s.subtitle}</p>
+                    <p className="text-[12px] text-text-light/60 mt-3">
+                      {s.date}
+                    </p>
                   </div>
                 </Link>
               ))}
