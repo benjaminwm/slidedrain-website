@@ -9,6 +9,7 @@ import GoogleTagManager, {
   GoogleTagManagerNoScript,
 } from "@/components/analytics/GoogleTagManager";
 import MetaPixel from "@/components/analytics/MetaPixel";
+import { organizationSchema } from "@/lib/schema";
 
 const firaSans = Fira_Sans({
   variable: "--font-fira-sans",
@@ -42,6 +43,12 @@ export default function RootLayout({
         <ConsentMode />
         <GoogleTagManager />
         <MetaPixel />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema()),
+          }}
+        />
       </head>
       <body className="min-h-screen flex flex-col">
         <GoogleTagManagerNoScript />

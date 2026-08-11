@@ -12,6 +12,11 @@ import {
   getLandingBySlug,
   landingCategories,
 } from "@/data/landingCategories";
+import {
+  productSchema,
+  productBreadcrumb,
+  breadcrumbSchema,
+} from "@/lib/schema";
 
 export function generateStaticParams() {
   return [
@@ -48,6 +53,17 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
   if (landing) {
     return (
       <>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
+              breadcrumbSchema([
+                { name: "Produkter", path: "/produkter" },
+                { name: landing.title, path: `/produkter/${landing.slug}` },
+              ])
+            ),
+          }}
+        />
         <Navbar />
         <main>
           <CategoryLanding landing={landing} />
@@ -63,6 +79,20 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(productSchema(result.product)),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            productBreadcrumb(result.product, result.category)
+          ),
+        }}
+      />
       <Navbar />
       <main>
         <ProductDetail product={result.product} category={result.category} />
