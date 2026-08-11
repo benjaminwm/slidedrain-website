@@ -15,7 +15,9 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/api/", "/_next/", "/admin/"],
+        // NB: /_next/ skal IKKE blokkeres — Googlebot trenger JS/CSS/bilder
+        // for å rendre sidene (ga «Blokkert av robots.txt»-støy i GSC).
+        disallow: ["/api/", "/admin/"],
       },
     ],
     sitemap: `${SITE_URL}/sitemap.xml`,

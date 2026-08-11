@@ -60,6 +60,85 @@ const nextConfig: NextConfig = {
         destination: "/installasjon",
         permanent: true,
       },
+      {
+        source: "/shop",
+        destination: "/produkter",
+        permanent: true,
+      },
+      {
+        source: "/nyhetsbrev",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/privacy",
+        destination: "/personvern",
+        permanent: true,
+      },
+      {
+        source: "/les-mer-om-slidedrain",
+        destination: "/om-oss",
+        permanent: true,
+      },
+      // ── Gamle WooCommerce-produktsider (/product/<slug>) ──
+      // Slugs observert i GSC aug 2026 mappet til nye produktsider.
+      // ":feed(feed)?" fanger også WP sine /feed/-varianter.
+      {
+        source: "/product/gulvsluk-slukpotte-o75-:utlop/:feed(feed)?",
+        destination: "/produkter/slukpotte-75-:utlop",
+        permanent: true,
+      },
+      {
+        source: "/product/gulvsluk-slukoverdel-:variant/:feed(feed)?",
+        destination: "/produkter/slukoverdel-:variant",
+        permanent: true,
+      },
+      {
+        source: "/product/slukrist-sirkulaer-:finish/:feed(feed)?",
+        destination: "/produkter/sirkulaer-slukrist-:finish",
+        permanent: true,
+      },
+      {
+        source: "/product/slukrist-kvadrat-tile-insert-:finish/:feed(feed)?",
+        destination: "/produkter/slukrist-tile-insert-:finish",
+        permanent: true,
+      },
+      {
+        source:
+          "/product/slukrenne-eksentrisk-tile-insert-:size(\\d+)-rf-stal/:feed(feed)?",
+        destination: "/produkter/slukrenne-eksentrisk-tile-:size-stal",
+        permanent: true,
+      },
+      {
+        source:
+          "/product/slukrenne-eksentrisk-tile-insert-800-matt-sort/:feed(feed)?",
+        destination: "/produkter/slukrenne-eksentrisk-tile-800-sort",
+        permanent: true,
+      },
+      // Eksentrisk matt sort 900/1000/1200 finnes ikke lenger → kategoriside
+      {
+        source:
+          "/product/slukrenne-eksentrisk-tile-insert-:size(\\d+)-matt-sort/:feed(feed)?",
+        destination: "/produkter/slukrenner-tile-insert",
+        permanent: true,
+      },
+      // 1200 matt sort finnes ikke lenger → kategoriside
+      {
+        source: "/product/slukrenne-tile-insert-1200-matt-sort/:feed(feed)?",
+        destination: "/produkter/slukrenner-tile-insert",
+        permanent: true,
+      },
+      {
+        source: "/product/slukrenne-tile-insert-:variant/:feed(feed)?",
+        destination: "/produkter/slukrenne-tile-insert-:variant",
+        permanent: true,
+      },
+      // Ukjente/utgåtte produkt-slugs → produktoversikten
+      {
+        source: "/product/:rest*",
+        destination: "/produkter",
+        permanent: true,
+      },
       // ── Gamle WordPress-PDF-er (/wp-content/uploads) ──
       // Rangerer fortsatt i Google (~150 org. klikk/år, GSC aug 2026)
       // og ga 403 etter relansering. Mappet til nye /downloads-filer.
