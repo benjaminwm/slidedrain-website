@@ -86,6 +86,36 @@ export default function CategoryLanding({
             </div>
           </FadeUp>
 
+          {/* Monteringsguider — kontekstuell lenking til innholdssidene */}
+          <FadeUp>
+            <div className="border-t border-navy/8 pt-10">
+              <h3 className="text-sm font-semibold text-navy uppercase tracking-wide mb-4">
+                Slik monterer du
+              </h3>
+              <div className="flex flex-wrap gap-4">
+                <Link
+                  href={
+                    landing.slug.startsWith("slukrenner")
+                      ? "/installasjon/montere-slukrenne"
+                      : "/installasjon"
+                  }
+                  className="text-[14px] text-orange font-medium hover:underline"
+                >
+                  {landing.slug.startsWith("slukrenner")
+                    ? "Montere slukrenne – steg for steg"
+                    : "Montere sluk på baderom – steg for steg"}{" "}
+                  →
+                </Link>
+                <Link
+                  href="/installasjon/ofte-stilte-sporsmal"
+                  className="text-[14px] text-orange font-medium hover:underline"
+                >
+                  Sluk og våtromskrav: ofte stilte spørsmål →
+                </Link>
+              </div>
+            </div>
+          </FadeUp>
+
           {/* Andre kategorier */}
           <FadeUp>
             <div className="border-t border-navy/8 pt-10">

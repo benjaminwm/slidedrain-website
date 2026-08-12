@@ -4,6 +4,7 @@ import ValueProps from "@/components/home/ValueProps";
 import ProductShowcase from "@/components/home/ProductShowcase";
 import ProductOverview from "@/components/home/ProductOverview";
 import SegmentGuide from "@/components/home/SegmentGuide";
+import GuideLinks from "@/components/home/GuideLinks";
 import SintefDogaSection from "@/components/home/SintefDogaSection";
 import TestimonialsMarquee from "@/components/TestimonialsMarquee";
 import TrustBar from "@/components/home/TrustBar";
@@ -12,7 +13,7 @@ import CtaSection from "@/components/CtaSection";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: "Slidedrain // Neste generasjons gulvsluk",
+  title: "Slidedrain – gulvsluk og sluksystem for våtrom",
   description:
     "Prisbelønt design med SINTEF-godkjenning. Norskprodusert gulvsluk med patentert teknologi for redusert vannskaderisiko og økt fleksibilitet.",
   alternates: { canonical: "/" },
@@ -40,6 +41,7 @@ export default function HomePage() {
           <VideoEmbed />
         </section>
         <SegmentGuide />
+        <GuideLinks />
         <SintefDogaSection />
         <ProductShowcase />
         <TestimonialsMarquee />

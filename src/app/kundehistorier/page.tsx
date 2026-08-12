@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Slidedrain // Kundehistorier",
+  title: "Kundehistorier – rørleggere og entreprenører | Slidedrain",
   description:
     "Se hvordan norske byggeprosjekter bruker Slidedrain Sluksystem for tryggere bad, enklere montasje og økt fleksibilitet.",
   alternates: { canonical: "/kundehistorier" },

@@ -10,7 +10,7 @@ import CtaSection from "@/components/CtaSection";
 import Footer from "@/components/Footer";
 
 export const metadata = {
-  title: "Slidedrain // Markedets mest fleksible tilvalgsløsning for gulvsluk",
+  title: "Tilvalgsløsning for gulvsluk i boligprosjekter | Slidedrain",
   description:
     "Maksimer prosjektets lønnsomhet med markedets mest fleksible tilvalgsløsning for gulvsluk. Utvid tilvalgsperioden og eliminer omprosjektering.",
   alternates: { canonical: "/tilvalg" },

@@ -23,6 +23,23 @@ function DimensionBadge({
   );
 }
 
+/**
+ * Produktsidene lenket tidligere alle til den generelle /installasjon.
+ * Slukrenne-kategoriene har egen monteringsguide — å lenke til den
+ * relevante guiden hjelper både leseren og den interne lenkestrukturen.
+ */
+function guideForCategory(categoryId: string) {
+  return categoryId.startsWith("slukrenner")
+    ? {
+        href: "/installasjon/montere-slukrenne",
+        label: "Se guide: montere slukrenne",
+      }
+    : {
+        href: "/installasjon",
+        label: "Se guide: montere sluk på baderom",
+      };
+}
+
 export default function ProductDetail({
   product,
   category,
@@ -244,9 +261,9 @@ export default function ProductDetail({
                 Se teknisk data på NOBB.no
               </a>
 
-              {/* Installation guide link */}
+              {/* Installation guide link — kategori-spesifikk */}
               <Link
-                href="/installasjon"
+                href={guideForCategory(category.id).href}
                 className="inline-flex items-center gap-2 text-sm text-orange hover:text-orange-dark font-medium transition-colors"
               >
                 <svg
@@ -258,7 +275,25 @@ export default function ProductDetail({
                 >
                   <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
                 </svg>
-                Se installasjonsguide
+                {guideForCategory(category.id).label}
+              </Link>
+
+              {/* FAQ-lenke: membraner, godkjenninger, kapasitet */}
+              <Link
+                href="/installasjon/ofte-stilte-sporsmal"
+                className="inline-flex items-center gap-2 text-sm text-orange hover:text-orange-dark font-medium transition-colors"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth={1.5}
+                  className="w-4 h-4"
+                >
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M9.1 9a3 3 0 1 1 4.6 2.5c-.8.5-1.7 1-1.7 2M12 17h.01" />
+                </svg>
+                Spørsmål om sluk og våtromskrav
               </Link>
             </div>
           </FadeUp>

@@ -49,6 +49,27 @@ export function trackEvent(
   window.dataLayer.push({ event, ...params });
 }
 
+/**
+ * Spor nedlasting av PDF/ZIP (monteringsanvisninger, TG, EPD, BIM).
+ *
+ * Disse lenkene var tidligere utrackede <a href>, så etterspørselen etter
+ * dokumentasjonen var usynlig i GA4. Fyrer kun for lokale filer under
+ * /downloads/ — eksterne lenker skal spores som noe annet.
+ */
+export function trackFileDownload(href: string, linkText: string) {
+  if (!href.startsWith("/downloads/")) return;
+  const fileName = href.split("/").pop() || href;
+  trackEvent("file_download", {
+    file_name: fileName,
+    file_type: fileName.includes(".")
+      ? fileName.split(".").pop()!.toLowerCase()
+      : "",
+    link_text: linkText,
+    page_path:
+      typeof window !== "undefined" ? window.location.pathname : "",
+  });
+}
+
 const CTA_ORIGIN_KEY = "sd-cta-origin";
 
 /**

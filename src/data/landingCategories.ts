@@ -29,7 +29,7 @@ export const landingCategories: LandingCategory[] = [
   {
     slug: "gulvsluk",
     title: "Gulvsluk til bad og våtrom",
-    metaTitle: "Slidedrain // Gulvsluk til bad og våtrom",
+    metaTitle: "Gulvsluk til bad og våtrom | Slidedrain",
     metaDescription:
       "Neste generasjons gulvsluk for bad, dusj og våtrom. SINTEF Teknisk Godkjenning (TG 20991), løsninger for alle membraner. Kjøp hos Brødrene Dahl og Flisekompaniet.",
     badge: "Gulvsluk",
@@ -44,7 +44,7 @@ export const landingCategories: LandingCategory[] = [
   {
     slug: "slukrenner",
     title: "Slukrenner og linjesluk",
-    metaTitle: "Slidedrain // Slukrenner og linjesluk",
+    metaTitle: "Slukrenner og linjesluk til bad | Slidedrain",
     metaDescription:
       "Slukrenner (linjesluk) i 600–1200 mm: Tile Insert for usynlig flislagt rist, eksentrisk utløp for ensidig fall, eller klassisk rist i børstet stål og matt sort.",
     badge: "Slukrenner",
@@ -59,7 +59,7 @@ export const landingCategories: LandingCategory[] = [
   {
     slug: "slukrenner-tile-insert",
     title: "Slukrenner med Tile Insert",
-    metaTitle: "Slidedrain // Slukrenner med Tile Insert",
+    metaTitle: "Slukrenner med Tile Insert – flislagt rist | Slidedrain",
     metaDescription:
       "Slukrenner med Tile Insert: risten flislegges med gulvets egen flis og sluket integreres usynlig. Lengder 600–1200 mm, med sentrert eller eksentrisk utløp.",
     badge: "Tile Insert",
@@ -74,7 +74,7 @@ export const landingCategories: LandingCategory[] = [
   {
     slug: "slukrister",
     title: "Slukrister i børstet stål og matt sort",
-    metaTitle: "Slidedrain // Slukrister",
+    metaTitle: "Slukrister i børstet stål og matt sort | Slidedrain",
     metaDescription:
       "Kvadratiske og sirkulære slukrister til Slidedrain-systemet — med eller uten Tile Insert, i børstet stål eller matt sort. Byttes uten å endre sluket under.",
     badge: "Slukrister",
@@ -88,7 +88,7 @@ export const landingCategories: LandingCategory[] = [
   {
     slug: "hjornerister",
     title: "Hjørnerister — sluk i hjørnet",
-    metaTitle: "Slidedrain // Hjørnerister",
+    metaTitle: "Hjørnerister – hjørnesluk med Tile Insert | Slidedrain",
     metaDescription:
       "Hjørnesluk med Tile Insert: Slidedrains hjørnerister (297 × 297 mm) plasseres i hjørnet av dusjsonen og maksimerer bruken av storformat-fliser.",
     badge: "Hjørnerister",

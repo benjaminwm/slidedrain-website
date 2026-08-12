@@ -6,10 +6,13 @@ export default function FadeUp({
   children,
   className = "",
   style,
+  id,
 }: {
   children: React.ReactNode;
   className?: string;
   style?: React.CSSProperties;
+  /** Anker-ID, slik at seksjoner/steg kan lenkes direkte. */
+  id?: string;
 }) {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
@@ -30,6 +33,7 @@ export default function FadeUp({
   return (
     <div
       ref={ref}
+      id={id}
       className={`transition-all duration-600 ${
         visible
           ? "opacity-100 translate-y-0"

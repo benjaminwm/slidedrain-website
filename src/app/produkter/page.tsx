@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import CaseStudyPopup from "@/components/CaseStudyPopup";
 
 export const metadata = {
-  title: "Slidedrain // Produkter",
+  title: "Gulvsluk, slukrenner og slukrister – produkter | Slidedrain",
   description:
     "Komplett produktoversikt for Slidedrain Gulvsluk. 37 produkter med NOBB- og NRF-nummer, dimensjoner og tekniske spesifikasjoner.",
   alternates: { canonical: "/produkter" },

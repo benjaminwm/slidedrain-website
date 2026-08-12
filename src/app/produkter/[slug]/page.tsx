@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const result = getProductBySlug(slug);
   if (!result) return { title: "Produkt ikke funnet" };
   return {
-    title: `Slidedrain // ${result.product.name}`,
+    title: `${result.product.name} | Slidedrain`,
     description:
       result.product.description ||
       `${result.product.name} – ${result.product.dimensions}. NOBB ${result.product.nobbNr}, NRF ${result.product.nrfNr}.`,

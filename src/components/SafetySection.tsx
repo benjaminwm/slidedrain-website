@@ -3,6 +3,7 @@
 import Image from "next/image";
 import FadeUp from "./FadeUp";
 import { ShieldIcon, TrendingDownIcon } from "./icons";
+import { trackFileDownload } from "@/lib/analytics";
 
 type Feature = {
   icon?: React.ReactNode;
@@ -143,6 +144,7 @@ export default function SafetySection() {
                   href={f.href}
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => trackFileDownload(f.href!, f.linkLabel!)}
                   className="inline-flex items-center gap-1.5 mt-4 text-sm font-semibold text-orange hover:text-orange-dark transition-colors"
                 >
                   {f.linkLabel}

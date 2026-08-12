@@ -66,6 +66,123 @@ export function breadcrumbSchema(
   };
 }
 
+/**
+ * HowTo for installasjonsguidene. Hvert steg får egen URL-fragment slik
+ * at assistenter og søkemotorer kan referere til enkeltsteg.
+ */
+export function howToSchema({
+  name,
+  description,
+  path,
+  steps,
+  anchorPrefix = "steg",
+}: {
+  name: string;
+  description: string;
+  path: string;
+  steps: { step: number; title: string; desc: string; image: string }[];
+  /** Må matche `idPrefix` på StepCard-ene, ellers peker ankrene i tomme luften. */
+  anchorPrefix?: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name,
+    description,
+    step: steps.map((s, i) => ({
+      "@type": "HowToStep",
+      position: i + 1,
+      name: s.title,
+      text: s.desc,
+      image: `${SITE_URL}${s.image}`,
+      url: `${SITE_URL}${path}#${anchorPrefix}-${s.step}`,
+    })),
+  };
+}
+
+export function faqPageSchema(
+  items: { question: string; answer: string }[]
+) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: items.map((i) => ({
+      "@type": "Question",
+      name: i.question,
+      acceptedAnswer: { "@type": "Answer", text: i.answer },
+    })),
+  };
+}
+
+export function videoObjectSchema({
+  name,
+  description,
+  embedUrl,
+  thumbnailUrl,
+  uploadDate,
+}: {
+  name: string;
+  description: string;
+  embedUrl: string;
+  thumbnailUrl: string;
+  uploadDate: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "VideoObject",
+    name,
+    description,
+    embedUrl,
+    thumbnailUrl,
+    uploadDate,
+    publisher: {
+      "@type": "Organization",
+      name: "Slidedrain",
+      logo: {
+        "@type": "ImageObject",
+        url: `${SITE_URL}/images/logo-slidedrain.webp`,
+      },
+    },
+  };
+}
+
+/** Article for kundehistoriene, som er redaksjonelt innhold og ikke produktsider. */
+export function articleSchema({
+  headline,
+  description,
+  path,
+  image,
+  datePublished,
+}: {
+  headline: string;
+  description: string;
+  path: string;
+  image: string;
+  datePublished: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline,
+    description,
+    image: image.startsWith("http") ? image : `${SITE_URL}${image}`,
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `${SITE_URL}${path}`,
+    },
+    datePublished,
+    author: { "@type": "Organization", name: "Slidedrain" },
+    publisher: {
+      "@type": "Organization",
+      name: "Slidedrain",
+      logo: {
+        "@type": "ImageObject",
+        url: `${SITE_URL}/images/logo-slidedrain.webp`,
+      },
+    },
+  };
+}
+
 export function productBreadcrumb(
   product: Product,
   category: ProductCategory

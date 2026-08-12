@@ -10,7 +10,7 @@ import TestimonialsMarquee from "@/components/TestimonialsMarquee";
 import CaseStudyPopup from "@/components/CaseStudyPopup";
 
 export const metadata = {
-  title: "Slidedrain // Den usynlige detaljen som utgjør hele forskjellen",
+  title: "Sluk til baderom – design og vedlikehold | Slidedrain",
   description:
     "Skap et sømløst baderomsgulv med prisvinnende norsk design. Slidedrain forener skandinavisk minimalisme med patentert teknologi for våtromssikkerhet.",
   alternates: { canonical: "/sluttkunde" },
