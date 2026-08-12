@@ -86,6 +86,39 @@ export default function CategoryLanding({
             </div>
           </FadeUp>
 
+          {/* Ofte stilte spørsmål — også emittert som FAQPage-schema */}
+          <FadeUp>
+            <div className="border-t border-navy/8 pt-10">
+              <h2 className="text-2xl max-md:text-xl font-bold text-navy mb-5">
+                Ofte stilte spørsmål
+              </h2>
+              <div className="max-w-[760px] space-y-3">
+                {landing.faqs.map((f) => (
+                  <details
+                    key={f.q}
+                    className="bg-gray-bg rounded-xl p-5 group"
+                  >
+                    <summary className="font-semibold text-navy text-[15px] cursor-pointer list-none flex items-center justify-between">
+                      {f.q}
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth={2}
+                        className="w-4 h-4 shrink-0 ml-3 transition-transform group-open:rotate-180"
+                      >
+                        <path d="M6 9l6 6 6-6" />
+                      </svg>
+                    </summary>
+                    <p className="text-[14px] text-text-light leading-[1.7] mt-3">
+                      {f.a}
+                    </p>
+                  </details>
+                ))}
+              </div>
+            </div>
+          </FadeUp>
+
           {/* Monteringsguider — kontekstuell lenking til innholdssidene */}
           <FadeUp>
             <div className="border-t border-navy/8 pt-10">

@@ -23,6 +23,12 @@ export interface LandingCategory {
   body: string[];
   /** IDer fra productCategories som vises på siden */
   categoryIds: string[];
+  /**
+   * Kort FAQ per kategori. Rendres på siden og emitteres som FAQPage-schema.
+   * Svarene skal være korte, konkrete og siterbare — de er like mye rettet
+   * mot AI-assistenter som mot Google. Faktagrunnlag: SINTEF TG 20991.
+   */
+  faqs: { q: string; a: string }[];
 }
 
 export const landingCategories: LandingCategory[] = [
@@ -40,6 +46,24 @@ export const landingCategories: LandingCategory[] = [
       "Samme slukpotte kan kombineres med kvadratiske og sirkulære slukrister, hjørnerister og slukrenner. Dermed kan uttrykket på badet — dusjsluk i hjørnet, synlig rist eller flislagt slukrenne — velges og endres uten å bytte sluket under.",
     ],
     categoryIds: ["slukpotter", "slukoverdeler", "monteringsverktoy"],
+    faqs: [
+      {
+        q: "Kan Slidedrain Gulvsluk brukes som eneste sluk i våtrommet?",
+        a: "Ja. Kravet er minimum 0,8 l/s dreneringskapasitet når det installeres kun ett sluk i våtrommet. Slidedrain Gulvsluk har 1,0 l/s.",
+      },
+      {
+        q: "Kan gulvsluket monteres i trebjelkelag?",
+        a: "Ja. Sluket kan støpes inn i betongdekke eller monteres i trebjelkelag med påstøp. I trebjelkelag må avløpsrøret klamres så nær koblingen mot sluket som mulig.",
+      },
+      {
+        q: "Hvor mye kan sluket høydejusteres?",
+        a: "Slukoverdelen kan høydejusteres inntil 40 mm i forhold til slukpotten, slik at den kommer i plan med ferdig gulv. Monteringsverktøyet målsetter høyden under støp.",
+      },
+      {
+        q: "Hvilket utløp finnes?",
+        a: "Slukpotten leveres med Ø75 mm sideutløp, bunnutløp eller skrått utløp.",
+      },
+    ],
   },
   {
     slug: "slukrenner",
@@ -55,6 +79,24 @@ export const landingCategories: LandingCategory[] = [
       "Alle slukrennene bygger på samme SINTEF-godkjente slukpotte som resten av Slidedrain-systemet, og alle varer er lagerført hos Brødrene Dahl og Flisekompaniet med NOBB- og NRF-nummer.",
     ],
     categoryIds: ["slukrenner-tile", "slukrenner-eksentrisk", "slukrenner"],
+    faqs: [
+      {
+        q: "Hva er forskjellen på slukrenne, linjesluk og rennesluk?",
+        a: "Det er tre navn på det samme: et avlangt sluk som samler vannet langs én linje, i stedet for et rundt punktsluk. Slidedrain leverer dem i lengder fra 600 til 1200 mm.",
+      },
+      {
+        q: "Passer slukrennen på gulvsluket jeg allerede har?",
+        a: "Slidedrain Slukrenner passer med alle sirkulære gulvsluk. Rennen monteres over membranen og kan justeres 50 mm i bredden og 105 mm i lengden over en Ø130 mm vannlås.",
+      },
+      {
+        q: "Hva er eksentrisk utløp?",
+        a: "Eksentriske slukrenner har hullet forskjøvet mot den ene siden, slik at gulvet kan legges med ensidig fall mot vegg. Det er særlig nyttig for storformat-fliser som ellers må deles opp.",
+      },
+      {
+        q: "Hvor mye vann tar slukrennen unna?",
+        a: "Alle slukrenner og slukrister er testet til over 0,8 liter i sekundet. Slukene har belastningsklasse K3, bekreftet ved prøving etter NS-EN 1253.",
+      },
+    ],
   },
   {
     slug: "slukrenner-tile-insert",
@@ -70,6 +112,20 @@ export const landingCategories: LandingCategory[] = [
       "Tile Insert finnes også som kvadratiske slukrister og hjørnerister, alt på samme SINTEF-godkjente sluksystem.",
     ],
     categoryIds: ["slukrenner-tile", "slukrenner-eksentrisk"],
+    faqs: [
+      {
+        q: "Hva er en tile insert?",
+        a: "En rist som flislegges med gulvets egen flis, slik at sluket blir nesten usynlig. Bare en smal spalte rundt risten er synlig i ferdig gulv.",
+      },
+      {
+        q: "Hvilken flistykkelse passer?",
+        a: "Ved flistykkelser under 9,5 mm må du påføre et ekstra lag flislim eller monteringslim under flisen i tile inserten, og tilsvarende ekstra flislim på utsiden av rennen.",
+      },
+      {
+        q: "Hvordan rengjøres en tile insert-renne?",
+        a: "Løft tile inserten med det medfølgende rist-verktøyet, spyl rennen med dusjen og fjern smuss. Unngå harde skrubber og sterke kjemikalier på sortlakkerte produkter.",
+      },
+    ],
   },
   {
     slug: "slukrister",
@@ -84,6 +140,20 @@ export const landingCategories: LandingCategory[] = [
       "Slukristen er den synlige delen av gulvsluket. Med Slidedrain er risten et tilvalg: samme slukpotte og overdel kan kombineres med kvadratisk rist, sirkulær rist, Tile Insert eller slukrenne — og valget kan endres senere.",
     ],
     categoryIds: ["slukrister"],
+    faqs: [
+      {
+        q: "Kan jeg bytte slukrist uten å bytte sluket?",
+        a: "Ja. Risten monteres på slukoverdelen og kan byttes uten å endre sluket under. Samme slukpotte kan kombineres med kvadratisk rist, sirkulær rist, tile insert, hjørnerist eller slukrenne.",
+      },
+      {
+        q: "Hvilken slukrist passer til vinylgulv?",
+        a: "Den sirkulære slukristen er utviklet for slukoverdel med klemring, som er godkjent for vinylbelegg.",
+      },
+      {
+        q: "Finnes ristene i sort?",
+        a: "Ja, slukristene leveres i børstet stål og matt sort, med eller uten tile insert.",
+      },
+    ],
   },
   {
     slug: "hjornerister",
@@ -98,6 +168,20 @@ export const landingCategories: LandingCategory[] = [
       "Risten flislegges med gulvets egen flis, slik at sluket nærmest forsvinner i hjørnet. Vannet ledes til hjørnet med diagonalt fall, og gulvflaten kan legges med hele fliser uten oppdeling rundt et sentrert sluk.",
     ],
     categoryIds: ["hjornerister"],
+    faqs: [
+      {
+        q: "Hvor stor er hjørneristen?",
+        a: "Hjørneristen med tile insert måler 297 × 297 mm og plasseres i hjørnet av dusjsonen.",
+      },
+      {
+        q: "Hvorfor velge hjørnesluk?",
+        a: "Vannet ledes til hjørnet med diagonalt fall, slik at gulvflaten kan legges med hele storformat-fliser uten oppdeling rundt et sentrert sluk.",
+      },
+      {
+        q: "Kan jeg bytte fra hjørnerist til slukrenne senere?",
+        a: "Ja. Med hjørneplassert gulvsluk kan du bytte slukdesign fra hjørnerist til slukrenne med eksentrisk utløp uten å flytte selve gulvsluket.",
+      },
+    ],
   },
 ];
 

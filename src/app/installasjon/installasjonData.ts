@@ -27,11 +27,92 @@ export const installGuides = [
     navLabel: "Montere slukrenne",
   },
   {
+    href: "/installasjon/vatromskrav-sluk",
+    label: "Våtromskrav",
+    navLabel: "Sluk og våtromskrav",
+  },
+  {
     href: "/installasjon/ofte-stilte-sporsmal",
     label: "Ofte stilte spørsmål",
     navLabel: "Ofte stilte spørsmål",
   },
 ] as const;
+
+/**
+ * Membrantabell fra SINTEF Teknisk Godkjenning TG 20991 (tabell 1).
+ * Kilde: public/downloads/TG-20991-Slidedrain-Sluksystem.pdf, side 2.
+ */
+export const membranTable: {
+  slukoverdel: string;
+  membran: string;
+  plassering: string;
+}[] = [
+  {
+    slukoverdel: "Slukoverdel med integrert mansjett",
+    membran: "Påstrykningsmembran, foliemembran",
+    plassering: "Ute på gulvet, nær vegg, i hjørner",
+  },
+  {
+    slukoverdel: "Slukoverdel med klemring",
+    membran: "Påstrykningsmembran, foliemembran",
+    plassering: "Ute på gulvet, nær vegg, i hjørner",
+  },
+  {
+    slukoverdel: "Slukoverdel med klemring",
+    membran: "Tykk banevare",
+    plassering: "Ute på gulvet, nær vegg",
+  },
+  {
+    slukoverdel: "Slukoverdel med klemring",
+    membran: "Vinylbelegg",
+    plassering: "Ute på gulvet",
+  },
+];
+
+/** FAQ spesifikt for krav og dokumentasjon. */
+export const kravFaqs: Faq[] = [
+  {
+    q: "Må sluket ha SINTEF Teknisk Godkjenning?",
+    a: [
+      "Produkter til byggverk skal ha dokumenterte egenskaper etter DOK-forskriften og de tekniske kravene i TEK. SINTEF Teknisk Godkjenning er den vanligste måten å dokumentere at et sluk er egnet til bruk i norske våtrom.",
+      "Slidedrain Sluksystem har TG 20991, utstedt 27. januar 2026 og gyldig til 1. februar 2031.",
+    ],
+  },
+  {
+    q: "Hvor høy må vannlåsen være?",
+    a: "Enhver sanitærinstallasjon som er koblet direkte til avløpsanlegget skal ha vannlås med vannlukkehøyde på minimum 50 mm. Slidedrain Gulvsluk har vannlukkehøyde ≥ 50 mm og kan knyttes direkte til avløpsanlegget.",
+  },
+  {
+    q: "Hvor mye vann må sluket klare?",
+    a: "Sluk med 50 og 75 mm utløp skal ha en dreneringskapasitet på minimum 0,8 l/s dersom det installeres kun ett sluk i våtrommet. Slidedrain Gulvsluk har dreneringskapasitet 1,0 l/s og kan derfor benyttes som eneste sluk i våtrommet.",
+  },
+  {
+    q: "Hvilke membraner er sluket godkjent for?",
+    a: [
+      "Slukoverdel med integrert mansjett er godkjent for påstrykningsmembran og foliemembran. Slukoverdel med klemring er i tillegg godkjent for tykk banevare og vinylbelegg.",
+      "Hvor sluket kan plasseres i rommet avhenger av membranløsningen — se tabellen over. Membransystemet som benyttes skal selv ha SINTEF Teknisk Godkjenning.",
+    ],
+  },
+  {
+    q: "Kan sluket monteres i trebjelkelag?",
+    a: [
+      "Ja. Slidedrain Gulvsluk kan støpes inn i betongdekker eller monteres i trebjelkelag med påstøp.",
+      "Ved montering i trebjelkelag må avløpsrøret klamres så nær koblingen mellom avløpsrør og sluk som mulig.",
+    ],
+  },
+  {
+    q: "Hvilken belastning tåler sluket?",
+    a: "Slukene har belastningsklasse K3, bekreftet ved prøving i henhold til NS-EN 1253.",
+  },
+  {
+    q: "Må membranen testes før flislegging?",
+    a: "Ja. Før flislegging bør det utføres vanntetthetstest av membransystemet, se Byggebransjens våtromsnorm, BVN 53.010.",
+  },
+  {
+    q: "Hvor kan sluket brukes?",
+    a: "Slidedrain Sluksystem kan benyttes i boliger, hoteller, dusjanlegg og i andre bygninger eller lokaler med tilsvarende bruksforutsetninger.",
+  },
+];
 
 export type Step = {
   step: number;

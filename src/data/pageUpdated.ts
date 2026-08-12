@@ -20,6 +20,7 @@ export const pageUpdated: Record<string, string> = {
   "/tilvalg": "2026-08-04",
   "/installasjon": "2026-08-12",
   "/installasjon/montere-slukrenne": "2026-08-12",
+  "/installasjon/vatromskrav-sluk": "2026-08-12",
   "/installasjon/ofte-stilte-sporsmal": "2026-08-12",
   "/produkter": "2026-08-04",
   "/kundehistorier": "2026-08-12",

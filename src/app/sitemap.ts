@@ -39,6 +39,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.85,
     },
     {
+      path: "/installasjon/vatromskrav-sluk",
+      changeFrequency: "monthly",
+      priority: 0.85,
+    },
+    {
       path: "/installasjon/ofte-stilte-sporsmal",
       changeFrequency: "monthly",
       priority: 0.8,

@@ -16,6 +16,7 @@ import {
   productSchema,
   productBreadcrumb,
   breadcrumbSchema,
+  faqPageSchema,
 } from "@/lib/schema";
 
 export function generateStaticParams() {
@@ -61,6 +62,16 @@ export default async function ProductPage({ params }: { params: Promise<{ slug: 
                 { name: "Produkter", path: "/produkter" },
                 { name: landing.title, path: `/produkter/${landing.slug}` },
               ])
+            ),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
+              faqPageSchema(
+                landing.faqs.map((f) => ({ question: f.q, answer: f.a }))
+              )
             ),
           }}
         />

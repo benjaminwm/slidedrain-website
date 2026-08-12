@@ -21,9 +21,9 @@ const links = [
     desc: "Plassering, flislim og høyder for slukrenne med tile insert eller rist.",
   },
   {
-    href: "/installasjon/ofte-stilte-sporsmal",
+    href: "/installasjon/vatromskrav-sluk",
     title: "Sluk og våtromskrav",
-    desc: "Godkjente membraner, TEK17, SINTEF Teknisk Godkjenning, belastning og kapasitet.",
+    desc: "Vannlukkehøyde, dreneringskapasitet, godkjente membraner og dokumentasjon — med tallene fra TG 20991.",
   },
   {
     href: "/kundehistorier",
