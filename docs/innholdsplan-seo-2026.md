@@ -36,15 +36,51 @@ så «finn forhandler» som key event er ren GA4-konfigurasjon, ikke kodearbeid.
 
 Uten dette kan ingen av de andre fasene evalueres.
 
-| Oppgave | Detaljer | Sted |
-|---------|----------|------|
-| Spor filnedlastinger | `trackEvent("file_download", { file_name, file_type, page_path })` på alle PDF/BIM-lenker. Vurder en delt `<DownloadLink>`-komponent. | `InstallasjonContent.tsx`, `SafetySection.tsx`, `rorlegger/TrustSection.tsx` |
-| Key events i GA4 | Marker `retailer_click`, `file_download`, `contact_form_submit`, `generate_lead` som key events. Sjekk at GTM-triggere for `retailer_click` faktisk finnes i publisert container (v11). | GA4 + GTM-PHPZ59V |
-| GSC-baseline | Eksporter query- og sidedata for siste 3 mnd: posisjon + visninger for «montering sluk baderom», «sluk baderom», «våtromskrav sluk», «slukrenne montering», TEK17-varianter. Lagre som utgangspunkt. | GSC (evt. via Supermetrics) |
-| Indekseringssjekk | URL-inspeksjon på `/installasjon` og de tre kundehistoriene: er de indeksert, og hvilken gjengitt HTML ser Google? | GSC |
-| AI-trafikk som egen kanal | Egendefinert kanalgruppe i GA4 for `chatgpt.com`, `perplexity.ai`, `gemini.google.com`, `copilot.microsoft.com`. | GA4 |
+### To antakelser som falt da dataene ble hentet (2026-08-12)
 
-**Leveranse:** baseline-ark + verifiserte key events.
+1. **PDF-nedlastinger var ikke usporet.** GA4s Enhanced Measurement fyrer allerede
+   `file_download` automatisk — **372 hendelser siste 90 dager**, med filnavn, filtype,
+   lenketekst og URL. Egen dataLayer-hendelse med samme navn ble derfor reversert; den ville
+   gitt dobbelttelling. Nedlastinger skal markeres som key event på den innebygde hendelsen.
+2. **AI-trafikk trenger ingen egendefinert kanalgruppe.** GA4 har nå «AI Assistant» som
+   innebygd kanal — 5 sesjoner siste 90 dager. Ingen konfigurasjon nødvendig, bare rapportering.
+
+### Baseline hentet 2026-08-12 (GA4, siste 90 dager)
+
+| Kanal | Sesjoner | Engasjerte | Konverteringer |
+|-------|---------:|-----------:|---------------:|
+| Paid Social | 2 005 | 660 | 0 |
+| Paid Search | 1 649 | 1 046 | 6 |
+| Direct | 920 | 437 | 2 |
+| Organic Search | 915 | 475 | 4 |
+| Unassigned | 852 | 184 | 0 |
+| Cross-network | 770 | 275 | 16 |
+| Paid Other | 467 | 225 | 0 |
+| Organic Social | 121 | 53 | 2 |
+| Referral | 85 | 52 | 3 |
+| AI Assistant | 5 | 1 | 0 |
+
+Hendelser samme periode: `file_download` 372, `click` 251, `video_progress` 62,
+`retailer_click` 54, `generate_lead` 32 (allerede key event), `video_start` 27,
+`form_start` 11, `book_meeting_click` 5, `contact_form_submit` 2.
+Gamle WordPress-hendelser fyrer fortsatt: `klikk_flisekompaniet` 15, `Klikk_BD` 6.
+
+To ting å merke seg: **Unassigned på 852 sesjoner** (12 % av trafikken) er attribusjonstap
+som bør undersøkes, og **Paid Social har 2 005 sesjoner og null konverteringer** — som
+underbygger trakt-logikken i fase 5 (sosialt skaper kjennskap, det konverterer ikke direkte).
+
+### Oppgaver
+
+| Oppgave | Detaljer | Sted | Status |
+|---------|----------|------|--------|
+| ~~Spor filnedlastinger~~ | Utgår — dekkes av Enhanced Measurement (se over). | — | Reversert |
+| Key events i GA4 | Marker `retailer_click`, `file_download` og `contact_form_submit` som key events (`generate_lead` er det allerede). | GA4 | |
+| Rydd gamle WP-hendelser | `klikk_flisekompaniet` og `Klikk_BD` fyrer fortsatt fra gamle GTM-triggere. | GTM-PHPZ59V | |
+| GSC-baseline | Query- og sidedata siste 3 mnd for «montering sluk baderom», «sluk baderom», «våtromskrav sluk», «slukrenne montering», TEK17-varianter. Krever at GSC kobles til Supermetrics. | GSC | |
+| Indekseringssjekk | URL-inspeksjon på `/installasjon` og de tre kundehistoriene. | GSC | |
+| ~~AI-kanalgruppe~~ | Utgår — «AI Assistant» finnes innebygd i GA4. | — | Utgår |
+
+**Leveranse:** baseline (over) + verifiserte key events.
 
 ---
 
@@ -57,7 +93,7 @@ Uten dette kan ingen av de andre fasene evalueres.
 | Intern lenking: kontekstuell seksjon på forsiden, kategori-spesifikke guidelenker fra produkt- og kategorisider, kryss-lenker fra guidene til produkt/kundehistorier. | ✅ `home/GuideLinks.tsx`, `ProductDetail.guideForCategory()`, `CategoryLanding`, `GuideCrossLinks`. |
 | `HowTo`, `FAQPage`, `VideoObject`, `Article` i `src/lib/schema.ts`. | ✅ HowTo på begge monteringsguidene (steg-ankre), FAQPage på FAQ-siden, VideoObject på `/installasjon`, Article + breadcrumbs på de tre kundehistoriene. |
 | Ekte `lastModified` i sitemap. | ✅ `src/data/pageUpdated.ts` — datoene må oppdateres manuelt ved innholdsendring. |
-| Sporing av PDF-nedlastinger (fremskyndet fra fase 0, siden lenkene ble refaktorert). | ✅ `trackFileDownload()` + `DownloadLink`. Verifisert: `file_download` med filnavn, filtype og sti. |
+| ~~Sporing av PDF-nedlastinger~~ | ↩︎ Reversert 2026-08-12: GA4s Enhanced Measurement fyrer allerede `file_download`. `DownloadLink` beholdes som ren markup-komponent. |
 
 **URL-valg:** guideklyngen legges under `/installasjon/`, ikke `/guider/`. `/installasjon` er
 QR-kodenes mål (trykt på produktene) og allerede indeksert — å flytte den ville kastet bort

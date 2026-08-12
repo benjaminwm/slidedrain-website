@@ -1,14 +1,9 @@
-"use client";
-
-import { trackFileDownload } from "@/lib/analytics";
-
 /**
- * Nedlastingslenke for PDF/ZIP med sporing.
+ * Nedlastingslenke for PDF/ZIP.
  *
- * PDF-ene (monteringsanvisninger, TG, EPD, BIM) var tidligere vanlige
- * <a href>-lenker uten event, så etterspørselen etter dem var usynlig i
- * GA4. Fyrer `file_download` med filnavn, filtype og side, slik at
- * nedlastinger kan settes opp som key event.
+ * Ren markup-komponent — nedlastinger fanges allerede av GA4s Enhanced
+ * Measurement (`file_download`), så her skal det ikke fyres egne events.
+ * Se kommentaren i src/lib/analytics.ts.
  */
 export default function DownloadLink({
   href,
@@ -24,10 +19,7 @@ export default function DownloadLink({
   return (
     <a
       href={href}
-      {...(isPdf
-        ? { target: "_blank", rel: "noopener noreferrer" }
-        : {})}
-      onClick={() => trackFileDownload(href, label)}
+      {...(isPdf ? { target: "_blank", rel: "noopener noreferrer" } : {})}
       className={
         className ||
         "inline-flex items-center gap-2 text-sm bg-gray-bg text-navy px-4 py-2 rounded-lg hover:bg-navy/10 transition-colors font-medium"

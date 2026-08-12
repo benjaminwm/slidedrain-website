@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import FadeUp from "../FadeUp";
-import { trackFileDownload } from "@/lib/analytics";
 
 type Logo ={ src: string; alt: string; heightClass: string };
 
@@ -111,9 +110,6 @@ export default function TrustSection() {
                   href={item.href}
                   target={item.external ? "_blank" : undefined}
                   rel={item.external ? "noopener noreferrer" : undefined}
-                  onClick={() =>
-                    trackFileDownload(item.href!, item.linkLabel!)
-                  }
                   className="inline-flex items-center gap-1.5 mt-4 text-sm font-semibold text-orange hover:text-orange-dark transition-colors"
                 >
                   {item.linkLabel}

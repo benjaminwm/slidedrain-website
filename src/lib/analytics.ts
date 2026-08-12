@@ -50,25 +50,15 @@ export function trackEvent(
 }
 
 /**
- * Spor nedlasting av PDF/ZIP (monteringsanvisninger, TG, EPD, BIM).
+ * MERK: nedlasting av PDF/ZIP spores IKKE herfra.
  *
- * Disse lenkene var tidligere utrackede <a href>, så etterspørselen etter
- * dokumentasjonen var usynlig i GA4. Fyrer kun for lokale filer under
- * /downloads/ — eksterne lenker skal spores som noe annet.
+ * GA4s Enhanced Measurement fyrer allerede `file_download` automatisk på
+ * klikk mot filtyper som pdf og zip (372 hendelser siste 90 dager, målt
+ * 2026-08-12), med file_name, file_extension, link_text og link_url. En
+ * egen dataLayer-hendelse med samme navn ville gitt dobbelttelling.
+ * Skal nedlastinger telles som key event, gjøres det på den innebygde
+ * hendelsen i GA4 — ikke med ny kode.
  */
-export function trackFileDownload(href: string, linkText: string) {
-  if (!href.startsWith("/downloads/")) return;
-  const fileName = href.split("/").pop() || href;
-  trackEvent("file_download", {
-    file_name: fileName,
-    file_type: fileName.includes(".")
-      ? fileName.split(".").pop()!.toLowerCase()
-      : "",
-    link_text: linkText,
-    page_path:
-      typeof window !== "undefined" ? window.location.pathname : "",
-  });
-}
 
 const CTA_ORIGIN_KEY = "sd-cta-origin";
 
