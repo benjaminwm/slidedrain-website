@@ -212,6 +212,31 @@ const nextConfig: NextConfig = {
         destination: "/",
         permanent: true,
       },
+      // ── Gamle WordPress-sitemaps (Yoast + WP core) ──
+      // Googlebot fortsetter å hente sitemap-URL-er den har sett før, og
+      // disse ga 404 etter relansering. Peker dem til den nye sitemapen.
+      // Yoast paginerer (post-sitemap2.xml), derfor :num(\\d*).
+      {
+        source: "/sitemap_index.xml",
+        destination: "/sitemap.xml",
+        permanent: true,
+      },
+      {
+        source:
+          "/:type(post|page|product|product_cat|product_tag|category|author|attachment)-sitemap:num(\\d*).xml",
+        destination: "/sitemap.xml",
+        permanent: true,
+      },
+      {
+        source: "/wp-sitemap.xml",
+        destination: "/sitemap.xml",
+        permanent: true,
+      },
+      {
+        source: "/wp-sitemap-:rest",
+        destination: "/sitemap.xml",
+        permanent: true,
+      },
       {
         source: "/feed",
         destination: "/",

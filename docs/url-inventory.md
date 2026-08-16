@@ -124,3 +124,36 @@ men ga 403 etter relansering. Query-parametere (`?x59798` o.l.) bevares.
 | `/wp-content/uploads/2025/06/Slidedrain-Gulvsluk-brosjyre-050325.pdf` | `/produkter/gulvsluk` |
 | `/wp-content/uploads/2025/06/Slidedrain-Slukrenner-Slukrister-080525.pdf` | `/produkter/slukrenner` |
 | `/wp-content/*` (alt annet: gamle bilder o.l.) | `/` |
+
+## Gamle WordPress-sitemaps — redirects lagt til 2026-08-16
+
+Googlebot fortsetter å hente sitemap-URL-er den har sett før. Disse ga 404
+etter relanseringen og peker nå til den nye sitemapen.
+
+| Gammel URL | Ny destinasjon |
+|---|---|
+| `/sitemap_index.xml` (Yoast-indeks) | `/sitemap.xml` |
+| `/post-sitemap.xml`, `/page-sitemap.xml`, `/product-sitemap.xml`, `/product_cat-sitemap.xml`, `/product_tag-sitemap.xml`, `/category-sitemap.xml`, `/author-sitemap.xml`, `/attachment-sitemap.xml` — inkl. paginerte varianter (`post-sitemap2.xml`) | `/sitemap.xml` |
+| `/wp-sitemap.xml`, `/wp-sitemap-*` (WP core) | `/sitemap.xml` |
+
+> Er den gamle `sitemap_index.xml` fortsatt registrert i Search Console,
+> bør den fjernes der og `sitemap.xml` sendes inn i stedet. Redirecten
+> hindrer 404-en, men GSC vil helst ha den kanoniske URL-en direkte.
+
+## 404-side
+
+`src/app/not-found.tsx` fanger alt som ikke treffer en rute eller en
+redirect, og gir lenker videre til produkter, installasjon, kundehistorier
+og de fem kategorisidene. Next.js svarer fortsatt HTTP 404 — verifisert.
+
+## Merknad om statuskoder
+
+Next.js sender **308** (permanent) og **307** (midlertidig), ikke 301/302 —
+`permanent: true` gir 308. Google behandler 308 likt som 301, så tabellene
+over som sier «301» beskriver intensjonen; på nettet ser du 308.
+
+URL-er Google har indeksert med etterstilt skråstrek (`/kontakt/`) tar to
+hopp: Next fjerner først skråstreken (`→ /kontakt`), deretter treffer
+redirecten (`→ /#kontakt`). Det er forventet og uproblematisk — Google
+følger opptil ti hopp — men det er grunnen til at slike URL-er dukker opp
+som «Side med viderekobling» i indekseringsrapporten.
