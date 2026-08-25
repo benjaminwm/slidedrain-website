@@ -18,15 +18,18 @@ const nextConfig: NextConfig = {
         destination: "/#kontakt",
         permanent: true,
       },
+      // Gammel nyhetsseksjon. Nærmeste levende ekvivalent er
+      // kundehistoriene — /om-oss er en statisk selskapsside og ga
+      // besøkende noe helt annet enn det de klikket på.
       {
         source: "/aktuelt",
-        destination: "/om-oss",
+        destination: "/kundehistorier",
         permanent: true,
       },
       // Bloggposter og datoarkiv: /2020/11/05/nemitek-nytt-sluk…
       {
         source: "/:year(\\d{4})/:month(\\d{2})/:rest*",
-        destination: "/om-oss",
+        destination: "/kundehistorier",
         permanent: true,
       },
       {
