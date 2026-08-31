@@ -21,8 +21,11 @@ export default function CookieBanner() {
   useEffect(() => {
     const existing = readConsent();
     if (!existing) {
-      const timer = setTimeout(() => setShow(true), 800);
-      return () => clearTimeout(timer);
+      // Vises umiddelbart. Tidligere lå her 800 ms forsinkelse — besøkende
+      // som forlot siden før den løp ut fikk aldri sjansen til å ta et valg,
+      // og ble dermed usynlige i GA4 (Consent Mode default = denied).
+      setShow(true);
+      return;
     }
     // Sørg for at Consent Mode reflekterer lagret valg ved page load
     updateConsentMode(existing);
